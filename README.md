@@ -10,7 +10,7 @@ Common OpenRTB's Object types and constants for Go programming language
 	- [ ] 3.2.4 Object: Video
 	- [ ] 3.2.5 Object: Native
 	- [x] 3.2.6 Object: Site
-	- [ ] 3.2.7 Object: App 
+	- [x] 3.2.7 Object: App 
 	- [x] 3.2.8 Object: Publisher
 	- [x] 3.2.9 Object: Content
 	- [x] 3.2.10 Object: Producer 
