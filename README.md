@@ -14,7 +14,7 @@ Common OpenRTB's Object types and constants for Go programming language
 	- [x] 3.2.8 Object: Publisher
 	- [x] 3.2.9 Object: Content
 	- [x] 3.2.10 Object: Producer 
-	- [ ] 3.2.11 Object: Device
+	- [x] 3.2.11 Object: Device
 	- [x] 3.2.12 Object: Geo
 	- [x] 3.2.13 Object: User
 	- [x] 3.2.14 Object: Data
