@@ -1,4 +1,7 @@
 # go-rtb
+
+[![GoDoc](https://godoc.org/github.com/mxmCherry/go-rtb/2.3/rtb?status.svg)](https://godoc.org/github.com/mxmCherry/go-rtb/2.3/rtb)
+
 Common OpenRTB's Object types and constants for Go programming language
 
 
