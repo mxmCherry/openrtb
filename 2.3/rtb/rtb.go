@@ -78,6 +78,30 @@ const (
 	DeviceJSYes uint8 = 1 // 1 = yes
 )
 
+// Flag indicating if this request is subject to the COPPA
+// regulations established by the USA FTC, where 0 = no, 1 = yes.
+const (
+	RegsCOPPANo  int8 = 0 // 0 = no
+	RegsCOPPAYes int8 = 1 // 1 = yes
+)
+
+// Indicator of auction eligibility to seats named in the Direct Deals object, where 0 = all bids are accepted,
+// 1 = bids are restricted to the deals specified and the terms thereof.
+const (
+	PMPPrivateAuctionUnrestricted uint8 = 0 // 0 = all bids are accepted
+	PMPPrivateAuctionRestricted   uint8 = 1 // 1 = bids are restricted to the deals specified and the terms thereof
+)
+
+
+// Optional override of the overall auction type of the bid request, where 1 = First Price,
+// 2 = Second Price Plus, 3 = the value passed in bidfloor is the agreed upon deal price. Additional
+// auction types can be defined by the exchange.
+const (
+	DealATFirstPrice      uint8 = 1 // 1 = First Price
+	DealATSecondPricePlus uint8 = 2 // 2 = Second Price Plus
+	DealATAgreed          uint8 = 3 // 3 = the value passed in bidfloor is the agreed upon deal price
+)
+
 // Placeholder for exchange-specific extensions to OpenRTB.
 type Ext interface{}
 
@@ -1129,13 +1153,13 @@ type Segment struct {
 type Regs struct {
 
 	// Attribute:
-	//   id
+	//   coppa
 	// Type:
 	//   integer
 	// Description:
 	//   Flag indicating if this request is subject to the COPPA
 	//   regulations established by the USA FTC, where 0 = no, 1 = yes.
-	Coppa int8 `json:"coppa"`
+	COPPA int8 `json:"coppa"`
 
 	// Attribute:
 	//   ext
@@ -1150,10 +1174,10 @@ type Regs struct {
 //   This object is the private marketplace container for direct deals between buyers and sellers that may pertain
 //   to this impression. The actual deals are represented as a collection of Deal objects. Refer to Section 7.2
 //   for more details.
-type Pmp struct {
+type PMP struct {
 
 	// Attribute:
-	//   id
+	//   private_auction
 	// Type:
 	//   integer
 	// Description:
@@ -1217,7 +1241,7 @@ type Deal struct {
 	//   Optional override of the overall auction type of the bid request, where 1 = First Price,
 	//   2 = Second Price Plus, 3 = the value passed in bidfloor is the agreed upon deal price. Additional
 	//   auction types can be defined by the exchange.
-	At int8 `json:"at"`
+	AT int8 `json:"at"`
 
 	// Attribute:
 	//   wseat
