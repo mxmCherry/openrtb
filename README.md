@@ -6,12 +6,12 @@ Common OpenRTB's Object types and constants for Go programming language
 
 
 # Types
-- [ ] 3.2 Object Specifications
-	- [ ] 3.2.1 Object: BidRequest
-	- [ ] 3.2.2 Object: Imp
-	- [ ] 3.2.3 Object: Banner
-	- [ ] 3.2.4 Object: Video
-	- [ ] 3.2.5 Object: Native
+- [x] 3.2 Object Specifications
+	- [x] 3.2.1 Object: BidRequest
+	- [x] 3.2.2 Object: Imp
+	- [x] 3.2.3 Object: Banner
+	- [x] 3.2.4 Object: Video
+	- [x] 3.2.5 Object: Native
 	- [x] 3.2.6 Object: Site
 	- [x] 3.2.7 Object: App
 	- [x] 3.2.8 Object: Publisher
