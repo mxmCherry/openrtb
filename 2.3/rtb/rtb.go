@@ -622,7 +622,7 @@ type Video struct {
 	//   Indicates the start delay in seconds for pre-roll, mid-roll, or
 	//   post-roll ad placements. Refer to List 5.10 for additional
 	//   generic values.
-	StartDely int64 `json:"startdelay"`
+	StartDelay int64 `json:"startdelay"`
 
 	// Attribute:
 	//   linearity
@@ -769,7 +769,7 @@ type Native struct {
 	//   string; required
 	// Description:
 	//   Request payload complying with the Native Ad Specification.
-	request string `json:"request"`
+	Request string `json:"request"`
 
 	// Attribute:
 	//   ver
