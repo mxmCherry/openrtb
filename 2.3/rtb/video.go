@@ -1,5 +1,22 @@
 package rtb
 
+// Maximum extended video ad duration if extension is allowed.
+// If blank or 0, extension is not allowed. If -1, extension is
+// allowed, and there is no time limit imposed. If greater than 0,
+// then the value represents the number of seconds of extended
+// play supported beyond the maxduration value.
+const (
+	VideoMaxExtendedUnlimited  int64 = -1 // If -1, extension is allowed, and there is no time limit imposed
+	VideoMaxExtendedNotAllowed int64 =  0 // If blank or 0, extension is not allowed
+)
+
+// Indicates if letter-boxing of 4:3 content into a 16:9 window is
+// allowed, where 0 = no, 1 = yes.
+const (
+	VideoBoxingAllowedNo  uint8 = 0 // 0 = no
+	VideoBoxingAllowedYes uint8 = 1 // 1 = yes
+)
+
 // 3.2.4 Object: Video
 //   This object represents an in-stream video impression. Many of the fields are non-essential for minimally
 //   viable transactions, but are included to offer fine control when needed. Video in OpenRTB generally
@@ -177,6 +194,13 @@ type Video struct {
 	//   Ad position on screen. Refer to List 5.4
 	Pos int64 `json:"pos"`
 
+	// Attribute:
+	//   companionad
+	// Type:
+	//   object array
+	// Description:
+	//   Array of Banner objects (Section 3.2.3) if companion ads are
+	//   available.
 	CompanionAd []Banner `json:"companionad"`
 
 	// Attribute:

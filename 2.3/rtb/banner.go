@@ -1,5 +1,12 @@
 package rtb
 
+// Indicates if the banner is in the top frame as opposed to an
+// iframe, where 0 = no, 1 = yes.
+const (
+	BannerTopFrameNo  uint8 = 0 // 0 = no
+	BannerTopFrameYes uint8 = 1 // 1 = yes
+)
+
 // 3.2.3 Object: Banner
 //   This object represents the most general type of impression. Although the term “banner” may have very
 //   specific meaning in other contexts, here it can be many things including a simple static image, an

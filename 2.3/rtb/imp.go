@@ -1,5 +1,20 @@
 package rtb
 
+// 1 = the ad is interstitial or full screen, 0 = not interstitial.
+const (
+	ImpInstlNo  uint8 = 0 // 0 = not interstitial
+	ImpInstlYes uint8 = 1 // 1 = the ad is interstitial or full screen
+)
+
+// Flag to indicate if the impression requires secure HTTPS URL
+// creative assets and markup, where 0 = non-secure, 1 = secure.
+// If omitted, the secure state is unknown, but non-secure HTTP
+// support can be assumed.
+const (
+	ImpSecureNo  uint8 = 0 // 0 = non-secure
+	ImpSecureYes uint8 = 1 // 1 = secure
+)
+
 // 3.2.2 Object: Imp
 //   This object describes an ad placement or impression being auctioned. A single bid request can include
 //   multiple Imp objects, a use case for which might be an exchange that supports selling all ad positions on
@@ -64,7 +79,7 @@ type Imp struct {
 	//   int; default 0
 	// Description:
 	//   1 = the ad is interstitial or full screen, 0 = not interstitial.
-	Instl int8 `json:"instl"`
+	Instl uint8 `json:"instl"`
 
 	// Attribute:
 	//   tagid
