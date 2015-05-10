@@ -1,7 +1,7 @@
 package rtb
 
 // Gender, where “M” = male, “F” = female, “O” = known to be
-//   other (i.e., omitted is unknown).
+// other (i.e., omitted is unknown).
 const (
 	UserGenderMale    string = "M" // “M” = male
 	UserGenderFemale  string = "F" // “F” = female
@@ -10,10 +10,11 @@ const (
 )
 
 // 3.2.13 Object: User
-//   This object contains information known or derived about the human user of the device (i.e., the
-//   audience for advertising). The user id is an exchange artifact and may be subject to rotation or other
-//   privacy policies. However, this user ID must be stable long enough to serve reasonably as the basis for
-//   frequency capping and retargeting.
+// 
+// This object contains information known or derived about the human user of the device (i.e., the
+// audience for advertising). The user id is an exchange artifact and may be subject to rotation or other
+// privacy policies. However, this user ID must be stable long enough to serve reasonably as the basis for
+// frequency capping and retargeting.
 type User struct {
 
 	// Attribute:

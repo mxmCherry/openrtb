@@ -7,12 +7,13 @@ const (
 )
 
 // 3.2.7 Object: App
-//   This object should be included if the ad supported content is a non-browser application (typically in
-//   mobile) as opposed to a website. A bid request must not contain both an App and a Site object. At a
-//   minimum, it is useful to provide an App ID or bundle, but this is not strictly required.
+// 
+// This object should be included if the ad supported content is a non-browser application (typically in
+// mobile) as opposed to a website. A bid request must not contain both an App and a Site object. At a
+// minimum, it is useful to provide an App ID or bundle, but this is not strictly required.
 type App struct {
 
-	// Attrubute:
+	// Attribute:
 	//   id
 	// Type:
 	//   string; recommended
@@ -22,7 +23,7 @@ type App struct {
 
 	// Attribute:
 	//   name
-	// Tyoe:
+	// Type:
 	//   string
 	// Description:
 	//   App name (may be aliased at the publisher’s request).

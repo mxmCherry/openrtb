@@ -22,9 +22,10 @@ const (
 )
 
 // 3.2.11 Object: Device
-//   This object provides information pertaining to the device through which the user is interacting. Device
-//   information includes its hardware, platform, location, and carrier data. The device can refer to a mobile
-//   handset, a desktop computer, set top box, or other digital device.
+// 
+// This object provides information pertaining to the device through which the user is interacting. Device
+// information includes its hardware, platform, location, and carrier data. The device can refer to a mobile
+// handset, a desktop computer, set top box, or other digital device.
 type Device struct {
 
 	// Attribute:

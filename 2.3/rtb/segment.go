@@ -1,9 +1,10 @@
 package rtb
 
 // 3.2.15 Object: Segment
-//   Segment objects are essentially key-value pairs that convey specific units of data about the user. The
-//   parent Data object is a collection of such values from a given data provider. The specific segment
-//   names and value options must be published by the exchange a priori to its bidders.
+// 
+// Segment objects are essentially key-value pairs that convey specific units of data about the user. The
+// parent Data object is a collection of such values from a given data provider. The specific segment
+// names and value options must be published by the exchange a priori to its bidders.
 type Segment struct {
 
 	// Attribute:
