@@ -7,7 +7,7 @@ package rtb
 // play supported beyond the maxduration value.
 const (
 	VideoMaxExtendedUnlimited  int64 = -1 // If -1, extension is allowed, and there is no time limit imposed
-	VideoMaxExtendedNotAllowed int64 =  0 // If blank or 0, extension is not allowed
+	VideoMaxExtendedNotAllowed int64 = 0  // If blank or 0, extension is not allowed
 )
 
 // Indicates if letter-boxing of 4:3 content into a 16:9 window is
@@ -18,7 +18,7 @@ const (
 )
 
 // 3.2.4 Object: Video
-// 
+//
 // This object represents an in-stream video impression. Many of the fields are non-essential for minimally
 // viable transactions, but are included to offer fine control when needed. Video in OpenRTB generally
 // assumes compliance with the VAST standard. As such, the notion of companion ads is supported by

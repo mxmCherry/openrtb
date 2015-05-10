@@ -25,11 +25,11 @@ const (
 )
 
 // 3.2.1 Object: BidRequest
-// 
+//
 // The top-level bid request object contains a globally unique bid request or auction ID. This id attribute is
 // required as is at least one impression object (Section 3.2.2). Other attributes in this top-level object
 // establish rules and restrictions that apply to all impressions being offered.
-// 
+//
 // There are also several subordinate objects that provide detailed data to potential buyers. Among these
 // are the Site and App objects, which describe the type of published media in which the impression(s)
 // appear. These objects are highly recommended, but only one applies to a given bid request depending

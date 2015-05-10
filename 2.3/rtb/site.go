@@ -13,7 +13,7 @@ const (
 )
 
 // 3.2.6 Object: Site
-// 
+//
 // This object should be included if the ad supported content is a website as opposed to a non-browser
 // application. A bid request must not contain both a Site and an App object. At a minimum, it is useful
 // to provide a site ID or page URL, but this is not strictly required.

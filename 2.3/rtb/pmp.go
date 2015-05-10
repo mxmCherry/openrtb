@@ -8,7 +8,7 @@ const (
 )
 
 // 3.2.17 Object: Pmp
-// 
+//
 // This object is the private marketplace container for direct deals between buyers and sellers that may pertain
 // to this impression. The actual deals are represented as a collection of Deal objects. Refer to Section 7.2
 // for more details.

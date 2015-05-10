@@ -16,11 +16,11 @@ const (
 )
 
 // 3.2.2 Object: Imp
-// 
+//
 // This object describes an ad placement or impression being auctioned. A single bid request can include
 // multiple Imp objects, a use case for which might be an exchange that supports selling all ad positions on
 // a given page. Each Imp object has a required ID so that bids can reference them individually.
-// 
+//
 // The presence of Banner (Section 3.2.3), Video (Section 3.2.4), and/or Native (Section 3.2.5) objects
 // subordinate to the Imp object indicates the type of impression being offered. The publisher can choose
 // one such type which is the typical case or mix them at their discretion. However, any given bid for the

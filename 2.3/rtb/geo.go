@@ -9,7 +9,7 @@ const (
 )
 
 // 3.2.12 Object: Geo
-// 
+//
 // This object encapsulates various methods for specifying a geographic location. When subordinate to a
 // Device object, it indicates the location of the device which can also be interpreted as the user’s current
 // location. When subordinate to a User object, it indicates the location of the user’s home base (i.e., not

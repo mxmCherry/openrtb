@@ -1,7 +1,7 @@
 package rtb
 
 // 3.2.5 Object: Native
-// 
+//
 // This object represents a native type impression. Native ad units are intended to blend seamlessly into
 // the surrounding content (e.g., a sponsored Twitter or Facebook post). As such, the response must be
 // well-structured to afford the publisher fine-grained control over rendering.
