@@ -27,10 +27,10 @@ Common [OpenRTB](//github.com/openrtb/OpenRTB) [v2.3](//github.com/openrtb/OpenR
 	- [x] 3.2.16 Object: Regs
 	- [x] 3.2.17 Object: Pmp
 	- [x] 3.2.18 Object: Deal
-- [ ] 4.2 Object Specifications
-	- [ ] 4.2.1 Object: BidResponse
-	- [ ] 4.2.2 Object: SeatBid
-	- [ ] 4.2.3 Object: Bid
+- [x] 4.2 Object Specifications
+	- [x] 4.2.1 Object: BidResponse
+	- [x] 4.2.2 Object: SeatBid
+	- [x] 4.2.3 Object: Bid
 - [ ] Code quality/review
 	- [ ] Check types for struct keys (see Guidelines - Types)
 	- [ ] Use struct pointers for optional keys (e.g., App.Content)
