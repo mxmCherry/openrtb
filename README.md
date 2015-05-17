@@ -31,6 +31,26 @@ Common [OpenRTB](//github.com/openrtb/OpenRTB) [v2.3](//github.com/openrtb/OpenR
 	- [x] 4.2.1 Object: BidResponse
 	- [x] 4.2.2 Object: SeatBid
 	- [x] 4.2.3 Object: Bid
+- [ ] 5. Enumerated Lists Specification
+	- [ ] 5.1 Content Categories
+	- [ ] 5.2 Banner Ad Types
+	- [ ] 5.3 Creative Attributes
+	- [ ] 5.4 Ad Position
+	- [ ] 5.5 Expandable Direction
+	- [ ] 5.6 API Frameworks
+	- [ ] 5.7 Video Linearity
+	- [ ] 5.8 Video Bid Response Protocols
+	- [ ] 5.9 Video Playback Methods
+	- [ ] 5.10 Video Start Delay
+	- [ ] 5.11 Video Quality
+	- [ ] 5.12 VAST Companion Types
+	- [ ] 5.13 Content Delivery Methods
+	- [ ] 5.14 Content Context
+	- [ ] 5.15 QAG Media Ratings
+	- [ ] 5.16 Location Type
+	- [ ] 5.17 Device Type
+	- [ ] 5.18 Connection Type
+	- [ ] 5.19 No-Bid Reason Codes
 - [ ] Code quality/review
 	- [ ] Check types for struct keys (see Guidelines - Types)
 	- [ ] Use struct pointers for optional keys (e.g., App.Content)
