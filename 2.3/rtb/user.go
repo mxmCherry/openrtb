@@ -1,14 +1,5 @@
 package rtb
 
-// Gender, where “M” = male, “F” = female, “O” = known to be
-// other (i.e., omitted is unknown).
-const (
-	UserGenderMale    string = "M" // “M” = male
-	UserGenderFemale  string = "F" // “F” = female
-	UserGenderOther   string = "O" // “O” = known to be other
-	UserGenderUnknown string = ""  // omitted is unknown
-)
-
 // 3.2.13 Object: User
 //
 // This object contains information known or derived about the human user of the device (i.e., the

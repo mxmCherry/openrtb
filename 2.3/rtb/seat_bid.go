@@ -1,12 +1,5 @@
 package rtb
 
-// 0 = impressions can be won individually; 1 = impressions must
-// be won or lost as a group.
-const (
-	SeatBidGroupNo  uint8 = 0 // 0 = impressions can be won individually
-	SeatBidGroupYes uint8 = 1 // 1 = impressions must be won or lost as a group
-)
-
 // 4.2.2 Object: SeatBid
 //
 // A bid response can contain multiple SeatBid objects, each on behalf of a different bidder seat and each

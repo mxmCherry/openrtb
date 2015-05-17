@@ -1,24 +1,5 @@
 package rtb
 
-// 0 = not live, 1 = content is live (e.g., stream, live blog).
-const (
-	ContentLiveStreamNo  uint8 = 0 // 0 = not live
-	ContentLiveStreamYes uint8 = 1 // 1 = content is live (e.g., stream, live blog)
-)
-
-// 0 = indirect, 1 = direct.
-const (
-	ContentSourceRelationshipIndirect uint8 = 0 // 0 = indirect
-	ContentSourceRelationshipDirect   uint8 = 1 // 1 = direct
-)
-
-// Indicator of whether or not the content is embeddable (e.g.,
-// an embeddable video player), where 0 = no, 1 = yes.
-const (
-	ContentEmbeddableNo  uint8 = 0 // 0 = no
-	ContentEmbeddableYes uint8 = 1 // 1 = yes
-)
-
 // 3.2.9 Object: Content
 //
 // This object describes the content in which the impression will appear, which may be syndicated or nonsyndicated

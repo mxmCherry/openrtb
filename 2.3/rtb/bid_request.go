@@ -1,29 +1,5 @@
 package rtb
 
-// Indicator of test mode in which auctions are not billable, where 0 = live mode, 1 = test mode.
-const (
-	BidRequestTestLive = 0 // 0 = live mode
-	BidRequestTestTest = 1 // 1 = test mode
-)
-
-// Auction type, where 1 = First Price, 2 = Second Price Plus.
-// Exchange-specific auction types can be defined using values
-// greater than 500.
-const (
-	BidRequestATFirstPrice      uint8 = 1 // 1 = First Price
-	BidRequestATSecondPricePlus uint8 = 2 // 2 = Second Price Plus (default)
-)
-
-// Flag to indicate if Exchange can verify that the impressions
-// offered represent all of the impressions available in context
-// (e.g., all on the web page, all video spots such as pre/mid/post
-// roll) to support road-blocking. 0 = no or unknown, 1 = yes, the
-// impressions offered represent all that are available.
-const (
-	BidRequestAllImpsNo  uint8 = 0 // 0 = no or unknown
-	BidRequestAllImpsYes uint8 = 1 // 1 = yes, the impressions offered represent all that are available.
-)
-
 // 3.2.1 Object: BidRequest
 //
 // The top-level bid request object contains a globally unique bid request or auction ID. This id attribute is

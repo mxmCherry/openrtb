@@ -1,12 +1,5 @@
 package rtb
 
-// Indicator of auction eligibility to seats named in the Direct Deals object, where 0 = all bids are accepted,
-// 1 = bids are restricted to the deals specified and the terms thereof.
-const (
-	PMPPrivateAuctionUnrestricted uint8 = 0 // 0 = all bids are accepted
-	PMPPrivateAuctionRestricted   uint8 = 1 // 1 = bids are restricted to the deals specified and the terms thereof
-)
-
 // 3.2.17 Object: Pmp
 //
 // This object is the private marketplace container for direct deals between buyers and sellers that may pertain

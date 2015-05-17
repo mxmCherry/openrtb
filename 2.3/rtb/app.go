@@ -1,11 +1,5 @@
 package rtb
 
-// Indicates if the app has a privacy policy, where 0 = no, 1 = yes.
-const (
-	AppPrivacyPolicyNo  uint8 = 0 // 0 = no
-	AppPrivacyPolicyYes uint8 = 1 // 1 = yes
-)
-
 // 3.2.7 Object: App
 //
 // This object should be included if the ad supported content is a non-browser application (typically in

@@ -1,26 +1,5 @@
 package rtb
 
-// Standard “Do Not Track” flag as set in the header by the
-// browser, where 0 = tracking is unrestricted, 1 = do not track.
-const (
-	DeviceDNTUnrestricted uint8 = 0 // 0 = tracking is unrestricted
-	DeviceDNT             uint8 = 1 // 1 = do not track
-)
-
-// “Limit Ad Tracking” signal commercially endorsed (e.g., iOS,
-// Android), where 0 = tracking is unrestricted, 1 = tracking must
-// be limited per commercial guidelines.
-const (
-	DeviceLmtUnrestricted uint8 = 0 // 0 = tracking is unrestricted
-	DeviceLmtLimited      uint8 = 1 // 1 = tracking must be limited per commercial guidelines.
-)
-
-// Support for JavaScript, where 0 = no, 1 = yes.
-const (
-	DeviceJSNo  uint8 = 0 // 0 = no
-	DeviceJSYes uint8 = 1 // 1 = yes
-)
-
 // 3.2.11 Object: Device
 //
 // This object provides information pertaining to the device through which the user is interacting. Device

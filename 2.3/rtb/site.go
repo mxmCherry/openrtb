@@ -1,17 +1,5 @@
 package rtb
 
-// Mobile-optimized signal, where 0 = no, 1 = yes.
-const (
-	SiteMobileNo  uint8 = 0 // 0 = no
-	SiteMobileYes uint8 = 1 // 1 = yes
-)
-
-// Indicates if the site has a privacy policy, where 0 = no, 1 = yes.
-const (
-	SitePrivacyPolicyNo  uint8 = 0 // 0 = no
-	SitePrivacyPolicyYes uint8 = 1 // 1 = yes
-)
-
 // 3.2.6 Object: Site
 //
 // This object should be included if the ad supported content is a website as opposed to a non-browser

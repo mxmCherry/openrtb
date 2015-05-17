@@ -1,13 +1,5 @@
 package rtb
 
-// 5.16 Location Type
-//   The following table lists the options to indicate how the geographic information was determined.
-const (
-	GeoTypeGPS          uint8 = 1 // 1 GPS/Location Services
-	GeoTypeIP           uint8 = 2 // 2 IP Address
-	GeoTypeUserProvided uint8 = 3 // 3 User provided (e.g., registration data)
-)
-
 // 3.2.12 Object: Geo
 //
 // This object encapsulates various methods for specifying a geographic location. When subordinate to a
