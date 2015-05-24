@@ -22,7 +22,7 @@ type Banner struct {
 	//   Width of the impression in pixels.
 	//   If neither wmin nor wmax are specified, this value is an exact
 	//   width requirement. Otherwise it is a preferred width.
-	W int64 `json:"w"`
+	W uint64 `json:"w"`
 
 	// Attribute:
 	//   h
@@ -32,7 +32,7 @@ type Banner struct {
 	//   Height of the impression in pixels.
 	//   If neither hmin nor hmax are specified, this value is an exact
 	//   height requirement. Otherwise it is a preferred height.
-	H int64 `json:"h"`
+	H uint64 `json:"h"`
 
 	// Attribute:
 	//   wmax
@@ -42,7 +42,7 @@ type Banner struct {
 	//   Maximum width of the impression in pixels.
 	//   If included along with a w value then w should be interpreted
 	//   as a recommended or preferred width.
-	WMax int64 `json:"wmax"`
+	WMax uint64 `json:"wmax"`
 
 	// Attribute:
 	//   hmax
@@ -52,7 +52,7 @@ type Banner struct {
 	//   Maximum height of the impression in pixels.
 	//   If included along with an h value then h should be interpreted
 	//   as a recommended or preferred height.
-	HMax int64 `json:"hmax"`
+	HMax uint64 `json:"hmax"`
 
 	// Attribute:
 	//   wmin
@@ -62,7 +62,7 @@ type Banner struct {
 	//   Minimum width of the impression in pixels.
 	//   If included along with a w value then w should be interpreted
 	//   as a recommended or preferred width.
-	WMin int64 `json:"wmin"`
+	WMin uint64 `json:"wmin"`
 
 	// Attribute:
 	//   hmin
@@ -72,7 +72,7 @@ type Banner struct {
 	//   Minimum height of the impression in pixels.
 	//   If included along with an h value then h should be interpreted
 	//   as a recommended or preferred height.
-	HMin int64 `json:"hmin"`
+	HMin uint64 `json:"hmin"`
 
 	// Attribute:
 	//   id
@@ -92,7 +92,7 @@ type Banner struct {
 	//   integer array
 	// Description:
 	//   Blocked banner ad types. Refer to List 5.2.
-	BType []int64 `json:"btype"`
+	BType []uint8 `json:"btype"`
 
 	// Attribute:
 	//   battr
@@ -100,7 +100,7 @@ type Banner struct {
 	//   integer array
 	// Description:
 	//   Blocked creative attributes. Refer to List 5.3.
-	BAttr []int64 `json:"battr"`
+	BAttr []uint8 `json:"battr"`
 
 	// Attribute:
 	//   pos
@@ -108,7 +108,7 @@ type Banner struct {
 	//   integer
 	// Description:
 	//   Ad position on screen. Refer to List 5.4
-	Pos int64 `json:"pos"`
+	Pos uint8 `json:"pos"`
 
 	// Attribute:
 	//   mimes
@@ -126,7 +126,7 @@ type Banner struct {
 	// Description:
 	//    Indicates if the banner is in the top frame as opposed to an
 	//    iframe, where 0 = no, 1 = yes.
-	TopFrame int8 `json:"topframe"`
+	TopFrame uint8 `json:"topframe"`
 
 	// Attribute:
 	//   expdir
@@ -134,7 +134,7 @@ type Banner struct {
 	//   integer array
 	// Description:
 	//   Directions in which the banner may expand. Refer to List 5.5.
-	ExpDir []int64 `json:"expdir"`
+	ExpDir []uint8 `json:"expdir"`
 
 	// Attribute:
 	//   api
@@ -143,7 +143,7 @@ type Banner struct {
 	// Description:
 	//   List of supported API frameworks for this impression. Refer to
 	//   List 5.6. If an API is not explicitly listed, it is assumed not to be supported.
-	API []int64 `json:"api"`
+	API []uint8 `json:"api"`
 
 	// Attribute:
 	//   ext

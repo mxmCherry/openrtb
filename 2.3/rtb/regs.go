@@ -14,7 +14,7 @@ type Regs struct {
 	// Description:
 	//   Flag indicating if this request is subject to the COPPA
 	//   regulations established by the USA FTC, where 0 = no, 1 = yes.
-	COPPA int8 `json:"coppa"`
+	COPPA uint8 `json:"coppa"`
 
 	// Attribute:
 	//   ext

@@ -93,7 +93,7 @@ type Imp struct {
 	//   Currency specified using ISO-4217 alpha codes. This may be
 	//   different from bid currency returned by bidder if this is
 	//   allowed by the exchange.
-	BidFloorCur float64 `json:"bidfloorcur"`
+	BidFloorCur string `json:"bidfloorcur"`
 
 	// Attribute:
 	//   secure
@@ -104,7 +104,7 @@ type Imp struct {
 	//   creative assets and markup, where 0 = non-secure, 1 = secure.
 	//   If omitted, the secure state is unknown, but non-secure HTTP
 	//   support can be assumed.
-	Secure int8 `json:"secure"`
+	Secure uint8 `json:"secure"`
 
 	// Attribute:
 	//   iframebuster

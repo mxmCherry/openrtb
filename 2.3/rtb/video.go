@@ -29,7 +29,7 @@ type Video struct {
 	//   integer; recommended
 	// Description:
 	//   Minimum video ad duration in seconds.
-	MinDuration int64 `json:"minduration"`
+	MinDuration uint64 `json:"minduration"`
 
 	// Attribute:
 	//   maxduration
@@ -37,7 +37,7 @@ type Video struct {
 	//   integer; recommended
 	// Description:
 	//   Maximum video ad duration in seconds.
-	MaxDuration int64 `json:"maxduration"`
+	MaxDuration uint64 `json:"maxduration"`
 
 	// Attribute:
 	//   protocol
@@ -48,7 +48,7 @@ type Video struct {
 	//   Supported video bid response protocol. Refer to List 5.8. At
 	//   least one supported protocol must be specified in either the
 	//   protocol or protocols attribute.
-	Protocol []int64 `json:"protocol"`
+	Protocol []uint8 `json:"protocol"`
 
 	// Attribute:
 	//   protocols
@@ -58,7 +58,7 @@ type Video struct {
 	//   Array of supported video bid response protocols. Refer to List
 	//   5.8. At least one supported protocol must be specified in
 	//   either the protocol or protocols attribute.
-	Protocols []int64 `json:"protocols"`
+	Protocols []uint8 `json:"protocols"`
 
 	// Attribute:
 	//   w
@@ -66,7 +66,7 @@ type Video struct {
 	//   integer; recommended
 	// Description:
 	//   Width of the video player in pixels.
-	W int64 `json:"w"`
+	W uint64 `json:"w"`
 
 	// Attribute:
 	//   h
@@ -74,7 +74,7 @@ type Video struct {
 	//   integer; recommended
 	// Description:
 	//   Height of the video player in pixels.
-	H int64 `json:"h"`
+	H uint64 `json:"h"`
 
 	// Attribute:
 	//   startdelay
@@ -93,7 +93,7 @@ type Video struct {
 	// Description:
 	//   Indicates if the impression must be linear, nonlinear, etc. If
 	//   none specified, assume all are allowed. Refer to List 5.7.
-	Linearity int8 `json:"linearity"`
+	Linearity uint8 `json:"linearity"`
 
 	// Attribute:
 	//   sequence
@@ -103,15 +103,15 @@ type Video struct {
 	//   If multiple ad impressions are offered in the same bid request,
 	//   the sequence number will allow for the coordinated delivery
 	//   of multiple creatives.
-	Sequence int64 `json:"sequence"`
+	Sequence uint8 `json:"sequence"`
 
 	// Attribute:
-	//   sequence
+	//   battr
 	// Type:
 	//   integer array
 	// Description:
 	//   Blocked creative attributes. Refer to List 5.3.
-	BAttr []int64 `json:"battr"`
+	BAttr []uint8 `json:"battr"`
 
 	// Attribute:
 	//   maxextended
@@ -132,7 +132,7 @@ type Video struct {
 	// Description:
 	//   Minimum bit rate in Kbps. Exchange may set this dynamically
 	//   or universally across their set of publishers.
-	MinBitRate int64 `json:"minbitrate"`
+	MinBitRate uint64 `json:"minbitrate"`
 
 	// Attribute:
 	//   maxbitrate
@@ -141,7 +141,7 @@ type Video struct {
 	// Description:
 	//   Maximum bit rate in Kbps. Exchange may set this dynamically
 	//   or universally across their set of publishers.
-	MaxBitRate int64 `json:"maxbitrate"`
+	MaxBitRate uint64 `json:"maxbitrate"`
 
 	// Attribute:
 	//   boxingallowed
@@ -150,7 +150,7 @@ type Video struct {
 	// Description:
 	//   Indicates if letter-boxing of 4:3 content into a 16:9 window is
 	//   allowed, where 0 = no, 1 = yes.
-	BoxingAllowed int8 `json:"boxingallowed"`
+	BoxingAllowed uint8 `json:"boxingallowed"`
 
 	// Attribute:
 	//   playbackmethod
@@ -159,7 +159,7 @@ type Video struct {
 	// Description:
 	//   Allowed playback methods. If none specified, assume all are
 	//   allowed. Refer to List 5.9.
-	PlaybackMethod []int64 `json:"playbackmethod"`
+	PlaybackMethod []uint8 `json:"playbackmethod"`
 
 	// Attribute:
 	//   delivery
@@ -168,7 +168,7 @@ type Video struct {
 	// Description:
 	//   Supported delivery methods (e.g., streaming, progressive). If
 	//   none specified, assume all are supported. Refer to List 5.13.
-	Delivery []int64 `json:"delivery"`
+	Delivery []uint8 `json:"delivery"`
 
 	// Attribute:
 	//   pos
@@ -176,7 +176,7 @@ type Video struct {
 	//   integer
 	// Description:
 	//   Ad position on screen. Refer to List 5.4
-	Pos int64 `json:"pos"`
+	Pos uint8 `json:"pos"`
 
 	// Attribute:
 	//   companionad
@@ -194,7 +194,7 @@ type Video struct {
 	// Description:
 	//   List of supported API frameworks for this impression. Refer to
 	//   List 5.6. If an API is not explicitly listed, it is assumed not to be supported.
-	API []int64 `json:"api"`
+	API []uint8 `json:"api"`
 
 	// Attribute:
 	//   companiontype
@@ -204,7 +204,7 @@ type Video struct {
 	//   Supported VAST companion ad types. Refer to List 5.12.
 	//   Recommended if companion Banner objects are included via
 	//   the companionad array.
-	CompanionType []int64 `json:"companiontype"`
+	CompanionType []uint8 `json:"companiontype"`
 
 	// Attribute:
 	//   ext

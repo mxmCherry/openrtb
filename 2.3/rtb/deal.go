@@ -40,7 +40,7 @@ type Deal struct {
 	//   Optional override of the overall auction type of the bid request, where 1 = First Price,
 	//   2 = Second Price Plus, 3 = the value passed in bidfloor is the agreed upon deal price. Additional
 	//   auction types can be defined by the exchange.
-	AT int8 `json:"at"`
+	AT uint8 `json:"at"`
 
 	// Attribute:
 	//   wseat

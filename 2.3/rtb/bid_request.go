@@ -87,7 +87,7 @@ type BidRequest struct {
 	//   integer
 	// Description:
 	//    Maximum time in milliseconds to submit a bid to avoid timeout. This value is commonly communicated offline.
-	TMax int64 `json:"tmax"`
+	TMax uint64 `json:"tmax"`
 
 	// Attribute:
 	//   wseat

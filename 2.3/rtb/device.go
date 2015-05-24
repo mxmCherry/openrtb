@@ -65,7 +65,7 @@ type Device struct {
 	//   integer
 	// Description:
 	//   The general type of device. Refer to List 5.17.
-	DeviceType uint64 `json:"devicetype"`
+	DeviceType uint8 `json:"devicetype"`
 
 	// Attribute:
 	//   make
