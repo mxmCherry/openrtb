@@ -34,7 +34,7 @@ Common [OpenRTB](//github.com/openrtb/OpenRTB) [v2.3](//github.com/openrtb/OpenR
 - [ ] Code quality/review
 	- [ ] Review struct key types, which refer to section "5. Enumerated Lists Specification"
 	- [ ] Check types for struct keys (see Guidelines - Types)
-	- [ ] Use struct pointers for optional keys (e.g., App.Content)
+	- [x] Use struct pointers for optional keys (e.g., App.Content)
 	- [ ] Add json directive "omitempty" for optional keys
 
 

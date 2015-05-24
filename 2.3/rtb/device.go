@@ -22,7 +22,7 @@ type Device struct {
 	// Description:
 	//   Location of the device assumed to be the user’s current
 	//   location defined by a Geo object (Section 3.2.12).
-	Geo Geo `json:"geo"`
+	Geo *Geo `json:"geo"`
 
 	// Attribute:
 	//   dnt

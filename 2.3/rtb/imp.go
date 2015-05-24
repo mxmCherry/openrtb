@@ -28,7 +28,7 @@ type Imp struct {
 	// Description:
 	//   A Banner object (Section 3.2.3); required if this impression is
 	//   offered as a banner ad opportunity.
-	Banner Banner `json:"banner"`
+	Banner *Banner `json:"banner"`
 
 	// Attribute:
 	//   video
@@ -37,7 +37,7 @@ type Imp struct {
 	// Description:
 	//   A Video object (Section 3.2.4); required if this impression is
 	//   offered as a video ad opportunity.
-	Video Video `json:"video"`
+	Video *Video `json:"video"`
 
 	// Attribute:
 	//   native
@@ -46,7 +46,7 @@ type Imp struct {
 	// Description:
 	//   A Native object (Section 3.2.5); required if this impression is
 	//   offered as a native ad opportunity
-	Native Native `json:"native"`
+	Native *Native `json:"native"`
 
 	// Attribute:
 	//   displaymanager
@@ -120,7 +120,7 @@ type Imp struct {
 	//   object
 	// Description:
 	//   A Pmp object (Section 3.2.17) containing any private marketplace deals in effect for this impression.
-	PMP PMP `json:"pmp"`
+	PMP *PMP `json:"pmp"`
 
 	// Attribute:
 	//   ext

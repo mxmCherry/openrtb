@@ -103,7 +103,7 @@ type Site struct {
 	//   object
 	// Description:
 	//   Details about the Publisher (Section 3.2.8) of the site.
-	Publisher Publisher `json:"publisher"`
+	Publisher *Publisher `json:"publisher"`
 
 	// Attribute:
 	//   content
@@ -111,7 +111,7 @@ type Site struct {
 	//   object
 	// Description:
 	//   Details about the Content (Section 3.2.9) within the site.
-	Content Content `json:"content"`
+	Content *Content `json:"content"`
 
 	// Attribute:
 	//   keywords

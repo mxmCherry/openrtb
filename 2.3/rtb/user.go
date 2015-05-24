@@ -69,7 +69,7 @@ type User struct {
 	// Description:
 	//   Location of the user’s home base defined by a Geo object
 	//   (Section 3.2.12). This is not necessarily their current location.
-	Geo Geo `json:"geo"`
+	Geo *Geo `json:"geo"`
 
 	// Attribute:
 	//   data
@@ -78,7 +78,7 @@ type User struct {
 	// Description:
 	//   Additional user data. Each Data object (Section 3.2.14)
 	//   represents a different data source.
-	Data Data `json:"data"`
+	Data []Data `json:"data"`
 
 	// Attribute:
 	//   ext

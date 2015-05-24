@@ -104,7 +104,7 @@ type App struct {
 	//   object
 	// Description:
 	//   Details about the Publisher (Section 3.2.8) of the app.
-	Publisher Publisher `json:"publisher"`
+	Publisher *Publisher `json:"publisher"`
 
 	// Attribute:
 	//   content
@@ -112,7 +112,7 @@ type App struct {
 	//   object
 	// Description:
 	//   Details about the Content (Section 3.2.9) within the app.
-	Content Content `json:"content"`
+	Content *Content `json:"content"`
 
 	// Attribute:
 	//   keywords

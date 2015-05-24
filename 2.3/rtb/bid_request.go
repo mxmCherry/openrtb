@@ -36,7 +36,7 @@ type BidRequest struct {
 	// Description:
 	//    Details via a Site object (Section 3.2.6) about the publisher's
 	//    website. Only applicable and recommended for websites.
-	Site Site `json:"site"`
+	Site *Site `json:"site"`
 
 	// Attribute:
 	//   app
@@ -45,15 +45,15 @@ type BidRequest struct {
 	// Description:
 	//    Details via an App object (Section 3.2.7) about the publisher's
 	//    app (i.e. non-browser applications). Only applicable and recommended for apps.
-	App App `json:"app"`
+	App *App `json:"app"`
 
 	// Attribute:
 	//   device
 	// Type:
 	//   object; recommended
 	// Description:
-	//    Details via a Device object (Section 3.2.11) about the user’s device to which the impression will be delivered.
-	Device Device `json:"device"`
+	//   Details via a Device object (Section 3.2.11) about the user’s device to which the impression will be delivered.
+	Device *Device `json:"device"`
 
 	// Attribute:
 	//   user
@@ -61,7 +61,7 @@ type BidRequest struct {
 	//   object; recommended
 	// Description:
 	//    Details via a User object (Section 3.2.13) about the human user of the device; the advertising audience.
-	User User `json:"user"`
+	User *User `json:"user"`
 
 	// Attribute:
 	//   test
@@ -142,7 +142,7 @@ type BidRequest struct {
 	// Description:
 	//   Blocked advertiser categories using the IAB content categories. Refer to List 5.1. or governmental
 	//   regulations in force for this request.
-	Regs Regs `json:"regs"`
+	Regs *Regs `json:"regs"`
 
 	// Attribute:
 	//   ext

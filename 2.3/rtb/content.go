@@ -62,7 +62,7 @@ type Content struct {
 	//   object
 	// Description:
 	//   Details about the content Producer (Section 3.2.10).
-	Producer Producer `json:"producer"`
+	Producer *Producer `json:"producer"`
 
 	// Attribute:
 	//   url
