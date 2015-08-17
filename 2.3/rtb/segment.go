@@ -13,7 +13,7 @@ type Segment struct {
 	//   string
 	// Description:
 	//   ID of the data segment specific to the data provider.
-	ID string `json:"id"`
+	ID string `json:"id,omitempty"`
 
 	// Attribute:
 	//   name
@@ -21,7 +21,7 @@ type Segment struct {
 	//   string
 	// Description:
 	//   Name of the data segment specific to the data provider.
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 
 	// Attribute:
 	//   value
@@ -29,7 +29,7 @@ type Segment struct {
 	//   string
 	// Description:
 	//   String representation of the data segment value.
-	Value string `json:"value"`
+	Value string `json:"value,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -37,5 +37,5 @@ type Segment struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }

@@ -15,7 +15,7 @@ type Content struct {
 	//   string
 	// Description:
 	//   ID uniquely identifying the content.
-	ID string `json:"id"`
+	ID string `json:"id,omitempty"`
 
 	// Attribute:
 	//   episode
@@ -23,7 +23,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   Episode number (typically applies to video content).
-	Episode uint64 `json:"episode"`
+	Episode uint64 `json:"episode,omitempty"`
 
 	// Attribute:
 	//   title
@@ -35,7 +35,7 @@ type Content struct {
 	//   Hope” (movie), or “Endgame” (made for web).
 	//   Non-Video Example: “Why an Antarctic Glacier Is Melting So
 	//   Quickly” (Time magazine article).
-	Title string `json:"title"`
+	Title string `json:"title,omitempty"`
 
 	// Attribute:
 	//   series
@@ -46,7 +46,7 @@ type Content struct {
 	//   Video Examples: “The Office” (television), “Star Wars” (movie),
 	//   or “Arby ‘N’ The Chief” (made for web).
 	//   Non-Video Example: “Ecocentric” (Time Magazine blog).
-	Series string `json:"series"`
+	Series string `json:"series,omitempty"`
 
 	// Attribute:
 	//   season
@@ -54,7 +54,7 @@ type Content struct {
 	//   string
 	// Description:
 	//   Content season; typically for video content (e.g., “Season 3”).
-	Season string `json:"season"`
+	Season string `json:"season,omitempty"`
 
 	// Attribute:
 	//   producer
@@ -62,7 +62,7 @@ type Content struct {
 	//   object
 	// Description:
 	//   Details about the content Producer (Section 3.2.10).
-	Producer *Producer `json:"producer"`
+	Producer *Producer `json:"producer,omitempty"`
 
 	// Attribute:
 	//   url
@@ -70,7 +70,7 @@ type Content struct {
 	//   string
 	// Description:
 	//   URL of the content, for buy-side contextualization or review.
-	URL string `json:"url"`
+	URL string `json:"url,omitempty"`
 
 	// Attribute:
 	//   cat
@@ -79,7 +79,7 @@ type Content struct {
 	// Description:
 	//   Array of IAB content categories that describe the content
 	//   producer. Refer to List 5.1.
-	Cat []string `json:"cat"`
+	Cat []string `json:"cat,omitempty"`
 
 	// Attribute:
 	//   videoquality
@@ -87,7 +87,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   Video quality per IAB’s classification. Refer to List 5.11.
-	VideoQuality uint8 `json:"videoquality"`
+	VideoQuality uint8 `json:"videoquality,omitempty"`
 
 	// Attribute:
 	//   context
@@ -95,7 +95,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   Type of content (game, video, text, etc.). Refer to List 5.14.
-	Context uint8 `json:"context"`
+	Context uint8 `json:"context,omitempty"`
 
 	// Attribute:
 	//   contentrating
@@ -103,7 +103,7 @@ type Content struct {
 	//   string
 	// Description:
 	//   Content rating (e.g., MPAA).
-	ContentRating string `json:"contentrating"`
+	ContentRating string `json:"contentrating,omitempty"`
 
 	// Attribute:
 	//   userrating
@@ -111,7 +111,7 @@ type Content struct {
 	//   string
 	// Description:
 	//   User rating of the content (e.g., number of stars, likes, etc.).
-	UserRating string `json:"userrating"`
+	UserRating string `json:"userrating,omitempty"`
 
 	// Attribute:
 	//   qagmediarating
@@ -119,7 +119,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   Media rating per QAG guidelines. Refer to List 5.15.
-	QAGMediaRating uint8 `json:"qagmediarating"`
+	QAGMediaRating uint8 `json:"qagmediarating,omitempty"`
 
 	// Attribute:
 	//   keywords
@@ -127,7 +127,7 @@ type Content struct {
 	//   string
 	// Description:
 	//   Comma separated list of keywords describing the content.
-	Keywords string `json:"keywords"`
+	Keywords string `json:"keywords,omitempty"`
 
 	// Attribute:
 	//   livestream
@@ -135,7 +135,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   0 = not live, 1 = content is live (e.g., stream, live blog).
-	LiveStream uint8 `json:"livestream"`
+	LiveStream uint8 `json:"livestream,omitempty"`
 
 	// Attribute:
 	//   sourcerelationship
@@ -143,7 +143,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   0 = indirect, 1 = direct.
-	SourceRelationship uint8 `json:"sourcerelationship"`
+	SourceRelationship uint8 `json:"sourcerelationship,omitempty"`
 
 	// Attribute:
 	//   len
@@ -151,7 +151,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   Length of content in seconds; appropriate for video or audio.
-	Len uint64 `json:"len"`
+	Len uint64 `json:"len,omitempty"`
 
 	// Attribute:
 	//   language
@@ -159,7 +159,7 @@ type Content struct {
 	//   string
 	// Description:
 	//   Content language using ISO-639-1-alpha-2.
-	Language string `json:"language"`
+	Language string `json:"language,omitempty"`
 
 	// Attribute:
 	//   embeddable
@@ -168,7 +168,7 @@ type Content struct {
 	// Description:
 	//   Indicator of whether or not the content is embeddable (e.g.,
 	//   an embeddable video player), where 0 = no, 1 = yes.
-	Embeddable uint8 `json:"embeddable"`
+	Embeddable uint8 `json:"embeddable,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -176,5 +176,5 @@ type Content struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }

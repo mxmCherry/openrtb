@@ -12,7 +12,7 @@ type Bid struct {
 	//   string; required
 	// Description:
 	//   Bidder generated bid ID to assist with logging/tracking.
-	ID string `json:"id"`
+	ID string `json:"id,omitempty"`
 
 	// Attribute:
 	//   impid
@@ -20,7 +20,7 @@ type Bid struct {
 	//   string; required
 	// Description:
 	//   ID of the Imp object in the related bid request.
-	ImpID string `json:"impid"`
+	ImpID string `json:"impid,omitempty"`
 
 	// Attribute:
 	//   price
@@ -31,7 +31,7 @@ type Bid struct {
 	//   for a unit impression only. Note that while the type indicates
 	//   float, integer math is highly recommended when handling
 	//   currencies (e.g., BigDecimal in Java).
-	Price float64 `json:"price"`
+	Price float64 `json:"price,omitempty"`
 
 	// Attribute:
 	//   adid
@@ -39,7 +39,7 @@ type Bid struct {
 	//   string
 	// Description:
 	//   ID of a preloaded ad to be served if the bid wins.
-	AdID string `json:"adid"`
+	AdID string `json:"adid,omitempty"`
 
 	// Attribute:
 	//   nurl
@@ -48,7 +48,7 @@ type Bid struct {
 	// Description:
 	//   Win notice URL called by the exchange if the bid wins; optional
 	//   means of serving ad markup.
-	NURL string `json:"nurl"`
+	NURL string `json:"nurl,omitempty"`
 
 	// Attribute:
 	//   adm
@@ -57,7 +57,7 @@ type Bid struct {
 	// Description:
 	//   Optional means of conveying ad markup in case the bid wins;
 	//   supersedes the win notice if markup is included in both.
-	AdM string `json:"adm"`
+	AdM string `json:"adm,omitempty"`
 
 	// Attribute:
 	//   adomain
@@ -67,7 +67,7 @@ type Bid struct {
 	//   Advertiser domain for block list checking (e.g., “ford.com”).
 	//   This can be an array of for the case of rotating creatives.
 	//   Exchanges can mandate that only one domain is allowed.
-	ADomain []string `json:"adomain"`
+	ADomain []string `json:"adomain,omitempty"`
 
 	// Attribute:
 	//   bundle
@@ -77,7 +77,7 @@ type Bid struct {
 	//   Bundle or package name (e.g., com.foo.mygame) of the app
 	//   being advertised, if applicable; intended to be a unique ID
 	//   across exchanges.
-	Bundle string `json:"bundle"`
+	Bundle string `json:"bundle,omitempty"`
 
 	// Attribute:
 	//   iurl
@@ -86,7 +86,7 @@ type Bid struct {
 	// Description:
 	//   URL without cache-busting to an image that is representative
 	//   of the content of the campaign for ad quality/safety checking.
-	IURL string `json:"iurl"`
+	IURL string `json:"iurl,omitempty"`
 
 	// Attribute:
 	//   cid
@@ -95,7 +95,7 @@ type Bid struct {
 	// Description:
 	//   Campaign ID to assist with ad quality checking; the collection
 	//   of creatives for which iurl should be representative.
-	CID string `json:"cid"`
+	CID string `json:"cid,omitempty"`
 
 	// Attribute:
 	//   crid
@@ -103,7 +103,7 @@ type Bid struct {
 	//   string
 	// Description:
 	//   Creative ID to assist with ad quality checking.
-	CrID string `json:"crid"`
+	CrID string `json:"crid,omitempty"`
 
 	// Attribute:
 	//   cat
@@ -111,7 +111,7 @@ type Bid struct {
 	//   string array
 	// Description:
 	//   IAB content categories of the creative. Refer to List 5.1.attr integer array Set of attributes describing the creative. Refer to List 5.3.
-	Cat []string `json:"cat"`
+	Cat []string `json:"cat,omitempty"`
 
 	// Attribute:
 	//   dealid
@@ -120,7 +120,7 @@ type Bid struct {
 	// Description:
 	//   Reference to the deal.id from the bid request if this bid
 	//   pertains to a private marketplace direct deal.
-	DealID string `json:"dealid"`
+	DealID string `json:"dealid,omitempty"`
 
 	// Attribute:
 	//   h
@@ -128,7 +128,7 @@ type Bid struct {
 	//   integer
 	// Description:
 	//   Height of the creative in pixels.
-	H uint64 `json:"h"`
+	H uint64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   w
@@ -136,7 +136,7 @@ type Bid struct {
 	//   integer
 	// Description:
 	//   Width of the creative in pixels.
-	W uint64 `json:"w"`
+	W uint64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -144,5 +144,5 @@ type Bid struct {
 	//   object
 	// Description:
 	//   Placeholder for bidder-specific extensions to OpenRTB
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }

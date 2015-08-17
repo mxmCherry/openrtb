@@ -21,7 +21,7 @@ type Video struct {
 	// Description:
 	//   Content MIME types supported. Popular MIME types may include “video/x-ms-wmv” for Windows Media and
 	//   “video/x-flv” for Flash Video.
-	MIMEs []string `json:"mimes"`
+	MIMEs []string `json:"mimes,omitempty"`
 
 	// Attribute:
 	//   minduration
@@ -29,7 +29,7 @@ type Video struct {
 	//   integer; recommended
 	// Description:
 	//   Minimum video ad duration in seconds.
-	MinDuration uint64 `json:"minduration"`
+	MinDuration uint64 `json:"minduration,omitempty"`
 
 	// Attribute:
 	//   maxduration
@@ -37,7 +37,7 @@ type Video struct {
 	//   integer; recommended
 	// Description:
 	//   Maximum video ad duration in seconds.
-	MaxDuration uint64 `json:"maxduration"`
+	MaxDuration uint64 `json:"maxduration,omitempty"`
 
 	// Attribute:
 	//   protocol
@@ -48,7 +48,7 @@ type Video struct {
 	//   Supported video bid response protocol. Refer to List 5.8. At
 	//   least one supported protocol must be specified in either the
 	//   protocol or protocols attribute.
-	Protocol []uint8 `json:"protocol"`
+	Protocol []uint8 `json:"protocol,omitempty"`
 
 	// Attribute:
 	//   protocols
@@ -58,7 +58,7 @@ type Video struct {
 	//   Array of supported video bid response protocols. Refer to List
 	//   5.8. At least one supported protocol must be specified in
 	//   either the protocol or protocols attribute.
-	Protocols []uint8 `json:"protocols"`
+	Protocols []uint8 `json:"protocols,omitempty"`
 
 	// Attribute:
 	//   w
@@ -66,7 +66,7 @@ type Video struct {
 	//   integer; recommended
 	// Description:
 	//   Width of the video player in pixels.
-	W uint64 `json:"w"`
+	W uint64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -74,7 +74,7 @@ type Video struct {
 	//   integer; recommended
 	// Description:
 	//   Height of the video player in pixels.
-	H uint64 `json:"h"`
+	H uint64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   startdelay
@@ -84,7 +84,7 @@ type Video struct {
 	//   Indicates the start delay in seconds for pre-roll, mid-roll, or
 	//   post-roll ad placements. Refer to List 5.10 for additional
 	//   generic values.
-	StartDelay int64 `json:"startdelay"`
+	StartDelay int64 `json:"startdelay,omitempty"`
 
 	// Attribute:
 	//   linearity
@@ -93,7 +93,7 @@ type Video struct {
 	// Description:
 	//   Indicates if the impression must be linear, nonlinear, etc. If
 	//   none specified, assume all are allowed. Refer to List 5.7.
-	Linearity uint8 `json:"linearity"`
+	Linearity uint8 `json:"linearity,omitempty"`
 
 	// Attribute:
 	//   sequence
@@ -103,7 +103,7 @@ type Video struct {
 	//   If multiple ad impressions are offered in the same bid request,
 	//   the sequence number will allow for the coordinated delivery
 	//   of multiple creatives.
-	Sequence uint8 `json:"sequence"`
+	Sequence uint8 `json:"sequence,omitempty"`
 
 	// Attribute:
 	//   battr
@@ -111,7 +111,7 @@ type Video struct {
 	//   integer array
 	// Description:
 	//   Blocked creative attributes. Refer to List 5.3.
-	BAttr []uint8 `json:"battr"`
+	BAttr []uint8 `json:"battr,omitempty"`
 
 	// Attribute:
 	//   maxextended
@@ -123,7 +123,7 @@ type Video struct {
 	//   allowed, and there is no time limit imposed. If greater than 0,
 	//   then the value represents the number of seconds of extended
 	//   play supported beyond the maxduration value.
-	MaxExtended int64 `json:"maxextended"`
+	MaxExtended int64 `json:"maxextended,omitempty"`
 
 	// Attribute:
 	//   minbitrate
@@ -132,7 +132,7 @@ type Video struct {
 	// Description:
 	//   Minimum bit rate in Kbps. Exchange may set this dynamically
 	//   or universally across their set of publishers.
-	MinBitRate uint64 `json:"minbitrate"`
+	MinBitRate uint64 `json:"minbitrate,omitempty"`
 
 	// Attribute:
 	//   maxbitrate
@@ -141,7 +141,7 @@ type Video struct {
 	// Description:
 	//   Maximum bit rate in Kbps. Exchange may set this dynamically
 	//   or universally across their set of publishers.
-	MaxBitRate uint64 `json:"maxbitrate"`
+	MaxBitRate uint64 `json:"maxbitrate,omitempty"`
 
 	// Attribute:
 	//   boxingallowed
@@ -150,7 +150,7 @@ type Video struct {
 	// Description:
 	//   Indicates if letter-boxing of 4:3 content into a 16:9 window is
 	//   allowed, where 0 = no, 1 = yes.
-	BoxingAllowed uint8 `json:"boxingallowed"`
+	BoxingAllowed uint8 `json:"boxingallowed,omitempty"`
 
 	// Attribute:
 	//   playbackmethod
@@ -159,7 +159,7 @@ type Video struct {
 	// Description:
 	//   Allowed playback methods. If none specified, assume all are
 	//   allowed. Refer to List 5.9.
-	PlaybackMethod []uint8 `json:"playbackmethod"`
+	PlaybackMethod []uint8 `json:"playbackmethod,omitempty"`
 
 	// Attribute:
 	//   delivery
@@ -168,7 +168,7 @@ type Video struct {
 	// Description:
 	//   Supported delivery methods (e.g., streaming, progressive). If
 	//   none specified, assume all are supported. Refer to List 5.13.
-	Delivery []uint8 `json:"delivery"`
+	Delivery []uint8 `json:"delivery,omitempty"`
 
 	// Attribute:
 	//   pos
@@ -176,7 +176,7 @@ type Video struct {
 	//   integer
 	// Description:
 	//   Ad position on screen. Refer to List 5.4
-	Pos uint8 `json:"pos"`
+	Pos uint8 `json:"pos,omitempty"`
 
 	// Attribute:
 	//   companionad
@@ -185,7 +185,7 @@ type Video struct {
 	// Description:
 	//   Array of Banner objects (Section 3.2.3) if companion ads are
 	//   available.
-	CompanionAd []Banner `json:"companionad"`
+	CompanionAd []Banner `json:"companionad,omitempty"`
 
 	// Attribute:
 	//   api
@@ -194,7 +194,7 @@ type Video struct {
 	// Description:
 	//   List of supported API frameworks for this impression. Refer to
 	//   List 5.6. If an API is not explicitly listed, it is assumed not to be supported.
-	API []uint8 `json:"api"`
+	API []uint8 `json:"api,omitempty"`
 
 	// Attribute:
 	//   companiontype
@@ -204,7 +204,7 @@ type Video struct {
 	//   Supported VAST companion ad types. Refer to List 5.12.
 	//   Recommended if companion Banner objects are included via
 	//   the companionad array.
-	CompanionType []uint8 `json:"companiontype"`
+	CompanionType []uint8 `json:"companiontype,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -212,5 +212,5 @@ type Video struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }

@@ -14,7 +14,7 @@ type PMP struct {
 	// Description:
 	//   Indicator of auction eligibility to seats named in the Direct Deals object, where 0 = all bids are accepted,
 	//   1 = bids are restricted to the deals specified and the terms thereof.
-	PrivateAuction uint8 `json:"private_auction"`
+	PrivateAuction uint8 `json:"private_auction,omitempty"`
 
 	// Attribute:
 	//   id
@@ -22,7 +22,7 @@ type PMP struct {
 	//   integer
 	// Description:
 	//   Array of Deal (Section 3.2.18) objects that convey the specific deals applicable to this impression.
-	Deals []Deal `json:"deals"`
+	Deals []Deal `json:"deals,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -30,5 +30,5 @@ type PMP struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }

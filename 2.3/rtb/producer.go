@@ -14,7 +14,7 @@ type Producer struct {
 	// Description:
 	//   Content producer or originator ID. Useful if content is
 	//   syndicated and may be posted on a site using embed tags.
-	ID string `json:"id"`
+	ID string `json:"id,omitempty"`
 
 	// Attribute:
 	//   name
@@ -22,7 +22,7 @@ type Producer struct {
 	//   string
 	// Description:
 	//   Content producer or originator name (e.g., “Warner Bros”).
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 
 	// Attribute:
 	//   cat
@@ -31,7 +31,7 @@ type Producer struct {
 	// Description:
 	//   Array of IAB content categories that describe the content
 	//   producer. Refer to List 5.1.
-	Cat []string `json:"cat"`
+	Cat []string `json:"cat,omitempty"`
 
 	// Attribute:
 	//   domain
@@ -40,7 +40,7 @@ type Producer struct {
 	// Description:
 	//   Highest level domain of the content producer (e.g.,
 	//   “producer.com”).
-	Domain string `json:"domain"`
+	Domain string `json:"domain,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -48,5 +48,5 @@ type Producer struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }

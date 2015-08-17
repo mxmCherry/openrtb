@@ -23,7 +23,7 @@ type Native struct {
 	//   string; required
 	// Description:
 	//   Request payload complying with the Native Ad Specification.
-	Request string `json:"request"`
+	Request string `json:"request,omitempty"`
 
 	// Attribute:
 	//   ver
@@ -32,7 +32,7 @@ type Native struct {
 	// Description:
 	//   Version of the Native Ad Specification to which request
 	//   complies; highly recommended for efficient parsing
-	Ver string `json:"ver"`
+	Ver string `json:"ver,omitempty"`
 
 	// Attribute:
 	//   api
@@ -41,7 +41,7 @@ type Native struct {
 	// Description:
 	//   List of supported API frameworks for this impression. Refer to
 	//   List 5.6. If an API is not explicitly listed, it is assumed not to be supported.
-	API []uint8 `json:"api"`
+	API []uint8 `json:"api,omitempty"`
 
 	// Attribute:
 	//   sequence
@@ -49,7 +49,7 @@ type Native struct {
 	//   integer array
 	// Description:
 	//   Blocked creative attributes. Refer to List 5.3.
-	BAttr []uint8 `json:"battr"`
+	BAttr []uint8 `json:"battr,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -57,5 +57,5 @@ type Native struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }

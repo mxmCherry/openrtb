@@ -15,7 +15,7 @@ type User struct {
 	// Description:
 	//   Exchange-specific ID for the user. At least one of id or
 	//   buyerid is recommended.
-	ID string `json:"id"`
+	ID string `json:"id,omitempty"`
 
 	// Attribute:
 	//   buyerid
@@ -24,7 +24,7 @@ type User struct {
 	// Description:
 	//   Buyer-specific ID for the user as mapped by the exchange for
 	//   the buyer. At least one of buyerid or id is recommended.
-	BuyerID string `json:"buyerid"`
+	BuyerID string `json:"buyerid,omitempty"`
 
 	// Attribute:
 	//   yob
@@ -32,7 +32,7 @@ type User struct {
 	//   integer
 	// Description:
 	//   Year of birth as a 4-digit integer.
-	Yob uint16 `json:"yob"`
+	Yob uint16 `json:"yob,omitempty"`
 
 	// Attribute:
 	//   gender
@@ -41,7 +41,7 @@ type User struct {
 	// Description:
 	//   Gender, where “M” = male, “F” = female, “O” = known to be
 	//   other (i.e., omitted is unknown).
-	Gender string `json:"gender"`
+	Gender string `json:"gender,omitempty"`
 
 	// Attribute:
 	//   keywords
@@ -49,7 +49,7 @@ type User struct {
 	//   string
 	// Description:
 	//   Comma separated list of keywords, interests, or intent.
-	Keywords string `json:"keywords"`
+	Keywords string `json:"keywords,omitempty"`
 
 	// Attribute:
 	//   customdata
@@ -60,7 +60,7 @@ type User struct {
 	//   exchange’s cookie. The string must be in base85 cookie safe
 	//   characters and be in any format. Proper JSON encoding must
 	//   be used to include “escaped” quotation marks.
-	CustomData string `json:"customdata"`
+	CustomData string `json:"customdata,omitempty"`
 
 	// Attribute:
 	//   geo
@@ -69,7 +69,7 @@ type User struct {
 	// Description:
 	//   Location of the user’s home base defined by a Geo object
 	//   (Section 3.2.12). This is not necessarily their current location.
-	Geo *Geo `json:"geo"`
+	Geo *Geo `json:"geo,omitempty"`
 
 	// Attribute:
 	//   data
@@ -78,7 +78,7 @@ type User struct {
 	// Description:
 	//   Additional user data. Each Data object (Section 3.2.14)
 	//   represents a different data source.
-	Data []Data `json:"data"`
+	Data []Data `json:"data,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -86,5 +86,5 @@ type User struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }

@@ -19,7 +19,7 @@ type Imp struct {
 	// Description:
 	//   A unique identifier for this impression within the context of the bid request (typically, starts
 	//   with 1 and increments.
-	ID string `json:"id"`
+	ID string `json:"id,omitempty"`
 
 	// Attribute:
 	//   banner
@@ -28,7 +28,7 @@ type Imp struct {
 	// Description:
 	//   A Banner object (Section 3.2.3); required if this impression is
 	//   offered as a banner ad opportunity.
-	Banner *Banner `json:"banner"`
+	Banner *Banner `json:"banner,omitempty"`
 
 	// Attribute:
 	//   video
@@ -37,7 +37,7 @@ type Imp struct {
 	// Description:
 	//   A Video object (Section 3.2.4); required if this impression is
 	//   offered as a video ad opportunity.
-	Video *Video `json:"video"`
+	Video *Video `json:"video,omitempty"`
 
 	// Attribute:
 	//   native
@@ -46,7 +46,7 @@ type Imp struct {
 	// Description:
 	//   A Native object (Section 3.2.5); required if this impression is
 	//   offered as a native ad opportunity
-	Native *Native `json:"native"`
+	Native *Native `json:"native,omitempty"`
 
 	// Attribute:
 	//   displaymanager
@@ -57,7 +57,7 @@ type Imp struct {
 	//   responsible for rendering ad (typically video or mobile). Used
 	//   by some ad servers to customize ad code by partner.
 	//   Recommended for video and/or apps.
-	DisplayManager string `json:"displaymanager"`
+	DisplayManager string `json:"displaymanager,omitempty"`
 
 	// Attribute:
 	//   instl
@@ -65,7 +65,7 @@ type Imp struct {
 	//   int; default 0
 	// Description:
 	//   1 = the ad is interstitial or full screen, 0 = not interstitial.
-	Instl uint8 `json:"instl"`
+	Instl uint8 `json:"instl,omitempty"`
 
 	// Attribute:
 	//   tagid
@@ -75,7 +75,7 @@ type Imp struct {
 	//   Identifier for specific ad placement or ad tag that was used to
 	//   initiate the auction. This can be useful for debugging of any
 	//   issues, or for optimization by the buyer.
-	TagID string `json:"tagid"`
+	TagID string `json:"tagid,omitempty"`
 
 	// Attribute:
 	//   bidfloor
@@ -83,7 +83,7 @@ type Imp struct {
 	//   float; default 0
 	// Description:
 	//   Minimum bid for this impression expressed in CPM.
-	BidFloor float64 `json:"bidfloor"`
+	BidFloor float64 `json:"bidfloor,omitempty"`
 
 	// Attribute:
 	//   bidfloorcur
@@ -93,7 +93,7 @@ type Imp struct {
 	//   Currency specified using ISO-4217 alpha codes. This may be
 	//   different from bid currency returned by bidder if this is
 	//   allowed by the exchange.
-	BidFloorCur string `json:"bidfloorcur"`
+	BidFloorCur string `json:"bidfloorcur,omitempty"`
 
 	// Attribute:
 	//   secure
@@ -104,7 +104,7 @@ type Imp struct {
 	//   creative assets and markup, where 0 = non-secure, 1 = secure.
 	//   If omitted, the secure state is unknown, but non-secure HTTP
 	//   support can be assumed.
-	Secure uint8 `json:"secure"`
+	Secure uint8 `json:"secure,omitempty"`
 
 	// Attribute:
 	//   iframebuster
@@ -112,7 +112,7 @@ type Imp struct {
 	//   string array
 	// Description:
 	//   Array of exchange-specific names of supported iframe busters.
-	IframeBuster []string `json:"iframebuster"`
+	IframeBuster []string `json:"iframebuster,omitempty"`
 
 	// Attribute:
 	//   pmp
@@ -120,7 +120,7 @@ type Imp struct {
 	//   object
 	// Description:
 	//   A Pmp object (Section 3.2.17) containing any private marketplace deals in effect for this impression.
-	PMP *PMP `json:"pmp"`
+	PMP *PMP `json:"pmp,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -128,5 +128,5 @@ type Imp struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }

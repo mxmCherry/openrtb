@@ -13,7 +13,7 @@ type Deal struct {
 	//   string
 	// Description:
 	//   A unique identifier for the direct deal.
-	ID string `json:"id"`
+	ID string `json:"id,omitempty"`
 
 	// Attribute:
 	//   bidfloor
@@ -21,7 +21,7 @@ type Deal struct {
 	//   float
 	// Description:
 	//   Minimum bid for this impression expressed in CPM.
-	BidFloor float64 `json:"bidfloor"`
+	BidFloor float64 `json:"bidfloor,omitempty"`
 
 	// Attribute:
 	//   bidfloorcur
@@ -30,7 +30,7 @@ type Deal struct {
 	// Description:
 	//   Currency specified using ISO-4217 alpha codes. This may be different from bid currency returned
 	//   by bidder if this is allowed by the exchange.
-	BidFloorCur string `json:"bidfloorcur"`
+	BidFloorCur string `json:"bidfloorcur,omitempty"`
 
 	// Attribute:
 	//   at
@@ -40,7 +40,7 @@ type Deal struct {
 	//   Optional override of the overall auction type of the bid request, where 1 = First Price,
 	//   2 = Second Price Plus, 3 = the value passed in bidfloor is the agreed upon deal price. Additional
 	//   auction types can be defined by the exchange.
-	AT uint8 `json:"at"`
+	AT uint8 `json:"at,omitempty"`
 
 	// Attribute:
 	//   wseat
@@ -49,7 +49,7 @@ type Deal struct {
 	// Description:
 	//   Whitelist of buyer seats allowed to bid on this deal.  Seat IDs must be
 	//   communicated between bidders and the exchange a priori. Omission implies no seat restrictions.
-	WSeat []string `json:"wseat"`
+	WSeat []string `json:"wseat,omitempty"`
 
 	// Attribute:
 	//   wadomain
@@ -58,7 +58,7 @@ type Deal struct {
 	// Description:
 	//   Array of advertiser domains (e.g., advertiser.com) allowed to bid on this deal.  Omission implies
 	//   no advertiser restrictions.
-	WADomain []string `json:"wadomain"`
+	WADomain []string `json:"wadomain,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -66,5 +66,5 @@ type Deal struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }

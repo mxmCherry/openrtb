@@ -13,7 +13,7 @@ type App struct {
 	//   string; recommended
 	// Description:
 	//   Exchange-specific app ID.
-	ID string `json:"id"`
+	ID string `json:"id,omitempty"`
 
 	// Attribute:
 	//   name
@@ -21,7 +21,7 @@ type App struct {
 	//   string
 	// Description:
 	//   App name (may be aliased at the publisher’s request).
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 
 	// Attribute:
 	//   bundle
@@ -30,7 +30,7 @@ type App struct {
 	// Description:
 	//   Application bundle or package name (e.g., com.foo.mygame);
 	//   intended to be a unique ID across exchanges.
-	Bundle string `json:"bundle"`
+	Bundle string `json:"bundle,omitempty"`
 
 	// Attribute:
 	//   domain
@@ -38,7 +38,7 @@ type App struct {
 	//   string
 	// Description:
 	//   Domain of the app (e.g., “mygame.foo.com”).
-	Domain string `json:"domain"`
+	Domain string `json:"domain,omitempty"`
 
 	// Attribute:
 	//   storeurl
@@ -46,7 +46,7 @@ type App struct {
 	//   string
 	// Description:
 	//   App store URL for an installed app; for QAG 1.5 compliance.
-	StoreURL string `json:"storeurl"`
+	StoreURL string `json:"storeurl,omitempty"`
 
 	// Attribute:
 	//   cat
@@ -54,7 +54,7 @@ type App struct {
 	//   string array
 	// Description:
 	//   Array of IAB content categories of the app. Refer to List 5.1.
-	Cat []string `json:"cat"`
+	Cat []string `json:"cat,omitempty"`
 
 	// Attribute:
 	//   sectioncat
@@ -63,7 +63,7 @@ type App struct {
 	// Description:
 	//   Array of IAB content categories that describe the current
 	//   section of the app. Refer to List 5.1.
-	SectionCat []string `json:"sectioncat"`
+	SectionCat []string `json:"sectioncat,omitempty"`
 
 	// Attribute:
 	//   pagecat
@@ -72,7 +72,7 @@ type App struct {
 	// Description:
 	//   Array of IAB content categories that describe the current page
 	//   or view of the app. Refer to List 5.1.
-	PageCat []string `json:"pagecat"`
+	PageCat []string `json:"pagecat,omitempty"`
 
 	// Attribute:
 	//   ver
@@ -80,7 +80,7 @@ type App struct {
 	//   string
 	// Description:
 	//   Application version.
-	Ver string `json:"ver"`
+	Ver string `json:"ver,omitempty"`
 
 	// Attribute:
 	//   privacypolicy
@@ -88,7 +88,7 @@ type App struct {
 	//   integer
 	// Description:
 	//   Indicates if the app has a privacy policy, where 0 = no, 1 = yes.
-	PrivacyPolicy uint8 `json:"privacypolicy"`
+	PrivacyPolicy uint8 `json:"privacypolicy,omitempty"`
 
 	// Attribute:
 	//   paid
@@ -96,7 +96,7 @@ type App struct {
 	//   integer
 	// Description:
 	//   0 = app is free, 1 = the app is a paid version.
-	Paid uint8 `json:"paid"`
+	Paid uint8 `json:"paid,omitempty"`
 
 	// Attribute:
 	//   publisher
@@ -104,7 +104,7 @@ type App struct {
 	//   object
 	// Description:
 	//   Details about the Publisher (Section 3.2.8) of the app.
-	Publisher *Publisher `json:"publisher"`
+	Publisher *Publisher `json:"publisher,omitempty"`
 
 	// Attribute:
 	//   content
@@ -112,7 +112,7 @@ type App struct {
 	//   object
 	// Description:
 	//   Details about the Content (Section 3.2.9) within the app.
-	Content *Content `json:"content"`
+	Content *Content `json:"content,omitempty"`
 
 	// Attribute:
 	//   keywords
@@ -120,7 +120,7 @@ type App struct {
 	//   string
 	// Description:
 	//   Comma separated list of keywords about the app.
-	Keywords string `json:"keywords"`
+	Keywords string `json:"keywords,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -128,5 +128,5 @@ type App struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }

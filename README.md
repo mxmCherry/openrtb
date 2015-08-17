@@ -35,7 +35,7 @@ Common [OpenRTB](//github.com/openrtb/OpenRTB) [v2.3](//github.com/openrtb/OpenR
 	- [x] Review struct key types, which refer to section "5. Enumerated Lists Specification"
 	- [x] Check types for struct keys (see Guidelines - Types)
 	- [x] Use struct pointers for optional keys (e.g., App.Content)
-	- [ ] Add json directive "omitempty" for optional keys
+	- [ ] ~~Add json directive "omitempty" for optional keys~~ Remove json directive "omitempty" for required fields or fields with meaningful golang-empty values (like numeric 0)
 
 
 # Guidelines

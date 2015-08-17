@@ -22,7 +22,7 @@ type Banner struct {
 	//   Width of the impression in pixels.
 	//   If neither wmin nor wmax are specified, this value is an exact
 	//   width requirement. Otherwise it is a preferred width.
-	W uint64 `json:"w"`
+	W uint64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -32,7 +32,7 @@ type Banner struct {
 	//   Height of the impression in pixels.
 	//   If neither hmin nor hmax are specified, this value is an exact
 	//   height requirement. Otherwise it is a preferred height.
-	H uint64 `json:"h"`
+	H uint64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   wmax
@@ -42,7 +42,7 @@ type Banner struct {
 	//   Maximum width of the impression in pixels.
 	//   If included along with a w value then w should be interpreted
 	//   as a recommended or preferred width.
-	WMax uint64 `json:"wmax"`
+	WMax uint64 `json:"wmax,omitempty"`
 
 	// Attribute:
 	//   hmax
@@ -52,7 +52,7 @@ type Banner struct {
 	//   Maximum height of the impression in pixels.
 	//   If included along with an h value then h should be interpreted
 	//   as a recommended or preferred height.
-	HMax uint64 `json:"hmax"`
+	HMax uint64 `json:"hmax,omitempty"`
 
 	// Attribute:
 	//   wmin
@@ -62,7 +62,7 @@ type Banner struct {
 	//   Minimum width of the impression in pixels.
 	//   If included along with a w value then w should be interpreted
 	//   as a recommended or preferred width.
-	WMin uint64 `json:"wmin"`
+	WMin uint64 `json:"wmin,omitempty"`
 
 	// Attribute:
 	//   hmin
@@ -72,7 +72,7 @@ type Banner struct {
 	//   Minimum height of the impression in pixels.
 	//   If included along with an h value then h should be interpreted
 	//   as a recommended or preferred height.
-	HMin uint64 `json:"hmin"`
+	HMin uint64 `json:"hmin,omitempty"`
 
 	// Attribute:
 	//   id
@@ -84,7 +84,7 @@ type Banner struct {
 	//   represent an array of companion ads. Values usually start at 1
 	//   and increase with each object; should be unique within an
 	//   impression.
-	ID string `json:"id"`
+	ID string `json:"id,omitempty"`
 
 	// Attribute:
 	//   btype
@@ -92,7 +92,7 @@ type Banner struct {
 	//   integer array
 	// Description:
 	//   Blocked banner ad types. Refer to List 5.2.
-	BType []uint8 `json:"btype"`
+	BType []uint8 `json:"btype,omitempty"`
 
 	// Attribute:
 	//   battr
@@ -100,7 +100,7 @@ type Banner struct {
 	//   integer array
 	// Description:
 	//   Blocked creative attributes. Refer to List 5.3.
-	BAttr []uint8 `json:"battr"`
+	BAttr []uint8 `json:"battr,omitempty"`
 
 	// Attribute:
 	//   pos
@@ -108,7 +108,7 @@ type Banner struct {
 	//   integer
 	// Description:
 	//   Ad position on screen. Refer to List 5.4
-	Pos uint8 `json:"pos"`
+	Pos uint8 `json:"pos,omitempty"`
 
 	// Attribute:
 	//   mimes
@@ -117,7 +117,7 @@ type Banner struct {
 	// Description:
 	//   Content MIME types supported. Popular MIME types may
 	//   include “application/x-shockwave-flash”, “image/jpg”, and “image/gif”.
-	MIMEs []string `json:"mimes"`
+	MIMEs []string `json:"mimes,omitempty"`
 
 	// Attribute:
 	//   topframe
@@ -126,7 +126,7 @@ type Banner struct {
 	// Description:
 	//    Indicates if the banner is in the top frame as opposed to an
 	//    iframe, where 0 = no, 1 = yes.
-	TopFrame uint8 `json:"topframe"`
+	TopFrame uint8 `json:"topframe,omitempty"`
 
 	// Attribute:
 	//   expdir
@@ -134,7 +134,7 @@ type Banner struct {
 	//   integer array
 	// Description:
 	//   Directions in which the banner may expand. Refer to List 5.5.
-	ExpDir []uint8 `json:"expdir"`
+	ExpDir []uint8 `json:"expdir,omitempty"`
 
 	// Attribute:
 	//   api
@@ -143,7 +143,7 @@ type Banner struct {
 	// Description:
 	//   List of supported API frameworks for this impression. Refer to
 	//   List 5.6. If an API is not explicitly listed, it is assumed not to be supported.
-	API []uint8 `json:"api"`
+	API []uint8 `json:"api,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -151,5 +151,5 @@ type Banner struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }

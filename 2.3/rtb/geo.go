@@ -16,7 +16,7 @@ type Geo struct {
 	//   float
 	// Description:
 	//   Latitude from -90.0 to +90.0, where negative is south.
-	Lat float64 `json:"lat"`
+	Lat float64 `json:"lat,omitempty"`
 
 	// Attribute:
 	//   lon
@@ -24,7 +24,7 @@ type Geo struct {
 	//   float
 	// Description:
 	//   Longitude from -180.0 to +180.0, where negative is west.
-	Lon float64 `json:"lon"`
+	Lon float64 `json:"lon,omitempty"`
 
 	// Attribute:
 	//   type
@@ -33,7 +33,7 @@ type Geo struct {
 	// Description:
 	//   Source of location data; recommended when passing
 	//   lat/lon. Refer to List 5.16.
-	Type uint8 `json:"type"`
+	Type uint8 `json:"type,omitempty"`
 
 	// Attribute:
 	//   country
@@ -41,7 +41,7 @@ type Geo struct {
 	//   string
 	// Description:
 	//   Country code using ISO-3166-1-alpha-3.
-	Country string `json:"country"`
+	Country string `json:"country,omitempty"`
 
 	// Attribute:
 	//   region
@@ -49,7 +49,7 @@ type Geo struct {
 	//   string
 	// Description:
 	//   Region code using ISO-3166-2; 2-letter state code if USA.
-	Region string `json:"region"`
+	Region string `json:"region,omitempty"`
 
 	// Attribute:
 	//   regionfips104
@@ -58,7 +58,7 @@ type Geo struct {
 	// Description:
 	//   Region of a country using FIPS 10-4 notation. While OpenRTB
 	//   supports this attribute, it has been withdrawn by NIST in 2008.
-	RegionFIPS104 string `json:"regionfips104"`
+	RegionFIPS104 string `json:"regionfips104,omitempty"`
 
 	// Attribute:
 	//   metro
@@ -67,7 +67,7 @@ type Geo struct {
 	// Description:
 	//   Google metro code; similar to but not exactly Nielsen DMAs.
 	//   See Appendix A for a link to the codes.
-	Metro string `json:"metro"`
+	Metro string `json:"metro,omitempty"`
 
 	// Attribute:
 	//   city
@@ -76,7 +76,7 @@ type Geo struct {
 	// Description:
 	//   City using United Nations Code for Trade & Transport
 	//   Locations. See Appendix A for a link to the codes.
-	City string `json:"city"`
+	City string `json:"city,omitempty"`
 
 	// Attribute:
 	//   zip
@@ -84,7 +84,7 @@ type Geo struct {
 	//   string
 	// Description:
 	//   Zip or postal code.
-	ZIP string `json:"zip"`
+	ZIP string `json:"zip,omitempty"`
 
 	// Attribute:
 	//   utcoffset
@@ -92,7 +92,7 @@ type Geo struct {
 	//   integer
 	// Description:
 	//   Local time as the number +/- of minutes from UTC.
-	UTCOffset int8 `json:"utcoffset"`
+	UTCOffset int8 `json:"utcoffset,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -100,5 +100,5 @@ type Geo struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }

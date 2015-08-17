@@ -18,7 +18,7 @@ type BidRequest struct {
 	//   string; required
 	// Description:
 	//   Unique ID of the bid request, provided by the exchange.
-	ID string `json:"id"`
+	ID string `json:"id,omitempty"`
 
 	// Attribute:
 	//   imp
@@ -27,7 +27,7 @@ type BidRequest struct {
 	// Description:
 	//   Array of Imp objects (Section 3.2.2) representing the
 	//   impressions offered. At least 1 Imp object is required.
-	Imp []Imp `json:"imp"`
+	Imp []Imp `json:"imp,omitempty"`
 
 	// Attribute:
 	//   site
@@ -36,7 +36,7 @@ type BidRequest struct {
 	// Description:
 	//    Details via a Site object (Section 3.2.6) about the publisher's
 	//    website. Only applicable and recommended for websites.
-	Site *Site `json:"site"`
+	Site *Site `json:"site,omitempty"`
 
 	// Attribute:
 	//   app
@@ -45,7 +45,7 @@ type BidRequest struct {
 	// Description:
 	//    Details via an App object (Section 3.2.7) about the publisher's
 	//    app (i.e. non-browser applications). Only applicable and recommended for apps.
-	App *App `json:"app"`
+	App *App `json:"app,omitempty"`
 
 	// Attribute:
 	//   device
@@ -53,7 +53,7 @@ type BidRequest struct {
 	//   object; recommended
 	// Description:
 	//   Details via a Device object (Section 3.2.11) about the user’s device to which the impression will be delivered.
-	Device *Device `json:"device"`
+	Device *Device `json:"device,omitempty"`
 
 	// Attribute:
 	//   user
@@ -61,7 +61,7 @@ type BidRequest struct {
 	//   object; recommended
 	// Description:
 	//    Details via a User object (Section 3.2.13) about the human user of the device; the advertising audience.
-	User *User `json:"user"`
+	User *User `json:"user,omitempty"`
 
 	// Attribute:
 	//   test
@@ -69,7 +69,7 @@ type BidRequest struct {
 	//   integer; default 0
 	// Description:
 	//    Indicator of test mode in which auctions are not billable, where 0 = live mode, 1 = test mode.
-	Test uint8 `json:"test"`
+	Test uint8 `json:"test,omitempty"`
 
 	// Attribute:
 	//   at
@@ -79,7 +79,7 @@ type BidRequest struct {
 	//    Auction type, where 1 = First Price, 2 = Second Price Plus.
 	//    Exchange-specific auction types can be defined using values
 	//    greater than 500.
-	AT uint8 `json:"at"`
+	AT uint8 `json:"at,omitempty"`
 
 	// Attribute:
 	//   tmax
@@ -87,7 +87,7 @@ type BidRequest struct {
 	//   integer
 	// Description:
 	//    Maximum time in milliseconds to submit a bid to avoid timeout. This value is commonly communicated offline.
-	TMax uint64 `json:"tmax"`
+	TMax uint64 `json:"tmax,omitempty"`
 
 	// Attribute:
 	//   wseat
@@ -96,7 +96,7 @@ type BidRequest struct {
 	// Description:
 	//   Whitelist of buyer seats allowed to bid on this deal.  Seat IDs must be
 	//   communicated between bidders and the exchange a priori. Omission implies no seat restrictions.
-	WSeat []string `json:"wseat"`
+	WSeat []string `json:"wseat,omitempty"`
 
 	// Attribute:
 	//   allimps
@@ -108,7 +108,7 @@ type BidRequest struct {
 	//   (e.g., all on the web page, all video spots such as pre/mid/post
 	//   roll) to support road-blocking. 0 = no or unknown, 1 = yes, the
 	//   impressions offered represent all that are available.
-	AllImps uint8 `json:"allimps"`
+	AllImps uint8 `json:"allimps,omitempty"`
 
 	// Attribute:
 	//   cur
@@ -117,7 +117,7 @@ type BidRequest struct {
 	// Description:
 	//    Array of allowed currencies for bids on this bid request using ISO-4217 alpha codes. Recommended only if
 	//    the exchange accepts multiple currencies.
-	Cur []string `json:"cur"`
+	Cur []string `json:"cur,omitempty"`
 
 	// Attribute:
 	//   bcat
@@ -125,7 +125,7 @@ type BidRequest struct {
 	//   string array
 	// Description:
 	//   Blocked advertiser categories using the IAB content categories. Refer to List 5.1.
-	BCat []string `json:"bcat"`
+	BCat []string `json:"bcat,omitempty"`
 
 	// Attribute:
 	//   badv
@@ -133,7 +133,7 @@ type BidRequest struct {
 	//   string array
 	// Description:
 	//   Blocked advertiser categories using the IAB content categories. Refer to List 5.1.
-	BAdv []string `json:"badv"`
+	BAdv []string `json:"badv,omitempty"`
 
 	// Attribute:
 	//   regs
@@ -142,7 +142,7 @@ type BidRequest struct {
 	// Description:
 	//   Blocked advertiser categories using the IAB content categories. Refer to List 5.1. or governmental
 	//   regulations in force for this request.
-	Regs *Regs `json:"regs"`
+	Regs *Regs `json:"regs,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -150,5 +150,5 @@ type BidRequest struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }

@@ -15,7 +15,7 @@ type SeatBid struct {
 	// Description:
 	//   Array of 1+ Bid objects (Section 4.2.3) each related to an
 	//   impression. Multiple bids can relate to the same impression.
-	Bid []Bid `json:"bid"`
+	Bid []Bid `json:"bid,omitempty"`
 
 	// Attribute:
 	//   seat
@@ -23,7 +23,7 @@ type SeatBid struct {
 	//   string
 	// Description:
 	//   ID of the bidder seat on whose behalf this bid is made.
-	Seat string `json:"seat"`
+	Seat string `json:"seat,omitempty"`
 
 	// Attribute:
 	//   group
@@ -32,7 +32,7 @@ type SeatBid struct {
 	// Description:
 	//   0 = impressions can be won individually; 1 = impressions must
 	//   be won or lost as a group.
-	Group uint8 `json:"group"`
+	Group uint8 `json:"group,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -40,5 +40,5 @@ type SeatBid struct {
 	//   object
 	// Description:
 	//   Placeholder for bidder-specific extensions to OpenRTB.
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }

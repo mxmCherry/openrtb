@@ -19,7 +19,7 @@ type BidResponse struct {
 	//   string; required
 	// Description:
 	//   ID of the bid request to which this is a response.
-	ID string `json:"id"`
+	ID string `json:"id,omitempty"`
 
 	// Attribute:
 	//   seatbid
@@ -27,7 +27,7 @@ type BidResponse struct {
 	//   object array
 	// Description:
 	//   Array of seatbid objects; 1+ required if a bid is to be made.
-	SeatBid []SeatBid `json:"seatbid"`
+	SeatBid []SeatBid `json:"seatbid,omitempty"`
 
 	// Attribute:
 	//   bidid
@@ -35,7 +35,7 @@ type BidResponse struct {
 	//   string
 	// Description:
 	//   Bidder generated response ID to assist with logging/tracking.
-	BidID string `json:"bidid"`
+	BidID string `json:"bidid,omitempty"`
 
 	// Attribute:
 	//   cur
@@ -43,7 +43,7 @@ type BidResponse struct {
 	//   string; default “USD”
 	// Description:
 	//   Bid currency using ISO-4217 alpha codes.
-	Cur string `json:"cur"`
+	Cur string `json:"cur,omitempty"`
 
 	// Attribute:
 	//   customdata
@@ -54,7 +54,7 @@ type BidResponse struct {
 	//   exchange’s cookie. The string must be in base85 cookie safe
 	//   characters and be in any format. Proper JSON encoding must
 	//   be used to include “escaped” quotation marks.
-	CustomData string `json:"customdata"`
+	CustomData string `json:"customdata,omitempty"`
 
 	// Attribute:
 	//   nbr
@@ -62,7 +62,7 @@ type BidResponse struct {
 	//   integer
 	// Description:
 	//   Reason for not bidding. Refer to List 5.19.
-	NBR uint8 `json:"nbr"`
+	NBR uint8 `json:"nbr,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -70,5 +70,5 @@ type BidResponse struct {
 	//   object
 	// Description:
 	//   Placeholder for bidder-specific extensions to OpenRTB.
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }

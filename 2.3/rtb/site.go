@@ -13,7 +13,7 @@ type Site struct {
 	//   string; recommended
 	// Description:
 	//   Exchange-specific site ID.
-	ID string `json:"id"`
+	ID string `json:"id,omitempty"`
 
 	// Attribute:
 	//   name
@@ -21,7 +21,7 @@ type Site struct {
 	//   string
 	// Description:
 	//   Site name (may be aliased at the publisher’s request).
-	Name string `json:"name"`
+	Name string `json:"name,omitempty"`
 
 	// Attribute:
 	//   domain
@@ -29,7 +29,7 @@ type Site struct {
 	//   string
 	// Description:
 	//   Domain of the site (e.g., “mysite.foo.com”).
-	Domain string `json:"domain"`
+	Domain string `json:"domain,omitempty"`
 
 	// Attribute:
 	//   cat
@@ -37,7 +37,7 @@ type Site struct {
 	//   string array
 	// Description:
 	//   Array of IAB content categories of the site. Refer to List 5.1.
-	Cat []string `json:"cat"`
+	Cat []string `json:"cat,omitempty"`
 
 	// Attribute:
 	//   sectioncat
@@ -46,7 +46,7 @@ type Site struct {
 	// Description:
 	//   Array of IAB content categories that describe the current
 	//   section of the site. Refer to List 5.1.
-	SectionCat []string `json:"sectioncat"`
+	SectionCat []string `json:"sectioncat,omitempty"`
 
 	// Attribute:
 	//   pagecat
@@ -55,7 +55,7 @@ type Site struct {
 	// Description:
 	//   Array of IAB content categories that describe the current page
 	//   or view of the site. Refer to List 5.1.
-	PageCat []string `json:"pagecat"`
+	PageCat []string `json:"pagecat,omitempty"`
 
 	// Attribute:
 	//   page
@@ -63,7 +63,7 @@ type Site struct {
 	//   string
 	// Description:
 	//   URL of the page where the impression will be shown.
-	Page string `json:"page"`
+	Page string `json:"page,omitempty"`
 
 	// Attribute:
 	//   ref
@@ -71,7 +71,7 @@ type Site struct {
 	//   string
 	// Description:
 	//   Referrer URL that caused navigation to the current page.
-	Ref string `json:"ref"`
+	Ref string `json:"ref,omitempty"`
 
 	// Attribute:
 	//   search
@@ -79,7 +79,7 @@ type Site struct {
 	//   string
 	// Description:
 	//   Search string that caused navigation to the current page.
-	Search string `json:"search"`
+	Search string `json:"search,omitempty"`
 
 	// Attribute:
 	//   mobile
@@ -87,7 +87,7 @@ type Site struct {
 	//   integer
 	// Description:
 	//   Mobile-optimized signal, where 0 = no, 1 = yes.
-	Mobile uint8 `json:"mobile"`
+	Mobile uint8 `json:"mobile,omitempty"`
 
 	// Attribute:
 	//   privacypolicy
@@ -95,7 +95,7 @@ type Site struct {
 	//   integer
 	// Description:
 	//   Indicates if the site has a privacy policy, where 0 = no, 1 = yes.
-	PrivacyPolicy uint8 `json:"privacypolicy"`
+	PrivacyPolicy uint8 `json:"privacypolicy,omitempty"`
 
 	// Attribute:
 	//   publisher
@@ -103,7 +103,7 @@ type Site struct {
 	//   object
 	// Description:
 	//   Details about the Publisher (Section 3.2.8) of the site.
-	Publisher *Publisher `json:"publisher"`
+	Publisher *Publisher `json:"publisher,omitempty"`
 
 	// Attribute:
 	//   content
@@ -111,7 +111,7 @@ type Site struct {
 	//   object
 	// Description:
 	//   Details about the Content (Section 3.2.9) within the site.
-	Content *Content `json:"content"`
+	Content *Content `json:"content,omitempty"`
 
 	// Attribute:
 	//   keywords
@@ -119,7 +119,7 @@ type Site struct {
 	//   string
 	// Description:
 	//   Comma separated list of keywords about the site.
-	Keywords string `json:"keywords"`
+	Keywords string `json:"keywords,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -127,5 +127,5 @@ type Site struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext"`
+	Ext Ext `json:"ext,omitempty"`
 }
