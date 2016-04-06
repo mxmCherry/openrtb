@@ -19,7 +19,7 @@ type Imp struct {
 	// Description:
 	//   A unique identifier for this impression within the context of the bid request (typically, starts
 	//   with 1 and increments.
-	ID string `json:"id,omitempty"`
+	ID string `json:"id"`
 
 	// Attribute:
 	//   banner

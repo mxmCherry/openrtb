@@ -23,7 +23,7 @@ type Native struct {
 	//   string; required
 	// Description:
 	//   Request payload complying with the Native Ad Specification.
-	Request string `json:"request,omitempty"`
+	Request string `json:"request"`
 
 	// Attribute:
 	//   ver

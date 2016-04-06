@@ -18,7 +18,7 @@ type BidRequest struct {
 	//   string; required
 	// Description:
 	//   Unique ID of the bid request, provided by the exchange.
-	ID string `json:"id,omitempty"`
+	ID string `json:"id"`
 
 	// Attribute:
 	//   imp
@@ -27,7 +27,7 @@ type BidRequest struct {
 	// Description:
 	//   Array of Imp objects (Section 3.2.2) representing the
 	//   impressions offered. At least 1 Imp object is required.
-	Imp []Imp `json:"imp,omitempty"`
+	Imp []Imp `json:"imp"`
 
 	// Attribute:
 	//   site

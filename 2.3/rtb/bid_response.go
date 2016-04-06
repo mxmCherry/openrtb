@@ -19,7 +19,7 @@ type BidResponse struct {
 	//   string; required
 	// Description:
 	//   ID of the bid request to which this is a response.
-	ID string `json:"id,omitempty"`
+	ID string `json:"id"`
 
 	// Attribute:
 	//   seatbid

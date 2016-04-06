@@ -12,7 +12,7 @@ type Bid struct {
 	//   string; required
 	// Description:
 	//   Bidder generated bid ID to assist with logging/tracking.
-	ID string `json:"id,omitempty"`
+	ID string `json:"id"`
 
 	// Attribute:
 	//   impid
@@ -20,7 +20,7 @@ type Bid struct {
 	//   string; required
 	// Description:
 	//   ID of the Imp object in the related bid request.
-	ImpID string `json:"impid,omitempty"`
+	ImpID string `json:"impid"`
 
 	// Attribute:
 	//   price
@@ -31,7 +31,7 @@ type Bid struct {
 	//   for a unit impression only. Note that while the type indicates
 	//   float, integer math is highly recommended when handling
 	//   currencies (e.g., BigDecimal in Java).
-	Price float64 `json:"price,omitempty"`
+	Price float64 `json:"price"`
 
 	// Attribute:
 	//   adid
