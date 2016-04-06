@@ -1,10 +1,20 @@
 # openrtb
 
-[![GoDoc](https://godoc.org/github.com/mxmCherry/openrtb?status.svg)](https://godoc.org/github.com/mxmCherry/openrtb)
+[![GoDoc](https://godoc.org/gopkg.in/mxmCherry/openrtb.v0?status.svg)](https://godoc.org/gopkg.in/mxmCherry/openrtb.v0)
 
 [OpenRTB](//github.com/openrtb/OpenRTB) [v2.3](//github.com/openrtb/OpenRTB/blob/master/OpenRTB-API-Specification-Version-2-3-FINAL.pdf) types for Go programming language (golang)
 
-**Warning!** This package is considered unstable, consider using [glide](https://github.com/Masterminds/glide) to vendor specific version (commit hash).
+**Warning!** This package is quite stable (changes very infrequently even being `v0.x.x`), but using [glide](https://github.com/Masterminds/glide) is highly recommended to vendor specific commit hash.
+
+# Using
+
+```bash
+go get -u "http://gopkg.in/mxmCherry/openrtb.v0"
+```
+
+```go
+import "http://gopkg.in/mxmCherry/openrtb.v0"
+```
 
 # Goals
 
