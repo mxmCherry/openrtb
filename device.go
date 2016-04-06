@@ -174,6 +174,14 @@ type Device struct {
 	Carrier string `json:"carrier,omitempty"`
 
 	// Attribute:
+	//   connectiontype
+	// Type:
+	//   integer
+	// Description:
+	//   Network connection type. Refer to List 5.18.
+	Connectiontype uint8 `json:"connectiontype,omitempty"`
+
+	// Attribute:
 	//   ifa
 	// Type:
 	//   string
