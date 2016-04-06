@@ -1,4 +1,4 @@
-package rtb
+package openrtb
 
 // 4.2.3 Object: Bid
 //

@@ -1,10 +1,17 @@
-# go-rtb
+# openrtb
 
-[![GoDoc](https://godoc.org/github.com/mxmCherry/go-rtb/2.3/rtb?status.svg)](https://godoc.org/github.com/mxmCherry/go-rtb/2.3/rtb)
+[![GoDoc](https://godoc.org/github.com/mxmCherry/openrtb?status.svg)](https://godoc.org/github.com/mxmCherry/openrtb)
 
 [OpenRTB](//github.com/openrtb/OpenRTB) [v2.3](//github.com/openrtb/OpenRTB/blob/master/OpenRTB-API-Specification-Version-2-3-FINAL.pdf) types for Go programming language (golang)
 
-**Warning!** This package is considered unstable, consider using [glide](https://github.com/Masterminds/glide) for vendoring specific version (commit hash).
+**Warning!** This package is considered unstable, consider using [glide](https://github.com/Masterminds/glide) to vendor specific version (commit hash).
+
+# Goals
+
+Provide base for OpenRTB-related projects, focusing on:
+- Extensive documentation
+- Strict specification (using unsigned numeric types for values, that are not meant to be signed; don't overuse pointers to avoid nil dereferencing etc.)
+- Efficient memory usage (using numeric types large enough just to hold intended values etc.)
 
 # Guidelines
 

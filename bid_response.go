@@ -1,4 +1,4 @@
-package rtb
+package openrtb
 
 // 4.2.1 Object: BidResponse
 //

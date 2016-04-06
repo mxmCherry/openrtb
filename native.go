@@ -1,4 +1,4 @@
-package rtb
+package openrtb
 
 // 3.2.5 Object: Native
 //
