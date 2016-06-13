@@ -132,7 +132,7 @@ type BidRequest struct {
 	// Type:
 	//   string array
 	// Description:
-	//   Blocked advertiser categories using the IAB content categories. Refer to List 5.1.
+	//   Block list of advertisers by their domains (e.g., “ford.com”).
 	BAdv []string `json:"badv,omitempty"`
 
 	// Attribute:
