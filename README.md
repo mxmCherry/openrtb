@@ -9,7 +9,7 @@
 # Using
 
 ```bash
-go get -u "http://gopkg.in/mxmCherry/openrtb.v1"
+go get -u "gopkg.in/mxmCherry/openrtb.v1"
 ```
 
 ```go
