@@ -13,7 +13,7 @@ go get -u "http://gopkg.in/mxmCherry/openrtb.v1"
 ```
 
 ```go
-import "http://gopkg.in/mxmCherry/openrtb.v1"
+import "gopkg.in/mxmCherry/openrtb.v1"
 ```
 
 # Goals
