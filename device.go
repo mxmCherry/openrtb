@@ -31,7 +31,7 @@ type Device struct {
 	// Description:
 	//   Standard “Do Not Track” flag as set in the header by the
 	//   browser, where 0 = tracking is unrestricted, 1 = do not track.
-	DNT uint8 `json:"dnt,omitempty"`
+	DNT int8 `json:"dnt,omitempty"`
 
 	// Attribute:
 	//   lmt
@@ -41,7 +41,7 @@ type Device struct {
 	//   “Limit Ad Tracking” signal commercially endorsed (e.g., iOS,
 	//   Android), where 0 = tracking is unrestricted, 1 = tracking must
 	//   be limited per commercial guidelines.
-	Lmt uint8 `json:"lmt,omitempty"`
+	Lmt int8 `json:"lmt,omitempty"`
 
 	// Attribute:
 	//   ip
@@ -65,7 +65,7 @@ type Device struct {
 	//   integer
 	// Description:
 	//   The general type of device. Refer to List 5.17.
-	DeviceType uint8 `json:"devicetype,omitempty"`
+	DeviceType int8 `json:"devicetype,omitempty"`
 
 	// Attribute:
 	//   make
@@ -145,7 +145,7 @@ type Device struct {
 	//   integer
 	// Description:
 	//   Support for JavaScript, where 0 = no, 1 = yes.
-	JS uint8 `json:"js,omitempty"`
+	JS int8 `json:"js,omitempty"`
 
 	// Attribute:
 	//   flashver
@@ -179,7 +179,7 @@ type Device struct {
 	//   integer
 	// Description:
 	//   Network connection type. Refer to List 5.18.
-	Connectiontype uint8 `json:"connectiontype,omitempty"`
+	Connectiontype int8 `json:"connectiontype,omitempty"`
 
 	// Attribute:
 	//   ifa

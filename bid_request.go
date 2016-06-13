@@ -69,7 +69,7 @@ type BidRequest struct {
 	//   integer; default 0
 	// Description:
 	//    Indicator of test mode in which auctions are not billable, where 0 = live mode, 1 = test mode.
-	Test uint8 `json:"test,omitempty"`
+	Test int8 `json:"test,omitempty"`
 
 	// Attribute:
 	//   at
@@ -79,7 +79,7 @@ type BidRequest struct {
 	//    Auction type, where 1 = First Price, 2 = Second Price Plus.
 	//    Exchange-specific auction types can be defined using values
 	//    greater than 500.
-	AT uint8 `json:"at,omitempty"`
+	AT int8 `json:"at,omitempty"`
 
 	// Attribute:
 	//   tmax
@@ -108,7 +108,7 @@ type BidRequest struct {
 	//   (e.g., all on the web page, all video spots such as pre/mid/post
 	//   roll) to support road-blocking. 0 = no or unknown, 1 = yes, the
 	//   impressions offered represent all that are available.
-	AllImps uint8 `json:"allimps,omitempty"`
+	AllImps int8 `json:"allimps,omitempty"`
 
 	// Attribute:
 	//   cur

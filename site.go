@@ -87,7 +87,7 @@ type Site struct {
 	//   integer
 	// Description:
 	//   Mobile-optimized signal, where 0 = no, 1 = yes.
-	Mobile uint8 `json:"mobile,omitempty"`
+	Mobile int8 `json:"mobile,omitempty"`
 
 	// Attribute:
 	//   privacypolicy
@@ -95,7 +95,7 @@ type Site struct {
 	//   integer
 	// Description:
 	//   Indicates if the site has a privacy policy, where 0 = no, 1 = yes.
-	PrivacyPolicy uint8 `json:"privacypolicy,omitempty"`
+	PrivacyPolicy int8 `json:"privacypolicy,omitempty"`
 
 	// Attribute:
 	//   publisher

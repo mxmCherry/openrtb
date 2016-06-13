@@ -92,7 +92,7 @@ type Banner struct {
 	//   integer array
 	// Description:
 	//   Blocked banner ad types. Refer to List 5.2.
-	BType []uint8 `json:"btype,omitempty"`
+	BType []int8 `json:"btype,omitempty"`
 
 	// Attribute:
 	//   battr
@@ -100,7 +100,7 @@ type Banner struct {
 	//   integer array
 	// Description:
 	//   Blocked creative attributes. Refer to List 5.3.
-	BAttr []uint8 `json:"battr,omitempty"`
+	BAttr []int8 `json:"battr,omitempty"`
 
 	// Attribute:
 	//   pos
@@ -108,7 +108,7 @@ type Banner struct {
 	//   integer
 	// Description:
 	//   Ad position on screen. Refer to List 5.4
-	Pos uint8 `json:"pos,omitempty"`
+	Pos int8 `json:"pos,omitempty"`
 
 	// Attribute:
 	//   mimes
@@ -126,7 +126,7 @@ type Banner struct {
 	// Description:
 	//    Indicates if the banner is in the top frame as opposed to an
 	//    iframe, where 0 = no, 1 = yes.
-	TopFrame uint8 `json:"topframe,omitempty"`
+	TopFrame int8 `json:"topframe,omitempty"`
 
 	// Attribute:
 	//   expdir
@@ -134,7 +134,7 @@ type Banner struct {
 	//   integer array
 	// Description:
 	//   Directions in which the banner may expand. Refer to List 5.5.
-	ExpDir []uint8 `json:"expdir,omitempty"`
+	ExpDir []int8 `json:"expdir,omitempty"`
 
 	// Attribute:
 	//   api
@@ -143,7 +143,7 @@ type Banner struct {
 	// Description:
 	//   List of supported API frameworks for this impression. Refer to
 	//   List 5.6. If an API is not explicitly listed, it is assumed not to be supported.
-	API []uint8 `json:"api,omitempty"`
+	API []int8 `json:"api,omitempty"`
 
 	// Attribute:
 	//   ext

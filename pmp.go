@@ -14,7 +14,7 @@ type PMP struct {
 	// Description:
 	//   Indicator of auction eligibility to seats named in the Direct Deals object, where 0 = all bids are accepted,
 	//   1 = bids are restricted to the deals specified and the terms thereof.
-	PrivateAuction uint8 `json:"private_auction,omitempty"`
+	PrivateAuction int8 `json:"private_auction,omitempty"`
 
 	// Attribute:
 	//   id

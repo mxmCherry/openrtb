@@ -33,7 +33,7 @@ type Geo struct {
 	// Description:
 	//   Source of location data; recommended when passing
 	//   lat/lon. Refer to List 5.16.
-	Type uint8 `json:"type,omitempty"`
+	Type int8 `json:"type,omitempty"`
 
 	// Attribute:
 	//   country
@@ -92,7 +92,7 @@ type Geo struct {
 	//   integer
 	// Description:
 	//   Local time as the number +/- of minutes from UTC.
-	UTCOffset int8 `json:"utcoffset,omitempty"`
+	UTCOffset int16 `json:"utcoffset,omitempty"`
 
 	// Attribute:
 	//   ext

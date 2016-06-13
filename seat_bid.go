@@ -32,7 +32,7 @@ type SeatBid struct {
 	// Description:
 	//   0 = impressions can be won individually; 1 = impressions must
 	//   be won or lost as a group.
-	Group uint8 `json:"group,omitempty"`
+	Group int8 `json:"group,omitempty"`
 
 	// Attribute:
 	//   ext

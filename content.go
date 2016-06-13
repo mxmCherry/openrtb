@@ -87,7 +87,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   Video quality per IAB’s classification. Refer to List 5.11.
-	VideoQuality uint8 `json:"videoquality,omitempty"`
+	VideoQuality int8 `json:"videoquality,omitempty"`
 
 	// Attribute:
 	//   context
@@ -95,7 +95,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   Type of content (game, video, text, etc.). Refer to List 5.14.
-	Context uint8 `json:"context,omitempty"`
+	Context int8 `json:"context,omitempty"`
 
 	// Attribute:
 	//   contentrating
@@ -119,7 +119,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   Media rating per QAG guidelines. Refer to List 5.15.
-	QAGMediaRating uint8 `json:"qagmediarating,omitempty"`
+	QAGMediaRating int8 `json:"qagmediarating,omitempty"`
 
 	// Attribute:
 	//   keywords
@@ -135,7 +135,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   0 = not live, 1 = content is live (e.g., stream, live blog).
-	LiveStream uint8 `json:"livestream,omitempty"`
+	LiveStream int8 `json:"livestream,omitempty"`
 
 	// Attribute:
 	//   sourcerelationship
@@ -143,7 +143,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   0 = indirect, 1 = direct.
-	SourceRelationship uint8 `json:"sourcerelationship,omitempty"`
+	SourceRelationship int8 `json:"sourcerelationship,omitempty"`
 
 	// Attribute:
 	//   len
@@ -168,7 +168,7 @@ type Content struct {
 	// Description:
 	//   Indicator of whether or not the content is embeddable (e.g.,
 	//   an embeddable video player), where 0 = no, 1 = yes.
-	Embeddable uint8 `json:"embeddable,omitempty"`
+	Embeddable int8 `json:"embeddable,omitempty"`
 
 	// Attribute:
 	//   ext
