@@ -140,8 +140,8 @@ type BidRequest struct {
 	// Type:
 	//   object
 	// Description:
-	//   Blocked advertiser categories using the IAB content categories. Refer to List 5.1. or governmental
-	//   regulations in force for this request.
+	//   A Regs object (Section 3.2.16) that specifies any industry, legal,
+	//   or governmental regulations in force for this request.
 	Regs *Regs `json:"regs,omitempty"`
 
 	// Attribute:

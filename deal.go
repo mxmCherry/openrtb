@@ -56,7 +56,7 @@ type Deal struct {
 	// Type:
 	//   string array
 	// Description:
-	//   Array of advertiser domains (e.g., advertiser.com) allowed to bid on this deal.  Omission implies
+	//   Array of advertiser domains (e.g., advertiser.com) allowed to bid on this deal. Omission implies
 	//   no advertiser restrictions.
 	WADomain []string `json:"wadomain,omitempty"`
 

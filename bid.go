@@ -110,8 +110,16 @@ type Bid struct {
 	// Type:
 	//   string array
 	// Description:
-	//   IAB content categories of the creative. Refer to List 5.1.attr integer array Set of attributes describing the creative. Refer to List 5.3.
+	//   IAB content categories of the creative. Refer to List 5.1.
 	Cat []string `json:"cat,omitempty"`
+
+	// Attribute:
+	//   attr
+	// Type:
+	//   integer array
+	// Description:
+	//   Set of attributes describing the creative. Refer to List 5.3.
+	Attr []int8 `json:"attr,omitempty"`
 
 	// Attribute:
 	//   dealid

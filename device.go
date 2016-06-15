@@ -170,7 +170,6 @@ type Device struct {
 	// Description:
 	//   Carrier or ISP (e.g., “VERIZON”). “WIFI” is often used in mobile
 	//   to indicate high bandwidth (e.g., video friendly vs. cellular).
-	//   connectiontype integer Network connection type. Refer to List 5.18.
 	Carrier string `json:"carrier,omitempty"`
 
 	// Attribute:
