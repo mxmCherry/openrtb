@@ -42,13 +42,13 @@ type Video struct {
 	// Attribute:
 	//   protocol
 	// Type:
-	//   integer array; DEPRECATED
+	//   integer; DEPRECATED
 	// Description:
 	//   NOTE: Use of protocols instead is highly recommended.
 	//   Supported video bid response protocol. Refer to List 5.8. At
 	//   least one supported protocol must be specified in either the
 	//   protocol or protocols attribute.
-	Protocol []int8 `json:"protocol,omitempty"`
+	Protocol int8 `json:"protocol,omitempty"`
 
 	// Attribute:
 	//   protocols
