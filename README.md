@@ -1,6 +1,6 @@
 # openrtb
 
-[![GoDoc](https://godoc.org/gopkg.in/mxmCherry/openrtb.v1?status.svg)](https://godoc.org/gopkg.in/mxmCherry/openrtb.v1)
+[![GoDoc](https://godoc.org/gopkg.in/mxmCherry/openrtb.v2?status.svg)](https://godoc.org/gopkg.in/mxmCherry/openrtb.v2)
 
 [OpenRTB](//github.com/openrtb/OpenRTB) [v2.3](//github.com/openrtb/OpenRTB/blob/master/OpenRTB-API-Specification-Version-2-3-FINAL.pdf) types for Go programming language (golang)
 
@@ -9,11 +9,11 @@
 # Using
 
 ```bash
-go get -u "gopkg.in/mxmCherry/openrtb.v1"
+go get -u "gopkg.in/mxmCherry/openrtb.v2"
 ```
 
 ```go
-import "gopkg.in/mxmCherry/openrtb.v1"
+import "gopkg.in/mxmCherry/openrtb.v2"
 ```
 
 # Goals
