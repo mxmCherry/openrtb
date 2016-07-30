@@ -2,7 +2,7 @@
 
 [![GoDoc](https://godoc.org/gopkg.in/mxmCherry/openrtb.v2?status.svg)](https://godoc.org/gopkg.in/mxmCherry/openrtb.v2)
 
-[OpenRTB](//github.com/openrtb/OpenRTB) [v2.3](//github.com/openrtb/OpenRTB/blob/master/OpenRTB-API-Specification-Version-2-3-FINAL.pdf) types for Go programming language (golang)
+[OpenRTB](//github.com/openrtb/OpenRTB) [v2.3.1](//github.com/openrtb/OpenRTB/blob/master/OpenRTB-API-Specification-Version-2-3-1-FINAL.pdf) types for Go programming language (golang)
 
 **Warning!** Using [glide](https://github.com/Masterminds/glide) is recommended to vendor specific commit hash.
 
@@ -31,7 +31,7 @@ Provide base for OpenRTB-related projects, focusing on:
 - Capitalized ID keys
 
 ## Types
-- Key types should be chosen according to OpenRTB v2.3 specification (attribute types)
+- Key types should be chosen according to OpenRTB v2.3.1 specification (attribute types)
 - Numeric types:
 	- architecture-independent, e.g., ```int32``` instead of ```int```
 	- signed integral types should be used only when absolutely needed (value may contain negative numbers), unsigned integral types are preferred

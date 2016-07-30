@@ -17,6 +17,7 @@ type User struct {
 	//   buyerid is recommended.
 	ID string `json:"id,omitempty"`
 
+	// DEPRECATED
 	// Attribute:
 	//   buyerid
 	// Type:
@@ -24,7 +25,20 @@ type User struct {
 	// Description:
 	//   Buyer-specific ID for the user as mapped by the exchange for
 	//   the buyer. At least one of buyerid or id is recommended.
+	// Dev note:
+	//   Seems to be a mistype in OpenRTB 2.3 spec - it contains examples
+	//   with "buyeruid" (not "buyerid").
+	//   OpenRTB 2.3.1 uses "buyeruid" only.
 	BuyerID string `json:"buyerid,omitempty"`
+
+	// Attribute:
+	//   buyeruid
+	// Type:
+	//   string; recommended
+	// Description:
+	//   Buyer-specific ID for the user as mapped by the exchange for
+	//   the buyer. At least one of buyeruid or id is recommended.
+	BuyerUID string `json:"buyeruid,omitempty"`
 
 	// Attribute:
 	//   yob
