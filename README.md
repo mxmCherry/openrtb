@@ -48,3 +48,10 @@ Provide base for OpenRTB-related projects, focusing on:
 - Each RTB type should be kept in its own file, named after type
 - File names are in underscore_case, e.g., ```type BidRequest``` should be declared in ```bid_request.go```
 - [go fmt your code](https://blog.golang.org/go-fmt-your-code)
+
+
+# TODO
+
+- [ ] OpenRTB 2.5 compliance ([specs](http://www.iab.com/wp-content/uploads/2016/03/OpenRTB-API-Specification-Version-2-5-FINAL.pdf))
+- [ ] Review time/duration types, use `int64` for easier [time](https://golang.org/pkg/time/) conversion (requires major version bump)
+- [ ] Review enum types (some experiments are in [next](https://github.com/mxmCherry/openrtb/tree/next) branch)
