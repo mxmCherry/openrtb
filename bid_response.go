@@ -70,5 +70,5 @@ type BidResponse struct {
 	//   object
 	// Description:
 	//   Placeholder for bidder-specific extensions to OpenRTB.
-	Ext Ext `json:"ext,omitempty"`
+	Ext RawJSON `json:"ext,omitempty"`
 }

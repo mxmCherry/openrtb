@@ -66,5 +66,5 @@ type Deal struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext,omitempty"`
+	Ext RawJSON `json:"ext,omitempty"`
 }
