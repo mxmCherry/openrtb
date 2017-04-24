@@ -34,10 +34,18 @@ type Banner struct {
 	//   height requirement. Otherwise it is a preferred height.
 	H uint64 `json:"h,omitempty"`
 
+    // Attribute:
+    //   format
+    // Type:
+    //   array of formats
+    // Description:
+    //   Creative sizes allowed by this tag. Overrides h and w if provided
+    Format []Format `json:"format,omitempty"`
+
 	// Attribute:
 	//   wmax
 	// Type:
-	//   integer
+	//   integer; deprecated
 	// Description:
 	//   Maximum width of the impression in pixels.
 	//   If included along with a w value then w should be interpreted
@@ -47,7 +55,7 @@ type Banner struct {
 	// Attribute:
 	//   hmax
 	// Type:
-	//   integer
+	//   integer; deprecated
 	// Description:
 	//   Maximum height of the impression in pixels.
 	//   If included along with an h value then h should be interpreted
@@ -57,7 +65,7 @@ type Banner struct {
 	// Attribute:
 	//   wmin
 	// Type:
-	//   integer
+	//   integer; deprecated
 	// Description:
 	//   Minimum width of the impression in pixels.
 	//   If included along with a w value then w should be interpreted
@@ -67,7 +75,7 @@ type Banner struct {
 	// Attribute:
 	//   hmin
 	// Type:
-	//   integer
+	//   integer; deprecated
 	// Description:
 	//   Minimum height of the impression in pixels.
 	//   If included along with an h value then h should be interpreted

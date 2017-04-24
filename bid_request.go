@@ -136,6 +136,14 @@ type BidRequest struct {
 	BAdv []string `json:"badv,omitempty"`
 
 	// Attribute:
+	//   source
+	// Type:
+	//   object
+	// Description:
+	//   A Source object (Section 3.2.2) that provides data about the inventory source and which entity makes the final decision.
+	Source *Source `json:"source,omitempty"`
+
+	// Attribute:
 	//   regs
 	// Type:
 	//   object
