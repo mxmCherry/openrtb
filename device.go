@@ -186,9 +186,9 @@ type Device struct {
 	// Type:
 	//   string
 	// Description:
-    //   Mobile carrier as the concatenated MCC-MNC code (e.g., “310-005” identifies Verizon Wireless CDMA in the USA).
-    //   Refer to https://en.wikipedia.org/wiki/Mobile_country_code for further examples. Note that the dash between
-    //   the MCC and MNC parts is required to remove parsing ambiguity.
+	//   Mobile carrier as the concatenated MCC-MNC code (e.g., “310-005” identifies Verizon Wireless CDMA in the USA).
+	//   Refer to https://en.wikipedia.org/wiki/Mobile_country_code for further examples. Note that the dash between
+	//   the MCC and MNC parts is required to remove parsing ambiguity.
 	MCCMNC string `json:"mccmnc,omitempty"`
 
 	// Attribute:
