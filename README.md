@@ -16,7 +16,8 @@ import "github.com/prebid/openrtb"
 
 # History
 
-Forked on April 23, 2017 from [mxmCherry](//github.com/mxmCherry/openrtb.v3)
+- Forked on April 23, 2017 from [mxmCherry](//github.com/mxmCherry/openrtb.v3)
+- Updated Device, Geo to OpenRTB 2.5
 
 # Goals
 

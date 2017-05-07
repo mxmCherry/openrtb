@@ -1,6 +1,7 @@
 package openrtb
 
-// 3.2.11 Object: Device
+// OpenRTB 2.5
+// 3.2.18 Object: Device
 //
 // This object provides information pertaining to the device through which the user is interacting. Device
 // information includes its hardware, platform, location, and carrier data. The device can refer to a mobile
@@ -21,7 +22,7 @@ type Device struct {
 	//   object; recommended
 	// Description:
 	//   Location of the device assumed to be the user’s current
-	//   location defined by a Geo object (Section 3.2.12).
+	//   location defined by a Geo object (Section 3.2.19).
 	Geo *Geo `json:"geo,omitempty"`
 
 	// Attribute:
@@ -148,6 +149,14 @@ type Device struct {
 	JS int8 `json:"js,omitempty"`
 
 	// Attribute:
+	//   geofetch
+	// Type:
+	//   integer
+	// Description:
+	//   Indicates if the geolocation API will be available to JavaScript code running in the banner, where 0 = no, 1 = yes.
+	GeoFetch int8 `json:"geofetch,omitempty"`
+
+	// Attribute:
 	//   flashver
 	// Type:
 	//   string
@@ -173,11 +182,21 @@ type Device struct {
 	Carrier string `json:"carrier,omitempty"`
 
 	// Attribute:
+	//   mccmnc
+	// Type:
+	//   string
+	// Description:
+    //   Mobile carrier as the concatenated MCC-MNC code (e.g., “310-005” identifies Verizon Wireless CDMA in the USA).
+    //   Refer to https://en.wikipedia.org/wiki/Mobile_country_code for further examples. Note that the dash between
+    //   the MCC and MNC parts is required to remove parsing ambiguity.
+	MCCMNC string `json:"mccmnc,omitempty"`
+
+	// Attribute:
 	//   connectiontype
 	// Type:
 	//   integer
 	// Description:
-	//   Network connection type. Refer to List 5.18.
+	//   Network connection type. Refer to List 5.22.
 	Connectiontype int8 `json:"connectiontype,omitempty"`
 
 	// Attribute:
