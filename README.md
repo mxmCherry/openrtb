@@ -42,10 +42,6 @@ Master always contains latest code, so better use some package manager to vendor
 
 # TODO
 
-- [x] OpenRTB 2.5 compliance ([specs](http://www.iab.com/wp-content/uploads/2016/03/OpenRTB-API-Specification-Version-2-5-FINAL.pdf))
-- [x] Review time/duration types, use `int64` for easier [time](https://golang.org/pkg/time/) conversion (requires major version bump)
-- [x] Review enum types - make sure they use large enough type to cover all the items
-- [x] Copy test examples from OpenRTB 2.5
 - [ ] Review all integral types, probably, switch everything to signed ones or just to `int`?
 - [ ] Consider switching back to `encoding/json.RawMessage`, as Go 1.8 fixed serialisation for non-ptr (probably, when Go 1.9 or even 1.10 is out)
 - [ ] Review enum types (typed enum attributes + constants)
