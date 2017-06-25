@@ -8,6 +8,7 @@ package openrtb
 // header bidding, but it can also apply to upstream server entities such as another RTB exchange, a
 // mediation platform, or an ad server combines direct campaigns with 3rd party demand in decisioning.
 type Source struct {
+
 	// Attribute:
 	//   fd
 	// Type:

@@ -41,7 +41,6 @@ Master always contains latest code, so better use some package manager to vendor
 - [go fmt your code](https://blog.golang.org/go-fmt-your-code)
 
 # TODO
-
 - [ ] Review all integral types, probably, switch everything to signed ones or just to `int`?
 - [ ] Consider switching back to `encoding/json.RawMessage`, as Go 1.8 fixed serialisation for non-ptr (probably, when Go 1.9 or even 1.10 is out)
 - [ ] Review enum types (typed enum attributes + constants)

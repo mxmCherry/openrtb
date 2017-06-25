@@ -6,6 +6,7 @@ package openrtb
 // banner impression. These are typically used in an array where multiple sizes are permitted. It is
 // recommended that either the w/h pair or the wratio/hratio/wmin set (i.e., for Flex Ads) be specified.
 type Format struct {
+
 	// Attribute:
 	//   w
 	// Type:
