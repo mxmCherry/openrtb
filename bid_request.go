@@ -3,7 +3,7 @@ package openrtb
 // 3.2.1 Object: BidRequest
 //
 // The top-level bid request object contains a globally unique bid request or auction ID. This id attribute is
-// required as is at least one impression object (Section 3.2.2). Other attributes in this top-level object
+// required as is at least one impression object (Section 3.2.4). Other attributes in this top-level object
 // establish rules and restrictions that apply to all impressions being offered.
 //
 // There are also several subordinate objects that provide detailed data to potential buyers. Among these
@@ -25,7 +25,7 @@ type BidRequest struct {
 	// Type:
 	//   object array; required
 	// Description:
-	//   Array of Imp objects (Section 3.2.2) representing the
+	//   Array of Imp objects (Section 3.2.4) representing the
 	//   impressions offered. At least 1 Imp object is required.
 	Imp []Imp `json:"imp"`
 
@@ -34,7 +34,7 @@ type BidRequest struct {
 	// Type:
 	//   object; recommended
 	// Description:
-	//    Details via a Site object (Section 3.2.6) about the publisher's
+	//    Details via a Site object (Section 3.2.13) about the publisher’s
 	//    website. Only applicable and recommended for websites.
 	Site *Site `json:"site,omitempty"`
 
@@ -43,8 +43,9 @@ type BidRequest struct {
 	// Type:
 	//   object; recommended
 	// Description:
-	//    Details via an App object (Section 3.2.7) about the publisher's
-	//    app (i.e. non-browser applications). Only applicable and recommended for apps.
+	//    Details via an App object (Section 3.2.14) about the publisher’s
+	//    app (i.e., non-browser applications). Only applicable and
+	//    recommended for apps.
 	App *App `json:"app,omitempty"`
 
 	// Attribute:
@@ -52,7 +53,8 @@ type BidRequest struct {
 	// Type:
 	//   object; recommended
 	// Description:
-	//   Details via a Device object (Section 3.2.11) about the user’s device to which the impression will be delivered.
+	//   Details via a Device object (Section 3.2.18) about the user’s
+	//   device to which the impression will be delivered.
 	Device *Device `json:"device,omitempty"`
 
 	// Attribute:
@@ -60,7 +62,8 @@ type BidRequest struct {
 	// Type:
 	//   object; recommended
 	// Description:
-	//    Details via a User object (Section 3.2.13) about the human user of the device; the advertising audience.
+	//    Details via a User object (Section 3.2.20) about the human
+	//    user of the device; the advertising audience.
 	User *User `json:"user,omitempty"`
 
 	// Attribute:
@@ -68,7 +71,8 @@ type BidRequest struct {
 	// Type:
 	//   integer; default 0
 	// Description:
-	//    Indicator of test mode in which auctions are not billable, where 0 = live mode, 1 = test mode.
+	//    Indicator of test mode in which auctions are not billable,
+	//    where 0 = live mode, 1 = test mode.
 	Test int8 `json:"test,omitempty"`
 
 	// Attribute:
@@ -79,24 +83,43 @@ type BidRequest struct {
 	//    Auction type, where 1 = First Price, 2 = Second Price Plus.
 	//    Exchange-specific auction types can be defined using values
 	//    greater than 500.
-	AT int8 `json:"at,omitempty"`
+	AT int64 `json:"at,omitempty"`
 
 	// Attribute:
 	//   tmax
 	// Type:
 	//   integer
 	// Description:
-	//    Maximum time in milliseconds to submit a bid to avoid timeout. This value is commonly communicated offline.
-	TMax uint64 `json:"tmax,omitempty"`
+	//    Maximum time in milliseconds the exchange allows for bids to
+	//    be received including Internet latency to avoid timeout. This
+	//    value supersedes any a priori guidance from the exchange.
+	TMax int64 `json:"tmax,omitempty"`
 
 	// Attribute:
 	//   wseat
 	// Type:
 	//   string array
 	// Description:
-	//   Whitelist of buyer seats allowed to bid on this deal.  Seat IDs must be
-	//   communicated between bidders and the exchange a priori. Omission implies no seat restrictions.
+	//   White list of buyer seats (e.g., advertisers, agencies) allowed
+	//   to bid on this impression. IDs of seats and knowledge of the
+	//   buyer’s customers to which they refer must be coordinated
+	//   between bidders and the exchange a priori. At most, only one
+	//   of wseat and bseat should be used in the same request.
+	//   Omission of both implies no seat restrictions.
 	WSeat []string `json:"wseat,omitempty"`
+
+	// Attribute:
+	//   bseat
+	// Type:
+	//   string array
+	// Description:
+	//   Block list of buyer seats (e.g., advertisers, agencies) restricted
+	//   from bidding on this impression. IDs of seats and knowledge
+	//   of the buyer’s customers to which they refer must be
+	//   coordinated between bidders and the exchange a priori. At
+	//   most, only one of wseat and bseat should be used in the
+	//   same request. Omission of both implies no seat restrictions.
+	BSeat []string `json:"bseat,omitempty"`
 
 	// Attribute:
 	//   allimps
@@ -115,16 +138,29 @@ type BidRequest struct {
 	// Type:
 	//   string array
 	// Description:
-	//    Array of allowed currencies for bids on this bid request using ISO-4217 alpha codes. Recommended only if
-	//    the exchange accepts multiple currencies.
+	//   Array of allowed currencies for bids on this bid request using
+	//   ISO-4217 alpha codes. Recommended only if the exchange
+	//   accepts multiple currencies.
 	Cur []string `json:"cur,omitempty"`
+
+	// Attribute:
+	//   wlang
+	// Type:
+	//   string array
+	// Description:
+	//   White list of languages for creatives using ISO-639-1-alpha-2.
+	//   Omission implies no specific restrictions, but buyers would be
+	//   advised to consider language attribute in the Device and/or
+	//   Content objects if available.
+	WLang []string `json:"wlang,omitempty"`
 
 	// Attribute:
 	//   bcat
 	// Type:
 	//   string array
 	// Description:
-	//   Blocked advertiser categories using the IAB content categories. Refer to List 5.1.
+	//   Blocked advertiser categories using the IAB content
+	//   categories. Refer to List 5.1.
 	BCat []string `json:"bcat,omitempty"`
 
 	// Attribute:
@@ -136,11 +172,31 @@ type BidRequest struct {
 	BAdv []string `json:"badv,omitempty"`
 
 	// Attribute:
+	//   bapp
+	// Type:
+	//   string array
+	// Description:
+	//   Block list of applications by their platform-specific exchangeindependent
+	//   application identifiers. On Android, these should
+	//   be bundle or package names (e.g., com.foo.mygame). On iOS,
+	//   these are numeric IDs.
+	BApp []string `json:"bapp,omitempty"`
+
+	// Attribute:
+	//   source
+	// Type:
+	//   object
+	// Description:
+	//   A Sorce object (Section 3.2.2) that provides data about the
+	//   inventory source and which entity makes the final decision.
+	Source *Source `json:"source,omitempty"`
+
+	// Attribute:
 	//   regs
 	// Type:
 	//   object
 	// Description:
-	//   A Regs object (Section 3.2.16) that specifies any industry, legal,
+	//   A Regs object (Section 3.2.3) that specifies any industry, legal,
 	//   or governmental regulations in force for this request.
 	Regs *Regs `json:"regs,omitempty"`
 

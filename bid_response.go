@@ -61,7 +61,7 @@ type BidResponse struct {
 	// Type:
 	//   integer
 	// Description:
-	//   Reason for not bidding. Refer to List 5.19.
+	//   Reason for not bidding. Refer to List 5.24.
 	NBR int8 `json:"nbr,omitempty"`
 
 	// Attribute:

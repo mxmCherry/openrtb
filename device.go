@@ -1,10 +1,20 @@
 package openrtb
 
-// 3.2.11 Object: Device
+// 3.2.18 Object: Device
 //
 // This object provides information pertaining to the device through which the user is interacting. Device
 // information includes its hardware, platform, location, and carrier data. The device can refer to a mobile
 // handset, a desktop computer, set top box, or other digital device.
+//
+// BEST PRACTICE: There are currently no prominent open source lists for device makes, models, operating
+// systems, or carriers. Exchanges typically use commercial products or other proprietary lists for these
+// attributes. Until suitable open standards are available, exchanges are highly encouraged to publish lists
+// of their device make, model, operating system, and carrier values to bidders.
+//
+// BEST PRACTICE: Proper device IP detection in mobile is not straightforward. Typically it involves starting
+// at the left of the x-forwarded-for header, skipping private carrier networks (e.g., 10.x.x.x or
+// 192.x.x.x), and possibly scanning for known carrier IP ranges. Exchanges are urged to research and
+// implement this feature carefully when presenting device IP values to bidders.
 type Device struct {
 
 	// Attribute:
@@ -21,7 +31,7 @@ type Device struct {
 	//   object; recommended
 	// Description:
 	//   Location of the device assumed to be the user’s current
-	//   location defined by a Geo object (Section 3.2.12).
+	//   location defined by a Geo object (Section 3.2.19).
 	Geo *Geo `json:"geo,omitempty"`
 
 	// Attribute:
@@ -64,7 +74,7 @@ type Device struct {
 	// Type:
 	//   integer
 	// Description:
-	//   The general type of device. Refer to List 5.17.
+	//   The general type of device. Refer to List 5.21.
 	DeviceType int8 `json:"devicetype,omitempty"`
 
 	// Attribute:
@@ -148,6 +158,15 @@ type Device struct {
 	JS int8 `json:"js,omitempty"`
 
 	// Attribute:
+	//   geofetch
+	// Type:
+	//   integer
+	// Description:
+	//   Indicates if the geolocation API will be available to JavaScript
+	//   code running in the banner, where 0 = no, 1 = yes.
+	GeoFetch int8 `json:"geofetch,omitempty"`
+
+	// Attribute:
 	//   flashver
 	// Type:
 	//   string
@@ -168,16 +187,28 @@ type Device struct {
 	// Type:
 	//   string
 	// Description:
-	//   Carrier or ISP (e.g., “VERIZON”). “WIFI” is often used in mobile
-	//   to indicate high bandwidth (e.g., video friendly vs. cellular).
+	//   Carrier or ISP (e.g., “VERIZON”) using exchange curated string
+	//   names which should be published to bidders a priori.
 	Carrier string `json:"carrier,omitempty"`
+
+	// Attribute:
+	//   mccmnc
+	// Type:
+	//   string
+	// Description:
+	//   Mobile carrier as the concatenated MCC-MNC code (e.g.,
+	//   “310-005” identifies Verizon Wireless CDMA in the USA).
+	//   Refer to https://en.wikipedia.org/wiki/Mobile_country_code
+	//   for further examples. Note that the dash between the MCC
+	//   and MNC parts is required to remove parsing ambiguity.
+	MCCMNC string `json:"mccmnc,omitempty"`
 
 	// Attribute:
 	//   connectiontype
 	// Type:
 	//   integer
 	// Description:
-	//   Network connection type. Refer to List 5.18.
+	//   Network connection type. Refer to List 5.22.
 	Connectiontype int8 `json:"connectiontype,omitempty"`
 
 	// Attribute:

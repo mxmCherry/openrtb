@@ -1,6 +1,6 @@
 package openrtb
 
-// 3.2.7 Object: App
+// 3.2.14 Object: App
 //
 // This object should be included if the ad supported content is a non-browser application (typically in
 // mobile) as opposed to a website. A bid request must not contain both an App and a Site object. At a
@@ -28,8 +28,10 @@ type App struct {
 	// Type:
 	//   string
 	// Description:
-	//   Application bundle or package name (e.g., com.foo.mygame);
-	//   intended to be a unique ID across exchanges.
+	//   A platform-specific application identifier intended to be
+	//   unique to the app and independent of the exchange. On
+	//   Android, this should be a bundle or package name (e.g.,
+	//   com.foo.mygame). On iOS, it is typically a numeric ID.
 	Bundle string `json:"bundle,omitempty"`
 
 	// Attribute:
@@ -45,7 +47,7 @@ type App struct {
 	// Type:
 	//   string
 	// Description:
-	//   App store URL for an installed app; for QAG 1.5 compliance.
+	//   App store URL for an installed app; for IQG 2.1 compliance.
 	StoreURL string `json:"storeurl,omitempty"`
 
 	// Attribute:
@@ -53,7 +55,7 @@ type App struct {
 	// Type:
 	//   string array
 	// Description:
-	//   Array of IAB content categories of the app. Refer to List 5.1.
+	//   Array of IAB content categories of the app. Refer to List 5.1
 	Cat []string `json:"cat,omitempty"`
 
 	// Attribute:
@@ -103,7 +105,7 @@ type App struct {
 	// Type:
 	//   object
 	// Description:
-	//   Details about the Publisher (Section 3.2.8) of the app.
+	//   Details about the Publisher (Section 3.2.15) of the app.
 	Publisher *Publisher `json:"publisher,omitempty"`
 
 	// Attribute:
@@ -111,7 +113,7 @@ type App struct {
 	// Type:
 	//   object
 	// Description:
-	//   Details about the Content (Section 3.2.9) within the app.
+	//   Details about the Content (Section 3.2.16) within the app
 	Content *Content `json:"content,omitempty"`
 
 	// Attribute:

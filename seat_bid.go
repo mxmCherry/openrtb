@@ -22,7 +22,8 @@ type SeatBid struct {
 	// Type:
 	//   string
 	// Description:
-	//   ID of the bidder seat on whose behalf this bid is made.
+	//   ID of the buyer seat (e.g., advertiser, agency) on whose behalf
+	//   this bid is made.
 	Seat string `json:"seat,omitempty"`
 
 	// Attribute:

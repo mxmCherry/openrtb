@@ -1,6 +1,6 @@
 package openrtb
 
-// 3.2.13 Object: User
+// 3.2.20 Object: User
 //
 // This object contains information known or derived about the human user of the device (i.e., the
 // audience for advertising). The user id is an exchange artifact and may be subject to rotation or other
@@ -14,22 +14,8 @@ type User struct {
 	//   string; recommended
 	// Description:
 	//   Exchange-specific ID for the user. At least one of id or
-	//   buyerid is recommended.
+	//   buyeruid is recommended.
 	ID string `json:"id,omitempty"`
-
-	// DEPRECATED
-	// Attribute:
-	//   buyerid
-	// Type:
-	//   string; recommended
-	// Description:
-	//   Buyer-specific ID for the user as mapped by the exchange for
-	//   the buyer. At least one of buyerid or id is recommended.
-	// Dev note:
-	//   Seems to be a mistype in OpenRTB 2.3 spec - it contains examples
-	//   with "buyeruid" (not "buyerid").
-	//   OpenRTB 2.3.1 uses "buyeruid" only.
-	BuyerID string `json:"buyerid,omitempty"`
 
 	// Attribute:
 	//   buyeruid
@@ -46,7 +32,7 @@ type User struct {
 	//   integer
 	// Description:
 	//   Year of birth as a 4-digit integer.
-	Yob uint16 `json:"yob,omitempty"`
+	Yob int64 `json:"yob,omitempty"`
 
 	// Attribute:
 	//   gender
@@ -82,7 +68,7 @@ type User struct {
 	//   object
 	// Description:
 	//   Location of the user’s home base defined by a Geo object
-	//   (Section 3.2.12). This is not necessarily their current location.
+	//   (Section 3.2.19). This is not necessarily their current location.
 	Geo *Geo `json:"geo,omitempty"`
 
 	// Attribute:
@@ -90,7 +76,7 @@ type User struct {
 	// Type:
 	//   object array
 	// Description:
-	//   Additional user data. Each Data object (Section 3.2.14)
+	//   Additional user data. Each Data object (Section 3.2.21)
 	//   represents a different data source.
 	Data []Data `json:"data,omitempty"`
 

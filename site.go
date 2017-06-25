@@ -1,6 +1,6 @@
 package openrtb
 
-// 3.2.6 Object: Site
+// 3.2.13 Object: Site
 //
 // This object should be included if the ad supported content is a website as opposed to a non-browser
 // application. A bid request must not contain both a Site and an App object. At a minimum, it is useful
@@ -70,7 +70,7 @@ type Site struct {
 	// Type:
 	//   string
 	// Description:
-	//   Referrer URL that caused navigation to the current page.
+	//   Referrer URL that caused navigation to the current page
 	Ref string `json:"ref,omitempty"`
 
 	// Attribute:
@@ -86,7 +86,8 @@ type Site struct {
 	// Type:
 	//   integer
 	// Description:
-	//   Mobile-optimized signal, where 0 = no, 1 = yes.
+	//   Indicates if the site has been programmed to optimize layout
+	//   when viewed on mobile devices, where 0 = no, 1 = yes.
 	Mobile int8 `json:"mobile,omitempty"`
 
 	// Attribute:
@@ -102,7 +103,7 @@ type Site struct {
 	// Type:
 	//   object
 	// Description:
-	//   Details about the Publisher (Section 3.2.8) of the site.
+	//   Details about the Publisher (Section 3.2.15) of the site.
 	Publisher *Publisher `json:"publisher,omitempty"`
 
 	// Attribute:
@@ -110,7 +111,7 @@ type Site struct {
 	// Type:
 	//   object
 	// Description:
-	//   Details about the Content (Section 3.2.9) within the site.
+	//   Details about the Content (Section 3.2.16) within the site.
 	Content *Content `json:"content,omitempty"`
 
 	// Attribute:

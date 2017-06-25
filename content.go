@@ -1,6 +1,6 @@
 package openrtb
 
-// 3.2.9 Object: Content
+// 3.2.16 Object: Content
 //
 // This object describes the content in which the impression will appear, which may be syndicated or nonsyndicated
 // content. This object may be useful when syndicated content contains impressions and does
@@ -22,7 +22,7 @@ type Content struct {
 	// Type:
 	//   integer
 	// Description:
-	//   Episode number (typically applies to video content).
+	//   Episode number.
 	Episode uint64 `json:"episode,omitempty"`
 
 	// Attribute:
@@ -53,15 +53,48 @@ type Content struct {
 	// Type:
 	//   string
 	// Description:
-	//   Content season; typically for video content (e.g., “Season 3”).
+	//   Content season (e.g., “Season 3”).
 	Season string `json:"season,omitempty"`
+
+	// Attribute:
+	//   artist
+	// Type:
+	//   string
+	// Description:
+	//   Artist credited with the content.
+	Artist string `json:"artist,omitempty"`
+
+	// Attribute:
+	//   genre
+	// Type:
+	//   string
+	// Description:
+	//   Genre that best describes the content (e.g., rock, pop, etc).
+	Genre string `json:"genre,omitempty"`
+
+	// Attribute:
+	//   album
+	// Type:
+	//   string
+	// Description:
+	//   Album to which the content belongs; typically for audio.
+	Album string `json:"album,omitempty"`
+
+	// Attribute:
+	//   isrc
+	// Type:
+	//   string
+	// Description:
+	//   International Standard Recording Code conforming to ISO-
+	//   3901.
+	ISRC string `json:"isrc,omitempty"`
 
 	// Attribute:
 	//   producer
 	// Type:
 	//   object
 	// Description:
-	//   Details about the content Producer (Section 3.2.10).
+	//   Details about the content Producer (Section 3.2.17).
 	Producer *Producer `json:"producer,omitempty"`
 
 	// Attribute:
@@ -82,11 +115,20 @@ type Content struct {
 	Cat []string `json:"cat,omitempty"`
 
 	// Attribute:
-	//   videoquality
+	//   prodq
 	// Type:
 	//   integer
 	// Description:
-	//   Video quality per IAB’s classification. Refer to List 5.11.
+	//   Production quality. Refer to List 5.13
+	ProdQ int8 `json:"prodq,omitempty"`
+
+	// Attribute:
+	//   videoquality
+	// Type:
+	//   integer; DEPRECATED
+	// Description:
+	//   Note: Deprecated in favor of prodq.
+	//   Video quality. Refer to List 5.13.
 	VideoQuality int8 `json:"videoquality,omitempty"`
 
 	// Attribute:
@@ -94,7 +136,7 @@ type Content struct {
 	// Type:
 	//   integer
 	// Description:
-	//   Type of content (game, video, text, etc.). Refer to List 5.14.
+	//   Type of content (game, video, text, etc.). Refer to List 5.18.
 	Context int8 `json:"context,omitempty"`
 
 	// Attribute:
@@ -118,7 +160,7 @@ type Content struct {
 	// Type:
 	//   integer
 	// Description:
-	//   Media rating per QAG guidelines. Refer to List 5.15.
+	//   Media rating per IQG guidelines. Refer to List 5.19.
 	QAGMediaRating int8 `json:"qagmediarating,omitempty"`
 
 	// Attribute:
@@ -151,7 +193,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   Length of content in seconds; appropriate for video or audio.
-	Len uint64 `json:"len,omitempty"`
+	Len int64 `json:"len,omitempty"`
 
 	// Attribute:
 	//   language
@@ -169,6 +211,15 @@ type Content struct {
 	//   Indicator of whether or not the content is embeddable (e.g.,
 	//   an embeddable video player), where 0 = no, 1 = yes.
 	Embeddable int8 `json:"embeddable,omitempty"`
+
+	// Attribute:
+	//   data
+	// Type:
+	//   object array
+	// Description:
+	//   Additional content data. Each Data object (Section 3.2.21)
+	//   represents a different data source.
+	Data []Data `json:"data,omitempty"`
 
 	// Attribute:
 	//   ext
