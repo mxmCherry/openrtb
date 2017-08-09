@@ -113,7 +113,7 @@ type Video struct {
 	//   If a bidder sends markup/creative that is itself skippable, the
 	//   Bid object should include the attr array with an element of
 	//   16 indicating skippable video. Refer to List 5.3.
-	Skip int8 `json:"skip,omitempty"`
+	Skip *int8 `json:"skip,omitempty"`
 
 	// Attribute:
 	//   skipmin
