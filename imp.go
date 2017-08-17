@@ -152,7 +152,7 @@ type Imp struct {
 	//   creative assets and markup, where 0 = non-secure, 1 = secure.
 	//   If omitted, the secure state is unknown, but non-secure HTTP
 	//   support can be assumed.
-	Secure int8 `json:"secure,omitempty"`
+	Secure *int8 `json:"secure,omitempty"`
 
 	// Attribute:
 	//   iframebuster
