@@ -209,7 +209,7 @@ type Device struct {
 	//   integer
 	// Description:
 	//   Network connection type. Refer to List 5.22.
-	Connectiontype int8 `json:"connectiontype,omitempty"`
+	Connectiontype *int8 `json:"connectiontype,omitempty"`
 
 	// Attribute:
 	//   ifa
