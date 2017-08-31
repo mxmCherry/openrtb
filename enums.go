@@ -5,227 +5,227 @@ package openrtb
 //5.2 Banner Ad Types
 
 const (
-	eBannerAdTypeXHTMLTextAd int8 = iota + 1
-	eBannerAdTypeXHTMLBannerAd
-	eBannerAdTypeJavaScriptAd
-	eBannerAdTypeIframe
+	EBannerAdTypeXHTMLTextAd int8 = iota + 1
+	EBannerAdTypeXHTMLBannerAd
+	EBannerAdTypeJavaScriptAd
+	EBannerAdTypeIframe
 )
 
 //5.3 Creative Attributes
 
 const (
-	eCreativeAttributesAudioAdAutoPlay int8 = iota + 1
-	eCreativeAttributesAudioAdUserInitiated
-	eCreativeAttributesExpandableAutomatic
-	eCreativeAttributesExpandableClick
-	eCreativeAttributesExpandableRollover
-	eCreativeAttributesInBannerVideoAdAutoPlay
-	eCreativeAttributesInBannerVideoAdUserInitiated
-	eCreativeAttributesPop
-	eCreativeAttributesProvocative
-	eCreativeAttributesShaky
-	eCreativeAttributesSurveys
-	eCreativeAttributesTextOnly
-	eCreativeAttributesUserInteractive
-	eCreativeAttributesWindowsDialog
-	eCreativeAttributesHasAudioOnOffButton
-	eCreativeAttributesAdProvidesSkipButton
-	eCreativeAttributesAdobeFlash
+	ECreativeAttributesAudioAdAutoPlay int8 = iota + 1
+	ECreativeAttributesAudioAdUserInitiated
+	ECreativeAttributesExpandableAutomatic
+	ECreativeAttributesExpandableClick
+	ECreativeAttributesExpandableRollover
+	ECreativeAttributesInBannerVideoAdAutoPlay
+	ECreativeAttributesInBannerVideoAdUserInitiated
+	ECreativeAttributesPop
+	ECreativeAttributesProvocative
+	ECreativeAttributesShaky
+	ECreativeAttributesSurveys
+	ECreativeAttributesTextOnly
+	ECreativeAttributesUserInteractive
+	ECreativeAttributesWindowsDialog
+	ECreativeAttributesHasAudioOnOffButton
+	ECreativeAttributesAdProvidesSkipButton
+	ECreativeAttributesAdobeFlash
 )
 
 //5.4 Ad Position
 
 const (
-	eAdPositionUnknown int8 = iota
-	eAdPositionAboveTheFold
-	eAdPositionDepricated
-	eAdPositionBelowTheFold
-	eAdPositionHeader
-	eAdPositionFooter
-	eAdPositionSidebar
-	eAdPositionFullScreen
+	EAdPositionUnknown int8 = iota
+	EAdPositionAboveTheFold
+	EAdPositionDepricated
+	EAdPositionBelowTheFold
+	EAdPositionHeader
+	EAdPositionFooter
+	EAdPositionSidebar
+	EAdPositionFullScreen
 )
 
 //5.5 Expandable Direction
 
 const (
-	eExpandableDirectionLeft int8 = iota + 1
-	eExpandableDirectionRight
-	eExpandableDirectionUp
-	eExpandableDirectionDown
-	eExpandableDirectionFullScreen
+	EExpandableDirectionLeft int8 = iota + 1
+	EExpandableDirectionRight
+	EExpandableDirectionUp
+	EExpandableDirectionDown
+	EExpandableDirectionFullScreen
 )
 
 //5.6 API Frameworks
 
 const (
-	eAPIFrameworksVPAID1 int8 = iota + 1
-	eAPIFrameworksVPAID2
-	eAPIFrameworksMRAID1
-	eAPIFrameworksORMMA
-	eAPIFrameworksMRAID2
-	eAPIFrameworksMRAID3
+	EAPIFrameworksVPAID1 int8 = iota + 1
+	EAPIFrameworksVPAID2
+	EAPIFrameworksMRAID1
+	EAPIFrameworksORMMA
+	EAPIFrameworksMRAID2
+	EAPIFrameworksMRAID3
 )
 
 //5.7 Video Linearity
 
 const (
-	eVideoLinearityLinear int8 = iota + 1
-	eVideoLinearityNonLinear
+	EVideoLinearityLinear int8 = iota + 1
+	EVideoLinearityNonLinear
 )
 
 //5.8 Protocols
 
 const (
-	eProtocolsVAST1 int8 = iota + 1
-	eProtocolsVAST2
-	eProtocolsVAST3
-	eProtocolsVAST1Wrapper
-	eProtocolsVAST2Wrapper
-	eProtocolsVAST3Wrapper
-	eProtocolsVAST4
-	eProtocolsVAST4Wrapper
-	eProtocolsDAAST1
-	eProtocolsDAAST1Wrapper
+	EProtocolsVAST1 int8 = iota + 1
+	EProtocolsVAST2
+	EProtocolsVAST3
+	EProtocolsVAST1Wrapper
+	EProtocolsVAST2Wrapper
+	EProtocolsVAST3Wrapper
+	EProtocolsVAST4
+	EProtocolsVAST4Wrapper
+	EProtocolsDAAST1
+	EProtocolsDAAST1Wrapper
 )
 
 //5.9 Video Placement Types
 
 const (
-	eVideoPlacementTypesInStream int8 = iota + 1
-	eVideoPlacementTypesInBanner
-	eVideoPlacementTypesInArticle
-	eVideoPlacementTypesInFeed
-	eVideoPlacementTypesInterstitialSliderFloating
+	EVideoPlacementTypesInStream int8 = iota + 1
+	EVideoPlacementTypesInBanner
+	EVideoPlacementTypesInArticle
+	EVideoPlacementTypesInFeed
+	EVideoPlacementTypesInterstitialSliderFloating
 )
 
 //5.10 Playback Methods
 
 const (
-	ePlaybackMethodsInitiatesOnPageLoadWithSoundOn int8 = iota + 1
-	ePlaybackMethodsInitiatesOnPageLoadWithSoundOff
-	ePlaybackMethodsInitiatesOnClickWithSoundOn
-	ePlaybackMethodsInitiatesOnMouseOverWithSoundOn
-	ePlaybackMethodsInitiatesOnEnteringViewportWithSoundOn
-	ePlaybackMethodsInitiatesOnEnteringViewportWithSoundOff
+	EPlaybackMethodsInitiatesOnPageLoadWithSoundOn int8 = iota + 1
+	EPlaybackMethodsInitiatesOnPageLoadWithSoundOff
+	EPlaybackMethodsInitiatesOnClickWithSoundOn
+	EPlaybackMethodsInitiatesOnMouseOverWithSoundOn
+	EPlaybackMethodsInitiatesOnEnteringViewportWithSoundOn
+	EPlaybackMethodsInitiatesOnEnteringViewportWithSoundOff
 )
 
 //5.11 Playback Cessation Modes
 
 const (
-	ePlaybackCessationModesOnVideoCompletion int8 = iota + 1
-	ePlaybackCessationModesOnLeavingViewport
-	ePlaybackCessationModesOnLeavingViewportContinuesAsFloatingSlider
+	EPlaybackCessationModesOnVideoCompletion int8 = iota + 1
+	EPlaybackCessationModesOnLeavingViewport
+	EPlaybackCessationModesOnLeavingViewportContinuesAsFloatingSlider
 )
 
 //5.12 Start Delay
 
 const (
-	eStartDelayGenericPostRoll int8 = iota - 2
-	eStartDelayGenericMidRoll
-	eStartDelayPreRoll
+	EStartDelayGenericPostRoll int8 = iota - 2
+	EStartDelayGenericMidRoll
+	EStartDelayPreRoll
 )
 
 //5.13 Production Quality
 
 const (
-	eProductionQualityUnknown int8 = iota
-	eProductionQualityProfessionallyProduced
-	eProductionQualityProsumer
-	eProductionQualityUserGenerated
+	EProductionQualityUnknown int8 = iota
+	EProductionQualityProfessionallyProduced
+	EProductionQualityProsumer
+	EProductionQualityUserGenerated
 )
 
 //5.14 Companion Types
 
 const (
-	eCompanionTypesStaticResource int8 = iota + 1
-	eCompanionTypesHTMLResource
-	eCompanionTypesIframeResource
+	ECompanionTypesStaticResource int8 = iota + 1
+	ECompanionTypesHTMLResource
+	ECompanionTypesIframeResource
 )
 
 //5.15 Content Delivery Methods
 
 const (
-	eContentDeliveryMethodsStreaming int8 = iota + 1
-	eContentDeliveryMethodsProgressive
-	eContentDeliveryMethodsDownload
+	EContentDeliveryMethodsStreaming int8 = iota + 1
+	EContentDeliveryMethodsProgressive
+	EContentDeliveryMethodsDownload
 )
 
 //5.16 Feed Types
 
 const (
-	eFeedTypesMusicService int8 = iota + 1
-	eFeedTypesFMAMBroadcast
-	eFeedTypesPodcast
+	EFeedTypesMusicService int8 = iota + 1
+	EFeedTypesFMAMBroadcast
+	EFeedTypesPodcast
 )
 
 //5.17 Volume Normalization Modes
 
 const (
-	eVolumeNormalizationModesNone int8 = iota
-	eVolumeNormalizationModesAdVolumeAverageNormalizedToContent
-	eVolumeNormalizationModesAdVolumePeakNormalizedToContent
-	eVolumeNormalizationModesAdLoudnessNormalizedToContent
-	eVolumeNormalizationModesCustomVolumeNormalization
+	EVolumeNormalizationModesNone int8 = iota
+	EVolumeNormalizationModesAdVolumeAverageNormalizedToContent
+	EVolumeNormalizationModesAdVolumePeakNormalizedToContent
+	EVolumeNormalizationModesAdLoudnessNormalizedToContent
+	EVolumeNormalizationModesCustomVolumeNormalization
 )
 
 //5.18 Content Context
 
 const (
-	eContentContextVideo int8 = iota + 1
-	eContentContextGame
-	eContentContextMusic
-	eContentContextApplication
-	eContentContextText
-	eContentContextOther
-	eContentContextUnknown
+	EContentContextVideo int8 = iota + 1
+	EContentContextGame
+	EContentContextMusic
+	EContentContextApplication
+	EContentContextText
+	EContentContextOther
+	EContentContextUnknown
 )
 
 //5.19 IQG Media Ratings
 
 const (
-	eIQGMediaRatingsAllAudiences int8 = iota + 1
-	eIQGMediaRatingsEveryoneOver12
-	eIQGMediaRatingsMatureAudiences
+	EIQGMediaRatingsAllAudiences int8 = iota + 1
+	EIQGMediaRatingsEveryoneOver12
+	EIQGMediaRatingsMatureAudiences
 )
 
 //5.20 Location Type
 
 const (
-	eLocationTypeGPS int8 = iota + 1
-	eLocationTypeIP
-	eLocationTypeUser
+	ELocationTypeGPS int8 = iota + 1
+	ELocationTypeIP
+	ELocationTypeUser
 )
 
 //5.21 Device Type
 
 const (
-	eDeviceTypeMobileTablet int8 = iota + 1
-	eDeviceTypePersonalComputer
-	eDeviceTypeConnectedTV
-	eDeviceTypePhone
-	eDeviceTypeTablet
-	eDeviceTypeConnectedDevice
-	eDeviceTypeSetTopBox
+	EDeviceTypeMobileTablet int8 = iota + 1
+	EDeviceTypePersonalComputer
+	EDeviceTypeConnectedTV
+	EDeviceTypePhone
+	EDeviceTypeTablet
+	EDeviceTypeConnectedDevice
+	EDeviceTypeSetTopBox
 )
 
 //5.22 Connection Type
 
 const (
-	eConnectionTypeUnknown int8 = iota
-	eConnectionTypeEthernet
-	eConnectionTypeWIFI
-	eConnectionTypeCellularNetworkUnknownGeneration
-	eConnectionTypeCellularNetwork2G
-	eConnectionTypeCellularNetwork3G
-	eConnectionTypeCellularNetwork4G
+	EConnectionTypeUnknown int8 = iota
+	EConnectionTypeEthernet
+	EConnectionTypeWIFI
+	EConnectionTypeCellularNetworkUnknownGeneration
+	EConnectionTypeCellularNetwork2G
+	EConnectionTypeCellularNetwork3G
+	EConnectionTypeCellularNetwork4G
 )
 
 //5.23 IP Location Services
 
 const (
-	eIPLocationServiceIP2Location int8 = iota + 1
-	eIPLocationServiceNeustar
+	EIPLocationServiceIP2Location int8 = iota + 1
+	EIPLocationServiceNeustar
 	IPLocationServiceMaxMind
 	IPLocationServiceNetAcuity
 )
@@ -233,50 +233,50 @@ const (
 //5.24 No-Bid Reason Codes
 
 const (
-	eNoBidReasonUnknownError int8 = iota
-	eNoBidReasonCodeTechnicalError
-	eNoBidReasonCodeInvalidRequest
-	eNoBidReasonCodeKnownWebSpider
-	eNoBidReasonCodeSuspectedNonHumanTraffic
-	eNoBidReasonCodeCloudDataCenterProxyIP
-	eNoBidReasonCodeUnsupportedDevice
-	eNoBidReasonCodeBlockedPublisherOrSite
-	eNoBidReasonCodeUnmatchedUser
-	eNoBidReasonCodeDailyReaderCapMet
-	eNoBidReasonCodeDailyDomainCapMet
+	ENoBidReasonUnknownError int8 = iota
+	ENoBidReasonCodeTechnicalError
+	ENoBidReasonCodeInvalidRequest
+	ENoBidReasonCodeKnownWebSpider
+	ENoBidReasonCodeSuspectedNonHumanTraffic
+	ENoBidReasonCodeCloudDataCenterProxyIP
+	ENoBidReasonCodeUnsupportedDevice
+	ENoBidReasonCodeBlockedPublisherOrSite
+	ENoBidReasonCodeUnmatchedUser
+	ENoBidReasonCodeDailyReaderCapMet
+	ENoBidReasonCodeDailyDomainCapMet
 )
 
 //5.25 Loss Reason Codes
 
 const (
-	eLossReasonCodesBidWon int8 = iota
-	eLossReasonCodesInternalError
-	eLossReasonCodesImpressionOpportunityExpired
-	eLossReasonCodesInvalidBidResponse
-	eLossReasonCodesInvalidDealID
-	eLossReasonCodesInvalidAuctionID
-	eLossReasonCodesInvalidAdvertiserDomain
-	eLossReasonCodesMissingMarkup
-	eLossReasonCodesMissingCreativeID
-	eLossReasonCodesMissingBidPrice
-	eLossReasonCodesMissingMinimumCreativeApprovalData
-	eLossReasonCodesBidWasBelowAuctionFloor int8 = iota + 100
-	eLossReasonCodesBidWasBelowDealFloor
-	eLossReasonCodesLostToHigherBid
-	eLossReasonCodesLostToABidForPMPDeal
-	eLossReasonCodesBuyerSeatBlocked
-	eLossReasonCodesCreativeFilteredGeneral uint8 = iota + 200
-	eLossReasonCodesCreativeFilteredPendingProcessingByExchange
-	eLossReasonCodesCreativeFilteredDisapprovedByExchange
-	eLossReasonCodesCreativeFilteredSizeNotAllowed
-	eLossReasonCodesCreativeFilteredIncorrectCreativeFormat
-	eLossReasonCodesCreativeFilteredAdvertiserExclusions
-	eLossReasonCodesCreativeFilteredAppBundleExclusions
-	eLossReasonCodesCreativeFilteredNotSecure
-	eLossReasonCodesCreativeFilteredLanguageExclusions
-	eLossReasonCodesCreativeFilteredCategoryExclusions
-	eLossReasonCodesCreativeFilteredCreativeAttributeExclusions
-	eLossReasonCodesCreativeFilteredAdTypeExclusions
-	eLossReasonCodesCreativeFilteredAnimationTooLong
-	eLossReasonCodesCreativeFilteredNotAllowedInPMPDeal
+	ELossReasonCodesBidWon int8 = iota
+	ELossReasonCodesInternalError
+	ELossReasonCodesImpressionOpportunityExpired
+	ELossReasonCodesInvalidBidResponse
+	ELossReasonCodesInvalidDealID
+	ELossReasonCodesInvalidAuctionID
+	ELossReasonCodesInvalidAdvertiserDomain
+	ELossReasonCodesMissingMarkup
+	ELossReasonCodesMissingCreativeID
+	ELossReasonCodesMissingBidPrice
+	ELossReasonCodesMissingMinimumCreativeApprovalData
+	ELossReasonCodesBidWasBelowAuctionFloor int8 = iota + 100
+	ELossReasonCodesBidWasBelowDealFloor
+	ELossReasonCodesLostToHigherBid
+	ELossReasonCodesLostToABidForPMPDeal
+	ELossReasonCodesBuyerSeatBlocked
+	ELossReasonCodesCreativeFilteredGeneral uint8 = iota + 200
+	ELossReasonCodesCreativeFilteredPendingProcessingByExchange
+	ELossReasonCodesCreativeFilteredDisapprovedByExchange
+	ELossReasonCodesCreativeFilteredSizeNotAllowed
+	ELossReasonCodesCreativeFilteredIncorrectCreativeFormat
+	ELossReasonCodesCreativeFilteredAdvertiserExclusions
+	ELossReasonCodesCreativeFilteredAppBundleExclusions
+	ELossReasonCodesCreativeFilteredNotSecure
+	ELossReasonCodesCreativeFilteredLanguageExclusions
+	ELossReasonCodesCreativeFilteredCategoryExclusions
+	ELossReasonCodesCreativeFilteredCreativeAttributeExclusions
+	ELossReasonCodesCreativeFilteredAdTypeExclusions
+	ELossReasonCodesCreativeFilteredAnimationTooLong
+	ELossReasonCodesCreativeFilteredNotAllowedInPMPDeal
 )
