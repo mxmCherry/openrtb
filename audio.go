@@ -53,7 +53,7 @@ type Audio struct {
 	// Description:
 	//   Indicates the start delay in seconds for pre-roll, mid-roll, or
 	//   post-roll ad placements. Refer to List 5.12.
-	StartDelay int64 `json:"startdelay,omitempty"`
+	StartDelay *int64 `json:"startdelay,omitempty"`
 
 	// Attribute:
 	//   sequence
@@ -167,7 +167,7 @@ type Audio struct {
 	//   integer
 	// Description:
 	//   Volume normalization mode. Refer to List 5.17.
-	NVol int8 `json:"nvol,omitempty"`
+	NVol *int8 `json:"nvol,omitempty"`
 
 	// Attribute:
 	//   ext

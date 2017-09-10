@@ -100,7 +100,7 @@ type Banner struct {
 	//   integer
 	// Description:
 	//   Ad position on screen. Refer to List 5.4.
-	Pos int8 `json:"pos,omitempty"`
+	Pos *int8 `json:"pos,omitempty"`
 
 	// Attribute:
 	//   mimes

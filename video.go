@@ -84,7 +84,7 @@ type Video struct {
 	//   Indicates the start delay in seconds for pre-roll, mid-roll, or
 	//   post-roll ad placements. Refer to List 5.12 for additional
 	//   generic values.
-	StartDelay int64 `json:"startdelay,omitempty"`
+	StartDelay *int64 `json:"startdelay,omitempty"`
 
 	// Attribute:
 	//   placement
@@ -224,7 +224,7 @@ type Video struct {
 	//   integer
 	// Description:
 	//   Ad position on screen. Refer to List 5.4.
-	Pos int8 `json:"pos,omitempty"`
+	Pos *int8 `json:"pos,omitempty"`
 
 	// Attribute:
 	//   companionad

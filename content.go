@@ -120,7 +120,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   Production quality. Refer to List 5.13
-	ProdQ int8 `json:"prodq,omitempty"`
+	ProdQ *int8 `json:"prodq,omitempty"`
 
 	// Attribute:
 	//   videoquality
