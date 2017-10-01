@@ -29,11 +29,16 @@ Master always contains latest code, so better use some package manager to vendor
 	- `int8` - short enums (with values <= 127), boolean-like attributes (like `BidRequest.test`)
 	- `uint64` - width, height, bitrate etc. (unbound positive numbers)
 	- `float64` - coordinates, prices etc.
+- Enums:
+	- all enums, described in section 5, must be typed with section name singularized (e.g., "5.2 Banner Ad Types" -> `type BannerAdType int8`)
+	- all typed enums must have constants for each element, prefixed with type name (e.g., "5.2 Banner Ad Types - XHTML Text Ad (usually mobile)" -> `const BannerAdTypeXHTMLTextAd BannerAdType = 1`)
+	- never use `iota` for enum constants
+	- section "5.1 Content Categories" should remain untyped and have no constants
 
-## Documentation
+## Documentation ([godoc](https://godoc.org/github.com/mxmCherry/openrtb))
 - [Godoc: documenting Go code](http://blog.golang.org/godoc-documenting-go-code)
-- Each entity (type or struct key) should be documented
-- Comments for entities should be copy-pasted "as-is" from OpenRTB specification (including line-breaks - think less)
+- Each entity (type, struct key or constant) should be documented
+- Comments for entities should be copy-pasted "as-is" from OpenRTB specification (except section 5 - replace "table" with "list" there; ideally, each sentence must be on a new line)
 
 ## Code organization
 - Each RTB type should be kept in its own file, named after type
@@ -43,4 +48,5 @@ Master always contains latest code, so better use some package manager to vendor
 # TODO
 - [ ] Review all integral types, probably, switch everything to signed ones or just to `int`?
 - [ ] Consider switching back to `encoding/json.RawMessage`, as Go 1.8 fixed serialisation for non-ptr (probably, when Go 1.9 or even 1.10 is out)
-- [ ] Review enum types (typed enum attributes + constants)
+- [x] Review enum types (typed enum attributes + constants)
+- [ ] Review types, that are enums (or "open enums" like `BidRequest.at`) themselves, but not described in section 5 - make them typed
