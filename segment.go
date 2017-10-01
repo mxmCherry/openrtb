@@ -2,9 +2,9 @@ package openrtb
 
 // 3.2.22 Object: Segment
 //
-// Segment objects are essentially key-value pairs that convey specific units of data. The parent Data
-// object is a collection of such values from a given data provider. The specific segment names and value
-// options must be published by the exchange a priori to its bidders.
+// Segment objects are essentially key-value pairs that convey specific units of data.
+// The parent Data object is a collection of such values from a given data provider.
+// The specific segment names and value options must be published by the exchange a priori to its bidders.
 type Segment struct {
 
 	// Attribute:

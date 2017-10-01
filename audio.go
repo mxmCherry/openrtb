@@ -2,16 +2,14 @@ package openrtb
 
 // 3.2.8 Object: Audio
 //
-// This object represents an audio type impression. Many of the fields are non-essential for minimally
-// viable transactions, but are included to offer fine control when needed. Audio in OpenRTB generally
-// assumes compliance with the DAAST standard. As such, the notion of companion ads is supported by
-// optionally including an array of Banner objects (refer to the Banner object in Section 3.2.6) that define
-// these companion ads.
+// This object represents an audio type impression.
+// Many of the fields are non-essential for minimally viable transactions, but are included to offer fine control when needed.
+// Audio in OpenRTB generally assumes compliance with the DAAST standard.
+// As such, the notion of companion ads is supported by optionally including an array of Banner objects (refer to the Banner object in Section 3.2.6) that define these companion ads.
 //
-// The presence of a Audio as a subordinate of the Imp object indicates that this impression is offered as
-// an audio type impression. At the publisher’s discretion, that same impression may also be offered as
-// banner, video, and/or native by also including as Imp subordinates objects of those types. However, any
-// given bid for the impression must conform to one of the offered types.
+// The presence of a Audio as a subordinate of the Imp object indicates that this impression is offered as an audio type impression.
+// At the publisher’s discretion, that same impression may also be offered as banner, video, and/or native by also including as Imp subordinates objects of those types.
+// However, any given bid for the impression must conform to one of the offered types.
 type Audio struct {
 
 	// Attribute:

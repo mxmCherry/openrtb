@@ -2,13 +2,13 @@ package openrtb
 
 // 3.2.19 Object: Geo
 //
-// This object encapsulates various methods for specifying a geographic location. When subordinate to a
-// Device object, it indicates the location of the device which can also be interpreted as the user’s current
-// location. When subordinate to a User object, it indicates the location of the user’s home base (i.e., not
-// necessarily their current location).
+// This object encapsulates various methods for specifying a geographic location.
+// When subordinate to a
+// Device object, it indicates the location of the device which can also be interpreted as the user’s current location.
+// When subordinate to a User object, it indicates the location of the user’s home base (i.e., not necessarily their current location).
 //
-// The lat/lon attributes should only be passed if they conform to the accuracy depicted in the type
-// attribute. For example, the centroid of a geographic region such as postal code should not be passed.
+// The lat/lon attributes should only be passed if they conform to the accuracy depicted in the type attribute.
+// For example, the centroid of a geographic region such as postal code should not be passed.
 type Geo struct {
 
 	// Attribute:

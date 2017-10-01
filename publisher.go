@@ -2,8 +2,8 @@ package openrtb
 
 // 3.2.15 Object: Publisher
 //
-// This object describes the publisher of the media in which the ad will be displayed. The publisher is
-// typically the seller in an OpenRTB transaction.
+// This object describes the publisher of the media in which the ad will be displayed.
+// The publisher is typically the seller in an OpenRTB transaction.
 type Publisher struct {
 
 	// Attribute:

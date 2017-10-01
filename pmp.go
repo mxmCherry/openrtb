@@ -2,9 +2,9 @@ package openrtb
 
 // 3.2.11 Object: Pmp
 //
-// This object is the private marketplace container for direct deals between buyers and sellers that may
-// pertain to this impression. The actual deals are represented as a collection of Deal objects. Refer to
-// Section 7.3 for more details.
+// This object is the private marketplace container for direct deals between buyers and sellers that may pertain to this impression.
+// The actual deals are represented as a collection of Deal objects.
+// Refer to Section 7.3 for more details.
 type PMP struct {
 
 	// Attribute:

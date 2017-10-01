@@ -2,19 +2,17 @@ package openrtb
 
 // 3.2.18 Object: Device
 //
-// This object provides information pertaining to the device through which the user is interacting. Device
-// information includes its hardware, platform, location, and carrier data. The device can refer to a mobile
-// handset, a desktop computer, set top box, or other digital device.
+// This object provides information pertaining to the device through which the user is interacting.
+// Device information includes its hardware, platform, location, and carrier data.
+// The device can refer to a mobile handset, a desktop computer, set top box, or other digital device.
 //
-// BEST PRACTICE: There are currently no prominent open source lists for device makes, models, operating
-// systems, or carriers. Exchanges typically use commercial products or other proprietary lists for these
-// attributes. Until suitable open standards are available, exchanges are highly encouraged to publish lists
-// of their device make, model, operating system, and carrier values to bidders.
+// BEST PRACTICE: There are currently no prominent open source lists for device makes, models, operating systems, or carriers.
+// Exchanges typically use commercial products or other proprietary lists for these attributes.
+// Until suitable open standards are available, exchanges are highly encouraged to publish lists of their device make, model, operating system, and carrier values to bidders.
 //
-// BEST PRACTICE: Proper device IP detection in mobile is not straightforward. Typically it involves starting
-// at the left of the x-forwarded-for header, skipping private carrier networks (e.g., 10.x.x.x or
-// 192.x.x.x), and possibly scanning for known carrier IP ranges. Exchanges are urged to research and
-// implement this feature carefully when presenting device IP values to bidders.
+// BEST PRACTICE: Proper device IP detection in mobile is not straightforward.
+// Typically it involves starting at the left of the x-forwarded-for header, skipping private carrier networks (e.g., 10.x.x.x or 192.x.x.x), and possibly scanning for known carrier IP ranges.
+// Exchanges are urged to research and implement this feature carefully when presenting device IP values to bidders.
 type Device struct {
 
 	// Attribute:

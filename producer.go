@@ -2,9 +2,8 @@ package openrtb
 
 // 3.2.17 Object: Producer
 //
-// This object defines the producer of the content in which the ad will be shown. This is particularly useful
-// when the content is syndicated and may be distributed through different publishers and thus when the
-// producer and publisher are not necessarily the same entity.
+// This object defines the producer of the content in which the ad will be shown.
+// This is particularly useful when the content is syndicated and may be distributed through different publishers and thus when the producer and publisher are not necessarily the same entity.
 type Producer struct {
 
 	// Attribute:

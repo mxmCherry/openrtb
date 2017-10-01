@@ -2,9 +2,9 @@ package openrtb
 
 // 3.2.12 Object: Deal
 //
-// This object constitutes a specific deal that was struck a priori between a buyer and a seller. Its presence
-// with the Pmp collection indicates that this impression is available under the terms of that deal. Refer to
-// Section 7.3 for more details.
+// This object constitutes a specific deal that was struck a priori between a buyer and a seller.
+// Its presence with the Pmp collection indicates that this impression is available under the terms of that deal.
+// Refer to Section 7.3 for more details.
 type Deal struct {
 
 	// Attribute:

@@ -2,9 +2,9 @@ package openrtb
 
 // 3.2.14 Object: App
 //
-// This object should be included if the ad supported content is a non-browser application (typically in
-// mobile) as opposed to a website. A bid request must not contain both an App and a Site object. At a
-// minimum, it is useful to provide an App ID or bundle, but this is not strictly required.
+// This object should be included if the ad supported content is a non-browser application (typically in mobile) as opposed to a website.
+// A bid request must not contain both an App and a Site object.
+// At a minimum, it is useful to provide an App ID or bundle, but this is not strictly required.
 type App struct {
 
 	// Attribute:
