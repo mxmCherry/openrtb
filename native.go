@@ -43,7 +43,7 @@ type Native struct {
 	//   List of supported API frameworks for this impression. Refer to
 	//   List 5.6. If an API is not explicitly listed, it is assumed not to be
 	//   supported.
-	API []int8 `json:"api,omitempty"`
+	API []APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   sequence
@@ -51,7 +51,7 @@ type Native struct {
 	//   integer array
 	// Description:
 	//   Blocked creative attributes. Refer to List 5.3.
-	BAttr []int8 `json:"battr,omitempty"`
+	BAttr []CreativeAttribute `json:"battr,omitempty"`
 
 	// Attribute:
 	//   ext

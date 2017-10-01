@@ -185,7 +185,7 @@ type Bid struct {
 	//   integer array
 	// Description:
 	//   Set of attributes describing the creative. Refer to List 5.3.
-	Attr []int8 `json:"attr,omitempty"`
+	Attr []CreativeAttribute `json:"attr,omitempty"`
 
 	// Attribute:
 	//   api
@@ -193,7 +193,7 @@ type Bid struct {
 	//   integer
 	// Description:
 	//   API required by the markup if applicable. Refer to List 5.6.
-	API int8 `json:"api,omitempty"`
+	API APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   protocol
@@ -202,7 +202,7 @@ type Bid struct {
 	// Description:
 	//   Video response protocol of the markup if applicable. Refer to
 	//   List 5.8.
-	Protocol int8 `json:"protocol,omitempty"`
+	Protocol Protocol `json:"protocol,omitempty"`
 
 	// Attribute:
 	//   qagmediarating
@@ -210,7 +210,7 @@ type Bid struct {
 	//   integer
 	// Description:
 	//   Creative media rating per IQG guidelines. Refer to List 5.19.
-	QAGMediaRating int8 `json:"qagmediarating,omitempty"`
+	QAGMediaRating IQGMediaRating `json:"qagmediarating,omitempty"`
 
 	// Attribute:
 	//   language

@@ -34,7 +34,7 @@ type Geo struct {
 	// Description:
 	//   Source of location data; recommended when passing
 	//   lat/lon. Refer to List 5.20.
-	Type int8 `json:"type,omitempty"`
+	Type LocationType `json:"type,omitempty"`
 
 	// Attribute:
 	//   accuracy
@@ -66,7 +66,7 @@ type Geo struct {
 	// Description:
 	//   Service or provider used to determine geolocation from IP
 	//   address if applicable (i.e., type = 2). Refer to List 5.23.
-	IPService int8 `json:"ipservice,omitempty"`
+	IPService IPLocationService `json:"ipservice,omitempty"`
 
 	// Attribute:
 	//   country

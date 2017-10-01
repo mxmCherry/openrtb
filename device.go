@@ -75,7 +75,7 @@ type Device struct {
 	//   integer
 	// Description:
 	//   The general type of device. Refer to List 5.21.
-	DeviceType int8 `json:"devicetype,omitempty"`
+	DeviceType DeviceType `json:"devicetype,omitempty"`
 
 	// Attribute:
 	//   make
@@ -209,7 +209,7 @@ type Device struct {
 	//   integer
 	// Description:
 	//   Network connection type. Refer to List 5.22.
-	ConnectionType *int8 `json:"connectiontype,omitempty"`
+	ConnectionType *ConnectionType `json:"connectiontype,omitempty"`
 
 	// Attribute:
 	//   ifa
