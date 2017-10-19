@@ -28,7 +28,7 @@ type Banner struct {
 	// Description:
 	//   Exact width in device independent pixels (DIPS);
 	//   recommended if no format objects are specified.
-	W *uint64 `json:"w"`
+	W *uint64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -37,7 +37,7 @@ type Banner struct {
 	// Description:
 	//   Exact height in device independent pixels (DIPS);
 	//   recommended if no format objects are specified.
-	H *uint64 `json:"h"`
+	H *uint64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   wmax
