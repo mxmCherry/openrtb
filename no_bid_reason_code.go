@@ -18,3 +18,8 @@ const (
 	NoBidReasonCodeDailyReaderCapMet        NoBidReasonCode = 9  // Daily Reader Cap Met
 	NoBidReasonCodeDailyDomainCapMet        NoBidReasonCode = 10 // Daily Domain Cap Met
 )
+
+// PtrNoBidReasonCode returns pointer to passed argument.
+func PtrNoBidReasonCode(c NoBidReasonCode) *NoBidReasonCode {
+	return &c
+}

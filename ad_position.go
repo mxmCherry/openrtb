@@ -18,3 +18,8 @@ const (
 	AdPositionSidebar                       AdPosition = 6 // Sidebar
 	AdPositionFullScreen                    AdPosition = 7 // Full Screen
 )
+
+// PtrAdPosition returns pointer to passed argument.
+func PtrAdPosition(p AdPosition) *AdPosition {
+	return &p
+}

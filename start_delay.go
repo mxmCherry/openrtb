@@ -13,3 +13,8 @@ const (
 	StartDelayGenericMidRoll  StartDelay = -1 // Generic Mid-Roll
 	StartDelayGenericPostRoll StartDelay = -2 // Generic Post-Roll
 )
+
+// PtrStartDelay returns pointer to passed argument.
+func PtrStartDelay(d StartDelay) *StartDelay {
+	return &d
+}

@@ -12,3 +12,8 @@ const (
 	VolumeNormalizationModeAdLoudnessNormalizedToContent      VolumeNormalizationMode = 3 // Ad Loudness Normalized to Content
 	VolumeNormalizationModeCustomVolumeNormalizationMode      VolumeNormalizationMode = 4 // Custom Volume Normalization
 )
+
+// PtrVolumeNormalizationMode returns pointer to passed argument.
+func PtrVolumeNormalizationMode(m VolumeNormalizationMode) *VolumeNormalizationMode {
+	return &m
+}
