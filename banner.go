@@ -40,14 +40,6 @@ type Banner struct {
 	H uint64 `json:"h"`
 
 	// Attribute:
-	//   format
-	// Type:
-	//   array of formats
-	// Description:
-	//   Creative sizes allowed by this tag. Overrides h and w if provided
-	Format []Format `json:"format,omitempty"`
-
-	// Attribute:
 	//   wmax
 	// Type:
 	//   integer; DEPRECATED
