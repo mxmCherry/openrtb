@@ -69,33 +69,6 @@ type Geo struct {
 	IPService IPLocationService `json:"ipservice,omitempty"`
 
 	// Attribute:
-	//   accuracy
-	// Type:
-	//   integer
-	// Description:
-	//   Estimated location accuracy in meters; recommended when lat/lon are specified
-	//   and derived from a device’s location services (i.e., type = 1). Note that this is the accuracy as
-	//   reported from the device. Consult OS specific documentation (e.g., Android, iOS) for exact interpretation.
-	Accuracy int32 `json:"accuracy,omitempty"`
-
-	// Attribute:
-	//   lastfix
-	// Type:
-	//   integer
-	// Description:
-	//   Number of seconds since this geolocation fix was established. Note that devices may cache location data
-	//   across multiple fetches. Ideally, this value should be from the time the actual fix was taken.
-	LastFix int32 `json:"lastfix,omitempty"`
-
-	// Attribute:
-	//   ipservice
-	// Type:
-	//   integer
-	// Description:
-	//   Service or provider used to determine geolocation from IP address if applicable (i.e., type = 2). Refer to List 5.23.
-	IPService int8 `json:"ipservice,omitempty"`
-
-	// Attribute:
 	//   country
 	// Type:
 	//   string

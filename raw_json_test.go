@@ -3,7 +3,7 @@ package openrtb_test
 import (
 	"encoding/json"
 
-	"github.com/prebid/openrtb"
+	"github.com/mxmCherry/openrtb"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
