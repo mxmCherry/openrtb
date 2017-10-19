@@ -19,7 +19,7 @@ const (
 	AdPositionFullScreen                    AdPosition = 7 // Full Screen
 )
 
-// PtrAdPosition returns pointer to passed argument.
-func PtrAdPosition(p AdPosition) *AdPosition {
+// Ptr returns pointer to own value.
+func (p AdPosition) Ptr() *AdPosition {
 	return &p
 }

@@ -15,7 +15,7 @@ const (
 	ConnectionTypeCellularNetwork4G                ConnectionType = 6 // Cellular Network – 4G
 )
 
-// PtrConnectionType returns pointer to passed argument.
-func PtrConnectionType(t ConnectionType) *ConnectionType {
+// Ptr returns pointer to own value.
+func (t ConnectionType) Ptr() *ConnectionType {
 	return &t
 }

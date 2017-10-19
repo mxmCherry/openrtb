@@ -13,7 +13,7 @@ const (
 	ProductionQualityUserGenerated          ProductionQuality = 3 // User Generated (UGC)
 )
 
-// PtrProductionQuality returns pointer to passed argument.
-func PtrProductionQuality(q ProductionQuality) *ProductionQuality {
+// Ptr returns pointer to own value.
+func (q ProductionQuality) Ptr() *ProductionQuality {
 	return &q
 }

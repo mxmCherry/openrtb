@@ -13,7 +13,7 @@ const (
 	VolumeNormalizationModeCustomVolumeNormalizationMode      VolumeNormalizationMode = 4 // Custom Volume Normalization
 )
 
-// PtrVolumeNormalizationMode returns pointer to passed argument.
-func PtrVolumeNormalizationMode(m VolumeNormalizationMode) *VolumeNormalizationMode {
+// Ptr returns pointer to own value.
+func (m VolumeNormalizationMode) Ptr() *VolumeNormalizationMode {
 	return &m
 }
