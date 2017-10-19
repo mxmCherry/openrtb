@@ -1,11 +1,11 @@
 package openrtb
 
-// PtrInt8 returns pointer to passed argument.
-func PtrInt8(n int8) *int8 {
+// Int8Ptr returns pointer to passed argument.
+func Int8Ptr(n int8) *int8 {
 	return &n
 }
 
-// PtrUint64 returns pointer to passed argument.
-func PtrUint64(n uint64) *uint64 {
+// Uint64Ptr returns pointer to passed argument.
+func Uint64Ptr(n uint64) *uint64 {
 	return &n
 }
