@@ -1,27 +1,29 @@
 package openrtb
 
-// 3.2.17 Object: Pmp
+// 3.2.11 Object: Pmp
 //
-// This object is the private marketplace container for direct deals between buyers and sellers that may pertain
-// to this impression. The actual deals are represented as a collection of Deal objects. Refer to Section 7.2
-// for more details.
+// This object is the private marketplace container for direct deals between buyers and sellers that may pertain to this impression.
+// The actual deals are represented as a collection of Deal objects.
+// Refer to Section 7.3 for more details.
 type PMP struct {
 
 	// Attribute:
 	//   private_auction
 	// Type:
-	//   integer
+	//   integer; default 0
 	// Description:
-	//   Indicator of auction eligibility to seats named in the Direct Deals object, where 0 = all bids are accepted,
-	//   1 = bids are restricted to the deals specified and the terms thereof.
+	//   Indicator of auction eligibility to seats named in the Direct
+	//   Deals object, where 0 = all bids are accepted, 1 = bids are
+	//   restricted to the deals specified and the terms thereof.
 	PrivateAuction int8 `json:"private_auction,omitempty"`
 
 	// Attribute:
-	//   id
+	//   deals
 	// Type:
-	//   integer
+	//   object array
 	// Description:
-	//   Array of Deal (Section 3.2.18) objects that convey the specific deals applicable to this impression.
+	//   Array of Deal (Section 3.2.12) objects that convey the specific
+	//   deals applicable to this impression.
 	Deals []Deal `json:"deals,omitempty"`
 
 	// Attribute:

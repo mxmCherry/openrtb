@@ -2,12 +2,13 @@ package openrtb
 
 // 3.2.19 Object: Geo
 //
-// This object encapsulates various methods for specifying a geographic location. When subordinate to a
-// Device object, it indicates the location of the device which can also be interpreted as the user’s current
-// location. When subordinate to a User object, it indicates the location of the user’s home base (i.e., not
-// necessarily their current location).
-// The lat/lon attributes should only be passed if they conform to the accuracy depicted in the type
-// attribute. For example, the centroid of a geographic region such as postal code should not be passed.
+// This object encapsulates various methods for specifying a geographic location.
+// When subordinate to a
+// Device object, it indicates the location of the device which can also be interpreted as the user’s current location.
+// When subordinate to a User object, it indicates the location of the user’s home base (i.e., not necessarily their current location).
+//
+// The lat/lon attributes should only be passed if they conform to the accuracy depicted in the type attribute.
+// For example, the centroid of a geographic region such as postal code should not be passed.
 type Geo struct {
 
 	// Attribute:
@@ -32,8 +33,40 @@ type Geo struct {
 	//   integer
 	// Description:
 	//   Source of location data; recommended when passing
-	//   lat/lon. Refer to List 5.16.
-	Type int8 `json:"type,omitempty"`
+	//   lat/lon. Refer to List 5.20.
+	Type LocationType `json:"type,omitempty"`
+
+	// Attribute:
+	//   accuracy
+	// Type:
+	//   integer
+	// Description:
+	//   Estimated location accuracy in meters; recommended when
+	//   lat/lon are specified and derived from a device’s location
+	//   services (i.e., type = 1). Note that this is the accuracy as
+	//   reported from the device. Consult OS specific documentation
+	//   (e.g., Android, iOS) for exact interpretation.
+	Accuracy uint64 `json:"accuracy,omitempty"`
+
+	// Attribute:
+	//   lastfix
+	// Type:
+	//   integer
+	// Description:
+	//   Number of seconds since this geolocation fix was established.
+	//   Note that devices may cache location data across multiple
+	//   fetches. Ideally, this value should be from the time the actual
+	//   fix was taken.
+	LastFix int64 `json:"lastfix,omitempty"`
+
+	// Attribute:
+	//   ipservice
+	// Type:
+	//   integer
+	// Description:
+	//   Service or provider used to determine geolocation from IP
+	//   address if applicable (i.e., type = 2). Refer to List 5.23.
+	IPService IPLocationService `json:"ipservice,omitempty"`
 
 	// Attribute:
 	//   accuracy
@@ -119,7 +152,7 @@ type Geo struct {
 	//   integer
 	// Description:
 	//   Local time as the number +/- of minutes from UTC.
-	UTCOffset int16 `json:"utcoffset,omitempty"`
+	UTCOffset int64 `json:"utcoffset,omitempty"`
 
 	// Attribute:
 	//   ext
