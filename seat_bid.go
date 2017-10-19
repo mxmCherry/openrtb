@@ -2,10 +2,8 @@ package openrtb
 
 // 4.2.2 Object: SeatBid
 //
-// A bid response can contain multiple SeatBid objects, each on behalf of a different bidder seat and each
-// containing one or more individual bids. If multiple impressions are presented in the request, the group
-// attribute can be used to specify if a seat is willing to accept any impressions that it can win (default) or if
-// it is only interested in winning any if it can win them all as a group.
+// A bid response can contain multiple SeatBid objects, each on behalf of a different bidder seat and each containing one or more individual bids.
+// If multiple impressions are presented in the request, the group attribute can be used to specify if a seat is willing to accept any impressions that it can win (default) or if it is only interested in winning any if it can win them all as a group.
 type SeatBid struct {
 
 	// Attribute:
@@ -22,7 +20,8 @@ type SeatBid struct {
 	// Type:
 	//   string
 	// Description:
-	//   ID of the bidder seat on whose behalf this bid is made.
+	//   ID of the buyer seat (e.g., advertiser, agency) on whose behalf
+	//   this bid is made.
 	Seat string `json:"seat,omitempty"`
 
 	// Attribute:
