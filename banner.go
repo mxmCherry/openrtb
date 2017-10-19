@@ -22,7 +22,7 @@ type Banner struct {
 	//   Width of the impression in pixels.
 	//   If neither wmin nor wmax are specified, this value is an exact
 	//   width requirement. Otherwise it is a preferred width.
-	W uint64 `json:"w,omitempty"`
+	W uint64 `json:"w"`
 
 	// Attribute:
 	//   h
@@ -32,7 +32,7 @@ type Banner struct {
 	//   Height of the impression in pixels.
 	//   If neither hmin nor hmax are specified, this value is an exact
 	//   height requirement. Otherwise it is a preferred height.
-	H uint64 `json:"h,omitempty"`
+	H uint64 `json:"h"`
 
     // Attribute:
     //   format
