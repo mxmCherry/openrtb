@@ -32,6 +32,26 @@
 					3
 				]
 			}
+		},
+		{
+			"id": "2",
+			"bidfloor": 0.5,
+			"tagid": "agltb3B1Yi1pbmNyDQsSBFNpdGUY7fD0FAwa",
+			"instl":1,
+			"banner": {
+				"w": 0,
+				"h": 0,
+				"pos": 2,
+				"btype": [
+					4
+				],
+				"battr": [
+					14
+				],
+				"api": [
+					3
+				]
+			}
 		}
 	],
 	"app": {
