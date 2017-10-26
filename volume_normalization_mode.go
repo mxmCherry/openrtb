@@ -17,3 +17,11 @@ const (
 func (m VolumeNormalizationMode) Ptr() *VolumeNormalizationMode {
 	return &m
 }
+
+// Val safely dereferences pointer, returning default value (VolumeNormalizationModeNone) for nil.
+func (m *VolumeNormalizationMode) Val() VolumeNormalizationMode {
+	if m == nil {
+		return VolumeNormalizationModeNone
+	}
+	return *m
+}

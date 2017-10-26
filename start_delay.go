@@ -18,3 +18,11 @@ const (
 func (d StartDelay) Ptr() *StartDelay {
 	return &d
 }
+
+// Val safely dereferences pointer, returning default value (StartDelayPreRoll) for nil.
+func (d *StartDelay) Val() StartDelay {
+	if d == nil {
+		return StartDelayPreRoll
+	}
+	return *d
+}

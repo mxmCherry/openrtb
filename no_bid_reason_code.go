@@ -23,3 +23,11 @@ const (
 func (c NoBidReasonCode) Ptr() *NoBidReasonCode {
 	return &c
 }
+
+// Val safely dereferences pointer, returning default value (NoBidReasonCodeUnknownError) for nil.
+func (c *NoBidReasonCode) Val() NoBidReasonCode {
+	if c == nil {
+		return NoBidReasonCodeUnknownError
+	}
+	return *c
+}

@@ -19,3 +19,11 @@ const (
 func (t ConnectionType) Ptr() *ConnectionType {
 	return &t
 }
+
+// Val safely dereferences pointer, returning default value (ConnectionTypeUnknown) for nil.
+func (t *ConnectionType) Val() ConnectionType {
+	if t == nil {
+		return ConnectionTypeUnknown
+	}
+	return *t
+}

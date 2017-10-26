@@ -17,3 +17,11 @@ const (
 func (q ProductionQuality) Ptr() *ProductionQuality {
 	return &q
 }
+
+// Val safely dereferences pointer, returning default value (ProductionQualityUnknown) for nil.
+func (q *ProductionQuality) Val() ProductionQuality {
+	if q == nil {
+		return ProductionQualityUnknown
+	}
+	return *q
+}

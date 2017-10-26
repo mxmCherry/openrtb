@@ -23,3 +23,11 @@ const (
 func (p AdPosition) Ptr() *AdPosition {
 	return &p
 }
+
+// Val safely dereferences pointer, returning default value (AdPositionUnknown) for nil.
+func (p *AdPosition) Val() AdPosition {
+	if p == nil {
+		return AdPositionUnknown
+	}
+	return *p
+}
