@@ -23,7 +23,7 @@ type Image struct {
 	//   int
 	// Description:
 	//   Width of the image in pixels
-	W int `json:"w,omitempty"`
+	W uint64 `json:"w,omitempty"`
 
 	// Field:
 	//   h
@@ -33,7 +33,7 @@ type Image struct {
 	//   int
 	// Description:
 	//   Height of the image in pixels
-	H int `json:"h,omitempty"`
+	H uint64 `json:"h,omitempty"`
 
 	// Field:
 	//   ext

@@ -10,6 +10,8 @@ type Response struct {
 	//   optional
 	// Type:
 	//   string
+	// Default:
+	//   1.1
 	// Description:
 	//   Version of the Native Markup version in use.
 	Ver string `json:"ver,omitempty"`

@@ -16,7 +16,7 @@ type Asset struct {
 	//   int
 	// Description:
 	//   Unique asset ID, assigned by exchange, must match one of the asset IDs in request.
-	ID int `json:"id"`
+	ID int64 `json:"id"`
 
 	// Field:
 	//   required
@@ -28,7 +28,7 @@ type Asset struct {
 	//   0
 	// Description:
 	//   Set to 1 if asset is required. (bidder requires it to be displayed).
-	Required int `json:"required,omitempty"`
+	Required int8 `json:"required,omitempty"`
 
 	// Field:
 	//   title
