@@ -30,19 +30,19 @@ var _ = Describe("BidResponse", func() {
 
 		Entry(
 			"Ad Served on Win Notice",
-			"bid-response-ad-served-on-win-notice.json",
+			"bid-response/ad-served-on-win-notice.json",
 			new(BidResponse)),
 		Entry(
 			"VAST XML Document Returned Inline",
-			"bid-response-vast-xml-document-returned-inline.json",
+			"bid-response/vast-xml-document-returned-inline.json",
 			new(BidResponse)),
 		Entry(
 			"Direct Deal Ad Served on Win Notice",
-			"bid-response-direct-deal-ad-served-on-win-notice.json",
+			"bid-response/direct-deal-ad-served-on-win-notice.json",
 			new(BidResponse)),
 		Entry(
 			"Native Markup Returned Inline",
-			"bid-response-native-markup-returned-inline.json",
+			"bid-response/native-markup-returned-inline.json",
 			new(BidResponse)),
 	)
 })

@@ -30,27 +30,27 @@ var _ = Describe("BidRequest", func() {
 
 		Entry(
 			"Simple Banner",
-			"bid-request-simple-banner.json",
+			"bid-request/simple-banner.json",
 			new(BidRequest)),
 		Entry(
 			"Expandable Creative",
-			"bid-request-expandable-creative.json",
+			"bid-request/expandable-creative.json",
 			new(BidRequest)),
 		Entry(
 			"Mobile",
-			"bid-request-mobile.json",
+			"bid-request/mobile.json",
 			new(BidRequest)),
 		Entry(
 			"Video",
-			"bid-request-video.json",
+			"bid-request/video.json",
 			new(BidRequest)),
 		Entry(
 			"PMP with Direct Deal",
-			"bid-request-pmp-with-direct-deal.json",
+			"bid-request/pmp-with-direct-deal.json",
 			new(BidRequest)),
 		Entry(
 			"Native Ad",
-			"bid-request-native-ad.json",
+			"bid-request/native-ad.json",
 			new(BidRequest)),
 	)
 })
