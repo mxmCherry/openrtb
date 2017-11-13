@@ -25,7 +25,7 @@ type Link struct {
 	//   string array
 	// Description:
 	//   List of third-party tracker URLs to be fired on click of the URL.
-	ClickTrackers []string `json:"clicktrackers"`
+	ClickTrackers []string `json:"clicktrackers,omitempty"`
 
 	// Field:
 	//   fallback
