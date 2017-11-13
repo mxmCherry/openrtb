@@ -1,7 +1,5 @@
 package request
 
-import "encoding/json"
-
 // 4.3 Title Object
 //
 // The Title object is to be used for title element of the Native ad.
@@ -25,5 +23,5 @@ type Title struct {
 	//   object
 	// Description:
 	//   This object is a placeholder that may contain custom JSON agreed to by the parties to support flexibility beyond the standard defined in this specification
-	Ext json.RawMessage `json:"ext,omitempty"`
+	Ext RawJSON `json:"ext,omitempty"`
 }

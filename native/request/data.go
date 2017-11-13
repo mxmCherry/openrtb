@@ -1,7 +1,5 @@
 package request
 
-import "encoding/json"
-
 // 4.6 Data Object
 //
 // The Data Object is to be used for all non-core elements of the native unit such as Brand Name, Ratings, Review Count, Stars, Download count, descriptions etc.
@@ -39,5 +37,5 @@ type Data struct {
 	//   object
 	// Description:
 	// This object is a placeholder that may contain custom JSON agreed to by the parties to support flexibility beyond the standard defined in this specification
-	Ext json.RawMessage `json:"ext,omitempty"`
+	Ext RawJSON `json:"ext,omitempty"`
 }

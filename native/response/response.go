@@ -1,7 +1,5 @@
 package response
 
-import "github.com/mxmCherry/openrtb"
-
 // 5.1 Object: Response
 //
 // The native object is the top level JSON object which identifies a native response.
@@ -68,5 +66,5 @@ type Response struct {
 	//   object
 	// Description:
 	//   This object is a placeholder that may contain custom JSON agreed to by the parties to support flexibility beyond the standard defined in this specification
-	Ext openrtb.RawJSON `json:"ext,omitempty"`
+	Ext RawJSON `json:"ext,omitempty"`
 }

@@ -1,7 +1,5 @@
 package request
 
-import "encoding/json"
-
 // 4.2 Asset Object
 //
 // The main container object for each asset requested or supported by Exchange on behalf of the rendering client.
@@ -95,5 +93,5 @@ type Asset struct {
 	//   object
 	// Description:
 	//   This object is a placeholder that may contain custom JSON agreed to by the parties to support flexibility beyond the standard defined in this specification
-	Ext json.RawMessage `json:"ext,omitempty"`
+	Ext RawJSON `json:"ext,omitempty"`
 }

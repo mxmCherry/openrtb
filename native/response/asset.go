@@ -1,7 +1,5 @@
 package response
 
-import "github.com/mxmCherry/openrtb"
-
 // 5.2 Object: Asset
 //
 // Corresponds to the Asset Object in the request. The main container object for each asset
@@ -93,5 +91,5 @@ type Asset struct {
 	//   object
 	// Description:
 	//   This object is a placeholder that may contain custom JSON agreed to by the parties to support flexibility beyond the standard defined in this specification
-	Ext openrtb.RawJSON `json:"ext,omitempty"`
+	Ext RawJSON `json:"ext,omitempty"`
 }

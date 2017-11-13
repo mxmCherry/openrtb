@@ -1,4 +1,4 @@
-package openrtb
+package request
 
 import "errors"
 
@@ -20,7 +20,7 @@ func (m RawJSON) MarshalJSON() ([]byte, error) {
 // UnmarshalJSON sets *m to a copy of data.
 func (m *RawJSON) UnmarshalJSON(data []byte) error {
 	if m == nil {
-		return errors.New("openrtb.RawJSON: UnmarshalJSON on nil pointer")
+		return errors.New("openrtb/native/request.RawJSON: UnmarshalJSON on nil pointer")
 	}
 	*m = append((*m)[0:0], data...)
 	return nil

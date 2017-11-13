@@ -1,7 +1,5 @@
 package request
 
-import "encoding/json"
-
 // 4.1 Native Markup Request Object
 //
 // The Native Object defines the native advertising opportunity available for bid via this bid request.
@@ -124,5 +122,5 @@ type Request struct {
 	//   object
 	// Description:
 	// This object is a placeholder that may contain custom JSON agreed to by the parties to support flexibility beyond the standard defined in this specification
-	Ext json.RawMessage `json:"ext,omitempty"`
+	Ext RawJSON `json:"ext,omitempty"`
 }
