@@ -3,7 +3,7 @@ package openrtb_test
 import (
 	"encoding/json"
 
-	"github.com/mxmCherry/openrtb"
+	. "github.com/mxmCherry/openrtb"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -11,11 +11,11 @@ import (
 
 var _ = Describe("RawJSON", func() {
 
-	var _ json.Marshaler = (openrtb.RawJSON)(nil)
-	var _ json.Unmarshaler = (*openrtb.RawJSON)(nil)
+	var _ json.Marshaler = (RawJSON)(nil)
+	var _ json.Unmarshaler = (*RawJSON)(nil)
 
 	It("should encode JSON", func() {
-		subject := openrtb.RawJSON(`true`)
+		subject := RawJSON(`true`)
 
 		actual, err := subject.MarshalJSON()
 		Expect(err).NotTo(HaveOccurred())
@@ -23,30 +23,30 @@ var _ = Describe("RawJSON", func() {
 	})
 
 	It("should decode JSON", func() {
-		subject := openrtb.RawJSON(nil)
+		subject := RawJSON(nil)
 
 		err := subject.UnmarshalJSON([]byte(`true`))
 		Expect(err).NotTo(HaveOccurred())
-		Expect(subject).To(Equal(openrtb.RawJSON(`true`)))
+		Expect(subject).To(Equal(RawJSON(`true`)))
 	})
 
 	It("should decode JSON when embedded into struct", func() {
 		wrapper := struct {
-			Raw openrtb.RawJSON `json:"raw"`
+			Raw RawJSON `json:"raw"`
 		}{
 			Raw: nil,
 		}
 
 		err := json.Unmarshal([]byte(`{"raw":true}`), &wrapper)
 		Expect(err).NotTo(HaveOccurred())
-		Expect(wrapper.Raw).To(Equal(openrtb.RawJSON(`true`)))
+		Expect(wrapper.Raw).To(Equal(RawJSON(`true`)))
 	})
 
 	It("should encode JSON when embedded into struct", func() {
 		wrapper := struct {
-			Raw openrtb.RawJSON `json:"raw"`
+			Raw RawJSON `json:"raw"`
 		}{
-			Raw: openrtb.RawJSON(`true`),
+			Raw: RawJSON(`true`),
 		}
 
 		actual, err := json.Marshal(wrapper)
