@@ -1,3 +1,7 @@
+// Package request provides OpenRTB Dynamic Native Ads API Specification Version 1.1
+// section 4 Native Ad Request Markup Details types:
+// https://www.iab.com/guidelines/real-time-bidding-rtb-project/
+// https://www.iab.com/wp-content/uploads/2016/03/OpenRTB-Native-Ads-Specification-1-1_2016.pdf
 package request
 
 // 4.1 Native Markup Request Object
