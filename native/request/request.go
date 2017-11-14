@@ -35,7 +35,7 @@ type Request struct {
 	// Description:
 	//   The Layout ID of the native ad unit.
 	//   See the Table of Layout IDs below.
-	Layout int8 `json:"layout,omitempty"`
+	Layout Layout `json:"layout,omitempty"`
 
 	// Field:
 	//   adunit

@@ -3,7 +3,7 @@ package request
 // 7.5 Placement Type IDs
 //
 // The FORMAT of the ad you are purchasing, separate from the surrounding context
-type PlacementType int8
+type PlacementType int64
 
 const (
 	PlacementTypeFeed                 = 1 // In the feed of content - for example as an item inside the organic feed/grid/listing/carousel.
