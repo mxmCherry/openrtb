@@ -48,7 +48,7 @@ type Video struct {
 	//   array of integers
 	// Description:
 	//   An array of video protocols the publisher can accept in the bid response.
-	// See OpenRTB Table ‘Video Bid Response Protocols’ for a list of possible values.
+	//   See OpenRTB Table ‘Video Bid Response Protocols’ for a list of possible values.
 	Protocols []int8 `json:"protocols"` // TODO!!!
 
 	// Field:
