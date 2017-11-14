@@ -30,7 +30,7 @@ Master always contains latest code, so better use some package manager to vendor
 ## Types
 - Key types should be chosen according to OpenRTB specification (attribute types)
 - Numeric types:
-	- `int64` - time, duration, unbound enums (like `BidRequest.at` - exchange-specific auctions types are > 500)
+	- `int64` - time, duration, length, unbound enums (like `BidRequest.at` - exchange-specific auctions types are > 500)
 	- `int8` - short enums (with values <= 127), boolean-like attributes (like `BidRequest.test`)
 	- `uint64` - width, height, bitrate etc. (unbound positive numbers)
 	- `float64` - coordinates, prices etc.
