@@ -8,7 +8,6 @@
 		{
 			"id": 4,
 			"video": {
-				"linearity": 1,
 				"minduration": 15,
 				"maxduration": 30,
 				"protocols": [

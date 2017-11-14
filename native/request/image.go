@@ -26,7 +26,7 @@ type Image struct {
 	//   integer
 	// Description:
 	//   Width of the image in pixels.
-	W int64 `json:"w,omitempty"`
+	W uint64 `json:"w,omitempty"`
 
 	// Field:
 	//   wmin
@@ -39,7 +39,7 @@ type Image struct {
 	//   This option should be used for any rescaling of images by the client.
 	//   Either w or wmin should be transmitted.
 	//   If only w is included, it should be considered an exact requirement.
-	WMin int64 `json:"wmin,omitempty"`
+	WMin uint64 `json:"wmin,omitempty"`
 
 	// Field:
 	//   h
@@ -49,7 +49,7 @@ type Image struct {
 	//   integer
 	// Description:
 	//   Height of the image in pixels.
-	H int64 `json:"h,omitempty"`
+	H uint64 `json:"h,omitempty"`
 
 	// Field:
 	//   hmin
@@ -62,7 +62,7 @@ type Image struct {
 	// This option should be used for any rescaling of images by the client.
 	// Either h or hmin should be transmitted.
 	// If only h is included, it should be considered an exact requirement.
-	HMin int64 `json:"hmin,omitempty"`
+	HMin uint64 `json:"hmin,omitempty"`
 
 	// Field:
 	//   mimes

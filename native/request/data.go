@@ -27,7 +27,7 @@ type Data struct {
 	//   integer
 	// Description:
 	//   Maximum length of the text in the element’s response.
-	Len int64 `json:"len,omitempty"`
+	Len uint64 `json:"len,omitempty"`
 
 	// Field:
 	//   ext
