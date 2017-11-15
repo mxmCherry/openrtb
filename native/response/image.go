@@ -13,7 +13,7 @@ type Image struct {
 	//   string
 	// Description:
 	//   URL of the image asset
-	URL string `json:"url,omitempty"`
+	URL string `json:"url"`
 
 	// Field:
 	//   w
