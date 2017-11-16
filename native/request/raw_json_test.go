@@ -1,9 +1,9 @@
-package openrtb_test
+package request_test
 
 import (
 	"encoding/json"
 
-	. "github.com/mxmCherry/openrtb"
+	. "github.com/mxmCherry/openrtb/native/response"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

@@ -1,6 +1,11 @@
 # openrtb [![GoDoc](https://godoc.org/github.com/mxmCherry/openrtb?status.svg)](https://godoc.org/github.com/mxmCherry/openrtb) [![Build Status](https://travis-ci.org/mxmCherry/openrtb.svg?branch=master)](https://travis-ci.org/mxmCherry/openrtb)
 
-[OpenRTB](//www.iab.com/guidelines/real-time-bidding-rtb-project/) [v2.5](//www.iab.com/wp-content/uploads/2016/03/OpenRTB-API-Specification-Version-2-5-FINAL.pdf) types for Go programming language (Golang)
+[OpenRTB](https://www.iab.com/guidelines/real-time-bidding-rtb-project/) [v2.5](https://www.iab.com/wp-content/uploads/2016/03/OpenRTB-API-Specification-Version-2-5-FINAL.pdf) types for Go programming language (Golang)
+
+Also includes [OpenRTB](https://www.iab.com/guidelines/real-time-bidding-rtb-project/) [Dynamic Native Ads API
+Specification Version 1.1](https://www.iab.com/wp-content/uploads/2016/03/OpenRTB-Native-Ads-Specification-1-1_2016.pdf) types:
+- [4 Native Ad Request Markup Details](native/request/)
+- [5 Native Ad Response Markup Details](native/response/)
 
 # Using
 
@@ -12,7 +17,7 @@ go get -u "github.com/mxmCherry/openrtb"
 import "github.com/mxmCherry/openrtb"
 ```
 
-This repo follows [semver](http://semver.org/) - see [releases](//github.com/mxmCherry/openrtb/releases).
+This repo follows [semver](http://semver.org/) - see [releases](https://github.com/mxmCherry/openrtb/releases).
 Master always contains latest code, so better use some package manager to vendor specific version.
 
 # Guidelines
@@ -25,7 +30,7 @@ Master always contains latest code, so better use some package manager to vendor
 ## Types
 - Key types should be chosen according to OpenRTB specification (attribute types)
 - Numeric types:
-	- `int64` - time, duration, unbound enums (like `BidRequest.at` - exchange-specific auctions types are > 500)
+	- `int64` - time, duration, length, unbound enums (like `BidRequest.at` - exchange-specific auctions types are > 500)
 	- `int8` - short enums (with values <= 127), boolean-like attributes (like `BidRequest.test`)
 	- `uint64` - width, height, bitrate etc. (unbound positive numbers)
 	- `float64` - coordinates, prices etc.
