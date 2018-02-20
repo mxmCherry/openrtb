@@ -153,7 +153,7 @@ type Request struct {
 	//   array of objects
 	// Description:
 	//   Specifies what type of event tracking is supported - see Event Trackers Request Object
-	EventTrackers []interface{} `json:"eventtrackers,omitempty"` // TODO: make EventTracker object type
+	EventTrackers []EventTracker `json:"eventtrackers,omitempty"` // TODO: make EventTracker object type
 
 	// Field:
 	//   privacy
