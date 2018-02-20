@@ -21,7 +21,7 @@ type Request struct {
 	// Type:
 	//   string
 	// Default:
-	//   1.1
+	//   1.2
 	// Description:
 	//   Version of the Native Markup version in use.
 	Ver string `json:"ver,omitempty"`
@@ -29,7 +29,7 @@ type Request struct {
 	// Field:
 	//   layout
 	// Scope:
-	//   recommended in 1.0, to be deprecated
+	//   recommended in 1.0, deprecated/removed in 1.2
 	// Type:
 	//   integer
 	// Description:
@@ -40,7 +40,7 @@ type Request struct {
 	// Field:
 	//   adunit
 	// Scope:
-	//   recommended in 1.0, to be deprecated
+	//   recommended in 1.0, deprecated/removed in 1.2
 	// Type:
 	//   integer
 	// Description:
@@ -117,6 +117,56 @@ type Request struct {
 	//   An array of Asset Objects.
 	//   Any bid response must comply with the array of elements expressed in the bid request.
 	Assets []Asset `json:"assets"`
+
+	// Field:
+	//   aurlsupport
+	// Scope:
+	//   optional
+	// Type:
+	//   int
+	// Default:
+	//   0
+	// Description:
+	//   Whether the supply source / impression supports returning an assetsurl instead of an asset object.
+	//   0 or the absence of the field indicates no such support.
+	AURLSupport int8 `json:"aurlsupport,omitempty"`
+
+	// Field:
+	//   durlsupport
+	// Scope:
+	//   optional
+	// Type:
+	//   int
+	// Default:
+	//   0
+	// Description:
+	//   Whether the supply source / impression supports returning a dco url instead of an asset object.
+	//   0 or the absence of the field indicates no such support.
+	//   Beta feature.
+	DURLSupport int8 `json:"durlsupport,omitempty"`
+
+	// Field:
+	//   eventtrackers
+	// Scope:
+	//   optional
+	// Type:
+	//   array of objects
+	// Description:
+	//   Specifies what type of event tracking is supported - see Event Trackers Request Object
+	EventTrackers []interface{} `json:"eventtrackers"` // TODO: make EventTracker object type
+
+	// Field:
+	//   privacy
+	// Scope:
+	//   recommended
+	// Type:
+	//   integer
+	// Default:
+	//   0
+	// Description:
+	//   Set to 1 when the native ad supports buyer-specific privacy notice.
+	//   Set to 0 (or field absent) when the native ad doesn’t support custom privacy links or if support is unknown.
+	Privacy int8 `json:"privacy,omitempty"`
 
 	// Field:
 	//   ext
