@@ -34,7 +34,8 @@ type Link struct {
 	// Type:
 	//   string
 	// Description:
-	//   Fallback URL for deeplink. To be used if the URL given in url is not supported by the device.
+	//   Fallback URL for deeplink.
+	//   To be used if the URL given in url is not supported by the device.
 	Fallback string `json:"fallback,omitempty"`
 
 	// Field:
