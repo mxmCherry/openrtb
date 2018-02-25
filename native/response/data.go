@@ -8,9 +8,32 @@ package response
 // contemplated at the time of the writing of this document.
 type Data struct {
 	// Field:
-	//   label
+	//   type
 	// Scope:
 	//   optional
+	// Type:
+	//   integer
+	// Description:
+	//   Required for assetsurl/dcourl responses, not required for embedded asset responses.
+	//   The type of data element being submitted from the Data Asset Types table.
+	Type interface{} `json:"type,omitempty"` // TODO: extract request.DataAssetType into native.*
+
+	// Field:
+	//   len
+	// Scope:
+	//   optional
+	// Type:
+	//   integer
+	// Description:
+	//   Required for assetsurl/dcourl responses, not required for embedded asset responses.
+	//   The length of the data element being submitted.
+	//   Where applicable, must comply with the recommended maximum lengths in the Data Asset Types table.
+	Len int64 `json:"len,omitempty"`
+
+	// Field:
+	//   label
+	// Scope:
+	//   optional in 1.1, deprecated/removed in 1.2
 	// Type:
 	//   string
 	// Description:
