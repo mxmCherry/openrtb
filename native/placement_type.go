@@ -1,6 +1,6 @@
-package request
+package native
 
-// 7.5 Placement Type IDs
+// 7.3 Placement Type IDs
 //
 // The FORMAT of the ad you are purchasing, separate from the surrounding context
 type PlacementType int64

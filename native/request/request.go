@@ -4,6 +4,8 @@
 // https://www.iab.com/wp-content/uploads/2016/03/OpenRTB-Native-Ads-Specification-1-1_2016.pdf
 package request
 
+import "github.com/mxmCherry/openrtb/native"
+
 // 4.1 Native Markup Request Object
 //
 // The Native Object defines the native advertising opportunity available for bid via this bid request.
@@ -35,7 +37,7 @@ type Request struct {
 	// Description:
 	//   The Layout ID of the native ad unit.
 	//   See the Table of Layout IDs below.
-	Layout Layout `json:"layout,omitempty"`
+	Layout native.Layout `json:"layout,omitempty"`
 
 	// Field:
 	//   adunit
@@ -46,7 +48,7 @@ type Request struct {
 	// Description:
 	//   The Ad unit ID of the native ad unit.
 	//   See Table of Ad Unit IDs below for a list of supported core ad units.
-	AdUnit AdUnit `json:"adunit,omitempty"`
+	AdUnit native.AdUnit `json:"adunit,omitempty"`
 
 	// Field:
 	//   context
@@ -57,7 +59,7 @@ type Request struct {
 	// Description:
 	//   The context in which the ad appears.
 	//   See Table of Context IDs below for a list of supported context types.
-	Context ContextType `json:"context,omitempty"`
+	Context native.ContextType `json:"context,omitempty"`
 
 	// Field:
 	//   contextsubtype
@@ -68,7 +70,7 @@ type Request struct {
 	// Description:
 	//   A more detailed context in which the ad appears.
 	//   See Table of Context SubType IDs below for a list of supported context subtypes.
-	ContextSubType ContextSubType `json:"contextsubtype,omitempty"`
+	ContextSubType native.ContextSubType `json:"contextsubtype,omitempty"`
 
 	// Field:
 	//   plcmttype
@@ -79,7 +81,7 @@ type Request struct {
 	// Description:
 	//   The design/format/layout of the ad unit being offered.
 	//   See Table of Placement Type IDs below for a list of supported placement types.
-	PlcmtType PlacementType `json:"plcmttype,omitempty"`
+	PlcmtType native.PlacementType `json:"plcmttype,omitempty"`
 
 	// Field:
 	//   plcmtcnt

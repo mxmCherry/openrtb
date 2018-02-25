@@ -1,6 +1,6 @@
-package request
+package native
 
-// 7.4 Context Sub Type IDs
+// 7.2 Context Sub Type IDs
 //
 // Next-level context in which the ad appears.
 // Again this reflects the primary context, and does not imply no presence of other elements.

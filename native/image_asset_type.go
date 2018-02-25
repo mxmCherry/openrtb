@@ -5,8 +5,7 @@ package native
 // Below is a list of common image asset element types of native advertising at the time of writing this spec.
 // This list is non-exhaustive and intended to be extended by the buyers and sellers as the format evolves.
 //
-// An implementing exchange may not support all asset variants or may introduce new
-// ones unique to that system.
+// An implementing exchange may not support all asset variants or may introduce new ones unique to that system.
 //
 // In order to facilitate adoption, recommendations are made for both minimum sizes and aspect ratios.
 // We speak here of 'minimum maximum height' or ‘max height of at least’, which means the SSP should support a max height of at least this value.
