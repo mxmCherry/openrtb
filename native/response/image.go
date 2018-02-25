@@ -6,6 +6,17 @@ package response
 // The Image object to be used for all image elements of the Native ad such as Icons, Main Image, etc.
 type Image struct {
 	// Field:
+	//   type
+	// Scope:
+	//   optional
+	// Type:
+	//   integer
+	// Description:
+	//    Required for assetsurl or dcourl responses, not required for embedded asset responses.
+	//   The type of image element being submitted from the Image Asset Types table.
+	Type interface{} `json:"type,omitempty"` // TODO: extract request.ImageAssetType into native.*
+
+	// Field:
 	//   url
 	// Scope:
 	//   required
@@ -22,7 +33,9 @@ type Image struct {
 	// Type:
 	//   int
 	// Description:
-	//   Width of the image in pixels
+	//   Width of the image in pixels.
+	//   Recommended for embedded asset responses.
+	//   Required for assetsurl/dcourlresponses if multiple assets of same type submitted.
 	W uint64 `json:"w,omitempty"`
 
 	// Field:
@@ -32,7 +45,9 @@ type Image struct {
 	// Type:
 	//   int
 	// Description:
-	//   Height of the image in pixels
+	//   Height of the image in pixels.
+	//   Recommended for embedded asset responses.
+	//   Required for assetsurl/dcourl responses if multiple assets of same type submitted.
 	H uint64 `json:"h,omitempty"`
 
 	// Field:
