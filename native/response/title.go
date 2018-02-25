@@ -15,6 +15,17 @@ type Title struct {
 	Text string `json:"text"`
 
 	// Field:
+	//   len
+	// Scope:
+	//   optional
+	// Type:
+	//   integer
+	// Description:
+	//   The length of the title being provided.
+	//   Required if using assetsurl/dcourl representation, optional if using embedded asset representation.
+	Len int64 `json:"len,omitempty"`
+
+	// Field:
 	//   ext
 	// Scope:
 	//   optional
