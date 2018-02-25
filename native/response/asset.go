@@ -11,12 +11,12 @@ type Asset struct {
 	// Field:
 	//   id
 	// Scope:
-	//   required
+	//   optional
 	// Type:
 	//   int
 	// Description:
-	//   Unique asset ID, assigned by exchange, must match one of the asset IDs in request.
-	ID int64 `json:"id"`
+	//   Optional if assetsurl/dcourl is being used; required if embedded asset is being used.
+	ID int64 `json:"id,omitempty"`
 
 	// Field:
 	//   required
