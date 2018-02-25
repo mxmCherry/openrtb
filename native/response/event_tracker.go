@@ -1,4 +1,6 @@
-package request
+package response
+
+import "github.com/mxmCherry/openrtb/native"
 
 // 5.8 Event Tracker Response Object
 //
@@ -15,7 +17,7 @@ type EventTracker struct {
 	// Description:
 	//   Type of event to track.
 	//   See Event Types table.
-	Event interface{} `json:"event"` // TODO: extract from request.* to native.*
+	Event native.EventType `json:"event"`
 
 	// Field:
 	//   method
@@ -26,7 +28,7 @@ type EventTracker struct {
 	// Description:
 	//   Type of tracking requested
 	//   See Event Tracking Methods table.
-	Method interface{} `json:"method"` // TODO: extract from request.* to native.*
+	Method native.EventTrackingMethod `json:"method"`
 
 	// Field:
 	//   url

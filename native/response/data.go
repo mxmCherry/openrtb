@@ -1,5 +1,7 @@
 package response
 
+import "github.com/mxmCherry/openrtb/native"
+
 // 5.5 Object: Data
 //
 // Corresponds to the Data Object in the request, with the value filled in. The Data Object is to be
@@ -16,7 +18,7 @@ type Data struct {
 	// Description:
 	//   Required for assetsurl/dcourl responses, not required for embedded asset responses.
 	//   The type of data element being submitted from the Data Asset Types table.
-	Type interface{} `json:"type,omitempty"` // TODO: extract request.DataAssetType into native.*
+	Type native.DataAssetType `json:"type,omitempty"`
 
 	// Field:
 	//   len

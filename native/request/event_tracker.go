@@ -1,5 +1,7 @@
 package request
 
+import "github.com/mxmCherry/openrtb/native"
+
 // 4.7 Event Trackers Request Object
 //
 // The event trackers object specifies the types of events the bidder can request to be tracked in the bid response, and which types of tracking are available for each event type, and is included as an array in the request.
@@ -14,7 +16,7 @@ type EventTracker struct {
 	// Description:
 	//   Type of event available for tracking.
 	//   See Event Types table.
-	Event EventType `json:"event"`
+	Event native.EventType `json:"event"`
 
 	// Field:
 	//   methods
@@ -25,7 +27,7 @@ type EventTracker struct {
 	// Description:
 	//   Array of the types of tracking available for the given event.
 	//   See Event Tracking Methods table
-	Methods []EventTrackingMethod `json:"methods"`
+	Methods []native.EventTrackingMethod `json:"methods"`
 
 	// Field:
 	//   ext

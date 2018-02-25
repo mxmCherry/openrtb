@@ -1,4 +1,4 @@
-package request
+package native
 
 // 7.7 Event Tracking Methods Table
 type EventTrackingMethod int8

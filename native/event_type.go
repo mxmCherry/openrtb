@@ -1,4 +1,4 @@
-package request
+package native
 
 // 7.6 Event Types Table
 type EventType int8

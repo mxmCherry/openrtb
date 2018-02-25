@@ -1,5 +1,7 @@
 package request
 
+import "github.com/mxmCherry/openrtb/native"
+
 // 4.6 Data Object
 //
 // The Data Object is to be used for all non-core elements of the native unit such as Brand Name, Ratings, Review Count, Stars, Download count, descriptions etc.
@@ -17,7 +19,7 @@ type Data struct {
 	//   Type ID of the element supported by the publisher.
 	//   The publisher can display this information in an appropriate format.
 	//   See Data Asset Types table for commonly used examples.
-	Type DataAssetType `json:"type"`
+	Type native.DataAssetType `json:"type"`
 
 	// Field:
 	//   len

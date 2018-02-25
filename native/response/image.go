@@ -1,5 +1,7 @@
 package response
 
+import "github.com/mxmCherry/openrtb/native"
+
 // 5.4 Object: Image
 //
 // Corresponds to the Image Object in the request.
@@ -14,7 +16,7 @@ type Image struct {
 	// Description:
 	//    Required for assetsurl or dcourl responses, not required for embedded asset responses.
 	//   The type of image element being submitted from the Image Asset Types table.
-	Type interface{} `json:"type,omitempty"` // TODO: extract request.ImageAssetType into native.*
+	Type native.ImageAssetType `json:"type,omitempty"`
 
 	// Field:
 	//   url

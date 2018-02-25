@@ -102,7 +102,7 @@ type Response struct {
 	// Description:
 	//   Array of tracking objects to run with the ad, in response to the declared supported methods in the request.
 	//   Replaces imptrackers and jstracker, to be deprecated.
-	EventTrackers []interface{} `json:"eventtrackers,omitempty"` // TODO: use Tracker type
+	EventTrackers []EventTracker `json:"eventtrackers,omitempty"`
 
 	// Field:
 	//   privacy
