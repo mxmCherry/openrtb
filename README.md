@@ -2,7 +2,7 @@
 
 [OpenRTB](https://www.iab.com/guidelines/real-time-bidding-rtb-project/) [v2.5](https://www.iab.com/wp-content/uploads/2016/03/OpenRTB-API-Specification-Version-2-5-FINAL.pdf) types for Go programming language (Golang)
 
-Also includes [OpenRTB](https://www.iab.com/guidelines/real-time-bidding-rtb-project/) [Dynamic Native Ads API Specification Version 1.2](https://iabtechlab.com/wp-content/uploads/2016/07/OpenRTB-Native-Ads-Specification-Final-1.2.pdf) types:
+Also includes [OpenRTB](https://www.iab.com/guidelines/real-time-bidding-rtb-project/) [Dynamic Native Ads API Specification Version 1.2](https://www.iab.com/wp-content/uploads/2018/03/OpenRTB-Native-Ads-Specification-Final-1.2.pdf) types:
 - [4 Native Ad Request Markup Details](native/request/)
 - [5 Native Ad Response Markup Details](native/response/)
 - [7 Reference Lists/Enumerations](native/)
