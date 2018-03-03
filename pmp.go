@@ -1,5 +1,7 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.11 Object: Pmp
 //
 // This object is the private marketplace container for direct deals between buyers and sellers that may pertain to this impression.
@@ -32,5 +34,5 @@ type PMP struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

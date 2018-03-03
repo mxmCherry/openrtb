@@ -1,5 +1,7 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.2 Object: Source
 //
 // This object describes the nature and behavior of the entity that is the source of the bid request upstream from the exchange.
@@ -40,5 +42,5 @@ type Source struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

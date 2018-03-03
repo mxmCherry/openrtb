@@ -1,5 +1,7 @@
 package request
 
+import "encoding/json"
+
 // 4.5 Video Object
 //
 // The video object to be used for all video elements supported in the Native Ad.
@@ -59,5 +61,5 @@ type Video struct {
 	//   object
 	// Description:
 	// This object is a placeholder that may contain custom JSON agreed to by the parties to support flexibility beyond the standard defined in this specification
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

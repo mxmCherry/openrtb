@@ -1,5 +1,7 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.12 Object: Deal
 //
 // This object constitutes a specific deal that was struck a priori between a buyer and a seller.
@@ -70,5 +72,5 @@ type Deal struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

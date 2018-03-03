@@ -1,5 +1,7 @@
 package openrtb
 
+import "encoding/json"
+
 // 4.2.2 Object: SeatBid
 //
 // A bid response can contain multiple SeatBid objects, each on behalf of a different bidder seat and each containing one or more individual bids.
@@ -39,5 +41,5 @@ type SeatBid struct {
 	//   object
 	// Description:
 	//   Placeholder for bidder-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

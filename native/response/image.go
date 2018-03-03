@@ -1,6 +1,10 @@
 package response
 
-import "github.com/mxmCherry/openrtb/native"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/native"
+)
 
 // 5.4 Object: Image
 //
@@ -62,5 +66,5 @@ type Image struct {
 	//   object
 	// Description:
 	//   This object is a placeholder that may contain custom JSON agreed to by the parties to support flexibility beyond the standard defined in this specification
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

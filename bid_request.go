@@ -1,5 +1,7 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.1 Object: BidRequest
 //
 // The top-level bid request object contains a globally unique bid request or auction ID.
@@ -205,5 +207,5 @@ type BidRequest struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

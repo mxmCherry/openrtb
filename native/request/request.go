@@ -4,7 +4,11 @@
 // https://www.iab.com/wp-content/uploads/2018/03/OpenRTB-Native-Ads-Specification-Final-1.2.pdf
 package request
 
-import "github.com/mxmCherry/openrtb/native"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/native"
+)
 
 // 4.1 Native Markup Request Object
 //
@@ -179,5 +183,5 @@ type Request struct {
 	//   object
 	// Description:
 	// This object is a placeholder that may contain custom JSON agreed to by the parties to support flexibility beyond the standard defined in this specification
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }
