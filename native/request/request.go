@@ -10,10 +10,11 @@ import "github.com/mxmCherry/openrtb/native"
 //
 // The Native Object defines the native advertising opportunity available for bid via this bid request.
 // It will be included as a JSON-encoded string in the bid request’s imp.native field or as a direct JSON object, depending on the choice of the exchange.
-// While OpenRTB 2.3/2.4 supports only JSON-encoded strings, many exchanges have implemented a formal object.
+// While OpenRTB 2.x officially supports only JSON-encoded strings, many exchanges have implemented a formal object.
 // Check with your integration docs.
 //
-// The Default column dictates how optional parameters should be interpreted if explicit values are not provided.
+// Note: Prior to VERSION 1.1, the specification could be interpreted as requiring the native request to have a root node with a single field “native” that would contain the object above as its value.
+// The Native Markup Request Object specified above is now the root object.
 type Request struct {
 
 	// Field:
