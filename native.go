@@ -1,5 +1,7 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.9 Object: Native
 //
 // This object represents a native type impression.
@@ -57,5 +59,5 @@ type Native struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

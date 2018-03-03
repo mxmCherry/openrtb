@@ -1,5 +1,7 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.14 Object: App
 //
 // This object should be included if the ad supported content is a non-browser application (typically in mobile) as opposed to a website.
@@ -130,5 +132,5 @@ type App struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

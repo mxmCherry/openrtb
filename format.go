@@ -1,5 +1,7 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.10 Object: Format
 //
 // This object represents an allowed size (i.e., height and width combination) or Flex Ad parameters for a banner impression.
@@ -54,5 +56,5 @@ type Format struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

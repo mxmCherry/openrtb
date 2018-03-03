@@ -1,5 +1,7 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.16 Object: Content
 //
 // This object describes the content in which the impression will appear, which may be syndicated or nonsyndicated content.
@@ -226,5 +228,5 @@ type Content struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

@@ -1,5 +1,7 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.19 Object: Geo
 //
 // This object encapsulates various methods for specifying a geographic location.
@@ -133,5 +135,5 @@ type Geo struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

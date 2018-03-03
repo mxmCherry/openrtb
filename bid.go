@@ -1,5 +1,7 @@
 package openrtb
 
+import "encoding/json"
+
 // 4.2.3 Object: Bid
 //
 // A SeatBid object contains one or more Bid objects, each of which relates to a specific impression in the bid request via the impid attribute and constitutes an offer to buy that impression for a given price.
@@ -273,5 +275,5 @@ type Bid struct {
 	//   object
 	// Description:
 	//   Placeholder for bidder-specific extensions to OpenRTB
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

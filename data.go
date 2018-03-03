@@ -1,5 +1,7 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.21 Object: Data
 //
 // The data and segment objects together allow additional data about the related object (e.g., user, content) to be specified.
@@ -39,5 +41,5 @@ type Data struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

@@ -1,5 +1,7 @@
 package openrtb
 
+import "encoding/json"
+
 // 4.2.1 Object: BidResponse
 //
 // This object is the top-level bid response object (i.e., the unnamed outer JSON object).
@@ -70,5 +72,5 @@ type BidResponse struct {
 	//   object
 	// Description:
 	//   Placeholder for bidder-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

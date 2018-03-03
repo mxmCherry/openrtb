@@ -1,5 +1,7 @@
 package response
 
+import "encoding/json"
+
 // 5.2 Object: Asset
 //
 // Corresponds to the Asset Object in the request. The main container object for each asset
@@ -97,5 +99,5 @@ type Asset struct {
 	//   This object is a placeholder that may contain custom JSON agreed to by the parties to support flexibility beyond the standard defined in this specification
 	//   Bidders are encouraged not to use asset.ext for exchanging text assets.
 	//   Use data.ext with custom type instead.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }
