@@ -49,8 +49,3 @@ Master always contains latest code, so better use some package manager to vendor
 - Each RTB type should be kept in its own file, named after type
 - File names are in underscore_case, e.g., `type BidRequest` should be declared in `bid_request.go`
 - [go fmt your code](https://blog.golang.org/go-fmt-your-code)
-
-# TODO
-- [ ] Review all integral types, probably, switch everything to signed ones or just to `int`?
-- [ ] Consider switching back to `encoding/json.RawMessage`, as Go 1.8 fixed serialisation for non-ptr (probably, when Go 1.9 or even 1.10 is out)
-- [ ] Review types, that are enums (or "open enums" like `BidRequest.at`) themselves, but not described in section 5 - make them typed
