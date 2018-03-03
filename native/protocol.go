@@ -1,8 +1,10 @@
-package request
+package native
 
 // 5.8 Protocols (from OpenRTB spec 2.5)
 //
 // Options for the various bid response protocols that could be supported by an exchange.
+//
+// Dev note: this enum is copied to native package to allow requiring native/{request,response} in root openrtb package in future.
 type Protocol int8
 
 const (

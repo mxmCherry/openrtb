@@ -1,6 +1,10 @@
 package request
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/native"
+)
 
 // 4.5 Video Object
 //
@@ -51,7 +55,7 @@ type Video struct {
 	// Description:
 	//   An array of video protocols the publisher can accept in the bid response.
 	//   See OpenRTB Table ‘Video Bid Response Protocols’ for a list of possible values.
-	Protocols []Protocol `json:"protocols"`
+	Protocols []native.Protocol `json:"protocols"`
 
 	// Field:
 	//   ext
