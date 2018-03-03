@@ -7,6 +7,21 @@ package response
 // 5.1 Object: Response
 //
 // The native object is the top level JSON object which identifies a native response.
+// Note: Prior to VERSION 1.1, the native response’s root node was an object with a single field “native” that would contain the object above as its value.
+// The Native Object specified above is now the root object.
+//
+// Note re: assetsurl format responses: In the case of assetsurl or dcourl (beta) bidding, since the ultimate buyer/creative engine cannot alter the assets response based on the details inside the assets request (as it does not receive said request), it is critical that all required assets are provided, and such communications will need to be handled offline for recommended/optional elements.
+//
+// In the normal embedded response, certain attributes of the response are assumed based on matching the ID of the asset object in the response to the ID of the asset object in the request.
+// Since the asset response will not be reading the asset request directly in this implementation, that information is added as option in the below object definitions and marked for that use case.
+//
+// It is also recommended that where the standard specifies multiple options for an element, that all options be provided.
+// IE all 4 supported thumbnail aspect ratios and all 3 supported title lengths.
+//
+// The ID component of the asset responses can be omitted.
+//
+// Note that this change to provide the metadata description of the asset in the response, rather than using the asset ID to implicitly specify that, may be reflected into the inline version of responses in a future version to align the two methods of replying.
+// Making that change now would break backwards compatibility of the inline response mechanism.
 type Response struct {
 	// Field:
 	//   ver
@@ -42,6 +57,7 @@ type Response struct {
 	//   URL of an alternate source for the assets object.
 	//   The expected response is a JSON object mirroring the assets object in the bid response, subject to certain requirements as specified in the individual objects.
 	//   Where present, overrides the asset object in the response.
+	//   The provided “assetsurl” or “dcourl” should be expected to provide a valid response when called in any context, including importantly the brand name and example thumbnails and headlines (to use for reporting, blacklisting, etc), but it is understood the final actual call should come from the client device from which the ad will be rendered to give the buyer the benefit of the cookies and header data available in that context.
 	AssetsURL string `json:"assetsurl,omitempty"`
 
 	// Field:

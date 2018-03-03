@@ -6,6 +6,8 @@ import "github.com/mxmCherry/openrtb/native"
 //
 // Corresponds to the Image Object in the request.
 // The Image object to be used for all image elements of the Native ad such as Icons, Main Image, etc.
+//
+// It is recommended that if assetsurl/dcourl is being used rather than embedded assets, that an image of each recommended aspect ratio (per the Image Types table) be provided forimage type 3.
 type Image struct {
 	// Field:
 	//   type

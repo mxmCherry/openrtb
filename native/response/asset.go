@@ -38,6 +38,7 @@ type Asset struct {
 	//   object
 	// Description:
 	//   Title object for title assets.
+	//   Asset object may contain only one of title, img, data or video.
 	Title *Title `json:"title,omitempty"`
 
 	// Field:
@@ -48,6 +49,7 @@ type Asset struct {
 	//   object
 	// Description:
 	//   Image object for image assets.
+	//   Asset object may contain only one of title, img, data or video.
 	Img *Image `json:"img,omitempty"`
 
 	// Field:
@@ -60,6 +62,7 @@ type Asset struct {
 	//   Video object for video assets. See Video response object definition.
 	//   Note that in-stream video ads are not part of Native.
 	//   Native ads may contain a video as the ad creative itself.
+	//   Asset object may contain only one of title, img, data or video.
 	Video *Video `json:"video,omitempty"`
 
 	// Field:
@@ -70,6 +73,7 @@ type Asset struct {
 	//   object
 	// Description:
 	//   Data object for ratings, prices etc.
+	//   Asset object may contain only one of title, img, data or video.
 	Data *Data `json:"data,omitempty"`
 
 	// Field:
@@ -91,5 +95,7 @@ type Asset struct {
 	//   object
 	// Description:
 	//   This object is a placeholder that may contain custom JSON agreed to by the parties to support flexibility beyond the standard defined in this specification
+	//   Bidders are encouraged not to use asset.ext for exchanging text assets.
+	//   Use data.ext with custom type instead.
 	Ext RawJSON `json:"ext,omitempty"`
 }
