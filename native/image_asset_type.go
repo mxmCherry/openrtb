@@ -1,6 +1,6 @@
-package request
+package native
 
-// 7.7 Image Asset Types
+// 7.5 Image Asset Types
 //
 // Below is a list of common image asset element types of native advertising at the time of writing this spec.
 // This list is non-exhaustive and intended to be extended by the buyers and sellers as the format evolves.
@@ -12,12 +12,12 @@ package request
 // They are free to support larger, but the DSP knows that if they have an image of this size it will be accepted.
 // Note that SSPs will be responsible for sizing image to exact size if min-maxheight framework is used; exact size may not be available at bid request time.
 // Width is calculated from the 3 supported aspect ratios.
-// Note we are merging the prior overlapping type 1 and type 2 as just type 1 - to be used for app icon, brand logo, or similar.
+// Note we merged the prior overlapping type 1 and type 2 as just type 1 - to be used for app icon, brand logo, or similar.
 type ImageAssetType int64
 
 const (
 	ImageAssetTypeIcon ImageAssetType = 1 // Icon; Icon image; Optional. Max height: at least 50; aspect ratio: 1:1
-	ImageAssetTypeLogo ImageAssetType = 2 // Logo; Logo image for the brand/app. To be deprecated in future version - use type 1 Icon.
+	ImageAssetTypeLogo ImageAssetType = 2 // Logo; Logo image for the brand/app. Deprecated in version 1.2 - use type 1 Icon.
 
 	// Main; Large image preview for the ad. At least one of 2 size variants required:
 	//   Small Variant:

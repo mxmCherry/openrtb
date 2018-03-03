@@ -3,6 +3,8 @@ package response
 // 5.3 Object: Title
 //
 // Corresponds to the Title Object in the request, with the value filled in.
+//
+// If using assetsurl or dcourl response rather than embedded asset response, it is recommended that three title objects be provided, the length of each of which is less than or equal to the three recommended maximum title lengths (25,90,140).
 type Title struct {
 	// Field:
 	//   text
@@ -13,6 +15,17 @@ type Title struct {
 	// Description:
 	//   The text associated with the text element.
 	Text string `json:"text"`
+
+	// Field:
+	//   len
+	// Scope:
+	//   optional
+	// Type:
+	//   integer
+	// Description:
+	//   The length of the title being provided.
+	//   Required if using assetsurl/dcourl representation, optional if using embedded asset representation.
+	Len int64 `json:"len,omitempty"`
 
 	// Field:
 	//   ext

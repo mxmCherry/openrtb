@@ -1,10 +1,13 @@
-package request
+package native
 
-// 7.3 Context Type IDs
+// 7.1 Context Type IDs
 //
-// The context in which the ad appears - what type of content is surrounding the ad on the page at a high level.
-// This maps directly to the new Deep Dive on In-Feed Ad Units.
-// This denotes the primary context, but does not imply other content may not exist on the page - for example it's expected that most content platforms have some social components, etc.
+// The context in which the ad appears - what type of content is surrounding the ad on the
+// page at a high level.
+// This maps directly to the new Deep Dive on In-Feed Ad Units. This
+// denotes the primary context, but does not imply other content may not exist on the
+// page - for example it's expected that most content platforms have some social
+// components, etc.
 type ContextType int64
 
 const (

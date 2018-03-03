@@ -1,5 +1,7 @@
 package request
 
+import "github.com/mxmCherry/openrtb/native"
+
 // 4.4 Image Object
 //
 // The Image object to be used for all image elements of the Native ad such as Icons, Main Image, etc.
@@ -16,7 +18,7 @@ type Image struct {
 	//   Type ID of the image element supported by the publisher.
 	//   The publisher can display this information in an appropriate format.
 	//   See Table Image Asset Types.
-	Type ImageAssetType `json:"type,omitempty"`
+	Type native.ImageAssetType `json:"type,omitempty"`
 
 	// Field:
 	//   w
@@ -87,6 +89,6 @@ type Image struct {
 	// Type:
 	//   object
 	// Description:
-	// This object is a placeholder that may contain custom JSON agreed to by the parties to support flexibility beyond the standard defined in this specification
+	//   This object is a placeholder that may contain custom JSON agreed to by the parties to support flexibility beyond the standard defined in this specification
 	Ext RawJSON `json:"ext,omitempty"`
 }

@@ -29,12 +29,25 @@ var _ = Describe("Response", func() {
 		},
 
 		Entry(
-			"Clickout",
-			"clickout.json",
+			"Clickout (v1.1)",
+			"v1.1/clickout.json",
 			new(Response)),
 		Entry(
-			"Video",
-			"video.json",
+			"Video (v1.1)",
+			"v1.1/video.json",
+			new(Response)),
+
+		Entry(
+			"Clickout (v1.2)",
+			"v1.2/clickout.json",
+			new(Response)),
+		Entry(
+			"Video (v1.2)",
+			"v1.2/video.json",
+			new(Response)),
+		Entry(
+			"Third-party (v1.2)",
+			"v1.2/third-party.json",
 			new(Response)),
 	)
 })

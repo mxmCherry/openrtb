@@ -1,6 +1,6 @@
-package request
+package native
 
-// 7.6 Data Asset Types
+// 7.4  Data Asset Types
 //
 // Below is a list of common asset element types of native advertising at the time of writing this spec.
 // This list is non-exhaustive and intended to be extended by the buyers and sellers as the format evolves.

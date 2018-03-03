@@ -1,17 +1,20 @@
-// Package request provides OpenRTB Dynamic Native Ads API Specification Version 1.1
+// Package request provides OpenRTB Dynamic Native Ads API Specification Version 1.2
 // section 4 Native Ad Request Markup Details types:
 // https://www.iab.com/guidelines/real-time-bidding-rtb-project/
-// https://www.iab.com/wp-content/uploads/2016/03/OpenRTB-Native-Ads-Specification-1-1_2016.pdf
+// https://www.iab.com/wp-content/uploads/2018/03/OpenRTB-Native-Ads-Specification-Final-1.2.pdf
 package request
+
+import "github.com/mxmCherry/openrtb/native"
 
 // 4.1 Native Markup Request Object
 //
 // The Native Object defines the native advertising opportunity available for bid via this bid request.
 // It will be included as a JSON-encoded string in the bid request’s imp.native field or as a direct JSON object, depending on the choice of the exchange.
-// While OpenRTB 2.3/2.4 supports only JSON-encoded strings, many exchanges have implemented a formal object.
+// While OpenRTB 2.x officially supports only JSON-encoded strings, many exchanges have implemented a formal object.
 // Check with your integration docs.
 //
-// The Default column dictates how optional parameters should be interpreted if explicit values are not provided.
+// Note: Prior to VERSION 1.1, the specification could be interpreted as requiring the native request to have a root node with a single field “native” that would contain the object above as its value.
+// The Native Markup Request Object specified above is now the root object.
 type Request struct {
 
 	// Field:
@@ -21,7 +24,7 @@ type Request struct {
 	// Type:
 	//   string
 	// Default:
-	//   1.1
+	//   1.2
 	// Description:
 	//   Version of the Native Markup version in use.
 	Ver string `json:"ver,omitempty"`
@@ -29,24 +32,24 @@ type Request struct {
 	// Field:
 	//   layout
 	// Scope:
-	//   recommended in 1.0, to be deprecated
+	//   recommended in 1.0, deprecated/removed in 1.2
 	// Type:
 	//   integer
 	// Description:
 	//   The Layout ID of the native ad unit.
 	//   See the Table of Layout IDs below.
-	Layout Layout `json:"layout,omitempty"`
+	Layout native.Layout `json:"layout,omitempty"`
 
 	// Field:
 	//   adunit
 	// Scope:
-	//   recommended in 1.0, to be deprecated
+	//   recommended in 1.0, deprecated/removed in 1.2
 	// Type:
 	//   integer
 	// Description:
 	//   The Ad unit ID of the native ad unit.
 	//   See Table of Ad Unit IDs below for a list of supported core ad units.
-	AdUnit AdUnit `json:"adunit,omitempty"`
+	AdUnit native.AdUnit `json:"adunit,omitempty"`
 
 	// Field:
 	//   context
@@ -57,7 +60,7 @@ type Request struct {
 	// Description:
 	//   The context in which the ad appears.
 	//   See Table of Context IDs below for a list of supported context types.
-	Context ContextType `json:"context,omitempty"`
+	Context native.ContextType `json:"context,omitempty"`
 
 	// Field:
 	//   contextsubtype
@@ -68,7 +71,7 @@ type Request struct {
 	// Description:
 	//   A more detailed context in which the ad appears.
 	//   See Table of Context SubType IDs below for a list of supported context subtypes.
-	ContextSubType ContextSubType `json:"contextsubtype,omitempty"`
+	ContextSubType native.ContextSubType `json:"contextsubtype,omitempty"`
 
 	// Field:
 	//   plcmttype
@@ -79,7 +82,7 @@ type Request struct {
 	// Description:
 	//   The design/format/layout of the ad unit being offered.
 	//   See Table of Placement Type IDs below for a list of supported placement types.
-	PlcmtType PlacementType `json:"plcmttype,omitempty"`
+	PlcmtType native.PlacementType `json:"plcmttype,omitempty"`
 
 	// Field:
 	//   plcmtcnt
@@ -117,6 +120,56 @@ type Request struct {
 	//   An array of Asset Objects.
 	//   Any bid response must comply with the array of elements expressed in the bid request.
 	Assets []Asset `json:"assets"`
+
+	// Field:
+	//   aurlsupport
+	// Scope:
+	//   optional
+	// Type:
+	//   int
+	// Default:
+	//   0
+	// Description:
+	//   Whether the supply source / impression supports returning an assetsurl instead of an asset object.
+	//   0 or the absence of the field indicates no such support.
+	AURLSupport int8 `json:"aurlsupport,omitempty"`
+
+	// Field:
+	//   durlsupport
+	// Scope:
+	//   optional
+	// Type:
+	//   int
+	// Default:
+	//   0
+	// Description:
+	//   Whether the supply source / impression supports returning a dco url instead of an asset object.
+	//   0 or the absence of the field indicates no such support.
+	//   Beta feature.
+	DURLSupport int8 `json:"durlsupport,omitempty"`
+
+	// Field:
+	//   eventtrackers
+	// Scope:
+	//   optional
+	// Type:
+	//   array of objects
+	// Description:
+	//   Specifies what type of event tracking is supported - see Event Trackers Request Object
+	EventTrackers []EventTracker `json:"eventtrackers,omitempty"`
+
+	// Field:
+	//   privacy
+	// Scope:
+	//   recommended
+	// Type:
+	//   integer
+	// Default:
+	//   0
+	// Description:
+	//   Set to 1 when the native ad supports buyer-specific privacy notice.
+	//   Set to 0 (or field absent) when the native ad doesn’t support custom privacy links or if support is unknown.
+	Privacy int8 `json:"privacy,omitempty"`
 
 	// Field:
 	//   ext

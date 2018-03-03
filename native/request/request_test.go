@@ -29,12 +29,25 @@ var _ = Describe("Request", func() {
 		},
 
 		Entry(
-			"Social Context",
-			"social-context.json",
+			"Social Context (v1.1)",
+			"v1.1/social-context.json",
 			new(Request)),
 		Entry(
-			"Content Context",
-			"content-context.json",
+			"Content Context (v1.1)",
+			"v1.1/content-context.json",
+			new(Request)),
+
+		Entry(
+			"Social Context (v1.2)",
+			"v1.2/social-context.json",
+			new(Request)),
+		Entry(
+			"Content Context (v1.2)",
+			"v1.2/content-context.json",
+			new(Request)),
+		Entry(
+			"Third-party (v1.2)",
+			"v1.2/third-party.json",
 			new(Request)),
 	)
 })

@@ -2,10 +2,10 @@
 
 [OpenRTB](https://www.iab.com/guidelines/real-time-bidding-rtb-project/) [v2.5](https://www.iab.com/wp-content/uploads/2016/03/OpenRTB-API-Specification-Version-2-5-FINAL.pdf) types for Go programming language (Golang)
 
-Also includes [OpenRTB](https://www.iab.com/guidelines/real-time-bidding-rtb-project/) [Dynamic Native Ads API
-Specification Version 1.1](https://www.iab.com/wp-content/uploads/2016/03/OpenRTB-Native-Ads-Specification-1-1_2016.pdf) types:
+Also includes [OpenRTB](https://www.iab.com/guidelines/real-time-bidding-rtb-project/) [Dynamic Native Ads API Specification Version 1.2](https://www.iab.com/wp-content/uploads/2018/03/OpenRTB-Native-Ads-Specification-Final-1.2.pdf) types:
 - [4 Native Ad Request Markup Details](native/request/)
 - [5 Native Ad Response Markup Details](native/response/)
+- [7 Reference Lists/Enumerations](native/)
 
 # Using
 
@@ -53,5 +53,4 @@ Master always contains latest code, so better use some package manager to vendor
 # TODO
 - [ ] Review all integral types, probably, switch everything to signed ones or just to `int`?
 - [ ] Consider switching back to `encoding/json.RawMessage`, as Go 1.8 fixed serialisation for non-ptr (probably, when Go 1.9 or even 1.10 is out)
-- [x] Review enum types (typed enum attributes + constants)
 - [ ] Review types, that are enums (or "open enums" like `BidRequest.at`) themselves, but not described in section 5 - make them typed

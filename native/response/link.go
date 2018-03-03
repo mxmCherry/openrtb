@@ -2,10 +2,9 @@ package response
 
 // 5.7 Object: Link
 //
-// Used for ‘call to action’ assets, or other links from the Native ad. This Object should be
-// associated to its peer object in the parent Asset Object or as the master link in the top level
-// Native Ad response object. When that peer object is activated (clicked) the action should take
-// the user to the location of the link.
+// Used for ‘call to action’ assets, or other links from the Native ad.
+// This Object should be associated to its peer object in the parent Asset Object or as the master link in the top level Native Ad response object.
+// When that peer object is activated (clicked) the action should take the user to the location of the link.
 type Link struct {
 	// Field:
 	//   url
@@ -34,7 +33,8 @@ type Link struct {
 	// Type:
 	//   string
 	// Description:
-	//   Fallback URL for deeplink. To be used if the URL given in url is not supported by the device.
+	//   Fallback URL for deeplink.
+	//   To be used if the URL given in url is not supported by the device.
 	Fallback string `json:"fallback,omitempty"`
 
 	// Field:

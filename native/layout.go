@@ -1,8 +1,7 @@
-package request
+package native
 
-// 7.1 Native Layout IDs - To Be Deprecated
-//
-// Layout ID is to be deprecated in a future version and is not suggested for new implementations.
+// 7.1 Native Layout IDs in version 1.1.
+// Deprecated/removed in version 1.2.
 //
 // Below is a list of the core layouts described in the introduction above.
 //
