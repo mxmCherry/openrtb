@@ -7,6 +7,12 @@ Also includes [OpenRTB](https://www.iab.com/guidelines/real-time-bidding-rtb-pro
 - [5 Native Ad Response Markup Details](native/response/)
 - [7 Reference Lists/Enumerations](native/)
 
+**Requires Go 1.8+**
+
+Go 1.8+ is needed for proper `Ext json.RawMessage` marshaling: non-pointer `json.RawMessage` is marshaled as base64 string prior to Go 1.8.
+
+This library uses `json.RawMessage` since [v10.0.0](https://github.com/mxmCherry/openrtb/releases/tag/v10.0.0).
+
 # Using
 
 ```bash
