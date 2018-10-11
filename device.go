@@ -41,7 +41,7 @@ type Device struct {
 	// Description:
 	//   Standard “Do Not Track” flag as set in the header by the
 	//   browser, where 0 = tracking is unrestricted, 1 = do not track.
-	DNT int8 `json:"dnt,omitempty"`
+	DNT *int8 `json:"dnt,omitempty"`
 
 	// Attribute:
 	//   lmt
