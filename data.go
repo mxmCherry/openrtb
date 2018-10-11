@@ -1,10 +1,12 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.21 Object: Data
 //
-// The data and segment objects together allow additional data about the related object (e.g., user,
-// content) to be specified. This data may be from multiple sources whether from the exchange itself or
-// third parties as specified by the id field. A bid request can mix data objects from multiple providers.
+// The data and segment objects together allow additional data about the related object (e.g., user, content) to be specified.
+// This data may be from multiple sources whether from the exchange itself or third parties as specified by the id field.
+// A bid request can mix data objects from multiple providers.
 // The specific data providers in use should be published by the exchange a priori to its bidders.
 type Data struct {
 
@@ -39,5 +41,5 @@ type Data struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

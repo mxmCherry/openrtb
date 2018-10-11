@@ -1,0 +1,48 @@
+{
+	"link": {
+		"url": "http: //i.am.a/URL"
+	},
+	"assets": [
+		{
+			"id": 4,
+			"video": {
+				"vasttag": "<VAST version='2.0'></VAST>"
+			}
+		},
+		{
+			"id": 123,
+			"required": 1,
+			"title": {
+				"text": "Watch this awesome thing"
+			}
+		},
+		{
+			"id": 124,
+			"required": 1,
+			"img": {
+				"url": "http://www.myads.com/thumbnail1.png"
+			}
+		},
+		{
+			"id": 128,
+			"required": 1,
+			"img": {
+				"url": "http://www.myads.com/largethumb1.png"
+			}
+		},
+		{
+			"id": 126,
+			"required": 1,
+			"data": {
+				"value": "My Brand"
+			}
+		},
+		{
+			"id": 127,
+			"required": 1,
+			"data": {
+				"value": "Watch all about this awesome story of someone using my product."
+			}
+		}
+	]
+}

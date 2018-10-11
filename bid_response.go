@@ -1,16 +1,18 @@
 package openrtb
 
+import "encoding/json"
+
 // 4.2.1 Object: BidResponse
 //
-// This object is the top-level bid response object (i.e., the unnamed outer JSON object). The id attribute
-// is a reflection of the bid request ID for logging purposes. Similarly, bidid is an optional response
-// tracking ID for bidders. If specified, it can be included in the subsequent win notice call if the bidder
-// wins. At least one seatbid object is required, which contains at least one bid for an impression. Other
-// attributes are optional.
+// This object is the top-level bid response object (i.e., the unnamed outer JSON object).
+// The id attribute is a reflection of the bid request ID for logging purposes.
+// Similarly, bidid is an optional response tracking ID for bidders.
+// If specified, it can be included in the subsequent win notice call if the bidder wins.
+// At least one seatbid object is required, which contains at least one bid for an impression.
+// Other attributes are optional.
 //
-// To express a “no-bid”, the options are to return an empty response with HTTP 204. Alternately if the
-// bidder wishes to convey to the exchange a reason for not bidding, just a BidResponse object is
-// returned with a reason code in the nbr attribute.
+// To express a “no-bid”, the options are to return an empty response with HTTP 204.
+// Alternately if the bidder wishes to convey to the exchange a reason for not bidding, just a BidResponse object is returned with a reason code in the nbr attribute.
 type BidResponse struct {
 
 	// Attribute:
@@ -62,7 +64,7 @@ type BidResponse struct {
 	//   integer
 	// Description:
 	//   Reason for not bidding. Refer to List 5.24.
-	NBR *int8 `json:"nbr,omitempty"`
+	NBR *NoBidReasonCode `json:"nbr,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -70,5 +72,5 @@ type BidResponse struct {
 	//   object
 	// Description:
 	//   Placeholder for bidder-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

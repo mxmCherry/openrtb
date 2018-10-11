@@ -1,17 +1,17 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.8 Object: Audio
 //
-// This object represents an audio type impression. Many of the fields are non-essential for minimally
-// viable transactions, but are included to offer fine control when needed. Audio in OpenRTB generally
-// assumes compliance with the DAAST standard. As such, the notion of companion ads is supported by
-// optionally including an array of Banner objects (refer to the Banner object in Section 3.2.6) that define
-// these companion ads.
+// This object represents an audio type impression.
+// Many of the fields are non-essential for minimally viable transactions, but are included to offer fine control when needed.
+// Audio in OpenRTB generally assumes compliance with the DAAST standard.
+// As such, the notion of companion ads is supported by optionally including an array of Banner objects (refer to the Banner object in Section 3.2.6) that define these companion ads.
 //
-// The presence of a Audio as a subordinate of the Imp object indicates that this impression is offered as
-// an audio type impression. At the publisher’s discretion, that same impression may also be offered as
-// banner, video, and/or native by also including as Imp subordinates objects of those types. However, any
-// given bid for the impression must conform to one of the offered types.
+// The presence of a Audio as a subordinate of the Imp object indicates that this impression is offered as an audio type impression.
+// At the publisher’s discretion, that same impression may also be offered as banner, video, and/or native by also including as Imp subordinates objects of those types.
+// However, any given bid for the impression must conform to one of the offered types.
 type Audio struct {
 
 	// Attribute:
@@ -44,7 +44,7 @@ type Audio struct {
 	//   integer array; recommended
 	// Description:
 	//   Array of supported audio protocols. Refer to List 5.8.
-	Protocols []int8 `json:"protocols,omitempty"`
+	Protocols []Protocol `json:"protocols,omitempty"`
 
 	// Attribute:
 	//   startdelay
@@ -53,7 +53,7 @@ type Audio struct {
 	// Description:
 	//   Indicates the start delay in seconds for pre-roll, mid-roll, or
 	//   post-roll ad placements. Refer to List 5.12.
-	StartDelay int64 `json:"startdelay,omitempty"`
+	StartDelay *StartDelay `json:"startdelay,omitempty"`
 
 	// Attribute:
 	//   sequence
@@ -71,7 +71,7 @@ type Audio struct {
 	//   integer array
 	// Description:
 	//   Blocked creative attributes. Refer to List 5.3.
-	BAttr []int8 `json:"battr,omitempty"`
+	BAttr []CreativeAttribute `json:"battr,omitempty"`
 
 	// Attribute:
 	//   maxextended
@@ -99,9 +99,16 @@ type Audio struct {
 	//   integer
 	// Description:
 	//   Maximum bit rate in Kbps.
-	//   delivery integer array Supported delivery methods (e.g., streaming, progressive). If
-	//   none specified, assume all are supported. Refer to List 5.15.
 	MaxBitrate uint64 `json:"maxbitrate,omitempty"`
+
+	// Attribute:
+	//   delivery
+	// Type:
+	//   integer array
+	// Description:
+	//   Supported delivery methods (e.g., streaming, progressive). If
+	//   none specified, assume all are supported. Refer to List 5.15.
+	Delivery []ContentDeliveryMethod `json:"delivery,omitempty"`
 
 	// Attribute:
 	//   companionad
@@ -120,7 +127,7 @@ type Audio struct {
 	//   List of supported API frameworks for this impression. Refer to
 	//   List 5.6. If an API is not explicitly listed, it is assumed not to be
 	//   supported.
-	API []int8 `json:"api,omitempty"`
+	API []APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   companiontype
@@ -130,7 +137,7 @@ type Audio struct {
 	//   Supported DAAST companion ad types. Refer to List 5.14.
 	//   Recommended if companion Banner objects are included via
 	//   the companionad array.
-	CompanionType []int8 `json:"companiontype,omitempty"`
+	CompanionType []CompanionType `json:"companiontype,omitempty"`
 
 	// Attribute:
 	//   maxseq
@@ -148,9 +155,7 @@ type Audio struct {
 	//   integer
 	// Description:
 	//   Type of audio feed. Refer to List 5.16.
-	//   stitched integer Indicates if the ad is stitched with audio content or delivered
-	//   independently, where 0 = no, 1 = yes.
-	Feed int8 `json:"feed,omitempty"`
+	Feed FeedType `json:"feed,omitempty"`
 
 	// Attribute:
 	//   stitched
@@ -167,7 +172,7 @@ type Audio struct {
 	//   integer
 	// Description:
 	//   Volume normalization mode. Refer to List 5.17.
-	NVol int8 `json:"nvol,omitempty"`
+	NVol *VolumeNormalizationMode `json:"nvol,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -175,5 +180,5 @@ type Audio struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

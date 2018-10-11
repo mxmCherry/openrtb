@@ -1,11 +1,12 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.20 Object: User
 //
-// This object contains information known or derived about the human user of the device (i.e., the
-// audience for advertising). The user id is an exchange artifact and may be subject to rotation or other
-// privacy policies. However, this user ID must be stable long enough to serve reasonably as the basis for
-// frequency capping and retargeting.
+// This object contains information known or derived about the human user of the device (i.e., the audience for advertising).
+// The user id is an exchange artifact and may be subject to rotation or other privacy policies.
+// However, this user ID must be stable long enough to serve reasonably as the basis for frequency capping and retargeting.
 type User struct {
 
 	// Attribute:
@@ -86,5 +87,5 @@ type User struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

@@ -1,10 +1,12 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.10 Object: Format
 //
-// This object represents an allowed size (i.e., height and width combination) or Flex Ad parameters for a
-// banner impression. These are typically used in an array where multiple sizes are permitted. It is
-// recommended that either the w/h pair or the wratio/hratio/wmin set (i.e., for Flex Ads) be specified.
+// This object represents an allowed size (i.e., height and width combination) or Flex Ad parameters for a banner impression.
+// These are typically used in an array where multiple sizes are permitted.
+// It is recommended that either the w/h pair or the wratio/hratio/wmin set (i.e., for Flex Ads) be specified.
 type Format struct {
 
 	// Attribute:
@@ -54,5 +56,5 @@ type Format struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

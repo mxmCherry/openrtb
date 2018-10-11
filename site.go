@@ -1,10 +1,12 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.13 Object: Site
 //
-// This object should be included if the ad supported content is a website as opposed to a non-browser
-// application. A bid request must not contain both a Site and an App object. At a minimum, it is useful
-// to provide a site ID or page URL, but this is not strictly required.
+// This object should be included if the ad supported content is a website as opposed to a non-browser application.
+// A bid request must not contain both a Site and an App object.
+// At a minimum, it is useful to provide a site ID or page URL, but this is not strictly required.
 type Site struct {
 
 	// Attribute:
@@ -128,5 +130,5 @@ type Site struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

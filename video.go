@@ -1,17 +1,17 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.7 Object: Video
 //
-// This object represents an in-stream video impression. Many of the fields are non-essential for minimally
-// viable transactions, but are included to offer fine control when needed. Video in OpenRTB generally
-// assumes compliance with the VAST standard. As such, the notion of companion ads is supported by
-// optionally including an array of Banner objects (refer to the Banner object in Section 3.2.6) that define
-// these companion ads.
+// This object represents an in-stream video impression.
+// Many of the fields are non-essential for minimally viable transactions, but are included to offer fine control when needed.
+// Video in OpenRTB generally assumes compliance with the VAST standard.
+// As such, the notion of companion ads is supported by optionally including an array of Banner objects (refer to the Banner object in Section 3.2.6) that define these companion ads.
 //
-// The presence of a Video as a subordinate of the Imp object indicates that this impression is offered as a
-// video type impression. At the publisher’s discretion, that same impression may also be offered as
-// banner, audio, and/or native by also including as Imp subordinates objects of those types. However,
-// any given bid for the impression must conform to one of the offered types
+// The presence of a Video as a subordinate of the Imp object indicates that this impression is offered as a video type impression.
+// At the publisher’s discretion, that same impression may also be offered as banner, audio, and/or native by also including as Imp subordinates objects of those types.
+// However, any given bid for the impression must conform to one of the offered types.
 type Video struct {
 
 	// Attribute:
@@ -47,7 +47,7 @@ type Video struct {
 	//   Array of supported video protocols. Refer to List 5.8. At least
 	//   one supported protocol must be specified in either the
 	//   protocol or protocols attribute.
-	Protocols []int8 `json:"protocols,omitempty"`
+	Protocols []Protocol `json:"protocols,omitempty"`
 
 	// Attribute:
 	//   protocol
@@ -58,7 +58,7 @@ type Video struct {
 	//   Supported video protocol. Refer to List 5.8. At least one
 	//   supported protocol must be specified in either the protocol
 	//   or protocols attribute.
-	Protocol int8 `json:"protocol,omitempty"`
+	Protocol Protocol `json:"protocol,omitempty"`
 
 	// Attribute:
 	//   w
@@ -84,7 +84,7 @@ type Video struct {
 	//   Indicates the start delay in seconds for pre-roll, mid-roll, or
 	//   post-roll ad placements. Refer to List 5.12 for additional
 	//   generic values.
-	StartDelay int64 `json:"startdelay,omitempty"`
+	StartDelay *StartDelay `json:"startdelay,omitempty"`
 
 	// Attribute:
 	//   placement
@@ -92,7 +92,7 @@ type Video struct {
 	//   integer
 	// Description:
 	//   Placement type for the impression. Refer to List 5.9.
-	Placement int8 `json:"placement,omitempty"`
+	Placement VideoPlacementType `json:"placement,omitempty"`
 
 	// Attribute:
 	//   linearity
@@ -101,7 +101,7 @@ type Video struct {
 	// Description:
 	//   Indicates if the impression must be linear, nonlinear, etc. If
 	//   none specified, assume all are allowed. Refer to List 5.7.
-	Linearity int8 `json:"linearity,omitempty"`
+	Linearity VideoLinearity `json:"linearity,omitempty"`
 
 	// Attribute:
 	//   skip
@@ -149,7 +149,7 @@ type Video struct {
 	//   integer array
 	// Description:
 	//   Blocked creative attributes. Refer to List 5.3.
-	BAttr []int8 `json:"battr,omitempty"`
+	BAttr []CreativeAttribute `json:"battr,omitempty"`
 
 	// Attribute:
 	//   maxextended
@@ -199,7 +199,7 @@ type Video struct {
 	//   be converted to an integer in a future version of the
 	//   specification. It is strongly advised to use only the first
 	//   element of this array in preparation for this change.
-	PlaybackMethod []int8 `json:"playbackmethod,omitempty"`
+	PlaybackMethod []PlaybackMethod `json:"playbackmethod,omitempty"`
 
 	// Attribute:
 	//   playbackend
@@ -207,7 +207,7 @@ type Video struct {
 	//   integer
 	// Description:
 	//   The event that causes playback to end. Refer to List 5.11.
-	PlaybackEnd int8 `json:"playbackend,omitempty"`
+	PlaybackEnd PlaybackCessationMode `json:"playbackend,omitempty"`
 
 	// Attribute:
 	//   delivery
@@ -216,7 +216,7 @@ type Video struct {
 	// Description:
 	//   Supported delivery methods (e.g., streaming, progressive). If
 	//   none specified, assume all are supported. Refer to List 5.15.
-	Delivery []int8 `json:"delivery,omitempty"`
+	Delivery []ContentDeliveryMethod `json:"delivery,omitempty"`
 
 	// Attribute:
 	//   pos
@@ -224,7 +224,7 @@ type Video struct {
 	//   integer
 	// Description:
 	//   Ad position on screen. Refer to List 5.4.
-	Pos int8 `json:"pos,omitempty"`
+	Pos *AdPosition `json:"pos,omitempty"`
 
 	// Attribute:
 	//   companionad
@@ -243,7 +243,7 @@ type Video struct {
 	//   List of supported API frameworks for this impression. Refer to
 	//   List 5.6. If an API is not explicitly listed, it is assumed not to be
 	//   supported.
-	API []int8 `json:"api,omitempty"`
+	API []APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   companiontype
@@ -255,7 +255,7 @@ type Video struct {
 	//   the companionad array. If one of these banners will be
 	//   rendered as an end-card, this can be specified using the vcm
 	//   attribute with the particular banner (Section 3.2.6).
-	CompanionType []int8 `json:"companiontype,omitempty"`
+	CompanionType []CompanionType `json:"companiontype,omitempty"`
 
 	// Attribute:
 	//   ext
@@ -263,5 +263,5 @@ type Video struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

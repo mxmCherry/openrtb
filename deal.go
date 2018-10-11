@@ -1,10 +1,12 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.12 Object: Deal
 //
-// This object constitutes a specific deal that was struck a priori between a buyer and a seller. Its presence
-// with the Pmp collection indicates that this impression is available under the terms of that deal. Refer to
-// Section 7.3 for more details.
+// This object constitutes a specific deal that was struck a priori between a buyer and a seller.
+// Its presence with the Pmp collection indicates that this impression is available under the terms of that deal.
+// Refer to Section 7.3 for more details.
 type Deal struct {
 
 	// Attribute:
@@ -70,5 +72,5 @@ type Deal struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

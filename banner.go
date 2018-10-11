@@ -1,17 +1,16 @@
 package openrtb
 
+import "encoding/json"
+
 // 3.2.6 Object: Banner
 //
-// This object represents the most general type of impression. Although the term “banner” may have very
-// specific meaning in other contexts, here it can be many things including a simple static image, an
-// expandable ad unit, or even in-banner video (refer to the Video object in Section 3.2.7 for the more
-// generalized and full featured video ad units). An array of Banner objects can also appear within the
-// Video to describe optional companion ads defined in the VAST specification.
+// This object represents the most general type of impression.
+// Although the term “banner” may have very specific meaning in other contexts, here it can be many things including a simple static image, an expandable ad unit, or even in-banner video (refer to the Video object in Section 3.2.7 for the more generalized and full featured video ad units).
+// An array of Banner objects can also appear within the Video to describe optional companion ads defined in the VAST specification.
 //
-// The presence of a Banner as a subordinate of the Imp object indicates that this impression is offered as
-// a banner type impression. At the publisher’s discretion, that same impression may also be offered as
-// video, audio, and/or native by also including as Imp subordinates objects of those types. However, any
-// given bid for the impression must conform to one of the offered types.
+// The presence of a Banner as a subordinate of the Imp object indicates that this impression is offered as a banner type impression.
+// At the publisher’s discretion, that same impression may also be offered as video, audio, and/or native by also including as Imp subordinates objects of those types.
+// However, any given bid for the impression must conform to one of the offered types.
 type Banner struct {
 
 	// Attribute:
@@ -31,7 +30,7 @@ type Banner struct {
 	// Description:
 	//   Exact width in device independent pixels (DIPS);
 	//   recommended if no format objects are specified.
-	W uint64 `json:"w,omitempty"`
+	W *uint64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -40,7 +39,7 @@ type Banner struct {
 	// Description:
 	//   Exact height in device independent pixels (DIPS);
 	//   recommended if no format objects are specified.
-	H uint64 `json:"h,omitempty"`
+	H *uint64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   wmax
@@ -84,7 +83,7 @@ type Banner struct {
 	//   integer array
 	// Description:
 	//   Blocked banner ad types. Refer to List 5.2.
-	BType []int8 `json:"btype,omitempty"`
+	BType []BannerAdType `json:"btype,omitempty"`
 
 	// Attribute:
 	//   battr
@@ -92,7 +91,7 @@ type Banner struct {
 	//   integer array
 	// Description:
 	//   Blocked creative attributes. Refer to List 5.3.
-	BAttr []int8 `json:"battr,omitempty"`
+	BAttr []CreativeAttribute `json:"battr,omitempty"`
 
 	// Attribute:
 	//   pos
@@ -100,7 +99,7 @@ type Banner struct {
 	//   integer
 	// Description:
 	//   Ad position on screen. Refer to List 5.4.
-	Pos int8 `json:"pos,omitempty"`
+	Pos *AdPosition `json:"pos,omitempty"`
 
 	// Attribute:
 	//   mimes
@@ -127,7 +126,7 @@ type Banner struct {
 	//   integer array
 	// Description:
 	//   Directions in which the banner may expand. Refer to List 5.5.
-	ExpDir []int8 `json:"expdir,omitempty"`
+	ExpDir []ExpandableDirection `json:"expdir,omitempty"`
 
 	// Attribute:
 	//   api
@@ -137,7 +136,7 @@ type Banner struct {
 	//   List of supported API frameworks for this impression. Refer to
 	//   List 5.6. If an API is not explicitly listed, it is assumed not to be
 	//   supported.
-	API []int8 `json:"api,omitempty"`
+	API []APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   id
@@ -168,5 +167,5 @@ type Banner struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext RawJSON `json:"ext,omitempty"`
+	Ext json.RawMessage `json:"ext,omitempty"`
 }
