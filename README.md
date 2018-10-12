@@ -55,3 +55,4 @@ Master always contains latest code, so better use some package manager to vendor
 - Each RTB type should be kept in its own file, named after type
 - File names are in underscore_case, e.g., `type BidRequest` should be declared in `bid_request.go`
 - [go fmt your code](https://blog.golang.org/go-fmt-your-code)
+- [EditorConfig](https://editorconfig.org/) (not required, but useful)
