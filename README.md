@@ -46,6 +46,16 @@ Master always contains latest code, so better use some package manager to vendor
 	- never use `iota` for enum constants
 	- section "5.1 Content Categories" should remain untyped and have no constants
 
+## Pointers/omitempty
+Pointer | Omitempty | When to use                                                          | Example
+------- | --------- | -------------------------------------------------------------------- | ---------------------------------
+ no     | no        | _required_ in spec                                                   | `Audio.mimes`
+ yes    | yes       | _required_ in spec, but is a part of mutually-exclusive group        | `Imp.{banner,video,audio,native}`
+ no     | yes       | zero value (`""`, `0`) is useless / has no meaning                   | `Device.ua`
+ yes    | yes       | zero value (`""`, `0`) or value absence (`null`) has special meaning | `Device.{dnt,lmt}`
+
+Using both pointer and `omitempty` is mostly just to save traffic / generate more "canonical" (strict) JSON.
+
 ## Documentation ([godoc](https://godoc.org/github.com/mxmCherry/openrtb))
 - [Godoc: documenting Go code](http://blog.golang.org/godoc-documenting-go-code)
 - Each entity (type, struct key or constant) should be documented
