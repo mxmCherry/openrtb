@@ -4,8 +4,6 @@ import (
 	"bytes"
 )
 
-// TODO: tests, including embedded Bool field with "omitempty" option.
-
 // Bool is a bool type wrapper.
 type Bool bool
 
