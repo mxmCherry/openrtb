@@ -118,10 +118,10 @@ type Imp struct {
 	// Attribute:
 	//   bidfloor
 	// Type:
-	//   float; default 0
+	//   float
 	// Description:
 	//   Minimum bid for this impression expressed in CPM.
-	BidFloor float64 `json:"bidfloor,omitempty"`
+	BidFloor *float64 `json:"bidfloor,omitempty"`
 
 	// Attribute:
 	//   bidfloorcur
