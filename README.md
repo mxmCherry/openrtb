@@ -1,5 +1,13 @@
 # openrtb [![GoDoc](https://godoc.org/github.com/mxmCherry/openrtb?status.svg)](https://godoc.org/github.com/mxmCherry/openrtb) [![Build Status](https://travis-ci.org/mxmCherry/openrtb.svg?branch=master)](https://travis-ci.org/mxmCherry/openrtb)
 
+# NOTE
+It's forked to custom changes in types.  
+
+For example, in original package Imp.Bidfloor is `float64`, which is 0 by default after unmarshaling in case field is missing from bid request. For data science purposes we want to know was it actually 0 or missing, so we changed `float64` to `*float64`.  
+
+Same can be done for other fields as well, if needed.  
+
+
 [OpenRTB](https://www.iab.com/guidelines/real-time-bidding-rtb-project/) [v2.5](https://www.iab.com/wp-content/uploads/2016/03/OpenRTB-API-Specification-Version-2-5-FINAL.pdf) types for Go programming language (Golang)
 
 Also includes [OpenRTB](https://www.iab.com/guidelines/real-time-bidding-rtb-project/) [Dynamic Native Ads API Specification Version 1.2](https://www.iab.com/wp-content/uploads/2018/03/OpenRTB-Native-Ads-Specification-Final-1.2.pdf) types:
