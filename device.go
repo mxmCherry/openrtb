@@ -99,7 +99,7 @@ type Device struct {
 	//   string
 	// Description:
 	//   Device operating system (e.g., “iOS”).
-	OS string `json:"os,omitempty"`
+	OS *string `json:"os,omitempty"`
 
 	// Attribute:
 	//   osv
