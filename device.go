@@ -107,7 +107,7 @@ type Device struct {
 	//   string
 	// Description:
 	//   Device operating system version (e.g., “3.1.2”).
-	OSV string `json:"osv,omitempty"`
+	OSV *string `json:"osv,omitempty"`
 
 	// Attribute:
 	//   hwv
