@@ -95,7 +95,7 @@ type Imp struct {
 	//   responsible for rendering ad (typically video or mobile). Used
 	//   by some ad servers to customize ad code by partner.
 	//   Recommended for video and/or apps.
-	DisplayManagerVer string `json:"displaymanagerver,omitempty"`
+	DisplayManagerVer *string `json:"displaymanagerver,omitempty"`
 
 	// Attribute:
 	//   instl
