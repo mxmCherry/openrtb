@@ -113,7 +113,7 @@ type Imp struct {
 	//   Identifier for specific ad placement or ad tag that was used to
 	//   initiate the auction. This can be useful for debugging of any
 	//   issues, or for optimization by the buyer.
-	TagID string `json:"tagid,omitempty"`
+	TagID *string `json:"tagid,omitempty"`
 
 	// Attribute:
 	//   bidfloor
