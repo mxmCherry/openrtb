@@ -34,7 +34,7 @@ type App struct {
 	//   unique to the app and independent of the exchange. On
 	//   Android, this should be a bundle or package name (e.g.,
 	//   com.foo.mygame). On iOS, it is typically a numeric ID.
-	Bundle string `json:"bundle,omitempty"`
+	Bundle *string `json:"bundle,omitempty"`
 
 	// Attribute:
 	//   domain
