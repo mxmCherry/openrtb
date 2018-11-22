@@ -189,7 +189,7 @@ type Device struct {
 	// Description:
 	//   Carrier or ISP (e.g., “VERIZON”) using exchange curated string
 	//   names which should be published to bidders a priori.
-	Carrier string `json:"carrier,omitempty"`
+	Carrier *string `json:"carrier,omitempty"`
 
 	// Attribute:
 	//   mccmnc
