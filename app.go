@@ -84,7 +84,7 @@ type App struct {
 	//   string
 	// Description:
 	//   Application version.
-	Ver string `json:"ver,omitempty"`
+	Ver *string `json:"ver,omitempty"`
 
 	// Attribute:
 	//   privacypolicy
