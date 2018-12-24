@@ -1,4 +1,4 @@
-package openrtb3_test
+package openrtb_test
 
 import (
 	"encoding/json"
