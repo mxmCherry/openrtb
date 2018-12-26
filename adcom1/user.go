@@ -30,7 +30,7 @@ type User struct {
 	//   integer
 	// Definition:
 	//   Year of birth as a 4-digit integer.
-	YOB integer `json:"yob,omitempty"`
+	YOB int `json:"yob,omitempty"` // TODO: make smaller int? int16 should cover it.
 
 	// Attribute:
 	//   gender
