@@ -8,6 +8,6 @@ const (
 	VolumeNormNone     VolumeNormalizationMode = 0 // None
 	VolumeNormAvg      VolumeNormalizationMode = 1 // Ad Volume Average Normalized to Content
 	VolumeNormPeak     VolumeNormalizationMode = 2 // Ad Volume Peak Normalized to Content
-	VolumeNormLoudNorm VolumeNormalizationMode = 3 // Ad Loudness Normalized to Content
+	VolumeNormLoudness VolumeNormalizationMode = 3 // Ad Loudness Normalized to Content
 	VolumeNormCustom   VolumeNormalizationMode = 4 // Custom Volume Normalization
 )
