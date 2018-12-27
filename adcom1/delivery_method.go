@@ -1,7 +1,7 @@
 package adcom
 
 // DeliveryMethod represents options for the delivery of video or audio content.
-type DeliveryMethod int
+type DeliveryMethod int8
 
 // Options for the delivery of video or audio content.
 const (

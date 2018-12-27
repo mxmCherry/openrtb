@@ -1,7 +1,7 @@
 package adcom
 
 // VolumeNormalizationMode represents types of volume normalization modes, typically for audio.
-type VolumeNormalizationMode int
+type VolumeNormalizationMode int8
 
 // Types of volume normalization modes, typically for audio.
 const (

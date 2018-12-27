@@ -2,7 +2,7 @@ package adcom
 
 // MediaRating represents media ratings used in describing content based on the TAG Inventory Quality Guidelines (IQG) v2.1 categorization.
 // Refer to www.iab.com/guidelines/digital-video-suite for more information.
-type MediaRating int
+type MediaRating int8
 
 // Media ratings used in describing content based on the TAG Inventory Quality Guidelines (IQG) v2.1 categorization.
 const (

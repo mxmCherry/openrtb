@@ -1,7 +1,7 @@
 package adcom
 
 // PlaybackMethod represents media playback methods.
-type PlaybackMethod int
+type PlaybackMethod int8
 
 // Media playback methods.
 const (

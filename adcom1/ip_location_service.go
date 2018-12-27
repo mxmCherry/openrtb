@@ -1,7 +1,7 @@
 package adcom
 
 // IPLocationService represents services and/or vendors used for resolving IP addresses to geolocations.
-type IPLocationService int
+type IPLocationService int8
 
 // Services and/or vendors used for resolving IP addresses to geolocations.
 const (

@@ -1,7 +1,7 @@
 package adcom
 
 // ConnectionType represents options for the type of device connectivity.
-type ConnectionType int
+type ConnectionType int8
 
 // Options for the type of device connectivity.
 const (

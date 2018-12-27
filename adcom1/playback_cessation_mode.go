@@ -1,7 +1,7 @@
 package adcom
 
 // PlaybackCessationMode represents modes for when media playback terminates.
-type PlaybackCessationMode int
+type PlaybackCessationMode int8
 
 // Modes for when media playback terminates.
 const (

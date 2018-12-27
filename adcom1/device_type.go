@@ -2,7 +2,7 @@ package adcom
 
 // DeviceType represents types of devices.
 // This table has values derived from the TAG Inventory Quality Guidelines (IQG).
-type DeviceType int
+type DeviceType int8
 
 // Types of devices.
 const (

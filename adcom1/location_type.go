@@ -1,7 +1,7 @@
 package adcom
 
 // LocationType represents options to indicate how the geographic information was determined.
-type LocationType int
+type LocationType int8
 
 // Options to indicate how the geographic information was determined.
 const (

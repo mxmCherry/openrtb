@@ -1,7 +1,7 @@
 package adcom
 
 // CreativeSubtypeDisplay represents subtypes of display ad creatives.
-type CreativeSubtypeDisplay int
+type CreativeSubtypeDisplay int8
 
 // Subtypes of display ad creatives.
 const (
