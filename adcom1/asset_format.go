@@ -30,7 +30,7 @@ type AssetFormat struct {
 	//   Asset Format Subtype Object that indicates this is specifying a title asset and provides additional detail as such.
 	//   Refer to Object: TitleAssetFormat.
 	//   * Required if no other asset format subtype object is specified.
-	Title interface{} `json:"title,omitempty"`
+	Title *TitleAssetFormat `json:"title,omitempty"`
 
 	// Attribute:
 	//   img
@@ -40,7 +40,7 @@ type AssetFormat struct {
 	//   Asset Format Subtype Object that indicates this is specifying an image asset and provides additional detail as such.
 	//   Refer to Object: ImageAssetFormat.
 	//   * Required if no other asset format subtype object is specified.
-	Img interface{} `json:"img,omitempty"`
+	Img *ImageAssetFormat `json:"img,omitempty"`
 
 	// Attribute:
 	//   video
@@ -50,7 +50,7 @@ type AssetFormat struct {
 	//   Asset Format Subtype Object, which leverages the VideoPlacement object, that indicates this is specifying a video asset and provides additional detail as such.
 	//   Refer to Object: VideoPlacement.
 	//   * Required if no other asset format subtype object is specified.
-	Video interface{} `json:"video,omitempty"`
+	Video *VideoPlacement `json:"video,omitempty"`
 
 	// Attribute:
 	//   data
@@ -60,7 +60,7 @@ type AssetFormat struct {
 	//   Asset Format Subtype Object that indicates this is specifying a data asset and provides additional detail as such.
 	//   Refer to Object: DataAssetFormat.
 	//   * Required if no other asset format subtype object is specified.
-	Data interface{} `json:"data,omitempty"`
+	Data *DataAssetFormat `json:"data,omitempty"`
 
 	// Attribute:
 	//   ext

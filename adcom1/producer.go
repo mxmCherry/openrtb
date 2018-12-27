@@ -45,7 +45,7 @@ type Producer struct {
 	// Definition:
 	//   The taxonomy in use for the cat attribute.
 	//   Refer to List: Category Taxonomies.
-	CatTax interface{} `json:"cattax,omitempty"`
+	CatTax CategoryTaxonomy `json:"cattax,omitempty"`
 
 	// Attribute:
 	//   ext

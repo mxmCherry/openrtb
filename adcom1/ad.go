@@ -56,7 +56,7 @@ type Ad struct {
 	// Definition:
 	//   The taxonomy in use for the cat attribute.
 	//   Refer to List: Category Taxonomies.
-	CatTax interface{} `json:"cattax,omitempty"`
+	CatTax CategoryTaxonomy `json:"cattax,omitempty"`
 
 	// Attribute:
 	//   lang
@@ -75,7 +75,7 @@ type Ad struct {
 	// Definition:
 	//   Set of attributes describing the creative.
 	//   Refer to List: Creative Attributes.
-	Attr []interface{} `json:"attr,omitempty"`
+	Attr []CreativeAttribute `json:"attr,omitempty"`
 
 	// Attribute:
 	//   secure
@@ -94,7 +94,7 @@ type Ad struct {
 	// Definition:
 	//   Media rating per IQG guidelines.
 	//   Refer to List: Media Ratings.
-	MRating interface{} `json:"mrating,omitempty"`
+	MRating MediaRating `json:"mrating,omitempty"`
 
 	// Attribute:
 	//   init
@@ -120,7 +120,7 @@ type Ad struct {
 	//   Media Subtype Object that indicates this is a display ad and provides additional detail as such.
 	//   Refer to Object: Display.
 	//   * Required if no other media subtype object is specified.
-	Display interface{} `json:"display,omitempty"`
+	Display *Display `json:"display,omitempty"`
 
 	// Attribute:
 	//   video
@@ -130,7 +130,7 @@ type Ad struct {
 	//   Media Subtype Object that indicates this is a video ad and provides additional detail as such.
 	//   Refer to Object: Video.
 	//   * Required if no other media subtype object is specified.
-	Video interface{} `json:"video,omitempty"`
+	Video *Video `json:"video,omitempty"`
 
 	// Attribute:
 	//   audio
@@ -140,7 +140,7 @@ type Ad struct {
 	//   Media Subtype Object that indicates this is an audio ad and provides additional detail as such.
 	//   Refer to Object: Audio.
 	//   * Required if no other media subtype object is specified.
-	Audio interface{} `json:"audio,omitempty"`
+	Audio *Audio `json:"audio,omitempty"`
 
 	// Attribute:
 	//   audit
@@ -149,7 +149,7 @@ type Ad struct {
 	// Definition:
 	//   An object depicting the audit status of the ad; typically part of a quality/safety review process.
 	//   Refer to Object: Audit.
-	Audit interface{} `json:"audit,omitempty"`
+	Audit *Audit `json:"audit,omitempty"`
 
 	// Attribute:
 	//   ext

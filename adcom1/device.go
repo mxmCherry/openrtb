@@ -13,7 +13,7 @@ type Device struct {
 	// Definition:
 	//   The general type of device.
 	//   Refer to List: Device Types.
-	Type interface{} `json:"type,omitempty"`
+	Type DeviceType `json:"type,omitempty"`
 
 	// Attribute:
 	//   ua
@@ -71,7 +71,7 @@ type Device struct {
 	// Definition:
 	//   Device operating system.
 	//   Refer to List: Operating Systems.
-	OS interface{} `json:"os,omitempty"`
+	OS OperatingSystem `json:"os,omitempty"`
 
 	// Attribute:
 	//   osv
@@ -204,7 +204,7 @@ type Device struct {
 	// Definition:
 	//   Network connection type.
 	//   Refer to List: Connection Types.
-	ConType interface{} `json:"contype,omitempty"`
+	ConType ConnectionType `json:"contype,omitempty"`
 
 	// Attribute:
 	//   geofetch
@@ -221,7 +221,7 @@ type Device struct {
 	// Definition:
 	//   Location of the device (i.e., typically the user's current location).
 	//   Refer to Object: Geo.
-	Geo interface{} `json:"geo,omitempty"`
+	Geo *Geo `json:"geo,omitempty"`
 
 	// Attribute:
 	//   ext

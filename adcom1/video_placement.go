@@ -9,23 +9,26 @@ type VideoPlacement struct {
 	// Type:
 	//   integer
 	// Definition:
-	//   Placement subtype. Refer to List: Placement Subtypes - Video.
-	PType interface{} `json:"ptype,omitempty"`
+	//   Placement subtype.
+	//   Refer to List: Placement Subtypes - Video.
+	PType VideoPlacementSubtype `json:"ptype,omitempty"`
 
 	// Attribute:
 	//   pos
 	// Type:
 	//   integer
 	// Definition:
-	//   Placement position on screen. Refer to List: Placement Positions.
-	Pos interface{} `json:"pos,omitempty"`
+	//   Placement position on screen.
+	//   Refer to List: Placement Positions.
+	Pos PlacementPosition `json:"pos,omitempty"`
 
 	// Attribute:
 	//   delay
 	// Type:
 	//   integer
 	// Definition:
-	//   Indicates the start delay in seconds for pre-roll, mid-roll, or post-roll placements. For additional generic values, refer to List: Start Delay Modes.
+	//   Indicates the start delay in seconds for pre-roll, mid-roll, or post-roll placements.
+	//   For additional generic values, refer to List: Start Delay Modes.
 	Delay int64 `json:"delay,omitempty"`
 
 	// Attribute:
@@ -57,31 +60,35 @@ type VideoPlacement struct {
 	// Type:
 	//   integer
 	// Definition:
-	//   Playback method in use for this placement. Refer to List: Playback Methods.
-	PlayMethod interface{} `json:"playmethod,omitempty"`
+	//   Playback method in use for this placement.
+	//   Refer to List: Playback Methods.
+	PlayMethod PlaybackMethod `json:"playmethod,omitempty"`
 
 	// Attribute:
 	//   playend
 	// Type:
 	//   integer
 	// Definition:
-	//   The event that causes playback to end for this placement. Refer to List: Playback Cessation Modes.
-	PlayEnd interface{} `json:"playend,omitempty"`
+	//   The event that causes playback to end for this placement.
+	//   Refer to List: Playback Cessation Modes.
+	PlayEnd PlaybackCessationMode `json:"playend,omitempty"`
 
 	// Attribute:
 	//   clktype
 	// Type:
 	//   integer
 	// Definition:
-	//   Indicates the click type of the placement. Refer to List: Click Types.
-	ClkType interface{} `json:"clktype,omitempty"`
+	//   Indicates the click type of the placement.
+	//   Refer to List: Click Types.
+	ClkType ClickType `json:"clktype,omitempty"`
 
 	// Attribute:
 	//   mime
 	// Type:
 	//   string array; required
 	// Definition:
-	//   Array of supported mime types (e.g., “video/mp4”). If omitted, all types are assumed.
+	//   Array of supported mime types (e.g., “video/mp4”).
+	//   If omitted, all types are assumed.
 	MIME []string `json:"mime,omitempty"`
 
 	// Attribute:
@@ -89,16 +96,19 @@ type VideoPlacement struct {
 	// Type:
 	//   integer array
 	// Definition:
-	//   List of supported APIs for this placement. If an API is not explicitly listed, it is assumed to be unsupported. Refer to List: API Frameworks.
-	API []interface{} `json:"api,omitempty"`
+	//   List of supported APIs for this placement.
+	//   If an API is not explicitly listed, it is assumed to be unsupported.
+	//   Refer to List: API Frameworks.
+	API []APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   ctype
 	// Type:
 	//   integer array
 	// Definition:
-	//   Creative subtypes permitted for this placement. Refer to List: Creative Subtypes - Audio/Video.
-	CType []interface{} `json:"ctype,omitempty"`
+	//   Creative subtypes permitted for this placement.
+	//   Refer to List: Creative Subtypes - Audio/Video.
+	CType []CreativeSubtypeAV `json:"ctype,omitempty"`
 
 	// Attribute:
 	//   w
@@ -121,8 +131,9 @@ type VideoPlacement struct {
 	// Type:
 	//   integer; default 1
 	// Definition:
-	//   Units of size used for w and h attributes. Refer to List: Size Units.
-	Unit interface{} `json:"unit,omitempty"`
+	//   Units of size used for w and h attributes.
+	//   Refer to List: Size Units.
+	Unit SizeUnit `json:"unit,omitempty"`
 
 	// Attribute:
 	//   mindur
@@ -145,7 +156,10 @@ type VideoPlacement struct {
 	// Type:
 	//   integer; default 0
 	// Definition:
-	//   Maximum extended creative duration if extension is allowed. If 0, extension is not allowed. If -1, extension is allowed and there is no time limit imposed. If greater than 0, then the value represents the number of seconds of extended play supported beyond the maxdur value.
+	//   Maximum extended creative duration if extension is allowed.
+	//   If 0, extension is not allowed.
+	//   If -1, extension is allowed and there is no time limit imposed.
+	//   If greater than 0, then the value represents the number of seconds of extended play supported beyond the maxdur value.
 	MaxExt int64 `json:"maxext,omitempty"`
 
 	// Attribute:
@@ -169,8 +183,10 @@ type VideoPlacement struct {
 	// Type:
 	//   integer array
 	// Definition:
-	//   Array of supported creative delivery methods. If omitted, all can be assumed. Refer to List: Delivery Methods.
-	Delivery []interface{} `json:"delivery,omitempty"`
+	//   Array of supported creative delivery methods.
+	//   If omitted, all can be assumed.
+	//   Refer to List: Delivery Methods.
+	Delivery []DeliveryMethod `json:"delivery,omitempty"`
 
 	// Attribute:
 	//   maxseq
@@ -185,8 +201,10 @@ type VideoPlacement struct {
 	// Type:
 	//   integer
 	// Definition:
-	//   Indicates if the creative must be linear, nonlinear, etc. If none specified, no restrictions are assumed. Refer to List: Linearity Modes.
-	Linear interface{} `json:"linear,omitempty"`
+	//   Indicates if the creative must be linear, nonlinear, etc.
+	//   If none specified, no restrictions are assumed.
+	//   Refer to List: Linearity Modes.
+	Linear LinearityMode `json:"linear,omitempty"`
 
 	// Attribute:
 	//   boxing
@@ -201,16 +219,18 @@ type VideoPlacement struct {
 	// Type:
 	//   object array
 	// Definition:
-	//   Array of objects indicating that companion ads are available and providing the specifications thereof. Refer to Object: Companion.
-	Comp []interface{} `json:"comp,omitempty"`
+	//   Array of objects indicating that companion ads are available and providing the specifications thereof.
+	//   Refer to Object: Companion.
+	Comp []Companion `json:"comp,omitempty"`
 
 	// Attribute:
 	//   comptype
 	// Type:
 	//   integer array
 	// Definition:
-	//   Supported companion ad types; recommended if companion ads are specified in comp. Refer to List: Companion Types.
-	CompType []interface{} `json:"comptype,omitempty"`
+	//   Supported companion ad types; recommended if companion ads are specified in comp.
+	//   Refer to List: Companion Types.
+	CompType []CompanionType `json:"comptype,omitempty"`
 
 	// Attribute:
 	//   ext

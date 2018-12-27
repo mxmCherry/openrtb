@@ -46,7 +46,7 @@ type App struct {
 	// Definition:
 	//   The taxonomy in use for the cat, sectcat and pagecat attributes.
 	//   Refer to List: Category Taxonomies.
-	CatTax interface{} `json:"cattax,omitempty"`
+	CatTax CategoryTaxonomy `json:"cattax,omitempty"`
 
 	// Attribute:
 	//   privpolicy

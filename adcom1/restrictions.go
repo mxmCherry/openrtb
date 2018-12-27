@@ -19,7 +19,7 @@ type Restrictions struct {
 	// Definition:
 	//   The taxonomy in use for the bcat attribute
 	//   Refer to List: Category Taxonomies.
-	CatTax interface{} `json:"cattax,omitempty"`
+	CatTax CategoryTaxonomy `json:"cattax,omitempty"`
 
 	// Attribute:
 	//   badv
@@ -45,7 +45,7 @@ type Restrictions struct {
 	// Definition:
 	//   Block list of creative attributes
 	//   Refer to List: Creative Attributes.
-	BAttr []interface{} `json:"battr,omitempty"`
+	BAttr []CreativeAttribute `json:"battr,omitempty"`
 
 	// Attribute:
 	//   ext

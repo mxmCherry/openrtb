@@ -20,7 +20,7 @@ type Banner struct {
 	// Definition:
 	//   Destination link if the image is activated (e.g., clicked); not applicable in some contexts (e.g., DOOH) and its inclusion does not guarantee it will be supported.
 	//   Refer to Object: LinkAsset.
-	Link interface{} `json:"link,omitempty"`
+	Link *LinkAsset `json:"link,omitempty"`
 
 	// Attribute:
 	//   ext

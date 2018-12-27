@@ -29,7 +29,7 @@ type Asset struct {
 	//   Asset Subtype Object that indicates this is a title asset and provides additional detail as such.
 	//   Refer to Object: TitleAsset.
 	//   * Required if no other asset subtype object is specified.
-	Title interface{} `json:"title,omitempty"`
+	Title *TitleAsset `json:"title,omitempty"`
 
 	// Attribute:
 	//   image
@@ -39,7 +39,7 @@ type Asset struct {
 	//   Asset Subtype Object that indicates this is an image asset and provides additional detail as such.
 	//   Refer to Object: ImageAsset.
 	//   * Required if no other asset subtype object is specified.
-	Image interface{} `json:"image,omitempty"`
+	Image *ImageAsset `json:"image,omitempty"`
 
 	// Attribute:
 	//   video
@@ -49,7 +49,7 @@ type Asset struct {
 	//   Asset Subtype Object that indicates this is a video asset and provides additional detail as such.
 	//   Refer to Object: VideoAsset.
 	//   * Required if no other asset subtype object is specified.
-	Video interface{} `json:"video,omitempty"`
+	Video *VideoAsset `json:"video,omitempty"`
 
 	// Attribute:
 	//   data
@@ -59,7 +59,7 @@ type Asset struct {
 	//   Asset Subtype Object that indicates this is a data asset and provides additional detail as such.
 	//   Refer to Object: DataAsset.
 	//   * Required if no other asset subtype object is specified.
-	Data interface{} `json:"data,omitempty"`
+	Data *DataAsset `json:"data,omitempty"`
 
 	// Attribute:
 	//   link
@@ -69,7 +69,7 @@ type Asset struct {
 	//   Asset Subtype Object that indicates this is a link asset and provides additional detail as such.
 	//   Refer to Object: LinkAsset.
 	//   * Required if no other asset subtype object is specified.
-	Link interface{} `json:"link,omitempty"`
+	Link *LinkAsset `json:"link,omitempty"`
 
 	// Attribute:
 	//   ext

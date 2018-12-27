@@ -47,7 +47,7 @@ type DisplayFormat struct {
 	// Definition:
 	//   Directions in which the creative is permitted to expand.
 	//   Refer to List: Expandable Directions.
-	ExpDir []interface{} `json:"expdir,omitempty"`
+	ExpDir []ExpandableDirection `json:"expdir,omitempty"`
 
 	// Attribute:
 	//   ext

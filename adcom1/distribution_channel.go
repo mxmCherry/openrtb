@@ -30,7 +30,7 @@ type DistributionChannel struct {
 	// Definition:
 	//   Details about the publisher of the distribution channel.
 	//   Refer to Object: Publisher.
-	Pub interface{} `json:"pub,omitempty"`
+	Pub *Publisher `json:"pub,omitempty"`
 
 	// Attribute:
 	//   content
@@ -39,5 +39,5 @@ type DistributionChannel struct {
 	// Definition:
 	//   Details about the content within the distribution channel.
 	//   Refer to Object: Content.
-	Content interface{} `json:"content,omitempty"`
+	Content *Content `json:"content,omitempty"`
 }

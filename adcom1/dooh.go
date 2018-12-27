@@ -14,7 +14,7 @@ type DOOH struct {
 	// Definition:
 	//   The type of out-of-home venue.
 	//   Refer to List: DOOH Venue TypesList: DOOH Venue Types.
-	Venue interface{} `json:"venue,omitempty"`
+	Venue DOOHVenueType `json:"venue,omitempty"`
 
 	// Attribute:
 	//   fixed

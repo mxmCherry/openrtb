@@ -11,7 +11,7 @@ type Event struct {
 	// Definition:
 	//   Type of event to track.
 	//   Refer to List: Event Types.
-	Type interface{} `json:"type"`
+	Type EventType `json:"type"`
 
 	// Attribute:
 	//   method
@@ -20,7 +20,7 @@ type Event struct {
 	// Definition:
 	//   Method of tracking requested.
 	//   Refer to List: Event Tracking Methods.
-	Method interface{} `json:"method"`
+	Method EventTrackingMethod `json:"method"`
 
 	// Attribute:
 	//   api
@@ -29,7 +29,7 @@ type Event struct {
 	// Definition:
 	//   The APIs being used by the tracker; only relevant when the tracking method is JavaScript.
 	//   Refer to List: API Frameworks.
-	API []interface{} `json:"api,omitempty"`
+	API []APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   url

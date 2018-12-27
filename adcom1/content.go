@@ -105,7 +105,7 @@ type Content struct {
 	// Definition:
 	//   The taxonomy in use for the cat attribute.
 	//   Refer to List: Category Taxonomies.
-	CatTax interface{} `json:"cattax,omitempty"`
+	CatTax CategoryTaxonomy `json:"cattax,omitempty"`
 
 	// Attribute:
 	//   prodq
@@ -114,7 +114,7 @@ type Content struct {
 	// Definition:
 	//   Production quality.
 	//   Refer to List: Production Qualities.
-	ProdQ interface{} `json:"prodq,omitempty"`
+	ProdQ ProductionQuality `json:"prodq,omitempty"`
 
 	// Attribute:
 	//   context
@@ -123,7 +123,7 @@ type Content struct {
 	// Definition:
 	//   Type of content (game, video, text, etc.).
 	//   Refer to List: Content Contexts.
-	Context interface{} `json:"context,omitempty"`
+	Context ContentContext `json:"context,omitempty"`
 
 	// Attribute:
 	//   rating
@@ -148,7 +148,7 @@ type Content struct {
 	// Definition:
 	//   Media rating per IQG guidelines.
 	//   Refer to List: Media Ratings.
-	MRating interface{} `json:"mrating,omitempty"`
+	MRating MediaRating `json:"mrating,omitempty"`
 
 	// Attribute:
 	//   keywords
@@ -205,7 +205,7 @@ type Content struct {
 	// Definition:
 	//   Details about the content producer.
 	//   Refer to Object: Producer.
-	Producer interface{} `json:"producer,omitempty"`
+	Producer *Producer `json:"producer,omitempty"`
 
 	// Attribute:
 	//   data
@@ -215,7 +215,7 @@ type Content struct {
 	//   Additional user data.
 	//   Each Data object represents a different data source.
 	//   Refer to Object: Data.
-	Data []interface{} `json:"data,omitempty"`
+	Data []Data `json:"data,omitempty"`
 
 	// Attribute:
 	//   ext

@@ -63,7 +63,7 @@ type User struct {
 	// Definition:
 	//   Location of the user's home base (i.e., not necessarily their current location).
 	//   Refer to Object: Geo.
-	Geo interface{} `json:"geo,omitempty"`
+	Geo *Geo `json:"geo,omitempty"`
 
 	// Attribute:
 	//   data
@@ -73,7 +73,7 @@ type User struct {
 	//   Additional user data.
 	//   Each Data object represents a different data source.
 	//   Refer to Object: Data.
-	Data []interface{} `json:"data,omitempty"`
+	Data []Data `json:"data,omitempty"`
 
 	// Attribute:
 	//   ext

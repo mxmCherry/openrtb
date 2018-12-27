@@ -11,7 +11,7 @@ type Native struct {
 	// Definition:
 	//   Default destination link for the native ad overall; used if an asset is activated (e.g., clicked) that doesn't specify it's own destination link.
 	//   Refer to Object: LinkAsset.
-	Link interface{} `json:"link,omitempty"`
+	Link *LinkAsset `json:"link,omitempty"`
 
 	// Attribute:
 	//   asset
@@ -20,7 +20,7 @@ type Native struct {
 	// Definition:
 	//   Array of assets that comprise the native ad.
 	//   Refer to Object: Asset.
-	Asset []interface{} `json:"asset,omitempty"`
+	Asset []Asset `json:"asset,omitempty"`
 
 	// Attribute:
 	//   ext

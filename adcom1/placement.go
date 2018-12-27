@@ -92,7 +92,7 @@ type Placement struct {
 	//   Placement Subtype Object that indicates that this may be a display placement and provides additional detail related thereto.
 	//   Refer to Object: DisplayPlacement.
 	//   * At least one placement subtype object is required.
-	Display interface{} `json:"display,omitempty"`
+	Display *DisplayPlacement `json:"display,omitempty"`
 
 	// Attribute:
 	//   video
@@ -102,7 +102,7 @@ type Placement struct {
 	//   Placement Subtype Object that indicates that this may be a video placement and provides additional detail related thereto.
 	//   Refer to Object: VideoPlacement.
 	//   * At least one placement subtype object is required.
-	Video interface{} `json:"video,omitempty"`
+	Video *VideoPlacement `json:"video,omitempty"`
 
 	// Attribute:
 	//   audio
@@ -112,7 +112,7 @@ type Placement struct {
 	//   Placement Subtype Object that indicates that this may be an audio placement and provides additional detail related thereto.
 	//   Refer to Object: AudioPlacement.
 	//   * At least one placement subtype object is required.
-	Audio interface{} `json:"audio,omitempty"`
+	Audio *AudioPlacement `json:"audio,omitempty"`
 
 	// Attribute:
 	//   ext

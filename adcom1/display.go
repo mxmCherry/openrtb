@@ -22,7 +22,7 @@ type Display struct {
 	// Definition:
 	//   API required by the ad if applicable.
 	//   Refer to List: API Frameworks.
-	API []interface{} `json:"api,omitempty"`
+	API []APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   ctype
@@ -31,7 +31,7 @@ type Display struct {
 	// Definition:
 	//   Subtype of display creative.
 	//   Refer to List: Creative Subtypes - Display.
-	CType interface{} `json:"ctype,omitempty"`
+	CType CreativeSubtypeDisplay `json:"ctype,omitempty"`
 
 	// Attribute:
 	//   w
@@ -103,7 +103,7 @@ type Display struct {
 	// Definition:
 	//   Structured banner image object, recommended for simple banner creatives.
 	//   Refer to Object: Banner.
-	Banner interface{} `json:"banner,omitempty"`
+	Banner *Banner `json:"banner,omitempty"`
 
 	// Attribute:
 	//   native
@@ -112,7 +112,7 @@ type Display struct {
 	// Definition:
 	//   Structured native object, recommended for native ads.
 	//   Refer to Object: Native.
-	Native interface{} `json:"native,omitempty"`
+	Native *Native `json:"native,omitempty"`
 
 	// Attribute:
 	//   event
@@ -121,7 +121,7 @@ type Display struct {
 	// Definition:
 	//   Array of events that the advertiser or buying platform wants to track.
 	//   Refer to Object: Event.
-	Event []interface{} `json:"event,omitempty"`
+	Event []Event `json:"event,omitempty"`
 
 	// Attribute:
 	//   ext

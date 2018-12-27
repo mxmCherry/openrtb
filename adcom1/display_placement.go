@@ -12,7 +12,7 @@ type DisplayPlacement struct {
 	// Definition:
 	//   Placement position on screen.
 	//   Refer to List: Placement Positions.
-	Pos interface{} `json:"pos,omitempty"`
+	Pos PlacementPosition `json:"pos,omitempty"`
 
 	// Attribute:
 	//   instl
@@ -47,7 +47,7 @@ type DisplayPlacement struct {
 	// Definition:
 	//   Indicates the click type of this placement.
 	//   Refer to List: Click Types.
-	ClkType interface{} `json:"clktype,omitempty"`
+	ClkType ClickType `json:"clktype,omitempty"`
 
 	// Attribute:
 	//   ampren
@@ -64,7 +64,7 @@ type DisplayPlacement struct {
 	// Definition:
 	//   The display placement type.
 	//   Refer to List: Display Placement Types.
-	PType interface{} `json:"ptype,omitempty"`
+	PType DisplayPlacementType `json:"ptype,omitempty"`
 
 	// Attribute:
 	//   context
@@ -73,7 +73,7 @@ type DisplayPlacement struct {
 	// Definition:
 	//   The context of the placement.
 	//   Refer to List: Display Context Types.
-	Context interface{} `json:"context,omitempty"`
+	Context DisplayContextType `json:"context,omitempty"`
 
 	// Attribute:
 	//   mime
@@ -92,7 +92,7 @@ type DisplayPlacement struct {
 	//   List of supported APIs.
 	//   If an API is not explicitly listed, it is assumed to be unsupported.
 	//   Refer to List: API Frameworks.
-	API []interface{} `json:"api,omitempty"`
+	API []APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   ctype
@@ -101,7 +101,7 @@ type DisplayPlacement struct {
 	// Definition:
 	//   Creative subtypes permitted.
 	//   Refer to List: Creative Subtypes - Display.
-	CType []interface{} `json:"ctype,omitempty"`
+	CType []CreativeSubtypeDisplay `json:"ctype,omitempty"`
 
 	// Attribute:
 	//   w
@@ -128,7 +128,7 @@ type DisplayPlacement struct {
 	// Definition:
 	//   Unit of size used for placement size (i.e., w and h attributes).
 	//   Refer to List: Size Units.
-	Unit interface{} `json:"unit,omitempty"`
+	Unit SizeUnit `json:"unit,omitempty"`
 
 	// Attribute:
 	//   priv
@@ -145,7 +145,7 @@ type DisplayPlacement struct {
 	// Definition:
 	//   Array of objects that govern the attributes (e.g., sizes) of a banner display placement.
 	//   Refer to Object: DisplayFormat.
-	DisplayFmt []interface{} `json:"displayfmt,omitempty"`
+	DisplayFmt []DisplayFormat `json:"displayfmt,omitempty"`
 
 	// Attribute:
 	//   nativefmt
@@ -154,7 +154,7 @@ type DisplayPlacement struct {
 	// Definition:
 	//   This object specified the required and permitted assets and attributes of a native display placement.
 	//   Refer to Object: NativeFormat.
-	NativeFmt interface{} `json:"nativefmt,omitempty"`
+	NativeFmt *NativeFormat `json:"nativefmt,omitempty"`
 
 	// Attribute:
 	//   event
@@ -163,7 +163,7 @@ type DisplayPlacement struct {
 	// Definition:
 	//   Array of supported ad tracking events.
 	//   Refer to Object: EventSpec.
-	Event []interface{} `json:"event,omitempty"`
+	Event []EventSpec `json:"event,omitempty"`
 
 	// Attribute:
 	//   ext

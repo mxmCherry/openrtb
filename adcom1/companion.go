@@ -29,7 +29,7 @@ type Companion struct {
 	// Definition:
 	//   Display specification object representing the companion ad.
 	//   Refer to Object: DisplayPlacement.
-	Display interface{} `json:"display,omitempty"`
+	Display *DisplayPlacement `json:"display,omitempty"`
 
 	// Attribute:
 	//   ext

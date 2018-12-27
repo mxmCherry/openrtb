@@ -36,7 +36,7 @@ type ImageAsset struct {
 	// Definition:
 	//   The type of image represented by this asset.
 	//   Refer to List: Native Image Asset Types.
-	Type interface{} `json:"type,omitempty"`
+	Type NativeImageAssetType `json:"type,omitempty"`
 
 	// Attribute:
 	//   ext

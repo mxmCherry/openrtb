@@ -19,7 +19,7 @@ type Video struct {
 	// Definition:
 	//   API required by the ad if applicable.
 	//   Refer to List: API Frameworks.
-	API []interface{} `json:"api,omitempty"`
+	API []APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   ctype
@@ -28,7 +28,7 @@ type Video struct {
 	// Definition:
 	//   Subtype of video creative.
 	//   Refer to List: Creative Subtypes - Audio/Video.
-	CType interface{} `json:"ctype,omitempty"`
+	CType CreativeSubtypeAV `json:"ctype,omitempty"`
 
 	// Attribute:
 	//   dur

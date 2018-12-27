@@ -11,8 +11,9 @@ type DataAssetFormat struct {
 	// Type:
 	//   integer; required
 	// Definition:
-	//   The type of data asset supported. Refer to List: Native Data Asset Types.
-	Type interface{} `json:"type,omitempty"`
+	//   The type of data asset supported.
+	//   Refer to List: Native Data Asset Types.
+	Type NativeDataAssetType `json:"type,omitempty"`
 
 	// Attribute:
 	//   len

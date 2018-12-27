@@ -29,7 +29,7 @@ type Data struct {
 	// Definition:
 	//   Array of Segment objects that contain the actual data values.
 	//   Refer to Object: Segment.
-	Segment []interface{} `json:"segment,omitempty"`
+	Segment []Segment `json:"segment,omitempty"`
 
 	// Attribute:
 	//   ext

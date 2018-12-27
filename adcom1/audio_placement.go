@@ -44,7 +44,7 @@ type AudioPlacement struct {
 	// Definition:
 	//   Playback method in use for this placement.
 	//   Refer to List: Playback Methods.
-	PlayMethod interface{} `json:"playmethod,omitempty"`
+	PlayMethod PlaybackMethod `json:"playmethod,omitempty"`
 
 	// Attribute:
 	//   playend
@@ -53,7 +53,7 @@ type AudioPlacement struct {
 	// Definition:
 	//   The event that causes playback to end for this placement.
 	//   Refer to List: Playback Cessation Modes.
-	PlayEnd interface{} `json:"playend,omitempty"`
+	PlayEnd PlaybackCessationMode `json:"playend,omitempty"`
 
 	// Attribute:
 	//   feed
@@ -62,7 +62,7 @@ type AudioPlacement struct {
 	// Definition:
 	//   Type of audio feed of this placement.
 	//   Refer to List: Feed Types.
-	Feed interface{} `json:"feed,omitempty"`
+	Feed FeedType `json:"feed,omitempty"`
 
 	// Attribute:
 	//   nvol
@@ -71,7 +71,7 @@ type AudioPlacement struct {
 	// Definition:
 	//   Volume normalization mode of this placement.
 	//   Refer to List: Volume Normalization Modes.
-	NVol interface{} `json:"nvol,omitempty"`
+	NVol VolumeNormalizationMode `json:"nvol,omitempty"`
 
 	// Attribute:
 	//   mime
@@ -90,7 +90,7 @@ type AudioPlacement struct {
 	//   List of supported APIs for this placement.
 	//   If an API is not explicitly listed, it is assumed to be unsupported.
 	//   Refer to List: API Frameworks.
-	API []interface{} `json:"api,omitempty"`
+	API []APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   ctype
@@ -99,7 +99,7 @@ type AudioPlacement struct {
 	// Definition:
 	//   Creative subtypes permitted for this placement.
 	//   Refer to List: Creative Subtypes - Audio/Video.
-	CType []interface{} `json:"ctype,omitempty"`
+	CType []CreativeSubtypeAV `json:"ctype,omitempty"`
 
 	// Attribute:
 	//   mindur
@@ -152,7 +152,7 @@ type AudioPlacement struct {
 	//   Array of supported creative delivery methods.
 	//   If omitted, all can be assumed.
 	//   Refer to List: Delivery Methods.
-	Delivery []interface{} `json:"delivery,omitempty"`
+	Delivery []DeliveryMethod `json:"delivery,omitempty"`
 
 	// Attribute:
 	//   maxseq
@@ -169,7 +169,7 @@ type AudioPlacement struct {
 	// Definition:
 	//   Array of objects indicating that companion ads are available and providing the specifications thereof.
 	//   Refer to Object: Companion.
-	Comp []interface{} `json:"comp,omitempty"`
+	Comp []Companion `json:"comp,omitempty"`
 
 	// Attribute:
 	//   comptype
@@ -178,7 +178,7 @@ type AudioPlacement struct {
 	// Definition:
 	//   Supported companion ad types; recommended if companion ads are specified in comp.
 	//   Refer to List: Companion Types.
-	CompType []interface{} `json:"comptype,omitempty"`
+	CompType []CompanionType `json:"comptype,omitempty"`
 
 	// Attribute:
 	//   ext

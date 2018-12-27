@@ -30,7 +30,7 @@ type DataAsset struct {
 	// Definition:
 	//   The type of data represented by this asset.
 	//   Refer to List: Native Data Asset Types.
-	Type interface{} `json:"type,omitempty"`
+	Type NativeDataAssetType `json:"type,omitempty"`
 
 	// Attribute:
 	//   ext

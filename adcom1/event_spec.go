@@ -12,7 +12,7 @@ type EventSpec struct {
 	// Definition:
 	//   Type of supported ad tracking event.
 	//   Refer to List: Event Types.
-	Type interface{} `json:"type,omitempty"`
+	Type EventType `json:"type,omitempty"`
 
 	// Attribute:
 	//   method
@@ -21,7 +21,7 @@ type EventSpec struct {
 	// Definition:
 	//   Array of supported event tracking methods for this event type.
 	//   Refer to List: Event Tracking Methods.
-	Method []interface{} `json:"method,omitempty"`
+	Method []EventTrackingMethod `json:"method,omitempty"`
 
 	// Attribute:
 	//   api
@@ -30,7 +30,7 @@ type EventSpec struct {
 	// Definition:
 	//   Event tracking APIs available for use; only relevant for JavaScript method trackers.
 	//   Refer to List: API Frameworks.
-	API []interface{} `json:"api,omitempty"`
+	API []APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   jstrk

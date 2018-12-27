@@ -12,7 +12,7 @@ type NativeFormat struct {
 	// Definition:
 	//   Array of objects that specify the set of native assets and their permitted formats.
 	//   Refer to Object: AssetFormat.
-	Asset []interface{} `json:"asset"`
+	Asset []AssetFormat `json:"asset"`
 
 	// Attribute:
 	//   ext

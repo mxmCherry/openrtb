@@ -12,7 +12,7 @@ type Audit struct {
 	// Definition:
 	//   The audit status of the ad.
 	//   Refer to List: Audit Status Codes.
-	Status interface{} `json:"status,omitempty"`
+	Status AuditStatus `json:"status,omitempty"`
 
 	// Attribute:
 	//   feedback
@@ -45,7 +45,7 @@ type Audit struct {
 	// Definition:
 	//   Correction object wherein the auditor can specify changes to attributes of the Ad object or its children they believe to be proper.
 	//   For example, if the original Ad indicated a category of “IAB3”, but the auditor deems the correct category to be “IAB13”, then corr could include a sparse Ad object including just the cat array indicating “IAB13”.
-	Corr interface{} `json:"corr,omitempty"`
+	Corr *Ad `json:"corr,omitempty"` // TODO: probably, this won't work due to "omitempty" stuff. Probably, will need an all-pointer Ad equivalent.
 
 	// Attribute:
 	//   ext
