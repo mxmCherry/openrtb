@@ -47,7 +47,7 @@ type Event struct {
 	// Definition:
 	//   An array of key-value pairs to support vendor-specific data required for custom tracking.
 	//   For example, the account number of a buyer with a tracking company might be represented as: {"acct": "123"}.
-	CData map[string]string `json:"cdata,omitempty"` // TODO: confirm type - probably, need map[string]json.RawMessage?
+	CData map[string]string `json:"cdata,omitempty"`
 
 	// Attribute:
 	//   ext

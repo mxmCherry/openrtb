@@ -1,7 +1,7 @@
 package adcom
 
 // VideoPlacementSubtype represents types of video placements derived largely from the IAB Digital Video Guidelines.
-type VideoPlacementSubtype int // TODO: rename?.. It's "List: Placement Subtypes - Video" in spec.
+type VideoPlacementSubtype int
 
 // Types of video placements derived largely from the IAB Digital Video Guidelines.
 const (

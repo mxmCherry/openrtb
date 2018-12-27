@@ -11,7 +11,7 @@ type Asset struct {
 	//   integer
 	// Definition:
 	//   The value of AssetFormat.id if this ad references a specific native placement defined by a Placement object and its structure.
-	ID int `json:"id,omitempty"` // TODO: confirm type when get to AssetFormat
+	ID int `json:"id,omitempty"`
 
 	// Attribute:
 	//   req

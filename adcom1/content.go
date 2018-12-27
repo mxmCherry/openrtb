@@ -172,7 +172,7 @@ type Content struct {
 	//   integer
 	// Definition:
 	//   Source relationship, where 0 = indirect, 1 = direct.
-	SrcRel int8 `json:"srcrel,omitempty"` // TODO: make enum?..
+	SrcRel int8 `json:"srcrel,omitempty"`
 
 	// Attribute:
 	//   len
