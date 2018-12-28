@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // DeliveryMethod represents options for the delivery of video or audio content.
 type DeliveryMethod int8

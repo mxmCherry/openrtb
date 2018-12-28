@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // CategoryTaxonomy identifies the taxonomy in effect when content categories are listed.
 type CategoryTaxonomy int

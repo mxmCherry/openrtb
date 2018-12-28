@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // LinearityMode represents options for media linearity, typically for video.
 type LinearityMode int8

@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // FeedType represents types of feeds, typically for audio.
 type FeedType int8

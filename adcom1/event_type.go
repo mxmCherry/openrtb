@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // EventType represents types of ad events available for tracking.
 // These types refer to the actual event, timing, etc.; not the method of firing.

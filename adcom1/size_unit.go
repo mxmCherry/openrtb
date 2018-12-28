@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // SizeUnit represents units of height and width used by creatives, assets, and placement specifications where noted.
 type SizeUnit int8

@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // PlacementPosition represents placement positions as a relative measure of visibility or prominence.
 // This table has values derived from the TAG Inventory Quality Guidelines (IQG).

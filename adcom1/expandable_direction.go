@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // ExpandableDirection represents directions in which an expandable ad may expand, given the positioning of the ad unit on the page and constraints imposed by the content.
 type ExpandableDirection int8

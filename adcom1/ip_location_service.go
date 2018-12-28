@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // IPLocationService represents services and/or vendors used for resolving IP addresses to geolocations.
 type IPLocationService int8

@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // LocationType represents options to indicate how the geographic information was determined.
 type LocationType int8

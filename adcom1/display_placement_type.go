@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // DisplayPlacementType represents types of display placements; the locations where a native ad may be shown in relationship to the surrounding content.
 type DisplayPlacementType int

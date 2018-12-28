@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // ClickType represents types of creative activation (i.e., click) behavior types.
 type ClickType int

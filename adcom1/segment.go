@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 import "encoding/json"
 

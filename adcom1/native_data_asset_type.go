@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // NativeDataAssetType represents data asset types.
 // This list is non-exhaustive and is intended to be expanded over time.

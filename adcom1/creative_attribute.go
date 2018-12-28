@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // CreativeAttribute specifies a standard list of creative attributes that can describe an actual ad or restrictions relative to a given placement.
 type CreativeAttribute int

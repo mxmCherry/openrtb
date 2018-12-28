@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // CreativeSubtypeAV represents subtypes of audio and video ad creatives.
 type CreativeSubtypeAV int8 // TODO: rename to smth like AudioVideoCreativeSubtype? (sounds more natural)

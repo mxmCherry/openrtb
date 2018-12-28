@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // NativeImageAssetType represents image asset types.
 // This list is non-exhaustive and is intended to be expanded over time.

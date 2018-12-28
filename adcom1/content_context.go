@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // ContentContext represents options for indicating the type of content being used or consumed by the user in which ads may appear.
 // This table has values derived from the TAG Inventory Quality Guidelines (IQG).

@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // PlaybackMethod represents media playback methods.
 type PlaybackMethod int8

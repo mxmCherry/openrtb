@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // ConnectionType represents options for the type of device connectivity.
 type ConnectionType int8

@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // DeviceType represents types of devices.
 // This table has values derived from the TAG Inventory Quality Guidelines (IQG).

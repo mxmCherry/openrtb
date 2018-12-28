@@ -1,6 +1,6 @@
-// Package adcom implements types for AdCOM Specification v1.0
+// Package adcom1 implements types for AdCOM Specification v1.0
 // https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md
-package adcom
+package adcom1
 
 /*
 

@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // CreativeSubtypeDisplay represents subtypes of display ad creatives.
 type CreativeSubtypeDisplay int8 // TODO: rename to smth like DisplayCreativeSubtype? (sounds more natural)

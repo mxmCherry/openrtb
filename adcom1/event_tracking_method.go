@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // EventTrackingMethod represents methods of tracking of ad events.
 // Vendor specific codes may include custom measurement companies (e.g., Moat, Doubleverify, IAS, etc.).

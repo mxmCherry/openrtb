@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // AuditStatus represents codes used in Audit objects to reflect status or workflow state.
 type AuditStatus int

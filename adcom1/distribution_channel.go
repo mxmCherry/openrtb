@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // DistributionChannel is an abstraction of the various types of entities or channels through which ads are distributed.
 // Examples include websites, mobile apps, and digital out-of-home (DOOH) systems.

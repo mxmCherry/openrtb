@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // DisplayContextType represents types of context in which a native ad may appear (i.e., the type of content surrounding the ad on the page).
 // This is intended to denote primary content although other content may also appear on the page.

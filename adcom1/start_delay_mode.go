@@ -1,4 +1,4 @@
-package adcom
+package adcom1
 
 // StartDelayMode represents video or audio start delay.
 type StartDelayMode int64
