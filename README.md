@@ -20,7 +20,7 @@ go get -u "github.com/mxmCherry/openrtb"
 ```
 
 ```go
-import "github.com/mxmCherry/openrtb"
+import openrtb "github.com/mxmCherry/openrtb/openrtb2"
 ```
 
 This repo follows [semver](http://semver.org/) - see [releases](https://github.com/mxmCherry/openrtb/releases).
