@@ -116,6 +116,8 @@ type Bid struct {
 	// Definition:
 	//   Layer-4 domain object structure that specifies the media to be presented if the bid is won conforming to the specification and version referenced in openrtb.domainspec and openrtb.domainver
 	//   For AdCOM v1.x, the objects allowed here are “Ad” and any objects subordinate thereto as specified by AdCOM.
+	// Dev note:
+	//   This object is implemented as ../adcom1.BidMedia type.
 	Media json.RawMessage `json:"media,omitempty"`
 
 	// Attribute:

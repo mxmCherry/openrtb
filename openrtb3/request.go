@@ -112,6 +112,8 @@ type Request struct {
 	// Definition:
 	//   Layer-4 domain object structure that provides context for the items being offered conforming to the specification and version referenced in openrtb.domainspec and openrtb.domainver.
 	//   For AdCOM v1.x, the objects allowed here all of which are optional are one of the DistributionChannel subtypes (i.e., Site, App, or Dooh), User, Device, Regs, Restrictions, and any objects subordinate to these as specified by AdCOM.
+	// Dev note:
+	//   This object is implemented as ../adcom1.RequestContext type.
 	Context json.RawMessage `json:"context,omitempty"`
 
 	// Attribute:

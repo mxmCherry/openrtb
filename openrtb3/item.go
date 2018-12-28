@@ -104,6 +104,8 @@ type Item struct {
 	// Definition:
 	//   Layer-4 domain object structure that provides specifies the item being offered conforming to the specification and version referenced in openrtb.domainspec and openrtb.domainver.
 	//   For AdCOM v1.x, the objects allowed here are Placement and any objects subordinate to these as specified by AdCOM.
+	// Dev note:
+	//   This object is implemented as ../adcom1.ItemSpec type.
 	Spec json.RawMessage `json:"spec"`
 
 	// Attribute:
