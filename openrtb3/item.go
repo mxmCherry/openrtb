@@ -59,8 +59,7 @@ type Item struct {
 	// Type:
 	//   integer
 	// Definition:
-	//   Timestamp when the item is expected to be fulfilled (e.g
-	// when a DOOH impression will be displayed) in Unix format (i.e., milliseconds since the epoch).
+	//   Timestamp when the item is expected to be fulfilled (e.g when a DOOH impression will be displayed) in Unix format (i.e., milliseconds since the epoch).
 	DT int64 `json:"dt,omitempty"`
 
 	// Attribute:
