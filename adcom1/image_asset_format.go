@@ -66,7 +66,9 @@ type ImageAssetFormat struct {
 	// Definition:
 	//   Relative width of the image asset when expressing size as a ratio.
 	//   Note that mixing absolute and relative sizes is not recommended.
-	WRatio uint64 `json:"wratio,omitempty"`
+	// Dev note:
+	//   This is kept as `uint8` because ratio values are expected to be quite small (like 16:9).
+	WRatio uint8 `json:"wratio,omitempty"`
 
 	// Attribute:
 	//   hratio
@@ -75,7 +77,9 @@ type ImageAssetFormat struct {
 	// Definition:
 	//   Relative height of the image asset when expressing size as a ratio.
 	//   Note that mixing absolute and relative sizes is not recommended.
-	HRatio uint64 `json:"hratio,omitempty"`
+	// Dev note:
+	//   This is kept as `uint8` because ratio values are expected to be quite small (like 16:9).
+	HRatio uint8 `json:"hratio,omitempty"`
 
 	// Attribute:
 	//   ext
