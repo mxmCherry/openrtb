@@ -1,4 +1,4 @@
-package openrtb
+package openrtb3
 
 import "encoding/json"
 

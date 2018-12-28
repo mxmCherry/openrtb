@@ -1,4 +1,4 @@
-package openrtb
+package openrtb3
 
 // LossReason represents OpenRTB Loss Reason Code enumeration.
 //

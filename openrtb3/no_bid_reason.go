@@ -1,4 +1,4 @@
-package openrtb
+package openrtb3
 
 // NoBidReason represents OpenRTB No-Bid Reason Code enumeration.
 //

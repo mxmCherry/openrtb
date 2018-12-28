@@ -1,4 +1,4 @@
-package openrtb
+package openrtb3
 
 // AuctionType defines an auction type.
 type AuctionType int64
