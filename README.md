@@ -1,11 +1,11 @@
 # openrtb [![GoDoc](https://godoc.org/github.com/mxmCherry/openrtb?status.svg)](https://godoc.org/github.com/mxmCherry/openrtb) [![Build Status](https://travis-ci.org/mxmCherry/openrtb.svg?branch=master)](https://travis-ci.org/mxmCherry/openrtb)
 
-[OpenRTB](https://www.iab.com/guidelines/real-time-bidding-rtb-project/) [v2.5](https://www.iab.com/wp-content/uploads/2016/03/OpenRTB-API-Specification-Version-2-5-FINAL.pdf) types for Go programming language (Golang)
+[OpenRTB](https://iabtechlab.com/standards/openrtb/), [AdCOM](https://iabtechlab.com/standards/openmedia) and [OpenRTB Dynamic Native Ads](https://iabtechlab.com/standards/openrtb-native/) types implementation for [Go programming language](https://golang.org/)
 
-Also includes [OpenRTB](https://www.iab.com/guidelines/real-time-bidding-rtb-project/) [Dynamic Native Ads API Specification Version 1.2](https://www.iab.com/wp-content/uploads/2018/03/OpenRTB-Native-Ads-Specification-Final-1.2.pdf) types:
-- [4 Native Ad Request Markup Details](native/request/)
-- [5 Native Ad Response Markup Details](native/response/)
-- [7 Reference Lists/Enumerations](native/)
+- [openrtb2](openrtb2/) - [OpenRTB](https://iabtechlab.com/standards/openrtb/) [2.5](https://iabtechlab.com/wp-content/uploads/2016/07/OpenRTB-API-Specification-Version-2-5-FINAL.pdf)
+- [openrtb3](openrtb3/) - [OpenRTB](https://iabtechlab.com/standards/openrtb/) [3.0](https://github.com/InteractiveAdvertisingBureau/openrtb)
+- [adcom1](adcom1/) - [AdCOM](https://iabtechlab.com/standards/openmedia/) [1.0](https://github.com/InteractiveAdvertisingBureau/AdCOM)
+- [native1](native1/) - [OpenRTB Dynamic Native Ads API](https://iabtechlab.com/standards/openrtb-native/) [1.2](https://iabtechlab.com/wp-content/uploads/2016/07/OpenRTB-Native-Ads-Specification-Final-1.2.pdf)
 
 **Requires Go 1.8+**
 
@@ -13,14 +13,25 @@ Go 1.8+ is needed for proper `Ext json.RawMessage` marshaling: non-pointer `json
 
 This library uses `json.RawMessage` since [v10.0.0](https://github.com/mxmCherry/openrtb/releases/tag/v10.0.0).
 
+This library is tested with Go 1.9+ since [v12.0.0](https://github.com/mxmCherry/openrtb/releases/tag/v12.0.0).
+
 # Using
 
 ```bash
-go get -u "github.com/mxmCherry/openrtb"
+go get -u "github.com/mxmCherry/openrtb/..."
 ```
 
 ```go
-import openrtb "github.com/mxmCherry/openrtb/openrtb2"
+import (
+	openrtb2 "github.com/mxmCherry/openrtb/openrtb2"
+
+	openrtb3 "github.com/mxmCherry/openrtb/openrtb3"
+	adcom1 "github.com/mxmCherry/openrtb/adcom1"
+
+	native1 "github.com/mxmCherry/openrtb/native1"
+	nreq "github.com/mxmCherry/openrtb/native1/request"
+	nres "github.com/mxmCherry/openrtb/native1/response"
+)
 ```
 
 This repo follows [semver](http://semver.org/) - see [releases](https://github.com/mxmCherry/openrtb/releases).
