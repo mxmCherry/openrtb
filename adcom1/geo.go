@@ -42,7 +42,7 @@ type Geo struct {
 	//   Estimated location accuracy in meters; recommended when lat/lon are specified and derived from a device's location services (i.e., type = 1).
 	//   Note that this is the accuracy as reported from the device.
 	//   Consult OS specific documentation (e.g., Android, iOS) for exact interpretation.
-	Accur int `json:"accur,omitempty"`
+	Accur int64 `json:"accur,omitempty"`
 
 	// Attribute:
 	//   lastfix
@@ -113,7 +113,7 @@ type Geo struct {
 	//   integer
 	// Definition:
 	//   Local time as the number +/- of minutes from UTC.
-	UTCOffset int `json:"utcoffset,omitempty"`
+	UTCOffset int64 `json:"utcoffset,omitempty"`
 
 	// Attribute:
 	//   ext

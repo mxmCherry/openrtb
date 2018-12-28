@@ -116,7 +116,7 @@ type VideoPlacement struct {
 	//   integer
 	// Definition:
 	//   Width of the placement in units specified by unit.
-	W int `json:"w,omitempty"`
+	W uint64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -124,7 +124,7 @@ type VideoPlacement struct {
 	//   integer
 	// Definition:
 	//   Height of the placement in units specified by unit.
-	H int `json:"h,omitempty"`
+	H uint64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   unit

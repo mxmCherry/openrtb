@@ -11,7 +11,7 @@ type DisplayFormat struct {
 	// Definition:
 	//   Absolute width of the creative in units specified by DisplayPlacement.unit.
 	//   Note that mixing absolute and relative sizes is not recommended.
-	W int `json:"w,omitempty"`
+	W uint64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -20,7 +20,7 @@ type DisplayFormat struct {
 	// Definition:
 	//   Absolute height of the creative in units specified by DisplayPlacement.unit.
 	//   Note that mixing absolute and relative sizes is not recommended.
-	H int `json:"h,omitempty"`
+	H uint64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   wratio
@@ -29,7 +29,7 @@ type DisplayFormat struct {
 	// Definition:
 	//   Relative width of the creative when expressing size as a ratio.
 	//   Note that mixing absolute and relative sizes is not recommended.
-	WRatio int `json:"wratio,omitempty"`
+	WRatio uint64 `json:"wratio,omitempty"`
 
 	// Attribute:
 	//   hratio
@@ -38,7 +38,7 @@ type DisplayFormat struct {
 	// Definition:
 	//   Relative height of the creative when expressing size as a ratio.
 	//   Note that mixing absolute and relative sizes is not recommended.
-	HRatio int `json:"hratio,omitempty"`
+	HRatio uint64 `json:"hratio,omitempty"`
 
 	// Attribute:
 	//   expdir

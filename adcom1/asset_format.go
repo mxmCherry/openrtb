@@ -12,7 +12,7 @@ type AssetFormat struct {
 	//   integer; required
 	// Definition:
 	//   Asset ID, unique within the scope of this placement specification.
-	ID int `json:"id"`
+	ID int64 `json:"id"`
 
 	// Attribute:
 	//   req
