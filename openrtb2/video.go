@@ -66,7 +66,7 @@ type Video struct {
 	//   integer; recommended
 	// Description:
 	//   Width of the video player in device independent pixels (DIPS).
-	W uint64 `json:"w,omitempty"`
+	W int64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -74,7 +74,7 @@ type Video struct {
 	//   integer; recommended
 	// Description:
 	//   Height of the video player in device independent pixels (DIPS).
-	H uint64 `json:"h,omitempty"`
+	H int64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   startdelay
@@ -169,7 +169,7 @@ type Video struct {
 	//   integer
 	// Description:
 	//   Minimum bit rate in Kbps.
-	MinBitRate uint64 `json:"minbitrate,omitempty"`
+	MinBitRate int64 `json:"minbitrate,omitempty"`
 
 	// Attribute:
 	//   maxbitrate
@@ -177,7 +177,7 @@ type Video struct {
 	//   integer
 	// Description:
 	//   Maximum bit rate in Kbps.
-	MaxBitRate uint64 `json:"maxbitrate,omitempty"`
+	MaxBitRate int64 `json:"maxbitrate,omitempty"`
 
 	// Attribute:
 	//   boxingallowed

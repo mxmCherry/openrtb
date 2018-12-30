@@ -48,14 +48,13 @@ Master always contains latest code, so better use some package manager to vendor
 - Key types should be chosen according to OpenRTB specification (attribute types)
 - Numeric types:
 	- `int8` - short enums (with values <= 127), boolean-like attributes (like `BidRequest.test`)
-	- `int64` - time, duration, length, unbound enums (like `BidRequest.at` - exchange-specific auctions types are > 500)
-	- `uint64` - width, height, bitrate etc. (unbound positive numbers)
+	- `int64` - every other integral type
 	- `float64` - coordinates, prices etc.
 - Enums:
 	- all enums, described in section 5, must be typed with section name singularized (e.g., "5.2 Banner Ad Types" -> `type BannerAdType int8`)
 	- all typed enums must have constants for each element, prefixed with type name (e.g., "5.2 Banner Ad Types - XHTML Text Ad (usually mobile)" -> `const BannerAdTypeXHTMLTextAd BannerAdType = 1`)
 	- never use `iota` for enum constants
-	- section "5.1 Content Categories" should remain untyped and have no constants
+	- OpenRTB (2.x) section "5.1 Content Categories" should remain untyped and have no constants
 
 ## Pointers/omitempty
 Pointer | Omitempty | When to use                                                          | Example

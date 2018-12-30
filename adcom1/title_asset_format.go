@@ -12,7 +12,7 @@ type TitleAssetFormat struct {
 	// Definition:
 	//   The maximum allowed length of the title value.
 	//   Recommended lengths are 25, 90, or 140.
-	Len int `json:"len,omitempty"`
+	Len int64 `json:"len,omitempty"`
 
 	// Attribute:
 	//   ext

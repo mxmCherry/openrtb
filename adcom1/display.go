@@ -40,7 +40,7 @@ type Display struct {
 	// Definition:
 	//   Absolute width of the creative in device independent pixels (DIPS), typically for non-native ads.
 	//   Note that mixing absolute and relative sizes is not recommended.
-	W uint64 `json:"w,omitempty"`
+	W int64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -49,7 +49,7 @@ type Display struct {
 	// Definition:
 	//   Absolute height of the creative in device independent pixels (DIPS), typically for non-native ads.
 	//   Note that mixing absolute and relative sizes is not recommended.
-	H uint64 `json:"h,omitempty"`
+	H int64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   wratio
@@ -59,8 +59,8 @@ type Display struct {
 	//   Relative width of the creative when expressing size as a ratio, typically for non-native ads.
 	//   Note that mixing absolute and relative sizes is not recommended.
 	// Dev note:
-	//   This is kept as `uint8` because ratio values are expected to be quite small (like 16:9).
-	WRatio uint8 `json:"wratio,omitempty"`
+	//   This is kept as `int8` because ratio values are expected to be quite small (like 16:9).
+	WRatio int8 `json:"wratio,omitempty"`
 
 	// Attribute:
 	//   hratio
@@ -70,8 +70,8 @@ type Display struct {
 	//   Relative height of the creative when expressing size as a ratio, typically for non-native ads.
 	//   Note that mixing absolute and relative sizes is not recommended.
 	// Dev note:
-	//   This is kept as `uint8` because ratio values are expected to be quite small (like 16:9).
-	HRatio uint8 `json:"hratio,omitempty"`
+	//   This is kept as `int8` because ratio values are expected to be quite small (like 16:9).
+	HRatio int8 `json:"hratio,omitempty"`
 
 	// Attribute:
 	//   priv

@@ -38,7 +38,7 @@ type DOOH struct {
 	//   integer
 	// Definition:
 	//   Minimum DPI for text-based creative elements to display clearly.
-	DPI uint16 `json:"dpi,omitempty"`
+	DPI int64 `json:"dpi,omitempty"`
 
 	// Attribute:
 	//   ext

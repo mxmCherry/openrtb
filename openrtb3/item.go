@@ -20,7 +20,7 @@ type Item struct {
 	//   integer; default 1
 	// Definition:
 	//   The number of instances (i.e., “quantity”) of this item being offered (e.g., multiple identical impressions in a digital out-of-home scenario).
-	Qty int `json:"qty,omitempty"`
+	Qty int64 `json:"qty,omitempty"`
 
 	// Attribute:
 	//   seq
@@ -28,7 +28,7 @@ type Item struct {
 	//   integer
 	// Definition:
 	//   If multiple items are offered in the same bid request, the sequence number allows for the coordinated delivery.
-	Seq int `json:"seq,omitempty"`
+	Seq int64 `json:"seq,omitempty"`
 
 	// Attribute:
 	//   flr

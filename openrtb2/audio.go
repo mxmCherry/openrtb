@@ -63,7 +63,7 @@ type Audio struct {
 	//   If multiple ad impressions are offered in the same bid request,
 	//   the sequence number will allow for the coordinated delivery
 	//   of multiple creatives.
-	Sequence uint64 `json:"sequence,omitempty"`
+	Sequence int64 `json:"sequence,omitempty"`
 
 	// Attribute:
 	//   battr
@@ -91,7 +91,7 @@ type Audio struct {
 	//   integer
 	// Description:
 	//   Minimum bit rate in Kbps.
-	MinBitrate uint64 `json:"minbitrate,omitempty"`
+	MinBitrate int64 `json:"minbitrate,omitempty"`
 
 	// Attribute:
 	//   maxbitrate
@@ -99,7 +99,7 @@ type Audio struct {
 	//   integer
 	// Description:
 	//   Maximum bit rate in Kbps.
-	MaxBitrate uint64 `json:"maxbitrate,omitempty"`
+	MaxBitrate int64 `json:"maxbitrate,omitempty"`
 
 	// Attribute:
 	//   delivery
@@ -147,7 +147,7 @@ type Audio struct {
 	//   The maximum number of ads that can be played in an ad pod.
 	//   OpenRTB API Specification Version 2.5 IAB Technology Lab
 	//   www.iab.com/openrtb Page 18
-	MaxSeq uint64 `json:"maxseq,omitempty"`
+	MaxSeq int64 `json:"maxseq,omitempty"`
 
 	// Attribute:
 	//   feed

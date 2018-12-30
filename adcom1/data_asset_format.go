@@ -21,7 +21,7 @@ type DataAssetFormat struct {
 	//   integer
 	// Definition:
 	//   The maximum allowed length of the data value.
-	Len int `json:"len,omitempty"`
+	Len int64 `json:"len,omitempty"`
 
 	// Attribute:
 	//   ext

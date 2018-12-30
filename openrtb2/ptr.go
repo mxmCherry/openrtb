@@ -5,7 +5,7 @@ func Int8Ptr(n int8) *int8 {
 	return &n
 }
 
-// Uint64Ptr returns pointer to passed argument.
-func Uint64Ptr(n uint64) *uint64 {
+// Int64Ptr returns pointer to passed argument.
+func Int64Ptr(n int64) *int64 {
 	return &n
 }

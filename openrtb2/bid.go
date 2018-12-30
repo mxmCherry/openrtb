@@ -232,7 +232,7 @@ type Bid struct {
 	//   integer
 	// Description:
 	//   Width of the creative in device independent pixels (DIPS).
-	W uint64 `json:"w,omitempty"`
+	W int64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -240,7 +240,7 @@ type Bid struct {
 	//   integer
 	// Description:
 	//   Height of the creative in device independent pixels (DIPS).
-	H uint64 `json:"h,omitempty"`
+	H int64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   wratio
@@ -249,7 +249,7 @@ type Bid struct {
 	// Description:
 	//   Relative width of the creative when expressing size as a ratio.
 	//   Required for Flex Ads.
-	WRatio uint64 `json:"wratio,omitempty"`
+	WRatio int64 `json:"wratio,omitempty"`
 
 	// Attribute:
 	//   hratio
@@ -258,7 +258,7 @@ type Bid struct {
 	// Description:
 	//   Relative height of the creative when expressing size as a ratio.
 	//   Required for Flex Ads.
-	HRatio uint64 `json:"hratio,omitempty"`
+	HRatio int64 `json:"hratio,omitempty"`
 
 	// Attribute:
 	//   exp

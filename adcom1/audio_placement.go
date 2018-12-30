@@ -134,7 +134,7 @@ type AudioPlacement struct {
 	//   integer
 	// Definition:
 	//   Minimum bit rate of the creative in Kbps.
-	MinBitR uint64 `json:"minbitr,omitempty"`
+	MinBitR int64 `json:"minbitr,omitempty"`
 
 	// Attribute:
 	//   maxbitr
@@ -142,7 +142,7 @@ type AudioPlacement struct {
 	//   integer
 	// Definition:
 	//   Maximum bit rate of the creative in Kbps.
-	MaxBitR uint64 `json:"maxbitr,omitempty"`
+	MaxBitR int64 `json:"maxbitr,omitempty"`
 
 	// Attribute:
 	//   delivery
@@ -160,7 +160,7 @@ type AudioPlacement struct {
 	//   integer
 	// Definition:
 	//   The maximum number of ads that can be played in an ad pod.
-	MaxSeq int `json:"maxseq,omitempty"`
+	MaxSeq int64 `json:"maxseq,omitempty"`
 
 	// Attribute:
 	//   comp

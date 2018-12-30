@@ -18,7 +18,7 @@ type TitleAsset struct {
 	//   integer
 	// Definition:
 	//   The length of the contents of the text attribute.
-	Len int `json:"len,omitempty"`
+	Len int64 `json:"len,omitempty"`
 
 	// Attribute:
 	//   ext

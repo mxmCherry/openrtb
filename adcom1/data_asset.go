@@ -21,7 +21,7 @@ type DataAsset struct {
 	// Definition:
 	//   The length of the value contents.
 	//   This length should conform to recommendations provided in List: Native Data Asset Types
-	Len int `json:"len,omitempty"`
+	Len int64 `json:"len,omitempty"`
 
 	// Attribute:
 	//   type
