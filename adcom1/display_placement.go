@@ -110,7 +110,7 @@ type DisplayPlacement struct {
 	// Definition:
 	//   Width of the placement in units specified by unit.
 	//   Note that this size applies to the placement itself; permitted creative sizes are specified elsewhere (e.g., DisplayFormat, ImageAssetFormat, etc.).
-	W uint64 `json:"w,omitempty"`
+	W int `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -119,7 +119,7 @@ type DisplayPlacement struct {
 	// Definition:
 	//   Width of the placement in units specified by unit.
 	//   Note that this size applies to the placement itself; permitted creative sizes are specified elsewhere (e.g., DisplayFormat, ImageAssetFormat, etc.).
-	H uint64 `json:"h,omitempty"`
+	H int `json:"h,omitempty"`
 
 	// Attribute:
 	//   unit

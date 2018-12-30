@@ -30,7 +30,7 @@ type Banner struct {
 	// Description:
 	//   Exact width in device independent pixels (DIPS);
 	//   recommended if no format objects are specified.
-	W *uint64 `json:"w,omitempty"`
+	W *int `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -39,7 +39,7 @@ type Banner struct {
 	// Description:
 	//   Exact height in device independent pixels (DIPS);
 	//   recommended if no format objects are specified.
-	H *uint64 `json:"h,omitempty"`
+	H *int `json:"h,omitempty"`
 
 	// Attribute:
 	//   wmax
@@ -48,7 +48,7 @@ type Banner struct {
 	// Description:
 	//   NOTE: Deprecated in favor of the format array.
 	//   Maximum width in device independent pixels (DIPS).
-	WMax uint64 `json:"wmax,omitempty"`
+	WMax int `json:"wmax,omitempty"`
 
 	// Attribute:
 	//   hmax
@@ -57,7 +57,7 @@ type Banner struct {
 	// Description:
 	//   NOTE: Deprecated in favor of the format array.
 	//   Maximum height in device independent pixels (DIPS).
-	HMax uint64 `json:"hmax,omitempty"`
+	HMax int `json:"hmax,omitempty"`
 
 	// Attribute:
 	//   wmin
@@ -66,7 +66,7 @@ type Banner struct {
 	// Description:
 	//   NOTE: Deprecated in favor of the format array.
 	//   Minimum width in device independent pixels (DIPS).
-	WMin uint64 `json:"wmin,omitempty"`
+	WMin int `json:"wmin,omitempty"`
 
 	// Attribute:
 	//   hmin
@@ -75,7 +75,7 @@ type Banner struct {
 	// Description:
 	//   NOTE: Deprecated in favor of the format array.
 	//   Minimum height in device independent pixels (DIPS).
-	HMin uint64 `json:"hmin,omitempty"`
+	HMin int `json:"hmin,omitempty"`
 
 	// Attribute:
 	//   btype

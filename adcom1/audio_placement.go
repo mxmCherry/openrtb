@@ -134,7 +134,7 @@ type AudioPlacement struct {
 	//   integer
 	// Definition:
 	//   Minimum bit rate of the creative in Kbps.
-	MinBitR uint64 `json:"minbitr,omitempty"`
+	MinBitR int `json:"minbitr,omitempty"`
 
 	// Attribute:
 	//   maxbitr
@@ -142,7 +142,7 @@ type AudioPlacement struct {
 	//   integer
 	// Definition:
 	//   Maximum bit rate of the creative in Kbps.
-	MaxBitR uint64 `json:"maxbitr,omitempty"`
+	MaxBitR int `json:"maxbitr,omitempty"`
 
 	// Attribute:
 	//   delivery

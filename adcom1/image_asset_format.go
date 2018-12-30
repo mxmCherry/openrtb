@@ -30,7 +30,7 @@ type ImageAssetFormat struct {
 	// Definition:
 	//   Absolute width of the image asset in device independent pixels (DIPS).
 	//   Note that mixing absolute and relative sizes is not recommended.
-	W uint64 `json:"w,omitempty"`
+	W int `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -39,7 +39,7 @@ type ImageAssetFormat struct {
 	// Definition:
 	//   Absolute height of the image asset in device independent pixels (DIPS).
 	//   Note that mixing absolute and relative sizes is not recommended.
-	H uint64 `json:"h,omitempty"`
+	H int `json:"h,omitempty"`
 
 	// Attribute:
 	//   wmin
@@ -48,7 +48,7 @@ type ImageAssetFormat struct {
 	// Definition:
 	//   The minimum requested absolute width of the image in device independent pixels (DIPS).
 	//   This option should be used for any scaling of images by the client.
-	WMin uint64 `json:"wmin,omitempty"`
+	WMin int `json:"wmin,omitempty"`
 
 	// Attribute:
 	//   hmin
@@ -57,7 +57,7 @@ type ImageAssetFormat struct {
 	// Definition:
 	//   The minimum requested absolute height of the image in device independent pixels (DIPS).
 	//   This option should be used for any scaling of images by the client.
-	HMin uint64 `json:"hmin,omitempty"`
+	HMin int `json:"hmin,omitempty"`
 
 	// Attribute:
 	//   wratio

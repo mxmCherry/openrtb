@@ -6,6 +6,6 @@ func Int8Ptr(n int8) *int8 {
 }
 
 // Uint64Ptr returns pointer to passed argument.
-func Uint64Ptr(n uint64) *uint64 {
+func Uint64Ptr(n int) *int {
 	return &n
 }

@@ -48,7 +48,7 @@ type Geo struct {
 	//   services (i.e., type = 1). Note that this is the accuracy as
 	//   reported from the device. Consult OS specific documentation
 	//   (e.g., Android, iOS) for exact interpretation.
-	Accuracy uint64 `json:"accuracy,omitempty"`
+	Accuracy int `json:"accuracy,omitempty"`
 
 	// Attribute:
 	//   lastfix

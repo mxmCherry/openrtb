@@ -123,7 +123,7 @@ type Device struct {
 	//   integer
 	// Description:
 	//   Physical height of the screen in pixels.
-	H uint64 `json:"h,omitempty"`
+	H int `json:"h,omitempty"`
 
 	// Attribute:
 	//   w
@@ -131,7 +131,7 @@ type Device struct {
 	//   integer
 	// Description:
 	//   Physical width of the screen in pixels.
-	W uint64 `json:"w,omitempty"`
+	W int `json:"w,omitempty"`
 
 	// Attribute:
 	//   ppi
@@ -139,7 +139,7 @@ type Device struct {
 	//   integer
 	// Description:
 	//   Screen size as pixels per linear inch.
-	PPI uint64 `json:"ppi,omitempty"`
+	PPI int `json:"ppi,omitempty"`
 
 	// Attribute:
 	//   pxratio
