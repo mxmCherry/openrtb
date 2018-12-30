@@ -44,7 +44,7 @@ type Image struct {
 	//   Width of the image in pixels.
 	//   Recommended for embedded asset responses.
 	//   Required for assetsurl/dcourlresponses if multiple assets of same type submitted.
-	W int `json:"w,omitempty"`
+	W int64 `json:"w,omitempty"`
 
 	// Field:
 	//   h
@@ -56,7 +56,7 @@ type Image struct {
 	//   Height of the image in pixels.
 	//   Recommended for embedded asset responses.
 	//   Required for assetsurl/dcourl responses if multiple assets of same type submitted.
-	H int `json:"h,omitempty"`
+	H int64 `json:"h,omitempty"`
 
 	// Field:
 	//   ext

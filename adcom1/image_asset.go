@@ -19,7 +19,7 @@ type ImageAsset struct {
 	//   integer; recommended
 	// Definition:
 	//   Width of the image asset in device independent pixels (DIPS).
-	W int `json:"w,omitempty"`
+	W int64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -27,7 +27,7 @@ type ImageAsset struct {
 	//   integer; recommended
 	// Definition:
 	//   Height of the image asset in device independent pixels (DIPS).
-	H int `json:"h,omitempty"`
+	H int64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   type

@@ -20,7 +20,7 @@ type Content struct {
 	//   integer
 	// Definition:
 	//   Episode number.
-	Episode int `json:"episode,omitempty"`
+	Episode int64 `json:"episode,omitempty"`
 
 	// Attribute:
 	//   title

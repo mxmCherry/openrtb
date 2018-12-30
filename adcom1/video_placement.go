@@ -116,7 +116,7 @@ type VideoPlacement struct {
 	//   integer
 	// Definition:
 	//   Width of the placement in units specified by unit.
-	W int `json:"w,omitempty"`
+	W int64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -124,7 +124,7 @@ type VideoPlacement struct {
 	//   integer
 	// Definition:
 	//   Height of the placement in units specified by unit.
-	H int `json:"h,omitempty"`
+	H int64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   unit
@@ -168,7 +168,7 @@ type VideoPlacement struct {
 	//   integer
 	// Definition:
 	//   Minimum bit rate of the creative in Kbps.
-	MinBitR int `json:"minbitr,omitempty"`
+	MinBitR int64 `json:"minbitr,omitempty"`
 
 	// Attribute:
 	//   maxbitr
@@ -176,7 +176,7 @@ type VideoPlacement struct {
 	//   integer
 	// Definition:
 	//   Maximum bit rate of the creative in Kbps.
-	MaxBitR int `json:"maxbitr,omitempty"`
+	MaxBitR int64 `json:"maxbitr,omitempty"`
 
 	// Attribute:
 	//   delivery
@@ -194,7 +194,7 @@ type VideoPlacement struct {
 	//   integer
 	// Definition:
 	//   The maximum number of ads that can be played in an ad pod.
-	MaxSeq int `json:"maxseq,omitempty"`
+	MaxSeq int64 `json:"maxseq,omitempty"`
 
 	// Attribute:
 	//   linear

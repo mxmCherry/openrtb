@@ -115,7 +115,7 @@ type Geo struct {
 	//   Local time as the number +/- of minutes from UTC.
 	// Dev note:
 	//   This field is kept as `int` to follow type choice for timezone offset in std. `time` package.
-	UTCOffset int `json:"utcoffset,omitempty"`
+	UTCOffset int64 `json:"utcoffset,omitempty"`
 
 	// Attribute:
 	//   ext

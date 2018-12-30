@@ -15,7 +15,7 @@ type Format struct {
 	//   integer
 	// Description:
 	//   Width in device independent pixels (DIPS).
-	W int `json:"w,omitempty"`
+	W int64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -23,7 +23,7 @@ type Format struct {
 	//   integer
 	// Description:
 	//   Height in device independent pixels (DIPS).
-	H int `json:"h,omitempty"`
+	H int64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   wratio
@@ -31,7 +31,7 @@ type Format struct {
 	//   integer
 	// Description:
 	//   Relative width when expressing size as a ratio
-	WRatio int `json:"wratio,omitempty"`
+	WRatio int64 `json:"wratio,omitempty"`
 
 	// Attribute:
 	//   hratio
@@ -39,7 +39,7 @@ type Format struct {
 	//   Integer
 	// Description:
 	//   Relative height when expressing size as a ratio.
-	HRatio int `json:"hratio,omitempty"`
+	HRatio int64 `json:"hratio,omitempty"`
 
 	// Attribute:
 	//   wmin
@@ -48,7 +48,7 @@ type Format struct {
 	// Description:
 	//   The minimum width in device independent pixels (DIPS) at
 	//   which the ad will be displayed the size is expressed as a ratio.
-	WMin int `json:"wmin,omitempty"`
+	WMin int64 `json:"wmin,omitempty"`
 
 	// Attribute:
 	//   ext
