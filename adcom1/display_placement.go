@@ -101,7 +101,7 @@ type DisplayPlacement struct {
 	// Definition:
 	//   Creative subtypes permitted.
 	//   Refer to List: Creative Subtypes - Display.
-	CType []CreativeSubtypeDisplay `json:"ctype,omitempty"`
+	CType []DisplayCreativeSubtype `json:"ctype,omitempty"`
 
 	// Attribute:
 	//   w

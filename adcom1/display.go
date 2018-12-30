@@ -31,7 +31,7 @@ type Display struct {
 	// Definition:
 	//   Subtype of display creative.
 	//   Refer to List: Creative Subtypes - Display.
-	CType CreativeSubtypeDisplay `json:"ctype,omitempty"`
+	CType DisplayCreativeSubtype `json:"ctype,omitempty"`
 
 	// Attribute:
 	//   w

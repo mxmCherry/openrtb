@@ -108,7 +108,7 @@ type VideoPlacement struct {
 	// Definition:
 	//   Creative subtypes permitted for this placement.
 	//   Refer to List: Creative Subtypes - Audio/Video.
-	CType []CreativeSubtypeAV `json:"ctype,omitempty"`
+	CType []MediaCreativeSubtype `json:"ctype,omitempty"`
 
 	// Attribute:
 	//   w

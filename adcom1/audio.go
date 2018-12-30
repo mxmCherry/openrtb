@@ -28,7 +28,7 @@ type Audio struct {
 	// Definition:
 	//   Subtype of audio creative.
 	//   Refer to List: Creative Subtypes - Audio/Video.
-	CType CreativeSubtypeAV `json:"ctype,omitempty"`
+	CType MediaCreativeSubtype `json:"ctype,omitempty"`
 
 	// Attribute:
 	//   dur

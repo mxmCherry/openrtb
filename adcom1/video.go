@@ -28,7 +28,7 @@ type Video struct {
 	// Definition:
 	//   Subtype of video creative.
 	//   Refer to List: Creative Subtypes - Audio/Video.
-	CType CreativeSubtypeAV `json:"ctype,omitempty"`
+	CType MediaCreativeSubtype `json:"ctype,omitempty"`
 
 	// Attribute:
 	//   dur
