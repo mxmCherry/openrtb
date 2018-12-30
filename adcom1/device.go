@@ -111,7 +111,7 @@ type Device struct {
 	//   integer
 	// Definition:
 	//   Screen size as pixels per linear inch.
-	PPI uint16 `json:"ppi,omitempty"`
+	PPI int `json:"ppi,omitempty"`
 
 	// Attribute:
 	//   pxratio
