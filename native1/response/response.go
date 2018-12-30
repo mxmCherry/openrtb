@@ -1,4 +1,4 @@
-// Package response provides OpenRTB Native 1.2 types
+// Package response provides OpenRTB Native 1.2 response types
 // (section "5 Native Ad Response Markup Details")
 //
 // https://iabtechlab.com/standards/openrtb-native/

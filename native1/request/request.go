@@ -1,4 +1,4 @@
-// Package request provides OpenRTB Native 1.2 types
+// Package request provides OpenRTB Native 1.2 request types
 // (section "4 Native Ad Request Markup Details")
 //
 // https://iabtechlab.com/standards/openrtb-native/

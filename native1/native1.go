@@ -1,4 +1,4 @@
-// Package native1 provides OpenRTB Native 1.2 types
+// Package native1 provides OpenRTB Native 1.2 enums
 // (section "7 Reference Lists/Enumerations")
 //
 // https://iabtechlab.com/standards/openrtb-native/
