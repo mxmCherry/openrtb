@@ -48,7 +48,7 @@ Master always contains latest code, so better use some package manager to vendor
 - Key types should be chosen according to OpenRTB specification (attribute types)
 - Numeric types:
 	- `int8` - short enums (with values <= 127), boolean-like attributes (like `BidRequest.test`)
-	- `int64` - every other integral type
+	- `int64` - other integral types
 	- `float64` - coordinates, prices etc.
 - Enums:
 	- all enums, described in section 5, must be typed with section name singularized (e.g., "5.2 Banner Ad Types" -> `type BannerAdType int8`)
