@@ -1,5 +1,7 @@
-// Package openrtb3 implements types for OpenRTB Specification v3.0
-// https://github.com/InteractiveAdvertisingBureau/openrtb/blob/master/OpenRTB%20v3.0%20FINAL.md
+// Package openrtb3 provides OpenRTB 3.0 types
+//
+// https://iabtechlab.com/standards/openrtb/
+// https://github.com/InteractiveAdvertisingBureau/openrtb
 package openrtb3
 
 // OpenRTB top-level object is the root for both request and response payloads.

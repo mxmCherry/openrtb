@@ -1,5 +1,7 @@
-// Package adcom1 implements types for AdCOM Specification v1.0
-// https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md
+// Package adcom1 provides AdCOM 1.0 types
+//
+// https://iabtechlab.com/standards/openmedia/
+// https://github.com/InteractiveAdvertisingBureau/AdCOM
 package adcom1
 
 /*
