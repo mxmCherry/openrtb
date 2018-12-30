@@ -1,0 +1,30 @@
+{
+  "placement": {
+    "tagid": "plc-ftr-123abc",
+    "secure": 1,
+    "display": {
+      "ctype": [
+        2,
+        3
+      ],
+      "displayfmt": [
+        {
+          "w": 320,
+          "h": 50
+        },
+        {
+          "w": 320,
+          "h": 250
+        }
+      ],
+      "event": [
+        {
+          "type": 1,
+          "method": [
+            1
+          ]
+        }
+      ]
+    }
+  }
+}
