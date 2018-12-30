@@ -30,8 +30,8 @@ type DisplayFormat struct {
 	//   Relative width of the creative when expressing size as a ratio.
 	//   Note that mixing absolute and relative sizes is not recommended.
 	// Dev note:
-	//   This is kept as `uint8` because ratio values are expected to be quite small (like 16:9).
-	WRatio uint8 `json:"wratio,omitempty"`
+	//   This is kept as `int8` because ratio values are expected to be quite small (like 16:9).
+	WRatio int8 `json:"wratio,omitempty"`
 
 	// Attribute:
 	//   hratio
@@ -41,8 +41,8 @@ type DisplayFormat struct {
 	//   Relative height of the creative when expressing size as a ratio.
 	//   Note that mixing absolute and relative sizes is not recommended.
 	// Dev note:
-	//   This is kept as `uint8` because ratio values are expected to be quite small (like 16:9).
-	HRatio uint8 `json:"hratio,omitempty"`
+	//   This is kept as `int8` because ratio values are expected to be quite small (like 16:9).
+	HRatio int8 `json:"hratio,omitempty"`
 
 	// Attribute:
 	//   expdir
