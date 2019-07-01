@@ -7,6 +7,14 @@
 - [adcom1](adcom1/) - [AdCOM](https://iabtechlab.com/standards/openmedia/) [1.0](https://github.com/InteractiveAdvertisingBureau/AdCOM)
 - [native1](native1/) - [OpenRTB Dynamic Native Ads API](https://iabtechlab.com/standards/openrtb-native/) [1.2](https://iabtechlab.com/wp-content/uploads/2016/07/OpenRTB-Native-Ads-Specification-Final-1.2.pdf)
 
+# Note
+
+This repository is a fork with changes in types.
+
+For example, in original package Imp.Bidfloor is `float64`, which is 0 by default after unmarshaling in case field is missing from bid request. For data science purposes we want to know was it actually 0 or missing, so we changed `float64` to `*float64`.
+
+Same can be done for other fields as well, if needed.
+
 **Requires Go 1.8+**
 
 Go 1.8+ is needed for proper `Ext json.RawMessage` marshaling: non-pointer `json.RawMessage` is marshaled as base64 string prior to Go 1.8.

@@ -99,7 +99,7 @@ type Device struct {
 	//   string
 	// Description:
 	//   Device operating system (e.g., “iOS”).
-	OS string `json:"os,omitempty"`
+	OS *string `json:"os,omitempty"`
 
 	// Attribute:
 	//   osv
@@ -107,7 +107,7 @@ type Device struct {
 	//   string
 	// Description:
 	//   Device operating system version (e.g., “3.1.2”).
-	OSV string `json:"osv,omitempty"`
+	OSV *string `json:"osv,omitempty"`
 
 	// Attribute:
 	//   hwv
@@ -189,7 +189,7 @@ type Device struct {
 	// Description:
 	//   Carrier or ISP (e.g., “VERIZON”) using exchange curated string
 	//   names which should be published to bidders a priori.
-	Carrier string `json:"carrier,omitempty"`
+	Carrier *string `json:"carrier,omitempty"`
 
 	// Attribute:
 	//   mccmnc

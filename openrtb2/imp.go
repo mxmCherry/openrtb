@@ -95,7 +95,7 @@ type Imp struct {
 	//   responsible for rendering ad (typically video or mobile). Used
 	//   by some ad servers to customize ad code by partner.
 	//   Recommended for video and/or apps.
-	DisplayManagerVer string `json:"displaymanagerver,omitempty"`
+	DisplayManagerVer *string `json:"displaymanagerver,omitempty"`
 
 	// Attribute:
 	//   instl
@@ -113,15 +113,15 @@ type Imp struct {
 	//   Identifier for specific ad placement or ad tag that was used to
 	//   initiate the auction. This can be useful for debugging of any
 	//   issues, or for optimization by the buyer.
-	TagID string `json:"tagid,omitempty"`
+	TagID *string `json:"tagid,omitempty"`
 
 	// Attribute:
 	//   bidfloor
 	// Type:
-	//   float; default 0
+	//   float
 	// Description:
 	//   Minimum bid for this impression expressed in CPM.
-	BidFloor float64 `json:"bidfloor,omitempty"`
+	BidFloor *float64 `json:"bidfloor,omitempty"`
 
 	// Attribute:
 	//   bidfloorcur
