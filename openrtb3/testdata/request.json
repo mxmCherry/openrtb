@@ -1,0 +1,58 @@
+{
+  "openrtb": {
+    "ver": "3.0",
+    "domainspec": "adcom",
+    "domainver": "1.0",
+    "request": {
+      "id": "0123456789ABCDEF",
+      "tmax": 150,
+      "at": 2,
+      "cur": [
+        "USD",
+        "EUR"
+      ],
+      "source": {
+        "tid": "FEDCBA9876543210",
+        "ts": 1541796182157,
+        "ds": "AE23865DF890100BECCD76579DD4769DBBA9812CEE8ED90BF",
+        "dsmap": "...",
+        "cert": "ads-cert.1.txt",
+        "pchain": "..."
+      },
+      "item": [
+        {
+          "id": "1",
+          "qty": 1,
+          "deal": [
+            {
+              "id": "1234",
+              "flr": 1.5
+            }
+          ],
+          "spec": {
+            "placement": {
+              "dummy": "dummy"
+            }
+          }
+        }
+      ],
+      "context": {
+        "site": {
+          "dummy": "dummy"
+        },
+        "user": {
+          "dummy": "dummy"
+        },
+        "device": {
+          "dummy": "dummy"
+        },
+        "regs": {
+          "dummy": "dummy"
+        },
+        "restrictions": {
+          "dummy": "dummy"
+        }
+      }
+    }
+  }
+}

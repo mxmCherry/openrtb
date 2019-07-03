@@ -1,0 +1,29 @@
+{
+  "ad": {
+    "id": "d0bcb39723af87c2bb00942afee5710e",
+    "adomain": [
+      "ford.com"
+    ],
+    "secure": 1,
+    "display": {
+      "mime": "image/jpeg",
+      "ctype": 3,
+      "w": 320,
+      "h": 50,
+      "banner": {
+        "img": "https://somebuyer.com/creative",
+        "link": {
+          "url": "https://somebuyer.com/click",
+          "urlfb": "https://somebuyer.com"
+        }
+      },
+      "event": [
+        {
+          "type": 1,
+          "method": 1,
+          "url": "https://somebuyer.com/pixel"
+        }
+      ]
+    }
+  }
+}

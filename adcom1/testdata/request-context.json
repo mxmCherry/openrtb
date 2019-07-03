@@ -1,0 +1,51 @@
+{
+  "regs": {},
+  "restrictions": {
+    "bcat": [
+      "IAB24",
+      "IAB25",
+      "IAB26"
+    ],
+    "cattax": 1,
+    "badv": [
+      "ford.com",
+      "buick.com"
+    ]
+  },
+  "site": {
+    "id": "1234",
+    "name": "Awesome Example Site",
+    "domain": "examplesitedomain.com",
+    "mobile": 1,
+    "pub": {
+      "id": "9876",
+      "name": "Example Publisher, Inc.",
+      "domain": "examplepubdomain.com"
+    }
+  },
+  "user": {
+    "id": "a0af45c77890045deec100acb8443baff57c",
+    "buyeruid": "fcd4282456238256034abcdef220d9aa5892",
+    "yob": 1990,
+    "gender": "F"
+  },
+  "device": {
+    "type": 4,
+    "ifa": "8846d6fa10008bceaaf322908dfcb221",
+    "ip": "1.2.3.4",
+    "ua": "...user agent string...",
+    "make": "Apple",
+    "model": "iPhone",
+    "hwv": "6s",
+    "os": 13,
+    "osv": "11.4.1",
+    "mccmnc": "310-005",
+    "geo": {
+      "type": 1,
+      "lat": 42.3601,
+      "lon": 71.0581,
+      "country": "USA",
+      "utcoffset": -300
+    }
+  }
+}
