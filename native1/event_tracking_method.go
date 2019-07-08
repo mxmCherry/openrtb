@@ -1,7 +1,7 @@
 package native1
 
 // 7.7 Event Tracking Methods Table
-type EventTrackingMethod int8
+type EventTrackingMethod int64
 
 const (
 	EventTrackingMethodImage EventTrackingMethod = 1 // Image-pixel tracking - URL provided will be inserted as a 1x1 pixel at the time of the event.
