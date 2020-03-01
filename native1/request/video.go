@@ -3,7 +3,7 @@ package request
 import (
 	"encoding/json"
 
-	"github.com/mxmCherry/openrtb/native1"
+	"github.com/mxmCherry/openrtb/v14/native1"
 )
 
 // 4.5 Video Object
