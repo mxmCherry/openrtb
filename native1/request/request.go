@@ -8,7 +8,7 @@ package request
 import (
 	"encoding/json"
 
-	"github.com/mxmCherry/openrtb/v14/native1"
+	"github.com/mxmCherry/openrtb/v15/native1"
 )
 
 // 4.1 Native Markup Request Object

@@ -1,8 +1,8 @@
-module github.com/mxmCherry/openrtb/v14
+module github.com/mxmCherry/openrtb/v15
 
-go 1.12
+go 1.16
 
 require (
-	github.com/onsi/ginkgo v1.8.0
-	github.com/onsi/gomega v1.5.0
+	github.com/onsi/ginkgo v1.16.1
+	github.com/onsi/gomega v1.11.0
 )
