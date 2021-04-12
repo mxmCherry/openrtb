@@ -18,7 +18,7 @@ type Asset struct {
 	//   int
 	// Description:
 	//   Optional if assetsurl/dcourl is being used; required if embedded asset is being used.
-	ID int64 `json:"id,omitempty"`
+	ID *int64 `json:"id,omitempty"`
 
 	// Field:
 	//   required
