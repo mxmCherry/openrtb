@@ -81,6 +81,8 @@ type User struct {
 	//   represents a different data source.
 	Data []Data `json:"data,omitempty"`
 
+	Eids []Eid `json:"eids,omitempty"`
+
 	// Attribute:
 	//   ext
 	// Type:
