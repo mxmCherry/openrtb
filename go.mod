@@ -1,4 +1,4 @@
-module github.com/mxmCherry/openrtb/v15
+module github.com/PubMatic-OpenWrap/openrtb/v15
 
 go 1.16
 
