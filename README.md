@@ -1,4 +1,4 @@
-# openrtb [![GoDoc](https://godoc.org/github.com/mxmCherry/openrtb?status.svg)](https://pkg.go.dev/github.com/mxmCherry/openrtb/v15) [![Build Status](https://travis-ci.org/mxmCherry/openrtb.svg?branch=master)](https://travis-ci.org/mxmCherry/openrtb)
+# openrtb [![Go Reference](https://pkg.go.dev/badge/github.com/mxmCherry/openrtb/v15.svg)](https://pkg.go.dev/github.com/mxmCherry/openrtb/v15) [![Build Status](https://travis-ci.org/mxmCherry/openrtb.svg?branch=master)](https://travis-ci.org/mxmCherry/openrtb)
 
 [OpenRTB](https://iabtechlab.com/standards/openrtb/), [AdCOM](https://iabtechlab.com/standards/openmedia) and [OpenRTB Dynamic Native Ads](https://iabtechlab.com/standards/openrtb-native/) types for [Go programming language](https://golang.org/)
 
