@@ -7,13 +7,9 @@
 - [adcom1](adcom1/) - [AdCOM](https://iabtechlab.com/standards/openmedia/) [1.0](https://github.com/InteractiveAdvertisingBureau/AdCOM)
 - [native1](native1/) - [OpenRTB Dynamic Native Ads API](https://iabtechlab.com/standards/openrtb-native/) [1.2](https://iabtechlab.com/wp-content/uploads/2016/07/OpenRTB-Native-Ads-Specification-Final-1.2.pdf)
 
-**Requires Go 1.8+**
+**Requires Go 1.11+**
 
-Go 1.8+ is needed for proper `Ext json.RawMessage` marshaling: non-pointer `json.RawMessage` is marshaled as base64 string prior to Go 1.8.
-
-This library uses `json.RawMessage` since [v10.0.0](https://github.com/mxmCherry/openrtb/releases/tag/v10.0.0).
-
-This library is tested with Go 1.9+ since [v12.0.0](https://github.com/mxmCherry/openrtb/releases/tag/v12.0.0).
+This library is switched to [Go modules](https://golang.org/ref/mod) ([tl;dr](https://blog.golang.org/using-go-modules)) as of [v14.0.0](https://github.com/mxmCherry/openrtb/releases/tag/v14.0.0), so it requires Go 1.11+ (older Go versions are not capable of using versioned paths).
 
 # Using
 
