@@ -1,4 +1,4 @@
-module github.com/mxmCherry/openrtb/v15
+module github.com/mxmCherry/openrtb/v16
 
 go 1.16
 
