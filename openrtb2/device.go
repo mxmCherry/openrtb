@@ -75,7 +75,7 @@ type Device struct {
 	//   the bid request, ‘sua’ should be considered the more accurate
 	//   representation of the device attributes. This is because the ‘ua’
 	//   may contain a frozen or reduced user agent string.
-	SUA UserAgent `json:"sua,omitempty"`
+	SUA *UserAgent `json:"sua,omitempty"`
 
 	// Attribute:
 	//   ip
