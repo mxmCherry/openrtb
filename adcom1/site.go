@@ -59,9 +59,11 @@ type Site struct {
 	// Attribute:
 	//   keywords
 	// Type:
-	//   string
+	//   string; DEPRECATED
 	// Definition:
-	//   Comma separated list of keywords about the site.
+	//   Comma-separated list of keywords about the app.
+	//   Only one of 'keywords' or 'kwarray' may be present.
+	//   NOTE: this field is deprecated, use 'kwarray' instead.
 	Keywords string `json:"keywords,omitempty"`
 
 	// Attribute:

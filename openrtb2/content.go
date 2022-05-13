@@ -173,7 +173,8 @@ type Content struct {
 	// Type:
 	//   string
 	// Description:
-	//   Comma separated list of keywords describing the content.
+	//   Comma separated list of keywords describing the content. Only
+	//   one of ‘keywords’ or ‘kwarray’ may be present.
 	Keywords string `json:"keywords,omitempty"`
 
 	// Attribute:

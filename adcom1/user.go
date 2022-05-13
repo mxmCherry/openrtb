@@ -43,9 +43,11 @@ type User struct {
 	// Attribute:
 	//   keywords
 	// Type:
-	//   string
+	//   string; DEPRECATED
 	// Definition:
-	//   Comma separated list of keywords, interests, or intent.
+	//   Comma-separated list of keywords, interests, or intent.
+	//   Only one of 'keywords' or 'kwarray' may be present.
+	//   NOTE: this field is deprecated, use 'kwarray' instead.
 	Keywords string `json:"keywords,omitempty"`
 
 	// Attribute:

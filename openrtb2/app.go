@@ -138,7 +138,8 @@ type App struct {
 	// Type:
 	//   string
 	// Description:
-	//   Comma separated list of keywords about the app.
+	//   Comma separated list of keywords about the app. Only one of
+	//   ‘keywords’ or ‘kwarray’ may be present.
 	Keywords string `json:"keywords,omitempty"`
 
 	// Attribute:

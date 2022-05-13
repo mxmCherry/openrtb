@@ -134,7 +134,8 @@ type Site struct {
 	// Type:
 	//   string
 	// Description:
-	//   Comma separated list of keywords about the site.
+	//   Comma separated list of keywords about the site. Only one of
+	//  ‘keywords’ or ‘kwarray’ may be present.
 	Keywords string `json:"keywords,omitempty"`
 
 	// Attribute:
