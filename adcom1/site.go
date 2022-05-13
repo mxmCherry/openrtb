@@ -65,6 +65,14 @@ type Site struct {
 	Keywords string `json:"keywords,omitempty"`
 
 	// Attribute:
+	//   kwarray
+	// Type:
+	//   string array
+	// Definition:
+	//   Array of keywords about the site. Only one of 'keywords' or 'kwarray' may be present.
+	KwArray []string `json:"kwarray,omitempty"`
+
+	// Attribute:
 	//   page
 	// Type:
 	//   string

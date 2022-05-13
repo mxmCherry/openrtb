@@ -31,7 +31,7 @@ type Video struct {
 	//   Minimum video ad duration in seconds. This field is mutually
 	//   exclusive with rqddurs; only one of minduration and rqddurs
 	//   may be in a bid request.
-	MinDuration *int64 `json:"minduration,omitempty"`
+	MinDuration int64 `json:"minduration,omitempty"`
 
 	// Attribute:
 	//   maxduration
@@ -41,7 +41,7 @@ type Video struct {
 	//  Maximum video ad duration in seconds. This field is mutually
 	//  exclusive with rqddurs; only one of maxduration and rqddurs
 	//  may be in a bid request.
-	MaxDuration *int64 `json:"maxduration,omitempty"`
+	MaxDuration int64 `json:"maxduration,omitempty"`
 
 	// Attribute:
 	//   startdelay

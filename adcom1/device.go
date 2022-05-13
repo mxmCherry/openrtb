@@ -24,6 +24,16 @@ type Device struct {
 	UA string `json:"ua,omitempty"`
 
 	// Attribute:
+	//   aua
+	// Type:
+	//   string
+	// Definition:
+	//   Structured user agent information defined by a Object: UserAgent.
+	//   If both `ua` and `sua` are present in the bid request, `sua` should be considered the more accurate representation of the device attributes.
+	//   This is because the `ua` may contain a frozen or reduced UserAgent string.
+	SUA *UserAgent `json:"sua,omitempty"`
+
+	// Attribute:
 	//   ifa
 	// Type:
 	//   string
@@ -136,6 +146,15 @@ type Device struct {
 	// Definition:
 	//   Browser language using ISO-639-1-alpha-2.
 	Lang string `json:"lang,omitempty"`
+
+	// Attribute:
+	//   langb
+	// Type:
+	//   string
+	// Definition:
+	//   Browser language using IETF BCP 47.
+	//   Only one of lang or langb should be present.
+	LangB string `json:"langb,omitempty"`
 
 	// Attribute:
 	//   ip

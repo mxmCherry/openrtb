@@ -159,6 +159,14 @@ type Content struct {
 	Keywords string `json:"keywords,omitempty"`
 
 	// Attribute:
+	//   kwarray
+	// Type:
+	//   string array
+	// Definition:
+	//   Array of keywords about the site. Only one of 'keywords' or 'kwarray' may be present.
+	KwArray []string `json:"kwarray,omitempty"`
+
+	// Attribute:
 	//   live
 	// Type:
 	//   integer
@@ -206,6 +214,24 @@ type Content struct {
 	//   Details about the content producer.
 	//   Refer to Object: Producer.
 	Producer *Producer `json:"producer,omitempty"`
+
+	// Attribute:
+	//   network
+	// Type:
+	//   object
+	// Definition:
+	//   Details about the network.
+	//   Refer to Object: Network.
+	Network *Network `json:"network,omitempty"`
+
+	// Attribute:
+	//   channel
+	// Type:
+	//   object
+	// Definition:
+	//   Details about the channel.
+	//   Refer to Object: Channel.
+	Channel *Channel `json:"channel,omitempty"`
 
 	// Attribute:
 	//   data

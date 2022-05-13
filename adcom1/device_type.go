@@ -13,4 +13,5 @@ const (
 	DeviceTablet    DeviceType = 5 // Tablet
 	DeviceConnected DeviceType = 6 // Connected Device
 	DeviceSetTopBox DeviceType = 7 // Set Top Box
+	DeviceOOH       DeviceType = 8 // OOH Device
 )
