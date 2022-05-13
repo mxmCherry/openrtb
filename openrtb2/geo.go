@@ -35,8 +35,8 @@ type Geo struct {
 	//   integer
 	// Description:
 	//   Source of location data; recommended when passing
-	//   lat/lon. Refer to List 5.20.
-	Type LocationType `json:"type,omitempty"`
+	//   lat/lon. Refer to List: Location Types in AdCOM 1.0.
+	Type int8 `json:"type,omitempty"`
 
 	// Attribute:
 	//   accuracy
@@ -67,8 +67,9 @@ type Geo struct {
 	//   integer
 	// Description:
 	//   Service or provider used to determine geolocation from IP
-	//   address if applicable (i.e., type = 2). Refer to List 5.23.
-	IPService IPLocationService `json:"ipservice,omitempty"`
+	//   address if applicable (i.e., type = 2). Refer to List: IP
+	//   Location Services in AdCOM 1.0.
+	IPService int8 `json:"ipservice,omitempty"`
 
 	// Attribute:
 	//   country

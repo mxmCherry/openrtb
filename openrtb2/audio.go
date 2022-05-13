@@ -25,7 +25,7 @@ type Audio struct {
 	// Attribute:
 	//   minduration
 	// Type:
-	//   integer; recommended
+	//   integer; default 0; recommended
 	// Description:
 	//   Minimum audio ad duration in seconds.
 	MinDuration int64 `json:"minduration,omitempty"`
@@ -39,12 +39,26 @@ type Audio struct {
 	MaxDuration int64 `json:"maxduration,omitempty"`
 
 	// Attribute:
+	//   poddur
+	// Type:
+	//   integer; recommended
+	// Description:
+	//   Indicates the total amount of time that advertisers may fill for a
+	//   "dynamic" audio ad pod, or the dynamic portion of a "hybrid"
+	//   ad pod. This field is required only for the dynamic portion(s) of
+	//   audio ad pods. This field refers to the length of the entire ad
+	//   break, whereas minduration/maxduration/rqddurs are
+	//   constraints relating to the slots that make up the pod.
+	PodDur int64 `json:"poddur,omitempty"`
+
+	// Attribute:
 	//   protocols
 	// Type:
 	//   integer array; recommended
 	// Description:
-	//   Array of supported audio protocols. Refer to List 5.8.
-	Protocols []Protocol `json:"protocols,omitempty"`
+	//   Array of supported audio protocols. Refer to List: Creative
+	//   Subtypes - Audio/Video in AdCOM 1.0.
+	Protocols []int8 `json:"protocols,omitempty"`
 
 	// Attribute:
 	//   startdelay
@@ -52,13 +66,49 @@ type Audio struct {
 	//   integer; recommended
 	// Description:
 	//   Indicates the start delay in seconds for pre-roll, mid-roll, or
-	//   post-roll ad placements. Refer to List 5.12.
-	StartDelay *StartDelay `json:"startdelay,omitempty"`
+	//   post-roll ad placements. Refer to List: Start Delay Modes in
+	//   AdCOM 1.0.
+	StartDelay *int8 `json:"startdelay,omitempty"`
+
+	// Attribute:
+	//   rqddurs
+	// Type:
+	//   integer array
+	// Description:
+	//   Precise acceptable durations for audio creatives in seconds. This
+	//   field specifically targets the live audio/radio use case where
+	//   non-exact ad durations would result in undesirable ‘dead air’.
+	//   This field is mutually exclusive with minduration and
+	//   maxduration; if rqddurs is specified, minduration and
+	//   maxduration must not be specified and vice versa.
+	RqdDurs []int64 `json:"rqddurs,omitempty"`
+
+	// Attribute:
+	//   podid
+	// Type:
+	//   integer
+	// Description:
+	//   Unique identifier indicating that an impression opportunity
+	//   belongs to an audioad pod. If multiple impression opportunities
+	//   within a bid request share the same podid, this indicates that
+	//   those impression opportunities belong to the same audio ad
+	//   pod.
+	PodID int64 `json:"podid,omitempty"`
+
+	// Attribute:
+	//   podid
+	// Type:
+	//   integer; default 0
+	// Description:
+	//   The sequence (position) of the audio ad pod within a
+	//   content stream. Refer to List: Pod Sequence in AdCOM 1.0
+	//   for guidance on the use of this field.
+	PodSeq int8 `json:"podseq,omitempty"`
 
 	// Attribute:
 	//   sequence
 	// Type:
-	//   integer
+	//   integer; default 0; DEPRECATED
 	// Description:
 	//   If multiple ad impressions are offered in the same bid request,
 	//   the sequence number will allow for the coordinated delivery
@@ -66,12 +116,34 @@ type Audio struct {
 	Sequence int64 `json:"sequence,omitempty"`
 
 	// Attribute:
+	//   slotinpod
+	// Type:
+	//   integer; default 0
+	// Description:
+	//   For audio ad pods, this value indicates that the seller can
+	//   guarantee delivery against the indicated sequence. Refer to
+	//   List: Slot Position in Pod in AdCOM 1.0 for guidance on the
+	//   use of this field.
+	SlotInPod *int8 `json:"slotinpod,omitempty"`
+
+	// Attribute:
+	//   mincpmpersec
+	// Type:
+	//   float
+	// Description:
+	//   Minimum CPM per second. This is a price floor for the
+	//   "dynamic" portion of an audio ad pod, relative to the duration
+	//   of bids an advertiser may submit.
+	MinCPMPerSec float64 `json:"mincpmpersec,omitempty"`
+
+	// Attribute:
 	//   battr
 	// Type:
 	//   integer array
 	// Description:
-	//   Blocked creative attributes. Refer to List 5.3.
-	BAttr []CreativeAttribute `json:"battr,omitempty"`
+	//   Blocked creative attributes. Refer to List: Creative Attributes in
+	//   AdCOM 1.0.
+	BAttr []int64 `json:"battr,omitempty"`
 
 	// Attribute:
 	//   maxextended
@@ -107,8 +179,9 @@ type Audio struct {
 	//   integer array
 	// Description:
 	//   Supported delivery methods (e.g., streaming, progressive). If
-	//   none specified, assume all are supported. Refer to List 5.15.
-	Delivery []ContentDeliveryMethod `json:"delivery,omitempty"`
+	//   none specified, assume all are supported. Refer to List: Delivery
+	//   Methods in AdCOM 1.0.
+	Delivery []int8 `json:"delivery,omitempty"`
 
 	// Attribute:
 	//   companionad
@@ -125,19 +198,19 @@ type Audio struct {
 	//   integer array
 	// Description:
 	//   List of supported API frameworks for this impression. Refer to
-	//   List 5.6. If an API is not explicitly listed, it is assumed not to be
-	//   supported.
-	API []APIFramework `json:"api,omitempty"`
+	//   List: API Frameworks in AdCOM 1.0. If an API is not explicitly
+	//   listed, it is assumed not to be supported.
+	API []int64 `json:"api,omitempty"`
 
 	// Attribute:
 	//   companiontype
 	// Type:
 	//   integer array
 	// Description:
-	//   Supported DAAST companion ad types. Refer to List 5.14.
-	//   Recommended if companion Banner objects are included via
-	//   the companionad array.
-	CompanionType []CompanionType `json:"companiontype,omitempty"`
+	//   Supported companion ad types. Refer to List: Companion
+	//   Types in AdCOM 1.0. Recommended if companion Banner
+	//   objects are included via the companionad array.
+	CompanionType []int8 `json:"companiontype,omitempty"`
 
 	// Attribute:
 	//   maxseq
@@ -145,8 +218,6 @@ type Audio struct {
 	//   integer
 	// Description:
 	//   The maximum number of ads that can be played in an ad pod.
-	//   OpenRTB API Specification Version 2.5 IAB Technology Lab
-	//   www.iab.com/openrtb Page 18
 	MaxSeq int64 `json:"maxseq,omitempty"`
 
 	// Attribute:
@@ -154,8 +225,8 @@ type Audio struct {
 	// Type:
 	//   integer
 	// Description:
-	//   Type of audio feed. Refer to List 5.16.
-	Feed FeedType `json:"feed,omitempty"`
+	//   Type of audio feed. Refer to List: Feed Types in AdCOM 1.0.
+	Feed int8 `json:"feed,omitempty"`
 
 	// Attribute:
 	//   stitched
@@ -171,8 +242,9 @@ type Audio struct {
 	// Type:
 	//   integer
 	// Description:
-	//   Volume normalization mode. Refer to List 5.17.
-	NVol *VolumeNormalizationMode `json:"nvol,omitempty"`
+	//   Volume normalization mode. Refer to List: Volume
+	//   Normalization Modes in AdCOM 1.0.
+	NVol int8 `json:"nvol,omitempty"`
 
 	// Attribute:
 	//   ext

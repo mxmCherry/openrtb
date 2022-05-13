@@ -2,7 +2,7 @@ package openrtb2
 
 import "encoding/json"
 
-// 4.2.1 Object: BidResponse
+// 4.3.17 Object: BidResponse
 //
 // This object is the top-level bid response object (i.e., the unnamed outer JSON object).
 // The id attribute is a reflection of the bid request ID for logging purposes.
@@ -63,8 +63,9 @@ type BidResponse struct {
 	// Type:
 	//   integer
 	// Description:
-	//   Reason for not bidding. Refer to List 5.24.
-	NBR *NoBidReasonCode `json:"nbr,omitempty"`
+	//   Reason for not bidding. Refer to List: No-Bid Reason Codes in
+	//   OpenRTB 3.0.
+	NBR *int64 `json:"nbr,omitempty"`
 
 	// Attribute:
 	//   ext

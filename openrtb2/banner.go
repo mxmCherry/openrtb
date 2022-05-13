@@ -42,73 +42,41 @@ type Banner struct {
 	H *int64 `json:"h,omitempty"`
 
 	// Attribute:
-	//   wmax
-	// Type:
-	//   integer; DEPRECATED
-	// Description:
-	//   NOTE: Deprecated in favor of the format array.
-	//   Maximum width in device independent pixels (DIPS).
-	WMax int64 `json:"wmax,omitempty"`
-
-	// Attribute:
-	//   hmax
-	// Type:
-	//   integer; DEPRECATED
-	// Description:
-	//   NOTE: Deprecated in favor of the format array.
-	//   Maximum height in device independent pixels (DIPS).
-	HMax int64 `json:"hmax,omitempty"`
-
-	// Attribute:
-	//   wmin
-	// Type:
-	//   integer; DEPRECATED
-	// Description:
-	//   NOTE: Deprecated in favor of the format array.
-	//   Minimum width in device independent pixels (DIPS).
-	WMin int64 `json:"wmin,omitempty"`
-
-	// Attribute:
-	//   hmin
-	// Type:
-	//   integer; DEPRECATED
-	// Description:
-	//   NOTE: Deprecated in favor of the format array.
-	//   Minimum height in device independent pixels (DIPS).
-	HMin int64 `json:"hmin,omitempty"`
-
-	// Attribute:
 	//   btype
 	// Type:
 	//   integer array
 	// Description:
-	//   Blocked banner ad types. Refer to List 5.2.
-	BType []BannerAdType `json:"btype,omitempty"`
+	//   Blocked banner ad types.
+	//   Values:
+	//   1 = XHTML Text Ad,
+	//   2 = XHTML Banner Ad,
+	//   3 = JavaScript Ad,
+	//   4 = iframe.
+	BType []int8 `json:"btype,omitempty"`
 
 	// Attribute:
 	//   battr
 	// Type:
 	//   integer array
 	// Description:
-	//   Blocked creative attributes. Refer to List 5.3.
-	BAttr []CreativeAttribute `json:"battr,omitempty"`
+	//   Blocked creative attributes. Refer to List: Creative Attributes in AdCOM 1.0.
+	BAttr []int64 `json:"battr,omitempty"`
 
 	// Attribute:
 	//   pos
 	// Type:
 	//   integer
 	// Description:
-	//   Ad position on screen. Refer to List 5.4.
-	Pos *AdPosition `json:"pos,omitempty"`
+	//   Ad position on screen. Refer to List: Placement Positions in AdCOM 1.0.
+	Pos *int8 `json:"pos,omitempty"`
 
 	// Attribute:
 	//   mimes
 	// Type:
 	//   string array
 	// Description:
-	//   Content MIME types supported. Popular MIME types may
-	//   include “application/x-shockwave-flash”,
-	//   “image/jpg”, and “image/gif”.
+	//   Content MIME types supported. Popular MIME types may include,
+	//   "image/jpeg" and "image/gif".
 	MIMEs []string `json:"mimes,omitempty"`
 
 	// Attribute:
@@ -125,18 +93,19 @@ type Banner struct {
 	// Type:
 	//   integer array
 	// Description:
-	//   Directions in which the banner may expand. Refer to List 5.5.
-	ExpDir []ExpandableDirection `json:"expdir,omitempty"`
+	//   Directions in which the banner may expand. Refer to List: Expandable
+	//   Directions in AdCOM 1.0.
+	ExpDir []int8 `json:"expdir,omitempty"`
 
 	// Attribute:
 	//   api
 	// Type:
 	//   integer array
 	// Description:
-	//   List of supported API frameworks for this impression. Refer to
-	//   List 5.6. If an API is not explicitly listed, it is assumed not to be
-	//   supported.
-	API []APIFramework `json:"api,omitempty"`
+	//   List of supported API frameworks for this impression. Refer to List: API
+	//   Frameworks in AdCOM 1.0. If an API is not explicitly listed, it is assumed
+	//   not to be supported.
+	API []int64 `json:"api,omitempty"`
 
 	// Attribute:
 	//   id

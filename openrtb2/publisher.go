@@ -25,12 +25,23 @@ type Publisher struct {
 	Name string `json:"name,omitempty"`
 
 	// Attribute:
+	//   cattax
+	// Type:
+	//   integer; default 1
+	// Description:
+	//   The taxonomy in use. Refer to the AdCOM list List: Category
+	//   Taxonomies for values.
+	CatTax int64 `json:"cattax,omitempty"`
+
+	// Attribute:
 	//   cat
 	// Type:
 	//   string array
 	// Description:
 	//   Array of IAB content categories that describe the publisher.
-	//   Refer to List 5.1.
+	//   The taxonomy to be used is defined by the cattax field. If no
+	//   cattax field is supplied IAB Content Category Taxonomy 1.0 is
+	//   assumed.
 	Cat []string `json:"cat,omitempty"`
 
 	// Attribute:

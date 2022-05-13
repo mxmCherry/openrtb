@@ -37,6 +37,17 @@ type Source struct {
 	PChain string `json:"pchain,omitempty"`
 
 	// Attribute:
+	//   schain
+	// Type:
+	//   object; recommended
+	// Description:
+	//   This object represents both the links in the supply chain as
+	//   well as an indicator whether or not the supply chain is
+	//   complete. Details via the SupplyChain object (section
+	//   3.2.25)
+	SChain struct `json:"schain,omitempty"`
+
+	// Attribute:
 	//   ext
 	// Type:
 	//   object

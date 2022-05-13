@@ -24,6 +24,17 @@ type Native struct {
 	//   string; required
 	// Description:
 	//   Request payload complying with the Native Ad Specification.
+	//   The root node of the payload, “native”, was dropped in the
+	//   Native Ad Specification 1.1.
+	//
+	//   For Native 1.0, this is a JSON-encoded string consisting of a
+	//   unnamed root object with a single subordinate object named
+	//   'native', which is the Native Markup Request object, section 4.1
+	//   of OpenRTB Native 1.0 specification.
+	//
+	//   For Native 1.1 and higher, this is a JSON-encoded string
+	//   consisting of an unnamed root object which is itself the Native
+	//   Markup Request Object, section 4.1 of OpenRTB Native 1.1+.
 	Request string `json:"request"`
 
 	// Attribute:
@@ -41,17 +52,18 @@ type Native struct {
 	//   integer array
 	// Description:
 	//   List of supported API frameworks for this impression. Refer to
-	//   List 5.6. If an API is not explicitly listed, it is assumed not to be
-	//   supported.
-	API []APIFramework `json:"api,omitempty"`
+	//   List: API Frameworks in AdCOM. If an API is not explicitly listed,
+	//   it is assumed not to be supported.
+	API []int64 `json:"api,omitempty"`
 
 	// Attribute:
 	//   sequence
 	// Type:
 	//   integer array
 	// Description:
-	//   Blocked creative attributes. Refer to List 5.3.
-	BAttr []CreativeAttribute `json:"battr,omitempty"`
+	//   Blocked creative attributes. Refer to List: Creative Attributes in
+	//   AdCOM.
+	BAttr []int64 `json:"battr,omitempty"`
 
 	// Attribute:
 	//   ext

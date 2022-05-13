@@ -34,11 +34,22 @@ type Site struct {
 	Domain string `json:"domain,omitempty"`
 
 	// Attribute:
+	//   cattax
+	// Type:
+	//   integer
+	// Description:
+	//   The taxonomy in use. Refer to the AdCOM list List: Category
+	//   Taxonomies for values. If no cattax field is supplied IAB Content
+	//   Category Taxonomy 1.0 is assumed.
+	CatTax int64 `json:"cattax,omitempty"`
+
+	// Attribute:
 	//   cat
 	// Type:
 	//   string array
 	// Description:
-	//   Array of IAB content categories of the site. Refer to List 5.1.
+	//   Array of IABTL content categories of the site.
+	//   The taxonomy to be used is defined by the cattax field.
 	Cat []string `json:"cat,omitempty"`
 
 	// Attribute:
@@ -46,8 +57,9 @@ type Site struct {
 	// Type:
 	//   string array
 	// Description:
-	//   Array of IAB content categories that describe the current
-	//   section of the site. Refer to List 5.1.
+	//   Array of IABTL content categories that describe the current
+	//   section of the site. The taxonomy to be used is defined by
+	//   the cattax field.
 	SectionCat []string `json:"sectioncat,omitempty"`
 
 	// Attribute:
@@ -55,8 +67,9 @@ type Site struct {
 	// Type:
 	//   string array
 	// Description:
-	//   Array of IAB content categories that describe the current page
-	//   or view of the site. Refer to List 5.1.
+	//   Array of IABTL content categories that describe the current
+	//   page or view of the site.
+	//   The taxonomy to be used is defined by the cattax field.
 	PageCat []string `json:"pagecat,omitempty"`
 
 	// Attribute:
@@ -123,6 +136,15 @@ type Site struct {
 	// Description:
 	//   Comma separated list of keywords about the site.
 	Keywords string `json:"keywords,omitempty"`
+
+	// Attribute:
+	//   kwarray
+	// Type:
+	//   string
+	// Description:
+	//   Array of keywords about the site. Only one of ‘keywords’ or
+	//   ‘kwarray’ may be present.
+	KwArray []string `json:"kwarray,omitempty"`
 
 	// Attribute:
 	//   ext

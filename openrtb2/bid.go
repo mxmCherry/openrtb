@@ -2,7 +2,7 @@ package openrtb2
 
 import "encoding/json"
 
-// 4.2.3 Object: Bid
+// 4.3.19 Object: Bid
 //
 // A SeatBid object contains one or more Bid objects, each of which relates to a specific impression in the bid request via the impid attribute and constitutes an offer to buy that impression for a given price.
 //
@@ -167,11 +167,22 @@ type Bid struct {
 	Tactic string `json:"tactic,omitempty"`
 
 	// Attribute:
+	//   cattax
+	// Type:
+	//   integer
+	// Description:
+	//   The taxonomy in use. Refer to the AdCOM 1.0 list List: Category
+	//   Taxonomies for values.
+	CatTax int64 `json:"cattax,omitempty"`
+
+	// Attribute:
 	//   cat
 	// Type:
 	//   string array
 	// Description:
-	//   IAB content categories of the creative. Refer to List 5.1.
+	//   IAB content categories of the creative. The taxonomy to be
+	//   used is defined by the cattax field. If no cattax field is supplied
+	//   IAB Content Category Taxonomy 1.0 is assumed.
 	Cat []string `json:"cat,omitempty"`
 
 	// Attribute:
@@ -179,16 +190,29 @@ type Bid struct {
 	// Type:
 	//   integer array
 	// Description:
-	//   Set of attributes describing the creative. Refer to List 5.3.
-	Attr []CreativeAttribute `json:"attr,omitempty"`
+	//   Set of attributes describing the creative. Refer to List: Creative
+	//   Attributes in AdCOM 1.0.
+	Attr []int64 `json:"attr,omitempty"`
+
+	// Attribute:
+	//   apis
+	// Type:
+	//   integer array
+	// Description:
+	//   List of supported APIs for the markup. If an API is not explicitly
+	//   listed, it is assumed to be unsupported. Refer to List: API
+	//   Frameworks in AdCOM 1.0.
+	APIs int64 `json:"apis,omitempty"`
 
 	// Attribute:
 	//   api
 	// Type:
-	//   integer
+	//   integer; DEPRECATED
 	// Description:
-	//   API required by the markup if applicable. Refer to List 5.6.
-	API APIFramework `json:"api,omitempty"`
+	//   NOTE: Deprecated in favor of the apis integer array.
+	//   API required by the markup if applicable. Refer to List: API
+	//   Frameworks in AdCOM 1.0.
+	API int64 `json:"api,omitempty"`
 
 	// Attribute:
 	//   protocol
@@ -196,26 +220,36 @@ type Bid struct {
 	//   integer
 	// Description:
 	//   Video response protocol of the markup if applicable. Refer to
-	//   List 5.8.
-	Protocol Protocol `json:"protocol,omitempty"`
+	//   List: Creative Subtypes - Audio/Video in AdCOM 1.0.
+	Protocol int8 `json:"protocol,omitempty"`
 
 	// Attribute:
 	//   qagmediarating
 	// Type:
 	//   integer
 	// Description:
-	//   Creative media rating per IQG guidelines. Refer to List 5.19.
-	QAGMediaRating IQGMediaRating `json:"qagmediarating,omitempty"`
+	//   Media rating per IQG guidelines. Refer to List: Media Ratings in
+	//  AdCOM 1.0.
+	QAGMediaRating int8 `json:"qagmediarating,omitempty"`
 
 	// Attribute:
 	//   language
 	// Type:
 	//   string
 	// Description:
-	//   Language of the creative using ISO-639-1-alpha-2. The nonstandard
-	//   code “xx” may also be used if the creative has no
+	//   Language of the creative using ISO-639-1-alpha-2. The nonstandard code “xx” may also be used if the creative has no
 	//   linguistic content (e.g., a banner with just a company logo).
+	//   Only one of language or langb should be present.
 	Language string `json:"language,omitempty"`
+
+	// Attribute:
+	//   langb
+	// Type:
+	//   string
+	// Description:
+	//   Language of the creative using IETF BCP 47. Only one of
+	//   language or langb should be present
+	LangB string `json:"langb,omitempty"`
 
 	// Attribute:
 	//   dealid
@@ -268,6 +302,39 @@ type Bid struct {
 	//   Advisory as to the number of seconds the bidder is willing to
 	//   wait between the auction and the actual impression.
 	Exp int64 `json:"exp,omitempty"`
+
+	// Attribute:
+	//   dur
+	// Type:
+	//   integer
+	// Description:
+	//   Duration of the video or audio creative in seconds.
+	Dur int64 `json:"dur,omitempty"`
+
+	// Attribute:
+	//   mtype
+	// Type:
+	//   integer
+	// Description:
+	//   Type of the creative markup so that it can properly be
+	//   associated with the right sub-object of the BidRequest.Imp.
+	//   Values:
+	//   1 = Banner
+	//   2 = Video
+	//   3 = Audio
+	//   4 = Native
+	MType int8 `json:"mtype,omitempty"`
+
+	// Attribute:
+	//   slotinpod
+	// Type:
+	//   integer
+	// Description:
+	//   Indicates that the bid response is only eligible for a specific
+	//   position within a video or audio ad pod (e.g. first position,
+	//   last position, or any). Refer to List: Slot Position in Pod in
+	//   AdCOM 1.0 for guidance on the use of this field.
+	SlotInPod *int8 `json:"slotinpod,omitempty"`
 
 	// Attribute:
 	//   ext

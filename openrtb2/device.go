@@ -18,14 +18,6 @@ import "encoding/json"
 type Device struct {
 
 	// Attribute:
-	//   ua
-	// Type:
-	//   string; recommended
-	// Description:
-	//   Browser user agent string.
-	UA string `json:"ua,omitempty"`
-
-	// Attribute:
 	//   geo
 	// Type:
 	//   object; recommended
@@ -54,6 +46,38 @@ type Device struct {
 	Lmt *int8 `json:"lmt,omitempty"`
 
 	// Attribute:
+	//   ua
+	// Type:
+	//   string
+	// Description:
+	//   Browser user agent string. This field represents a raw user
+	//   agent string from the browser. For backwards compatibility,
+	//   exchanges are recommended to always populate ‘ua’ with the
+	//   User-Agent string, when available from the end user’s device,
+	//   even if an alternative representation, such as the User-Agent
+	//   Client-Hints, is available and is used to populate ‘sua’. No
+	//   inferred or approximated user agents are expected in this field.
+	//   If a client supports User-Agent Client Hints, and ‘sua’ field is
+	//   present, bidders are recommended to rely on ‘sua’ for
+	//   detecting device type, browser type and version and other
+	//   purposes that rely on the user agent information, and ignore
+	//   ‘ua’ field. This is because the ‘ua’ may contain a frozen or
+	//   reduced user agent string.
+	UA string `json:"ua,omitempty"`
+
+	// Attribute:
+	//   sua
+	// Type:
+	//   object
+	// Description:
+	//   Structured user agent information defined by a UserAgent
+    //   object (see Section 3.2.29). If both ‘ua’ and ‘sua’ are present in
+    //   the bid request, ‘sua’ should be considered the more accurate
+    //   representation of the device attributes. This is because the ‘ua’
+    //   may contain a frozen or reduced user agent string.
+	SUA struct `json:"ua,omitempty"`
+
+	// Attribute:
 	//   ip
 	// Type:
 	//   string; recommended
@@ -74,8 +98,9 @@ type Device struct {
 	// Type:
 	//   integer
 	// Description:
-	//   The general type of device. Refer to List 5.21.
-	DeviceType DeviceType `json:"devicetype,omitempty"`
+	//   The general type of device. Refer to List: Device Types in
+    //   AdCOM 1.0.
+	DeviceType int8 `json:"devicetype,omitempty"`
 
 	// Attribute:
 	//   make
@@ -179,8 +204,18 @@ type Device struct {
 	// Type:
 	//   string
 	// Description:
-	//   Browser language using ISO-639-1-alpha-2.
+	//   Browser language using ISO-639-1-alpha-2. Only one of
+	//   language or langb should be present.
 	Language string `json:"language,omitempty"`
+
+	// Attribute:
+	//   langb
+	// Type:
+	//   string
+	// Description:
+	//   Content language using IETF BCP 47. Only one of language or
+	//   langb should be present.
+	LangB string `json:"langb,omitempty"`
 
 	// Attribute:
 	//   carrier
@@ -196,11 +231,16 @@ type Device struct {
 	// Type:
 	//   string
 	// Description:
-	//   Mobile carrier as the concatenated MCC-MNC code (e.g.,
-	//   “310-005” identifies Verizon Wireless CDMA in the USA).
+	//   Mobile carrier as the concatenated MCC-MNC code
+	//   (e.g., "310-005" identifies Verizon Wireless CDMA in the
+	//   USA).
 	//   Refer to https://en.wikipedia.org/wiki/Mobile_country_code
 	//   for further examples. Note that the dash between the MCC
-	//   and MNC parts is required to remove parsing ambiguity.
+	//   and MNC parts is required to remove parsing ambiguity. The
+	//   MCC-MNC values represent the SIM installed on the device
+	//   and do not change when a device is roaming. Roaming may
+	//   be inferred by a combination of the MCC-MNC, geo, IP and
+	//   other data signals.
 	MCCMNC string `json:"mccmnc,omitempty"`
 
 	// Attribute:
@@ -208,8 +248,9 @@ type Device struct {
 	// Type:
 	//   integer
 	// Description:
-	//   Network connection type. Refer to List 5.22.
-	ConnectionType *ConnectionType `json:"connectiontype,omitempty"`
+	//   Network connection type. Refer to List: Connection Types in
+    //   AdCOM 1.0.
+	ConnectionType int8 `json:"connectiontype,omitempty"`
 
 	// Attribute:
 	//   ifa
@@ -222,7 +263,7 @@ type Device struct {
 	// Attribute:
 	//   didsha1
 	// Type:
-	//   string
+	//   string; ; DEPRECATED
 	// Description:
 	//   Hardware device ID (e.g., IMEI); hashed via SHA1.
 	DIDSHA1 string `json:"didsha1,omitempty"`
@@ -230,7 +271,7 @@ type Device struct {
 	// Attribute:
 	//   didmd5
 	// Type:
-	//   string
+	//   string; DEPRECATED
 	// Description:
 	//  Hardware device ID (e.g., IMEI); hashed via MD5.
 	DIDMD5 string `json:"didmd5,omitempty"`
@@ -238,7 +279,7 @@ type Device struct {
 	// Attribute:
 	//   dpidsha1
 	// Type:
-	//   string
+	//   string; DEPRECATED
 	// Description:
 	//   Platform device ID (e.g., Android ID); hashed via SHA1.
 	DPIDSHA1 string `json:"dpidsha1,omitempty"`
@@ -246,7 +287,7 @@ type Device struct {
 	// Attribute:
 	//   dpidmd5
 	// Type:
-	//   string
+	//   string; DEPRECATED
 	// Description:
 	//   Platform device ID (e.g., Android ID); hashed via MD5.
 	DPIDMD5 string `json:"dpidmd5,omitempty"`
@@ -254,7 +295,7 @@ type Device struct {
 	// Attribute:
 	//   macsha1
 	// Type:
-	//   string
+	//   string; DEPRECATED
 	// Description:
 	//   MAC address of the device; hashed via SHA1.
 	MACSHA1 string `json:"macsha1,omitempty"`
@@ -262,7 +303,7 @@ type Device struct {
 	// Attribute:
 	//   macmd5
 	// Type:
-	//   string
+	//   string; DEPRECATED
 	// Description:
 	//   MAC address of the device; hashed via MD5.
 	MACMD5 string `json:"macmd5,omitempty"`
