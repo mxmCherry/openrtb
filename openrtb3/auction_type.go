@@ -9,5 +9,5 @@ const (
 	SecondPricePlus             = 2
 	DealPrice                   = 3 // the value passed in flr is the agreed upon deal price
 
-	// Values greater than 500 can be used for exchange-specific auction types.
+	// Values 500 and greater can be used for exchange-specific auction types.
 )

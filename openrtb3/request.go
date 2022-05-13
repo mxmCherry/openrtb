@@ -39,7 +39,7 @@ type Request struct {
 	//   integer; default 2
 	// Definition:
 	//   Auction type, where 1 = First Price, 2 = Second Price Plus.
-	//   Values greater than 500 can be used for exchange-specific auction types.
+	//   Values 500 and greater can be used for exchange-specific auction types.
 	AT AuctionType `json:"at,omitempty"`
 
 	// Attribute:

@@ -89,7 +89,7 @@ type User struct {
 	//   object array
 	// Definition:
 	//   Extended (third-party) identifiers for this user. Refer to Object: Extended Identifiers.
-	EIDs []EID `json:"eids,omitempty"`
+	EIDs []ExtendedIdentifier `json:"eids,omitempty"`
 
 	// Attribute:
 	//   ext

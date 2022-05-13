@@ -107,8 +107,8 @@ type User struct {
 	//   object array
 	// Description:
 	//   Details for support of a standard protocol for multiple third
-    //   party identity providers (Section 3.2.27)
-	EIDs []struct `json:"eids,omitempty"`
+	//   party identity providers (Section 3.2.27)
+	EIDs []EID `json:"eids,omitempty"`
 
 	// Attribute:
 	//   ext

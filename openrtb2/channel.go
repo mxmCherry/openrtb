@@ -17,7 +17,7 @@ type Channel struct {
 	//   string
 	// Description:
 	//   A unique identifier assigned by the publisher. This may not be
-	//  a unique identifier across all supply sources.
+	//   a unique identifier across all supply sources.
 	ID string `json:"id,omitempty"`
 
 	// Attribute:
@@ -25,7 +25,7 @@ type Channel struct {
 	// Type:
 	//   string
 	// Description:
-	//  Channel the content is on (e.g., a local channel like “WABC-TV").
+	//   Channel the content is on (e.g., a local channel like “WABC-TV").
 	Name string `json:"name,omitempty"`
 
 	// Attribute:

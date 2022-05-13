@@ -45,7 +45,7 @@ type Source struct {
 	//   well as an indicator whether or not the supply chain is
 	//   complete. Details via the SupplyChain object (section
 	//   3.2.25)
-	SChain struct `json:"schain,omitempty"`
+	SChain SupplyChain `json:"schain,omitempty"`
 
 	// Attribute:
 	//   ext

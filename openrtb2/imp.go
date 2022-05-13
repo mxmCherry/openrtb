@@ -183,9 +183,11 @@ type Imp struct {
 	// Description:
 	//   Indicates if server-side ad insertion (e.g., stitching an ad into an
 	//   audio or video stream) is in use and the impact of this on asset
-	//   and tracker retrieval, where 0 = status unknown, 1 = all client-
-	//   side (i.e., not server-side), 2 = assets stitched server-side but
-	//   tracking pixels fired client-side, 3 = all server-side.
+	//   and tracker retrieval, where
+	//   0 = status unknown,
+	//   1 = all client-side (i.e., not server-side),
+	//   2 = assets stitched server-side but tracking pixels fired client-side,
+	//   3 = all server-side.
 	SSAI int8 `json:"ssai,omitempty"`
 
 	// Attribute:

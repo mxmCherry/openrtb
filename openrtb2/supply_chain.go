@@ -30,7 +30,7 @@ type SupplyChain struct {
 	//   the owner of the site, app, or other medium. In an incomplete
 	//   supply chain, it represents the first known node. The last node
 	//   epresents the entity sending this bid request.
-	Nodes SupplyChainNode `json:"nodes"`
+	Nodes []SupplyChainNode `json:"nodes"`
 
 	// Attribute:
 	//   ver

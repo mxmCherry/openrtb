@@ -71,11 +71,11 @@ type Device struct {
 	//   object
 	// Description:
 	//   Structured user agent information defined by a UserAgent
-    //   object (see Section 3.2.29). If both ‘ua’ and ‘sua’ are present in
-    //   the bid request, ‘sua’ should be considered the more accurate
-    //   representation of the device attributes. This is because the ‘ua’
-    //   may contain a frozen or reduced user agent string.
-	SUA struct `json:"ua,omitempty"`
+	//   object (see Section 3.2.29). If both ‘ua’ and ‘sua’ are present in
+	//   the bid request, ‘sua’ should be considered the more accurate
+	//   representation of the device attributes. This is because the ‘ua’
+	//   may contain a frozen or reduced user agent string.
+	SUA UserAgent `json:"ua,omitempty"`
 
 	// Attribute:
 	//   ip
@@ -99,7 +99,7 @@ type Device struct {
 	//   integer
 	// Description:
 	//   The general type of device. Refer to List: Device Types in
-    //   AdCOM 1.0.
+	//   AdCOM 1.0.
 	DeviceType int8 `json:"devicetype,omitempty"`
 
 	// Attribute:
@@ -249,7 +249,7 @@ type Device struct {
 	//   integer
 	// Description:
 	//   Network connection type. Refer to List: Connection Types in
-    //   AdCOM 1.0.
+	//   AdCOM 1.0.
 	ConnectionType int8 `json:"connectiontype,omitempty"`
 
 	// Attribute:
@@ -263,7 +263,7 @@ type Device struct {
 	// Attribute:
 	//   didsha1
 	// Type:
-	//   string; ; DEPRECATED
+	//   string; DEPRECATED
 	// Description:
 	//   Hardware device ID (e.g., IMEI); hashed via SHA1.
 	DIDSHA1 string `json:"didsha1,omitempty"`

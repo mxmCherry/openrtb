@@ -68,7 +68,7 @@ type SupplyChainNode struct {
 	// Attribute:
 	//   hp
 	// Type:
-	//   integer; required
+	//   integer; default 1
 	// Description:
 	//   Indicates whether this node will be involved in the flow of
 	//   payment for the inventory. When set to 1, the advertising
@@ -80,7 +80,7 @@ type SupplyChainNode struct {
 	//   propagate this field onwards when constructing SupplyChain
 	//   objects in bid requests sent to a downstream advertising
 	//   system.
-	HP int8 `json:"hp"`
+	HP *int8 `json:"hp"`
 
 	// Attribute:
 	//   ext

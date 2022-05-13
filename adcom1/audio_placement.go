@@ -126,7 +126,7 @@ type AudioPlacement struct {
 	//   targets the Live TV use case where non-exact ad durations would result in undesirable
 	//   'dead air'. This field is mutually exclusive with mindur and maxdur; if rqddurs is
 	//   specified, mindur and maxdur must not be specified and vice versa.
-	RqdDurs []in64 `json:"rqddurs,omitempty"`
+	RqdDurs []int64 `json:"rqddurs,omitempty"`
 
 	// Attribute:
 	//   maxext

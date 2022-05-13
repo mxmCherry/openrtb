@@ -1,7 +1,7 @@
 package adcom1
 
 // APIFramework represents API frameworks either supported by a placement or required by an ad.
-type APIFramework int
+type APIFramework int64
 
 // API frameworks either supported by a placement or required by an ad.
 //
