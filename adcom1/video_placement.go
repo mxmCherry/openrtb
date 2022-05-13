@@ -236,7 +236,7 @@ type VideoPlacement struct {
 	//   integer; default 0
 	// Definition:
 	//   The sequence (position) of the video ad pod within a content stream.
-	//   Refer to List: List: Pod Sequence for guidance on the use of this field.
+	//   Refer to List: Pod Sequence for guidance on the use of this field.
 	PodSeq PodSequence `json:"podseq,omitempty"`
 
 	// Attribute:
@@ -246,7 +246,7 @@ type VideoPlacement struct {
 	// Definition:
 	//   For video ad pods, this value indicates that the seller can guarantee delivery
 	//   against the indicated slot position in the pod.
-	//   Refer to List: List: Slot Position in Pod for guidance on the use of this field.
+	//   Refer to List: Slot Position in Pod for guidance on the use of this field.
 	SlotInPod SlotPositionInPod `json:"slotinpod,omitempty"`
 
 	// Attribute:
