@@ -174,7 +174,7 @@ type Imp struct {
 	//   an extra life in a game, or get a sponsored ad-free music
 	//   session. The reward is typically distributed after the video ad is
 	//   completed.
-	Rwdd int8 `json:"secure,omitempty"`
+	Rwdd int8 `json:"rwdd,omitempty"`
 
 	// Attribute:
 	//   ssai

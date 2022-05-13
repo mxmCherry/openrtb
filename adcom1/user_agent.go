@@ -23,7 +23,7 @@ type UserAgent struct {
 	// Definition:
 	//   Refer to Object: BrandVersion that identifies the user agent’s execution platform / OS.
 	//   Implementers should send a brand derived from the Sec-CH-UA-Platform header, and version derived from the Sec-CH-UA-Platform-Version header.
-	Platform []BrandVersion `json:"platform,omitempty"`
+	Platform BrandVersion `json:"platform,omitempty"`
 
 	// Attribute:
 	//   mobile

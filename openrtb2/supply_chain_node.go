@@ -80,7 +80,7 @@ type SupplyChainNode struct {
 	//   propagate this field onwards when constructing SupplyChain
 	//   objects in bid requests sent to a downstream advertising
 	//   system.
-	HP *int8 `json:"hp"`
+	HP *int8 `json:"hp,omitempty"`
 
 	// Attribute:
 	//   ext

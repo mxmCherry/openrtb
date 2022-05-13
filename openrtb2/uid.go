@@ -9,12 +9,12 @@ import "encoding/json"
 type UID struct {
 
 	// Attribute:
-	//   source
+	//   id
 	// Type:
 	//   string
 	// Description:
 	//   The identifier for the user.
-	ID string `json:"source,omitempty"`
+	ID string `json:"id,omitempty"`
 
 	// Attribute:
 	//   atype
@@ -24,7 +24,7 @@ type UID struct {
 	//   Type of user agent the ID is from. It is highly recommended to set this, as
 	//   many DSPs separate app-native IDs from browser-based IDs and require a type
 	//   value for ID resolution. Refer to List: Agent Types in AdCOM 1.0
-	AType int64 `json:"uids,omitempty"`
+	AType int64 `json:"atype,omitempty"`
 
 	// Attribute:
 	//   ext

@@ -24,7 +24,7 @@ type Device struct {
 	UA string `json:"ua,omitempty"`
 
 	// Attribute:
-	//   aua
+	//   sua
 	// Type:
 	//   string
 	// Definition:
