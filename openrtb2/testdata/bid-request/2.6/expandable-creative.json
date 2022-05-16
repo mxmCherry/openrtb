@@ -1,0 +1,68 @@
+{
+  "id": "123456789316e6ede735f123ef6e32361bfc7b22",
+  "at": 2,
+  "cur": [
+    "USD"
+  ],
+  "imp": [
+    {
+      "id": "1",
+      "bidfloor": 0.03,
+      "iframebuster": [
+        "vendor1.com",
+        "vendor2.com"
+      ],
+      "banner": {
+        "h": 250,
+        "w": 300,
+        "pos": 0,
+        "battr": [
+          13
+        ],
+        "expdir": [
+          2,
+          4
+        ]
+      }
+    }
+  ],
+  "site": {
+    "id": "102855",
+    "cat": [
+      "IAB3-1"
+    ],
+    "domain": "www.foobar.com",
+    "page": "http://www.foobar.com/1234.html",
+    "publisher": {
+      "id": "8953",
+      "name": "foobar.com",
+      "cat": [
+        "IAB3-1"
+      ],
+      "domain": "foobar.com"
+    }
+  },
+  "user": {
+    "id": "55816b39711f9b5acf3b90e313ed29e51665623f",
+    "buyeruid": "545678765467876567898765678987654",
+    "data": [
+      {
+        "id": "12341318394918",
+        "name": "auto intenders"
+      },
+      {
+        "id": "1234131839491234",
+        "name": "auto enthusiasts"
+      },
+      {
+        "id": "23423424",
+        "name": "data-provider1-age",
+        "segment": [
+          {
+            "value": "30-40"
+          }
+        ]
+      }
+    ]
+  }
+}
