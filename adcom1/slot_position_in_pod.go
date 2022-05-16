@@ -1,9 +1,9 @@
 package adcom1
 
-// PodSequence identifies the slot position in pod field, for use in audio and video ad pods.
+// SlotPositionInPod identifies the slot position in pod field, for use in audio and video ad pods.
 type SlotPositionInPod int8
 
-// PodSequence options.
+// SlotPositionInPod options.
 const (
 	SlotPosLast        SlotPositionInPod = -1 // Last ad in the pod.
 	SlotPosAny         SlotPositionInPod = 0  // Any ad in the pod.
