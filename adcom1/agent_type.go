@@ -3,7 +3,7 @@ package adcom1
 // AgentType identifies the user agent types a user identifier is from.
 type AgentType int64
 
-// Agent types dewscribing where the user agent is from.
+// Agent types describing where the user agent is from.
 //
 // Values of 500+ hold vendor-specific codes.
 const (
