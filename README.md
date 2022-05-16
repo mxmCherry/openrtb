@@ -41,6 +41,7 @@ Master always contains latest code, so better use some package manager to vendor
 - [UpperCamelCase](http://en.wikipedia.org/wiki/CamelCase)
 - Capitalized abbreviations (e.g., `AT`, `COPPA`, `PMP` etc.)
 - Capitalized `ID` keys
+- Enum items with versions should include minor/patch zeros, i.e. "Foo 1.0" -> `Foo10` (and not just `Foo1`), "Foo 1.1" -> `Foo11` etc
 
 ## Types
 - Key types should be chosen according to OpenRTB specification (attribute types)
