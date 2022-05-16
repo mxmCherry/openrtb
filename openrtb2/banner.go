@@ -40,7 +40,43 @@ type Banner struct {
 	//   Exact height in device independent pixels (DIPS);
 	//   recommended if no format objects are specified.
 	H *int64 `json:"h,omitempty"`
+	
+	// Attribute:
+	//   wmax
+	// Type:
+	//   integer; DEPRECATED; REMOVED in OpenRTB 2.6
+	// Description:
+	//   NOTE: Deprecated in favor of the format array.
+	//   Maximum width in device independent pixels (DIPS).
+	WMax int64 `json:"wmax,omitempty"`
 
+	// Attribute:
+	//   hmax
+	// Type:
+	//   integer; DEPRECATED; REMOVED in OpenRTB 2.6
+	// Description:
+	//   NOTE: Deprecated in favor of the format array.
+	//   Maximum height in device independent pixels (DIPS).
+	HMax int64 `json:"hmax,omitempty"`
+
+	// Attribute:
+	//   wmin
+	// Type:
+	//   integer; DEPRECATED; REMOVED in OpenRTB 2.6
+	// Description:
+	//   NOTE: Deprecated in favor of the format array.
+	//   Minimum width in device independent pixels (DIPS).
+	WMin int64 `json:"wmin,omitempty"`
+
+	// Attribute:
+	//   hmin
+	// Type:
+	//   integer; DEPRECATED; REMOVED in OpenRTB 2.6
+	// Description:
+	//   NOTE: Deprecated in favor of the format array.
+	//   Minimum height in device independent pixels (DIPS).
+	HMin int64 `json:"hmin,omitempty"`
+	
 	// Attribute:
 	//   btype
 	// Type:
