@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/v16/adcom1"
+)
 
 // 3.2.6 Object: Banner
 //
@@ -76,19 +80,15 @@ type Banner struct {
 	//   NOTE: Deprecated in favor of the format array.
 	//   Minimum height in device independent pixels (DIPS).
 	HMin int64 `json:"hmin,omitempty"`
-	
+
 	// Attribute:
 	//   btype
 	// Type:
 	//   integer array
 	// Description:
 	//   Blocked banner ad types.
-	//   Values:
-	//   1 = XHTML Text Ad,
-	//   2 = XHTML Banner Ad,
-	//   3 = JavaScript Ad,
-	//   4 = iframe.
-	BType []int8 `json:"btype,omitempty"`
+	//   Refer to BannerAdType constants.
+	BType []BannerAdType `json:"btype,omitempty"`
 
 	// Attribute:
 	//   battr
@@ -96,7 +96,9 @@ type Banner struct {
 	//   integer array
 	// Description:
 	//   Blocked creative attributes. Refer to List: Creative Attributes in AdCOM 1.0.
-	BAttr []int64 `json:"battr,omitempty"`
+	// Note:
+	//   OpenRTB <=2.5 defined only attributes with IDs 1..17.
+	BAttr []adcom1.CreativeAttribute `json:"battr,omitempty"`
 
 	// Attribute:
 	//   pos
@@ -104,7 +106,7 @@ type Banner struct {
 	//   integer
 	// Description:
 	//   Ad position on screen. Refer to List: Placement Positions in AdCOM 1.0.
-	Pos *int8 `json:"pos,omitempty"`
+	Pos *adcom1.PlacementPosition `json:"pos,omitempty"`
 
 	// Attribute:
 	//   mimes
@@ -131,7 +133,9 @@ type Banner struct {
 	// Description:
 	//   Directions in which the banner may expand. Refer to List: Expandable
 	//   Directions in AdCOM 1.0.
-	ExpDir []int8 `json:"expdir,omitempty"`
+	// Note:
+	//   OpenRTB <=2.5 defined only directions 1..5.
+	ExpDir []adcom1.ExpandableDirection `json:"expdir,omitempty"`
 
 	// Attribute:
 	//   api
@@ -141,7 +145,9 @@ type Banner struct {
 	//   List of supported API frameworks for this impression. Refer to List: API
 	//   Frameworks in AdCOM 1.0. If an API is not explicitly listed, it is assumed
 	//   not to be supported.
-	API []int64 `json:"api,omitempty"`
+	// Note:
+	//   OpenRTB <=2.5 defined only frameworks 1..6.
+	API []adcom1.APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   id

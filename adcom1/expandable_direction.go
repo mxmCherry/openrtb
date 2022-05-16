@@ -10,5 +10,5 @@ const (
 	ExpandableUp         ExpandableDirection = 3 // Up
 	ExpandableDown       ExpandableDirection = 4 // Down
 	ExpandableFullScreen ExpandableDirection = 5 // Full Screen
-	ExpandableSmaller    ExpandableDirection = 6 // Resize/Minimize (make smaller)
+	ExpandableResize     ExpandableDirection = 6 // Resize/Minimize (make smaller)
 )
