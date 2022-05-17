@@ -136,7 +136,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   Production quality. Refer to List: Production Qualities in AdCOM 1.0.
-	ProdQ int8 `json:"prodq,omitempty"`
+	ProdQ adcom1.ProductionQuality `json:"prodq,omitempty"`
 
 	// Attribute:
 	//   context
@@ -145,7 +145,7 @@ type Content struct {
 	// Description:
 	//   Type of content (game, video, text, etc.). Refer to List: Content
 	//   Contexts in AdCOM 1.0.
-	Context int8 `json:"context,omitempty"`
+	Context adcom1.ContentContext `json:"context,omitempty"`
 
 	// Attribute:
 	//   contentrating
@@ -170,7 +170,7 @@ type Content struct {
 	// Description:
 	//   Media rating per IQG guidelines. Refer to List: Media Ratings in
 	//   AdCOM 1.0.
-	QAGMediaRating int8 `json:"qagmediarating,omitempty"`
+	QAGMediaRating adcom1.MediaRating `json:"qagmediarating,omitempty"`
 
 	// Attribute:
 	//   keywords
