@@ -58,7 +58,9 @@ type Native struct {
 	//   List of supported API frameworks for this impression. Refer to
 	//   List: API Frameworks in AdCOM. If an API is not explicitly listed,
 	//   it is assumed not to be supported.
-	API []int64 `json:"api,omitempty"`
+	// Note:
+	//   OpenRTB <=2.5 defined only frameworks 1..6.
+	API []adcom1.APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   sequence

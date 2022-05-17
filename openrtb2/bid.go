@@ -208,7 +208,7 @@ type Bid struct {
 	//   List of supported APIs for the markup. If an API is not explicitly
 	//   listed, it is assumed to be unsupported. Refer to List: API
 	//   Frameworks in AdCOM 1.0.
-	APIs int64 `json:"apis,omitempty"`
+	APIs []adcom1.APIFramework `json:"apis,omitempty"`
 
 	// Attribute:
 	//   api
@@ -218,7 +218,9 @@ type Bid struct {
 	//   NOTE: Deprecated in favor of the apis integer array.
 	//   API required by the markup if applicable. Refer to List: API
 	//   Frameworks in AdCOM 1.0.
-	API int64 `json:"api,omitempty"`
+	// Note:
+	//   OpenRTB <=2.5 defined only frameworks 1..6.
+	API adcom1.APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   protocol
