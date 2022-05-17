@@ -225,7 +225,7 @@ type Bid struct {
 	// Description:
 	//   Video response protocol of the markup if applicable. Refer to
 	//   List: Creative Subtypes - Audio/Video in AdCOM 1.0.
-	Protocol int8 `json:"protocol,omitempty"`
+	Protocol adcom1.MediaCreativeSubtype `json:"protocol,omitempty"`
 
 	// Attribute:
 	//   qagmediarating
