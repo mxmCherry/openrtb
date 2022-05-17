@@ -298,7 +298,9 @@ type Video struct {
 	//   future version of the specification. It is strongly advised to use
 	//   only the first element of this array in preparation for this
 	//   change.
-	PlaybackMethod []int8 `json:"playbackmethod,omitempty"`
+	// Note:
+	//   OpenRTB <=2.5 defined only methods 1..6.
+	PlaybackMethod []adcom1.PlaybackMethod `json:"playbackmethod,omitempty"`
 
 	// Attribute:
 	//   playbackend
