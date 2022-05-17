@@ -196,7 +196,7 @@ type Bid struct {
 	// Description:
 	//   Set of attributes describing the creative. Refer to List: Creative
 	//   Attributes in AdCOM 1.0.
-	Attr []int64 `json:"attr,omitempty"`
+	Attr []adcom1.CreativeAttribute `json:"attr,omitempty"`
 
 	// Attribute:
 	//   apis
