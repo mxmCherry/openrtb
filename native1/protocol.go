@@ -1,6 +1,6 @@
 package native1
 
-// 5.8 Protocols (from AdCOM spec 1.0)
+// Protocols (from AdCOM spec 1.0, List: Creative Subtypes - Audio/Video)
 //
 // Options for the various bid response protocols that could be supported by an exchange.
 //

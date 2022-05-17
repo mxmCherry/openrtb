@@ -89,7 +89,22 @@ type Video struct {
 	// Definition:
 	//   Array of supported video protocols. Refer to List: Creative
 	//   Subtypes - Audio/Video in AdCOM 1.0.
-	Protocols []int8 `json:"protocols,omitempty"`
+	// Note:
+	//   OpenRTB <=2.5 defined only protocols 1..10.
+	Protocols []adcom1.MediaCreativeSubtype `json:"protocols,omitempty"`
+
+	// Attribute:
+	//   protocol
+	// Type:
+	//   integer; DEPRECATED; REMOVED in OpenRTB 2.6
+	// Description:
+	//   NOTE: Deprecated in favor of protocols.
+	//   Supported video protocol. Refer to List 5.8. At least one
+	//   supported protocol must be specified in either the protocol
+	//   or protocols attribute.
+	// Note:
+	//   OpenRTB <=2.5 defined only protocols 1..10.
+	Protocol adcom1.MediaCreativeSubtype `json:"protocol,omitempty"`
 
 	// Attribute:
 	//   w

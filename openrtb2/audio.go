@@ -62,7 +62,9 @@ type Audio struct {
 	// Description:
 	//   Array of supported audio protocols. Refer to List: Creative
 	//   Subtypes - Audio/Video in AdCOM 1.0.
-	Protocols []int8 `json:"protocols,omitempty"`
+	// Note:
+	//   OpenRTB <=2.5 defined only protocols 1..10.
+	Protocols []adcom1.MediaCreativeSubtype `json:"protocols,omitempty"`
 
 	// Attribute:
 	//   startdelay
