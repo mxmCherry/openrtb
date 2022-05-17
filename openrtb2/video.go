@@ -321,7 +321,7 @@ type Video struct {
 	//   Supported delivery methods (e.g., streaming, progressive). If
 	//   none specified, assume all are supported. Refer to List:
 	//   Delivery Methods in AdCOM 1.0.
-	Delivery []int8 `json:"delivery,omitempty"`
+	Delivery []adcom1.DeliveryMethod `json:"delivery,omitempty"`
 
 	// Attribute:
 	//   pos
