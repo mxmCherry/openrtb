@@ -19,7 +19,7 @@ const (
 	ProtocolDAAST10        Protocol = 9  // DAAST 1.0
 	ProtocolDAAST10Wrapper Protocol = 10 // DAAST 1.0 Wrapper
 	ProtocolVAST41         Protocol = 11 // VAST 4.1
-	ProtocolVAST41Wrapper  Protocol = 11 // VAST 4.1 Wrapper
-	ProtocolVAST42         Protocol = 11 // VAST 4.2
-	ProtocolVAST42Wrapper  Protocol = 11 // VAST 4.2 Wrapper
+	ProtocolVAST41Wrapper  Protocol = 12 // VAST 4.1 Wrapper
+	ProtocolVAST42         Protocol = 13 // VAST 4.2
+	ProtocolVAST42Wrapper  Protocol = 14 // VAST 4.2 Wrapper
 )
