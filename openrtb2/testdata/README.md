@@ -6,7 +6,7 @@ JSON examples copied from [OpenRTB](https://iabtechlab.com/standards/openrtb/) s
 
 Some empty/zero attributes were omited (not copied) because of [encoding/json](https://golang.org/pkg/encoding/json/) `omitempty` and [gomega.MatchJSON(...)](http://onsi.github.io/gomega/#matchjsonjson-interface).
 
-Sloppy examples (and types) is not something new for OpenRTB spec, so the following adjustments were made:
+For [2.6](https://iabtechlab.com/wp-content/uploads/2022/04/OpenRTB-2-6_FINAL.pdf) the following adjustments were applied:
 
 - [bid-request/2.6/simple-banner.json](bid-request/2.6/simple-banner.json) - spec example embedded `user` into `site`, moved `user` to top level
 - [bid-request/2.6/expandable-creative.json](bid-request/2.6/expandable-creative.json) - `data[2].value` added, moved to `data[2].segment[0].value`
