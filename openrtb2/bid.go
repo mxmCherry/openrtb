@@ -238,7 +238,7 @@ type Bid struct {
 	// Description:
 	//   Media rating per IQG guidelines. Refer to List: Media Ratings in
 	//  AdCOM 1.0.
-	QAGMediaRating int8 `json:"qagmediarating,omitempty"`
+	QAGMediaRating adcom1.MediaRating `json:"qagmediarating,omitempty"`
 
 	// Attribute:
 	//   language

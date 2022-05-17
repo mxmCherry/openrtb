@@ -2,7 +2,7 @@ package openrtb2
 
 import "encoding/json"
 
-// 4.3.17 Object: BidResponse
+// 4.3.1 Object: BidResponse
 //
 // This object is the top-level bid response object (i.e., the unnamed outer JSON object).
 // The id attribute is a reflection of the bid request ID for logging purposes.
