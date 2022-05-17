@@ -220,7 +220,7 @@ type Audio struct {
 	//   Supported companion ad types. Refer to List: Companion
 	//   Types in AdCOM 1.0. Recommended if companion Banner
 	//   objects are included via the companionad array.
-	CompanionType []int8 `json:"companiontype,omitempty"`
+	CompanionType []adcom1.CompanionType `json:"companiontype,omitempty"`
 
 	// Attribute:
 	//   maxseq
@@ -236,7 +236,7 @@ type Audio struct {
 	//   integer
 	// Description:
 	//   Type of audio feed. Refer to List: Feed Types in AdCOM 1.0.
-	Feed int8 `json:"feed,omitempty"`
+	Feed adcom1.FeedType `json:"feed,omitempty"`
 
 	// Attribute:
 	//   stitched
@@ -254,7 +254,7 @@ type Audio struct {
 	// Description:
 	//   Volume normalization mode. Refer to List: Volume
 	//   Normalization Modes in AdCOM 1.0.
-	NVol int8 `json:"nvol,omitempty"`
+	NVol adcom1.VolumeNormalizationMode `json:"nvol,omitempty"`
 
 	// Attribute:
 	//   ext
