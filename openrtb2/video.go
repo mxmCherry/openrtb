@@ -164,7 +164,7 @@ type Video struct {
 	// Description:
 	//   Video placement type for the impression. Refer to List:
 	//   Placement Subtypes - Video in AdCOM 1.0.
-	Placement int8 `json:"placement,omitempty"`
+	Placement adcom1.VideoPlacementSubtype `json:"placement,omitempty"`
 
 	// Attribute:
 	//   linearity
@@ -176,7 +176,7 @@ type Video struct {
 	//   Modes in AdCOM 1.0. Note that this field describes the
 	//   expected VAST response and not whether a placement is in-
 	//   stream, out-stream, etc. For that, see placement.
-	Linearity int8 `json:"linearity,omitempty"`
+	Linearity adcom1.LinearityMode `json:"linearity,omitempty"`
 
 	// Attribute:
 	//   skip
@@ -189,7 +189,7 @@ type Video struct {
 	//   Bid object should include the attr array with an element of
 	//   16 indicating skippable video. Refer to List: Creative
 	//   Attributes in AdCOM 1.0.
-	Skip *adcom1.CreativeAttribute `json:"skip,omitempty"`
+	Skip int8 `json:"skip,omitempty"`
 
 	// Attribute:
 	//   skipmin
@@ -330,7 +330,7 @@ type Video struct {
 	// Description:
 	//   Ad position on screen. Refer to List: Placement Positions in
 	//   AdCOM 1.0.
-	Pos int8 `json:"pos,omitempty"`
+	Pos adcom1.PlacementPosition `json:"pos,omitempty"`
 
 	// Attribute:
 	//   companionad
@@ -364,7 +364,7 @@ type Video struct {
 	//   companionad array. If one of these banners will be
 	//   rendered as an end-card, this can be specified using the vcm
 	//   attribute with the particular banner (Section 3.2.6).
-	CompanionType []int8 `json:"companiontype,omitempty"`
+	CompanionType []adcom1.CompanionType `json:"companiontype,omitempty"`
 
 	// Attribute:
 	//   ext
