@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/v16/adcom1"
+)
 
 // 3.2.28 Object: UID
 //
@@ -24,7 +28,7 @@ type UID struct {
 	//   Type of user agent the ID is from. It is highly recommended to set this, as
 	//   many DSPs separate app-native IDs from browser-based IDs and require a type
 	//   value for ID resolution. Refer to List: Agent Types in AdCOM 1.0
-	AType int64 `json:"atype,omitempty"`
+	AType adcom1.AgentType `json:"atype,omitempty"`
 
 	// Attribute:
 	//   ext
