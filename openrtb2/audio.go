@@ -149,7 +149,9 @@ type Audio struct {
 	// Description:
 	//   Blocked creative attributes. Refer to List: Creative Attributes in
 	//   AdCOM 1.0.
-	BAttr []int64 `json:"battr,omitempty"`
+	// Note:
+	//   OpenRTB <=2.5 defined only attributes with IDs 1..17.
+	BAttr []adcom1.CreativeAttribute `json:"battr,omitempty"`
 
 	// Attribute:
 	//   maxextended

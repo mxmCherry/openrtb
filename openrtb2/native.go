@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/v16/adcom1"
+)
 
 // 3.2.9 Object: Native
 //
@@ -63,7 +67,9 @@ type Native struct {
 	// Description:
 	//   Blocked creative attributes. Refer to List: Creative Attributes in
 	//   AdCOM.
-	BAttr []int64 `json:"battr,omitempty"`
+	// Note:
+	//   OpenRTB <=2.5 defined only attributes with IDs 1..17.
+	BAttr []adcom1.CreativeAttribute `json:"battr,omitempty"`
 
 	// Attribute:
 	//   ext
