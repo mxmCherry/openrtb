@@ -189,7 +189,7 @@ type Video struct {
 	//   Bid object should include the attr array with an element of
 	//   16 indicating skippable video. Refer to List: Creative
 	//   Attributes in AdCOM 1.0.
-	Skip int8 `json:"skip,omitempty"`
+	Skip *int8 `json:"skip,omitempty"`
 
 	// Attribute:
 	//   skipmin
