@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/v16/adcom1"
+)
 
 // 3.2.29 Object: UserAgent
 //
@@ -74,7 +78,7 @@ type UserAgent struct {
 	// Description:
 	//   The source of data used to create this object, List: User-Agent Source in
 	//   AdCOM 1.0.
-	Source int8 `json:"source,omitempty"`
+	Source adcom1.UserAgentSource `json:"source,omitempty"`
 
 	// Attribute:
 	//   ext
