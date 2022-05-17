@@ -6,7 +6,7 @@ import (
 	"github.com/mxmCherry/openrtb/v16/adcom1"
 )
 
-// 4.3.19 Object: Bid
+// 4.3.3 Object: Bid
 //
 // A SeatBid object contains one or more Bid objects, each of which relates to a specific impression in the bid request via the impid attribute and constitutes an offer to buy that impression for a given price.
 //
