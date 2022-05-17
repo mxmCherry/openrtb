@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/v16/adcom1"
+)
 
 // 3.2.18 Object: Device
 //
@@ -100,7 +104,9 @@ type Device struct {
 	// Description:
 	//   The general type of device. Refer to List: Device Types in
 	//   AdCOM 1.0.
-	DeviceType int8 `json:"devicetype,omitempty"`
+	// Note:
+	//   OpenRTB <=2.5 defined only types 1..7.
+	DeviceType adcom1.DeviceType `json:"devicetype,omitempty"`
 
 	// Attribute:
 	//   make
