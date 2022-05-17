@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/v16/openrtb3"
+)
 
 // 4.3.1 Object: BidResponse
 //
@@ -65,7 +69,9 @@ type BidResponse struct {
 	// Description:
 	//   Reason for not bidding. Refer to List: No-Bid Reason Codes in
 	//   OpenRTB 3.0.
-	NBR *int64 `json:"nbr,omitempty"`
+	// Note:
+	//   OpenRTB <=2.5 defined only reasons 0..10.
+	NBR *openrtb3.NoBidReason `json:"nbr,omitempty"`
 
 	// Attribute:
 	//   ext
