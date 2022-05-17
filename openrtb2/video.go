@@ -311,7 +311,7 @@ type Video struct {
 	// Description:
 	//   The event that causes playback to end. Refer to List: Playback
 	//   Cessation Modes in AdCOM 1.0.
-	PlaybackEnd int8 `json:"playbackend,omitempty"`
+	PlaybackEnd adcom1.PlaybackCessationMode `json:"playbackend,omitempty"`
 
 	// Attribute:
 	//   delivery
