@@ -10,3 +10,16 @@ const (
 	StartDelayGenericMidRoll  StartDelayMode = -1 // Generic Mid-Roll
 	StartDelayGenericPostRoll StartDelayMode = -2 // Generic Post-Roll
 )
+
+// Ptr returns pointer to own value.
+func (p StartDelayMode) Ptr() *StartDelayMode {
+	return &p
+}
+
+// Val safely dereferences pointer, returning default value (StartDelayPreRoll) for nil.
+func (p *StartDelayMode) Val() StartDelayMode {
+	if p == nil {
+		return StartDelayPreRoll
+	}
+	return *p
+}

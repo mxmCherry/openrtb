@@ -1,6 +1,8 @@
 package adcom1
 
-import "encoding/json"
+import (
+	"encoding/json"
+)
 
 // VideoPlacement object signals that the placement may be a video placement and provides additional detail about permitted video ads (e.g., VAST).
 type VideoPlacement struct {
@@ -29,7 +31,7 @@ type VideoPlacement struct {
 	// Definition:
 	//   Indicates the start delay in seconds for pre-roll, mid-roll, or post-roll placements.
 	//   For additional generic values, refer to List: Start Delay Modes.
-	Delay int64 `json:"delay,omitempty"`
+	Delay StartDelayMode `json:"delay,omitempty"`
 
 	// Attribute:
 	//   skip
