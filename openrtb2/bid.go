@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/v16/adcom1"
+)
 
 // 4.3.19 Object: Bid
 //
@@ -334,7 +338,7 @@ type Bid struct {
 	//   position within a video or audio ad pod (e.g. first position,
 	//   last position, or any). Refer to List: Slot Position in Pod in
 	//   AdCOM 1.0 for guidance on the use of this field.
-	SlotInPod *int8 `json:"slotinpod,omitempty"`
+	SlotInPod adcom1.SlotPositionInPod `json:"slotinpod,omitempty"`
 
 	// Attribute:
 	//   ext

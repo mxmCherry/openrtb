@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/v16/adcom1"
+)
 
 // 3.2.8 Object: Audio
 //
@@ -103,7 +107,7 @@ type Audio struct {
 	//   The sequence (position) of the audio ad pod within a
 	//   content stream. Refer to List: Pod Sequence in AdCOM 1.0
 	//   for guidance on the use of this field.
-	PodSeq int8 `json:"podseq,omitempty"`
+	PodSeq adcom1.PodSequence `json:"podseq,omitempty"`
 
 	// Attribute:
 	//   sequence
@@ -124,7 +128,7 @@ type Audio struct {
 	//   guarantee delivery against the indicated sequence. Refer to
 	//   List: Slot Position in Pod in AdCOM 1.0 for guidance on the
 	//   use of this field.
-	SlotInPod *int8 `json:"slotinpod,omitempty"`
+	SlotInPod adcom1.SlotPositionInPod `json:"slotinpod,omitempty"`
 
 	// Attribute:
 	//   mincpmpersec

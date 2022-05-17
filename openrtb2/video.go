@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/v16/adcom1"
+)
 
 // 3.2.7 Object: Video
 //
@@ -123,7 +127,7 @@ type Video struct {
 	//   The sequence (position) of the video ad pod within a
 	//  content stream. Refer to List: Pod Sequence in AdCOM 1.0
 	//  for guidance on the use of this field.
-	PodSeq int8 `json:"podseq,omitempty"`
+	PodSeq adcom1.PodSequence `json:"podseq,omitempty"`
 
 	// Attribute:
 	//   rqddurs
@@ -209,7 +213,7 @@ type Video struct {
 	//   guarantee delivery against the indicated slot position in the
 	//   pod. Refer to  List: Slot Position in Pod in AdCOM 1.0 guidance
 	//   on the use of this field.
-	SlotInPod *int8 `json:"slotinpod,omitempty"`
+	SlotInPod adcom1.SlotPositionInPod `json:"slotinpod,omitempty"`
 
 	// Attribute:
 	//   mincpmpersec
