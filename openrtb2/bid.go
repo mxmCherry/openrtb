@@ -177,7 +177,7 @@ type Bid struct {
 	// Description:
 	//   The taxonomy in use. Refer to the AdCOM 1.0 list List: Category
 	//   Taxonomies for values.
-	CatTax int64 `json:"cattax,omitempty"`
+	CatTax adcom1.CategoryTaxonomy `json:"cattax,omitempty"`
 
 	// Attribute:
 	//   cat

@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/v16/adcom1"
+)
 
 // 3.2.15 Object: Publisher
 //
@@ -31,7 +35,7 @@ type Publisher struct {
 	// Description:
 	//   The taxonomy in use. Refer to the AdCOM list List: Category
 	//   Taxonomies for values.
-	CatTax int64 `json:"cattax,omitempty"`
+	CatTax adcom1.CategoryTaxonomy `json:"cattax,omitempty"`
 
 	// Attribute:
 	//   cat

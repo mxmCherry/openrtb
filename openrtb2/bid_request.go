@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/v16/adcom1"
+)
 
 // 3.2.1 Object: BidRequest
 //
@@ -187,7 +191,7 @@ type BidRequest struct {
 	// Description:
 	//   The taxonomy in use for bcat. Refer to the AdCOM
 	//   1.0 list List: Category Taxonomies for values
-	CatTax int64 `json:"cattax,omitempty"`
+	CatTax adcom1.CategoryTaxonomy `json:"cattax,omitempty"`
 
 	// Attribute:
 	//   badv
