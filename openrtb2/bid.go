@@ -331,7 +331,7 @@ type Bid struct {
 	//   2 = Video
 	//   3 = Audio
 	//   4 = Native
-	MType int8 `json:"mtype,omitempty"`
+	MType MarkupType `json:"mtype,omitempty"`
 
 	// Attribute:
 	//   slotinpod
