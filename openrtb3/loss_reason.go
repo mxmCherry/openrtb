@@ -7,7 +7,7 @@ type LossReason int64
 
 // LossReason options.
 //
-// Values of 500+	are exchange specific values; should be communicated with buyers a priori.
+// Values 500+ are exchange specific values; should be communicated with buyers beforehand.
 const (
 	LossWon                     LossReason = 0   // Bid Won
 	LossInternalError           LossReason = 1   // Internal Error
@@ -31,11 +31,14 @@ const (
 	LossSizeNotAllowed          LossReason = 203 // Creative Filtered - Size Not Allowed
 	LossIncorrectFormat         LossReason = 204 // Creative Filtered - Incorrect Creative Format
 	LossAdvertiserExclusions    LossReason = 205 // Creative Filtered - Advertiser Exclusions
-	LossNotSecure               LossReason = 206 // Creative Filtered - Not Secure
-	LossLanguageExclusions      LossReason = 207 // Creative Filtered - Language Exclusions
-	LossCategoryExclusions      LossReason = 208 // Creative Filtered - Category Exclusions
-	LossAttributeExclusions     LossReason = 209 // Creative Filtered - Creative Attribute Exclusions
-	LossAdTypeExclusions        LossReason = 210 // Creative Filtered - Ad Type Exclusions
-	LossAnimationTooLong        LossReason = 211 // Creative Filtered - Animation Too Long
-	LossNotAllowedInDeal        LossReason = 212 // Creative Filtered - Not Allowed in Deal
+	LossAppStoreIDExclusions    LossReason = 206 // Creative Filtered - App Store ID Exclusions (ex App Bundle Exclusions in OpenRTB <=2.5)
+	LossNotSecure               LossReason = 207 // Creative Filtered - Not Secure
+	LossLanguageExclusions      LossReason = 208 // Creative Filtered - Language Exclusions
+	LossCategoryExclusions      LossReason = 209 // Creative Filtered - Category Exclusions
+	LossAttributeExclusions     LossReason = 210 // Creative Filtered - Creative Attribute Exclusions
+	LossAdTypeExclusions        LossReason = 211 // Creative Filtered - Ad Type Exclusions
+	LossAnimationTooLong        LossReason = 212 // Creative Filtered - Animation Too Long
+	LossNotAllowedInDeal        LossReason = 213 // Creative Filtered - Not Allowed in Deal
+	LossInvalidSKAdNetwork      LossReason = 214 // Creative Filtered - Invalid SKAdNetwork
+	LossAppBundleExclusions     LossReason = 215 // Creative Filtered - App Bundle Exclusions
 )
