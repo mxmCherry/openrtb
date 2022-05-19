@@ -136,7 +136,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   Production quality. Refer to List: Production Qualities in AdCOM 1.0.
-	ProdQ adcom1.ProductionQuality `json:"prodq,omitempty"`
+	ProdQ *adcom1.ProductionQuality `json:"prodq,omitempty"`
 
 	// Attribute:
 	//   context
