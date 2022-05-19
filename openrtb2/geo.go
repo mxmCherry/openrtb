@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/v16/adcom1"
+)
 
 // 3.2.19 Object: Geo
 //
@@ -36,7 +40,7 @@ type Geo struct {
 	// Description:
 	//   Source of location data; recommended when passing
 	//   lat/lon. Refer to List: Location Types in AdCOM 1.0.
-	Type int8 `json:"type,omitempty"`
+	Type adcom1.LocationType `json:"type,omitempty"`
 
 	// Attribute:
 	//   accuracy
@@ -69,7 +73,7 @@ type Geo struct {
 	//   Service or provider used to determine geolocation from IP
 	//   address if applicable (i.e., type = 2). Refer to List: IP
 	//   Location Services in AdCOM 1.0.
-	IPService int8 `json:"ipservice,omitempty"`
+	IPService adcom1.IPLocationService `json:"ipservice,omitempty"`
 
 	// Attribute:
 	//   country
