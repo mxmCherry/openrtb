@@ -55,7 +55,7 @@ type Video struct {
 	//   Indicates the start delay in seconds for pre-roll, mid-roll, or
 	//   post-roll ad placements. Refer to List: Start Delay Modes
 	//   in AdCOM 1.0.
-	StartDelay *adcom1.StartDelayMode `json:"startdelay,omitempty"`
+	StartDelay *adcom1.StartDelay `json:"startdelay,omitempty"`
 
 	// Attribute:
 	//   maxseq

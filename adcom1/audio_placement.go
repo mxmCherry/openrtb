@@ -11,7 +11,7 @@ type AudioPlacement struct {
 	// Definition:
 	//   Indicates the start delay in seconds for pre-roll, mid-roll, or post-roll placements.
 	//   For additional generic values, refer to List: Start Delay Modes.
-	Delay StartDelayMode `json:"delay,omitempty"`
+	Delay StartDelay `json:"delay,omitempty"`
 
 	// Attribute:
 	//   skip
