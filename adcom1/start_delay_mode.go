@@ -12,14 +12,14 @@ const (
 )
 
 // Ptr returns pointer to own value.
-func (p StartDelayMode) Ptr() *StartDelayMode {
-	return &p
+func (s StartDelayMode) Ptr() *StartDelayMode {
+	return &s
 }
 
 // Val safely dereferences pointer, returning default value (StartDelayPreRoll) for nil.
-func (p *StartDelayMode) Val() StartDelayMode {
-	if p == nil {
+func (s *StartDelayMode) Val() StartDelayMode {
+	if s == nil {
 		return StartDelayPreRoll
 	}
-	return *p
+	return *s
 }
