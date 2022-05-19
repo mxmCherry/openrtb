@@ -188,7 +188,7 @@ type Imp struct {
 	//   1 = all client-side (i.e., not server-side),
 	//   2 = assets stitched server-side but tracking pixels fired client-side,
 	//   3 = all server-side.
-	SSAI int8 `json:"ssai,omitempty"`
+	SSAI AdInsertion `json:"ssai,omitempty"`
 
 	// Attribute:
 	//   exp
