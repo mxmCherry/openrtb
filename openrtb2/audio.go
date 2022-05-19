@@ -254,7 +254,7 @@ type Audio struct {
 	// Description:
 	//   Volume normalization mode. Refer to List: Volume
 	//   Normalization Modes in AdCOM 1.0.
-	NVol adcom1.VolumeNormalizationMode `json:"nvol,omitempty"`
+	NVol *adcom1.VolumeNormalizationMode `json:"nvol,omitempty"`
 
 	// Attribute:
 	//   ext
