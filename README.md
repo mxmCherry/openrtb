@@ -68,7 +68,7 @@ Using both pointer and `omitempty` is mostly just to save traffic / generate mor
 ## Documentation ([pkg.go.dev](https://pkg.go.dev/github.com/mxmCherry/openrtb/v16))
 - [Godoc: documenting Go code](http://blog.golang.org/godoc-documenting-go-code)
 - Each entity (type, struct key or constant) should be documented
-- Comments for entities should be copy-pasted "as-is" from OpenRTB specification (except section 5 - replace "table" with "list" there; ideally, each sentence must be on a new line)
+- Ideally, copy-paste descriptions as-is, but feel free to omit section numbers, so just `<GoTypeName> defines <copy-pasted description from spec>`
 
 ## Code organization
 - Each RTB type should be kept in its own file, named after type
