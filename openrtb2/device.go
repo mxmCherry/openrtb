@@ -256,7 +256,9 @@ type Device struct {
 	// Description:
 	//   Network connection type. Refer to List: Connection Types in
 	//   AdCOM 1.0.
-	ConnectionType int8 `json:"connectiontype,omitempty"`
+	// Note:
+	//   OpenRTB <=2.5 defined only connection types 1..6.
+	ConnectionType adcom1.ConnectionType `json:"connectiontype,omitempty"`
 
 	// Attribute:
 	//   ifa
