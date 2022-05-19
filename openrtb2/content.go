@@ -139,6 +139,15 @@ type Content struct {
 	ProdQ *adcom1.ProductionQuality `json:"prodq,omitempty"`
 
 	// Attribute:
+	//   videoquality
+	// Type:
+	//   integer; DEPRECATED; REMOVED in OpenRTB 2.6
+	// Description:
+	//   Note: Deprecated in favor of prodq.
+	//   Video quality. Refer to List 5.13.
+	VideoQuality *adcom1.ProductionQuality `json:"videoquality,omitempty"`
+
+	// Attribute:
 	//   context
 	// Type:
 	//   integer
