@@ -27,7 +27,7 @@ type User struct {
 	// Attribute:
 	//   yob
 	// Type:
-	//   integer
+	//   integer; DEPRECATED
 	// Definition:
 	//   Year of birth as a 4-digit integer.
 	YOB int64 `json:"yob,omitempty"`
@@ -35,7 +35,7 @@ type User struct {
 	// Attribute:
 	//   gender
 	// Type:
-	//   string
+	//   string; DEPRECATED
 	// Definition:
 	//   Gender, where “M” = male, “F” = female, “O” = known to be other (i.e., omitted is unknown).
 	Gender string `json:"gender,omitempty"`
@@ -43,10 +43,20 @@ type User struct {
 	// Attribute:
 	//   keywords
 	// Type:
-	//   string
+	//   string; DEPRECATED
 	// Definition:
-	//   Comma separated list of keywords, interests, or intent.
+	//   Comma-separated list of keywords, interests, or intent.
+	//   Only one of 'keywords' or 'kwarray' may be present.
+	//   NOTE: this field is deprecated, use 'kwarray' instead.
 	Keywords string `json:"keywords,omitempty"`
+
+	// Attribute:
+	//   kwarray
+	// Type:
+	//   string array
+	// Definition:
+	//   Array of keywords about the site. Only one of 'keywords' or 'kwarray' may be present.
+	KwArray []string `json:"kwarray,omitempty"`
 
 	// Attribute:
 	//   consent
@@ -74,6 +84,14 @@ type User struct {
 	//   Each Data object represents a different data source.
 	//   Refer to Object: Data.
 	Data []Data `json:"data,omitempty"`
+
+	// Attribute:
+	//   eids
+	// Type:
+	//   object array
+	// Definition:
+	//   Extended (third-party) identifiers for this user. Refer to Object: Extended Identifiers.
+	EIDs []ExtendedIdentifier `json:"eids,omitempty"`
 
 	// Attribute:
 	//   ext

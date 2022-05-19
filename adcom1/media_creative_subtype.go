@@ -17,4 +17,6 @@ const (
 	CreativeDAAST10Wrapper MediaCreativeSubtype = 10 // DAAST 1.0 Wrapper
 	CreativeVAST41         MediaCreativeSubtype = 11 // VAST 4.1
 	CreativeVAST41Wrapper  MediaCreativeSubtype = 12 // VAST 4.1 Wrapper
+	CreativeVAST42         MediaCreativeSubtype = 13 // VAST 4.2
+	CreativeVAST42Wrapper  MediaCreativeSubtype = 14 // VAST 4.2 Wrapper
 )

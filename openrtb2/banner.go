@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/v16/adcom1"
+)
 
 // 3.2.6 Object: Banner
 //
@@ -44,7 +48,7 @@ type Banner struct {
 	// Attribute:
 	//   wmax
 	// Type:
-	//   integer; DEPRECATED
+	//   integer; DEPRECATED; REMOVED in OpenRTB 2.6
 	// Description:
 	//   NOTE: Deprecated in favor of the format array.
 	//   Maximum width in device independent pixels (DIPS).
@@ -53,7 +57,7 @@ type Banner struct {
 	// Attribute:
 	//   hmax
 	// Type:
-	//   integer; DEPRECATED
+	//   integer; DEPRECATED; REMOVED in OpenRTB 2.6
 	// Description:
 	//   NOTE: Deprecated in favor of the format array.
 	//   Maximum height in device independent pixels (DIPS).
@@ -62,7 +66,7 @@ type Banner struct {
 	// Attribute:
 	//   wmin
 	// Type:
-	//   integer; DEPRECATED
+	//   integer; DEPRECATED; REMOVED in OpenRTB 2.6
 	// Description:
 	//   NOTE: Deprecated in favor of the format array.
 	//   Minimum width in device independent pixels (DIPS).
@@ -71,7 +75,7 @@ type Banner struct {
 	// Attribute:
 	//   hmin
 	// Type:
-	//   integer; DEPRECATED
+	//   integer; DEPRECATED; REMOVED in OpenRTB 2.6
 	// Description:
 	//   NOTE: Deprecated in favor of the format array.
 	//   Minimum height in device independent pixels (DIPS).
@@ -82,7 +86,8 @@ type Banner struct {
 	// Type:
 	//   integer array
 	// Description:
-	//   Blocked banner ad types. Refer to List 5.2.
+	//   Blocked banner ad types.
+	//   Refer to BannerAdType constants.
 	BType []BannerAdType `json:"btype,omitempty"`
 
 	// Attribute:
@@ -90,25 +95,26 @@ type Banner struct {
 	// Type:
 	//   integer array
 	// Description:
-	//   Blocked creative attributes. Refer to List 5.3.
-	BAttr []CreativeAttribute `json:"battr,omitempty"`
+	//   Blocked creative attributes. Refer to List: Creative Attributes in AdCOM 1.0.
+	// Note:
+	//   OpenRTB <=2.5 defined only attributes with IDs 1..17.
+	BAttr []adcom1.CreativeAttribute `json:"battr,omitempty"`
 
 	// Attribute:
 	//   pos
 	// Type:
 	//   integer
 	// Description:
-	//   Ad position on screen. Refer to List 5.4.
-	Pos *AdPosition `json:"pos,omitempty"`
+	//   Ad position on screen. Refer to List: Placement Positions in AdCOM 1.0.
+	Pos *adcom1.PlacementPosition `json:"pos,omitempty"`
 
 	// Attribute:
 	//   mimes
 	// Type:
 	//   string array
 	// Description:
-	//   Content MIME types supported. Popular MIME types may
-	//   include “application/x-shockwave-flash”,
-	//   “image/jpg”, and “image/gif”.
+	//   Content MIME types supported. Popular MIME types may include,
+	//   "image/jpeg" and "image/gif".
 	MIMEs []string `json:"mimes,omitempty"`
 
 	// Attribute:
@@ -125,18 +131,23 @@ type Banner struct {
 	// Type:
 	//   integer array
 	// Description:
-	//   Directions in which the banner may expand. Refer to List 5.5.
-	ExpDir []ExpandableDirection `json:"expdir,omitempty"`
+	//   Directions in which the banner may expand. Refer to List: Expandable
+	//   Directions in AdCOM 1.0.
+	// Note:
+	//   OpenRTB <=2.5 defined only directions 1..5.
+	ExpDir []adcom1.ExpandableDirection `json:"expdir,omitempty"`
 
 	// Attribute:
 	//   api
 	// Type:
 	//   integer array
 	// Description:
-	//   List of supported API frameworks for this impression. Refer to
-	//   List 5.6. If an API is not explicitly listed, it is assumed not to be
-	//   supported.
-	API []APIFramework `json:"api,omitempty"`
+	//   List of supported API frameworks for this impression. Refer to List: API
+	//   Frameworks in AdCOM 1.0. If an API is not explicitly listed, it is assumed
+	//   not to be supported.
+	// Note:
+	//   OpenRTB <=2.5 defined only frameworks 1..6.
+	API []adcom1.APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   id

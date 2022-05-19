@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/v16/adcom1"
+)
 
 // 3.2.1 Object: BidRequest
 //
@@ -83,7 +87,7 @@ type BidRequest struct {
 	// Description:
 	//    Auction type, where 1 = First Price, 2 = Second Price Plus.
 	//    Exchange-specific auction types can be defined using values
-	//    greater than 500.
+	//    500 and greater.
 	AT int64 `json:"at,omitempty"`
 
 	// Attribute:
@@ -101,12 +105,12 @@ type BidRequest struct {
 	// Type:
 	//   string array
 	// Description:
-	//   White list of buyer seats (e.g., advertisers, agencies) allowed
-	//   to bid on this impression. IDs of seats and knowledge of the
-	//   buyer’s customers to which they refer must be coordinated
-	//   between bidders and the exchange a priori. At most, only one
-	//   of wseat and bseat should be used in the same request.
-	//   Omission of both implies no seat restrictions.
+	//   Allowed list of buyer seats (e.g., advertisers, agencies)
+	//   allowed to bid on this impression. IDs of seats and knowledge
+	//   of the buyer’s customers to which they refer must be
+	//   coordinated between bidders and the exchange a priori. At
+	//   most, only one of wseat and bseat should be used in the
+	//   same request. Omission of both implies no seat restrictions.
 	WSeat []string `json:"wseat,omitempty"`
 
 	// Attribute:
@@ -149,20 +153,45 @@ type BidRequest struct {
 	// Type:
 	//   string array
 	// Description:
-	//   White list of languages for creatives using ISO-639-1-alpha-2.
+	//   Allowed list of languages for creatives using ISO-639-1-alpha-2.
 	//   Omission implies no specific restrictions, but buyers would be
 	//   advised to consider language attribute in the Device and/or
-	//   Content objects if available.
+	//   Content objects if available. Only one of wlang or wlangb
+	//   should be present.
 	WLang []string `json:"wlang,omitempty"`
+
+	// Attribute:
+	//   wlangb
+	// Type:
+	//   string array
+	// Description:
+	//   Allowed list of languages for creatives using IETF BCP 47I.
+	//   Omission implies no specific restrictions, but buyers would be
+	//   advised to consider language attribute in the Device and/or
+	//   Content objects if available. Only one of wlang or wlangb
+	//   should be present.
+	WLangB []string `json:"wlangb,omitempty"`
 
 	// Attribute:
 	//   bcat
 	// Type:
 	//   string array
 	// Description:
-	//   Blocked advertiser categories using the IAB content
-	//   categories. Refer to List 5.1.
+	//   Blocked advertiser categories using the specified
+	//   category taxonomy.
+	//   The taxonomy to be used is defined by the cattax field. If no
+	//   cattax field is supplied IAB Content Category Taxonomy 1.0 is
+	//   assumed.
 	BCat []string `json:"bcat,omitempty"`
+
+	// Attribute:
+	//   cattax
+	// Type:
+	//   integer; default 1
+	// Description:
+	//   The taxonomy in use for bcat. Refer to the AdCOM
+	//   1.0 list List: Category Taxonomies for values
+	CatTax adcom1.CategoryTaxonomy `json:"cattax,omitempty"`
 
 	// Attribute:
 	//   badv
@@ -177,10 +206,12 @@ type BidRequest struct {
 	// Type:
 	//   string array
 	// Description:
-	//   Block list of applications by their platform-specific exchangeindependent
-	//   application identifiers. On Android, these should
-	//   be bundle or package names (e.g., com.foo.mygame). On iOS,
-	//   these are numeric IDs.
+	//   Block list of applications by their app store IDs. See OTT/CTV
+	//   Store Assigned App Identification Guidelines for more details
+	//   about expected strings for CTV app stores. For mobile apps in
+	//   Google Play Store, these should be bundle or package names
+	//   (e.g. com.foo.mygame). For apps in Apple App Store, these
+	//   should be a numeric ID.
 	BApp []string `json:"bapp,omitempty"`
 
 	// Attribute:

@@ -11,7 +11,7 @@ type AudioPlacement struct {
 	// Definition:
 	//   Indicates the start delay in seconds for pre-roll, mid-roll, or post-roll placements.
 	//   For additional generic values, refer to List: Start Delay Modes.
-	Delay int64 `json:"delay,omitempty"`
+	Delay StartDelay `json:"delay,omitempty"`
 
 	// Attribute:
 	//   skip
@@ -118,6 +118,17 @@ type AudioPlacement struct {
 	MaxDur int64 `json:"maxdur,omitempty"`
 
 	// Attribute:
+	//   rqddurs
+	// Type:
+	//   integer array
+	// Definition:
+	//   Precise acceptable durations for video creatives in seconds. This field specifically
+	//   targets the Live TV use case where non-exact ad durations would result in undesirable
+	//   'dead air'. This field is mutually exclusive with mindur and maxdur; if rqddurs is
+	//   specified, mindur and maxdur must not be specified and vice versa.
+	RqdDurs []int64 `json:"rqddurs,omitempty"`
+
+	// Attribute:
 	//   maxext
 	// Type:
 	//   integer
@@ -163,6 +174,57 @@ type AudioPlacement struct {
 	MaxSeq int64 `json:"maxseq,omitempty"`
 
 	// Attribute:
+	//   poddur
+	// Type:
+	//   integer
+	// Definition:
+	//   Indicates the total amount of time in seconds that advertisers may fill
+	//   for a “dynamic” video ad pod, or the dynamic portion of a “hybrid” ad pod.
+	//   This field is required only for the dynamic portion(s) of video ad pods.
+	//   This field refers to the length of the entire ad break, whereas
+	//   mindur/maxdur/rqddurs are constraints relating to the slots that make up the pod.
+	PodDur int64 `json:"poddur,omitempty"`
+
+	// Attribute:
+	//   podid
+	// Type:
+	//   integer
+	// Definition:
+	//   Unique identifier indicating that an impression opportunity belongs to a
+	//   video ad pod. If multiple impression opportunities within a bid request
+	//   share the same podid, this indicates that those impression opportunities
+	//   belong to the same video ad pod.
+	PodID int64 `json:"podid,omitempty"`
+
+	// Attribute:
+	//   podseq
+	// Type:
+	//   integer; default 0
+	// Definition:
+	//   The sequence (position) of the video ad pod within a content stream.
+	//   Refer to List: Pod Sequence for guidance on the use of this field.
+	PodSeq PodSequence `json:"podseq,omitempty"`
+
+	// Attribute:
+	//   slotinpod
+	// Type:
+	//   integer; default 0
+	// Definition:
+	//   For video ad pods, this value indicates that the seller can guarantee delivery
+	//   against the indicated slot position in the pod.
+	//   Refer to List: Slot Position in Pod for guidance on the use of this field.
+	SlotInPod SlotPositionInPod `json:"slotinpod,omitempty"`
+
+	// Attribute:
+	//   mincpmpersec
+	// Type:
+	//   float
+	// Definition:
+	//   Minimum CPM per second. This is a price floor for the “dynamic” portion of a
+	//   video ad pod, relative to the duration of bids an advertiser may submit.
+	MinCPMPerSec float64 `json:"mincpmpersec,omitempty"`
+
+	// Attribute:
 	//   comp
 	// Type:
 	//   object array
@@ -179,6 +241,16 @@ type AudioPlacement struct {
 	//   Supported companion ad types; recommended if companion ads are specified in comp.
 	//   Refer to List: Companion Types.
 	CompType []CompanionType `json:"comptype,omitempty"`
+
+	// Attribute:
+	//   overlayexpdir
+	// Type:
+	//   integer array
+	// Definition:
+	//   Directions in which the creative (video overlay) is permitted to expand.
+	//   This is primarily used for non-linear videos.
+	//   Refer to List: Expandable Directions.
+	OverlayExpDir []ExpandableDirection `json:"overlayexpdir,omitempty"`
 
 	// Attribute:
 	//   ext

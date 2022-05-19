@@ -11,4 +11,5 @@ const (
 	PlaybackMouseOverSoundOn PlaybackMethod = 4 // Initiates on Mouse-Over with Sound On
 	PlaybackViewportSoundOn  PlaybackMethod = 5 // Initiates on Entering Viewport with Sound On
 	PlaybackViewportSoundOff PlaybackMethod = 6 // Initiates on Entering Viewport with Sound Off by Default
+	PlaybackContinuous       PlaybackMethod = 7 // Continuous Playback - Media playback is set to play additional media automatically without user interaction. The media player will keep playing additional media (playlist or generated) for the user until the user actively stops this from happening.
 )

@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"path/filepath"
 
-	. "github.com/mxmCherry/openrtb/v15/openrtb2"
+	. "github.com/mxmCherry/openrtb/v16/openrtb2"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/ginkgo/extensions/table"
@@ -28,21 +28,40 @@ var _ = Describe("BidResponse", func() {
 			Expect(actual).To(MatchJSON(expected))
 		},
 
+		// 2.5
 		Entry(
-			"Ad Served on Win Notice",
-			"bid-response/ad-served-on-win-notice.json",
+			"2.5 Ad Served on Win Notice",
+			"bid-response/2.5/ad-served-on-win-notice.json",
 			new(BidResponse)),
 		Entry(
-			"VAST XML Document Returned Inline",
-			"bid-response/vast-xml-document-returned-inline.json",
+			"2.5 VAST XML Document Returned Inline",
+			"bid-response/2.5/vast-xml-document-returned-inline.json",
 			new(BidResponse)),
 		Entry(
-			"Direct Deal Ad Served on Win Notice",
-			"bid-response/direct-deal-ad-served-on-win-notice.json",
+			"2.5 Direct Deal Ad Served on Win Notice",
+			"bid-response/2.5/direct-deal-ad-served-on-win-notice.json",
 			new(BidResponse)),
 		Entry(
-			"Native Markup Returned Inline",
-			"bid-response/native-markup-returned-inline.json",
+			"2.5 Native Markup Returned Inline",
+			"bid-response/2.5/native-markup-returned-inline.json",
+			new(BidResponse)),
+
+		// 2.6
+		Entry(
+			"2.6 Ad Served on Win Notice",
+			"bid-response/2.6/ad-served-on-win-notice.json",
+			new(BidResponse)),
+		Entry(
+			"2.6 VAST XML Document Returned Inline",
+			"bid-response/2.6/vast-xml-document-returned-inline.json",
+			new(BidResponse)),
+		Entry(
+			"2.6 Direct Deal Ad Served on Win Notice",
+			"bid-response/2.6/direct-deal-ad-served-on-win-notice.json",
+			new(BidResponse)),
+		Entry(
+			"2.6 Native Markup Returned Inline",
+			"bid-response/2.6/native-markup-returned-inline.json",
 			new(BidResponse)),
 	)
 })

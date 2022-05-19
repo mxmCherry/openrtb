@@ -1,13 +1,11 @@
 package openrtb3
 
-// NoBidReason represents OpenRTB No-Bid Reason Code enumeration.
-//
-// It lists the options for a bidder to signal the exchange as to why it did not offer a bid for the item.
+// NoBidReason lists the options for a bidder to signal the exchange as to why it did not offer a bid for the item.
 type NoBidReason int64
 
 // NoBidReason options.
 //
-// Values of 500+ are exchange specific values; should be communicated with buyers a priori.
+// Values 500+ are exchange specific values; should be communicated with buyers beforehand.
 const (
 	NoBidUnknownError              NoBidReason = 0  // Unknown Error
 	NoBidTechnicalError            NoBidReason = 1  // Technical Error
@@ -25,4 +23,6 @@ const (
 	NoBidAuthenticationUnavailable NoBidReason = 13 // Ads.cert Authentication Unavailable
 	NoBidAuthenticationViolation   NoBidReason = 14 // Ads.cert Authentication Violation
 	NoBidInsufficientTime          NoBidReason = 15 // Insufficient Auction Time
+	NoBidIncompleteSupplyChain     NoBidReason = 16 // Incomplete SupplyChain
+	NoBidBlockedSupplyChainNode    NoBidReason = 17 // Blocked SupplyChain Node
 )

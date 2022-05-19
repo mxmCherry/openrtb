@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/v16/adcom1"
+)
 
 // 3.2.16 Object: Content
 //
@@ -107,12 +111,23 @@ type Content struct {
 	URL string `json:"url,omitempty"`
 
 	// Attribute:
+	//   cattax
+	// Type:
+	//   integer
+	// Description:
+	//   The taxonomy in use. Refer to the AdCOM list List: Category
+	//   Taxonomies for values.
+	CatTax adcom1.CategoryTaxonomy `json:"cattax,omitempty"`
+
+	// Attribute:
 	//   cat
 	// Type:
 	//   string array
 	// Description:
-	//   Array of IAB content categories that describe the content
-	//   producer. Refer to List 5.1.
+	//   Array of IAB content categories that describe the content.
+	//   The taxonomy to be used is defined by the cattax field. If no
+	//   cattax field is supplied IAB Content Category Taxonomy 1.0 is
+	//   assumed.
 	Cat []string `json:"cat,omitempty"`
 
 	// Attribute:
@@ -120,25 +135,26 @@ type Content struct {
 	// Type:
 	//   integer
 	// Description:
-	//   Production quality. Refer to List 5.13
-	ProdQ *ProductionQuality `json:"prodq,omitempty"`
+	//   Production quality. Refer to List: Production Qualities in AdCOM 1.0.
+	ProdQ *adcom1.ProductionQuality `json:"prodq,omitempty"`
 
 	// Attribute:
 	//   videoquality
 	// Type:
-	//   integer; DEPRECATED
+	//   integer; DEPRECATED; REMOVED in OpenRTB 2.6
 	// Description:
 	//   Note: Deprecated in favor of prodq.
 	//   Video quality. Refer to List 5.13.
-	VideoQuality *ProductionQuality `json:"videoquality,omitempty"`
+	VideoQuality *adcom1.ProductionQuality `json:"videoquality,omitempty"`
 
 	// Attribute:
 	//   context
 	// Type:
 	//   integer
 	// Description:
-	//   Type of content (game, video, text, etc.). Refer to List 5.18.
-	Context ContentContext `json:"context,omitempty"`
+	//   Type of content (game, video, text, etc.). Refer to List: Content
+	//   Contexts in AdCOM 1.0.
+	Context adcom1.ContentContext `json:"context,omitempty"`
 
 	// Attribute:
 	//   contentrating
@@ -161,16 +177,27 @@ type Content struct {
 	// Type:
 	//   integer
 	// Description:
-	//   Media rating per IQG guidelines. Refer to List 5.19.
-	QAGMediaRating IQGMediaRating `json:"qagmediarating,omitempty"`
+	//   Media rating per IQG guidelines. Refer to List: Media Ratings in
+	//   AdCOM 1.0.
+	QAGMediaRating adcom1.MediaRating `json:"qagmediarating,omitempty"`
 
 	// Attribute:
 	//   keywords
 	// Type:
 	//   string
 	// Description:
-	//   Comma separated list of keywords describing the content.
+	//   Comma separated list of keywords describing the content. Only
+	//   one of ‘keywords’ or ‘kwarray’ may be present.
 	Keywords string `json:"keywords,omitempty"`
+
+	// Attribute:
+	//   kwarray
+	// Type:
+	//   string
+	// Description:
+	//   Array of keywords about the site. Only one of ‘keywords’ or
+	//   ‘kwarray’ may be present.
+	KwArray []string `json:"kwarray,omitempty"`
 
 	// Attribute:
 	//   livestream
@@ -201,8 +228,18 @@ type Content struct {
 	// Type:
 	//   string
 	// Description:
-	//   Content language using ISO-639-1-alpha-2.
+	//   Content language using ISO-639-1-alpha-2. Only one of
+	//   language or langb should be present.
 	Language string `json:"language,omitempty"`
+
+	// Attribute:
+	//   langb
+	// Type:
+	//   string
+	// Description:
+	//   Content language using IETF BCP 47. Only one of language or
+	//   langb should be present.
+	LangB string `json:"langb,omitempty"`
 
 	// Attribute:
 	//   embeddable
@@ -221,6 +258,22 @@ type Content struct {
 	//   Additional content data. Each Data object (Section 3.2.21)
 	//   represents a different data source.
 	Data []Data `json:"data,omitempty"`
+
+	// Attribute:
+	//   network
+	// Type:
+	//   object
+	// Description:
+	//   Details about the network (Section 3.2.23) the content is on.
+	Network *Network `json:"network,omitempty"`
+
+	// Attribute:
+	//   channel
+	// Type:
+	//   object
+	// Description:
+	//   Details about the channel (Section 3.2.24) the content is on.
+	Channel *Channel `json:"channel,omitempty"`
 
 	// Attribute:
 	//   ext

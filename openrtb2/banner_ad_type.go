@@ -1,6 +1,6 @@
 package openrtb2
 
-// 5.2 Banner Ad Types
+// BannerAdType
 //
 // Types of ads that can be accepted by the exchange unless restricted by publisher site settings.
 type BannerAdType int8

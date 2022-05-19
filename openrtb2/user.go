@@ -30,7 +30,7 @@ type User struct {
 	// Attribute:
 	//   yob
 	// Type:
-	//   integer
+	//   integer; DEPRECATED
 	// Description:
 	//   Year of birth as a 4-digit integer.
 	Yob int64 `json:"yob,omitempty"`
@@ -38,7 +38,7 @@ type User struct {
 	// Attribute:
 	//   gender
 	// Type:
-	//   string
+	//   string; DEPRECATED
 	// Description:
 	//   Gender, where “M” = male, “F” = female, “O” = known to be
 	//   other (i.e., omitted is unknown).
@@ -49,8 +49,18 @@ type User struct {
 	// Type:
 	//   string
 	// Description:
-	//   Comma separated list of keywords, interests, or intent.
+	//   Comma separated list of keywords, interests, or intent. Only
+	//   one of ‘keywords’ or ‘kwarray’ may be present.
 	Keywords string `json:"keywords,omitempty"`
+
+	// Attribute:
+	//   kwarray
+	// Type:
+	//   string
+	// Description:
+	//   Array of keywords about the site. Only one of ‘keywords’ or
+	//   ‘kwarray’ may be present.
+	KwArray []string `json:"kwarray,omitempty"`
 
 	// Attribute:
 	//   customdata
@@ -80,6 +90,25 @@ type User struct {
 	//   Additional user data. Each Data object (Section 3.2.21)
 	//   represents a different data source.
 	Data []Data `json:"data,omitempty"`
+
+	// Attribute:
+	//   consent
+	// Type:
+	//   string
+	// Description:
+	//   When GDPR regulations are in effect this attribute contains
+	//   the Transparency and Consent Framework’s Consent String
+	//   data structure.
+	Consent string `json:"consent,omitempty"`
+
+	// Attribute:
+	//   eids
+	// Type:
+	//   object array
+	// Description:
+	//   Details for support of a standard protocol for multiple third
+	//   party identity providers (Section 3.2.27)
+	EIDs []EID `json:"eids,omitempty"`
 
 	// Attribute:
 	//   ext

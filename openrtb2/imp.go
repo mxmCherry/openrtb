@@ -100,7 +100,7 @@ type Imp struct {
 	// Attribute:
 	//   instl
 	// Type:
-	//   int; default 0
+	//   integer; default 0
 	// Description:
 	//   1 = the ad is interstitial or full screen, 0 = not interstitial.
 	Instl int8 `json:"instl,omitempty"`
@@ -162,6 +162,33 @@ type Imp struct {
 	// Description:
 	//   Array of exchange-specific names of supported iframe busters.
 	IframeBuster []string `json:"iframebuster,omitempty"`
+
+	// Attribute:
+	//   rwdd
+	// Type:
+	//   integer; default 0
+	// Description:
+	//   Indicates whether the user receives a reward for viewing the
+	//   ad, where 0 = no, 1 = yes. Typically video ad implementations
+	//   allow users to read an additional news article for free, receive
+	//   an extra life in a game, or get a sponsored ad-free music
+	//   session. The reward is typically distributed after the video ad is
+	//   completed.
+	Rwdd int8 `json:"rwdd,omitempty"`
+
+	// Attribute:
+	//   ssai
+	// Type:
+	//   integer; default 0
+	// Description:
+	//   Indicates if server-side ad insertion (e.g., stitching an ad into an
+	//   audio or video stream) is in use and the impact of this on asset
+	//   and tracker retrieval, where
+	//   0 = status unknown,
+	//   1 = all client-side (i.e., not server-side),
+	//   2 = assets stitched server-side but tracking pixels fired client-side,
+	//   3 = all server-side.
+	SSAI AdInsertion `json:"ssai,omitempty"`
 
 	// Attribute:
 	//   exp

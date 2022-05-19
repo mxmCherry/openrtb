@@ -153,10 +153,20 @@ type Content struct {
 	// Attribute:
 	//   keywords
 	// Type:
-	//   string
+	//   string; DEPRECATED
 	// Definition:
-	//   Comma separated list of keywords describing the content.
+	//   Comma-separated list of keywords describing the content.
+	//   Only one of 'keywords' or 'kwarray' may be present.
+	//   NOTE: this field is deprecated, use 'kwarray' instead.
 	Keywords string `json:"keywords,omitempty"`
+
+	// Attribute:
+	//   kwarray
+	// Type:
+	//   string array
+	// Definition:
+	//   Array of keywords about the site. Only one of 'keywords' or 'kwarray' may be present.
+	KwArray []string `json:"kwarray,omitempty"`
 
 	// Attribute:
 	//   live
@@ -206,6 +216,24 @@ type Content struct {
 	//   Details about the content producer.
 	//   Refer to Object: Producer.
 	Producer *Producer `json:"producer,omitempty"`
+
+	// Attribute:
+	//   network
+	// Type:
+	//   object
+	// Definition:
+	//   Details about the network.
+	//   Refer to Object: Network.
+	Network *Network `json:"network,omitempty"`
+
+	// Attribute:
+	//   channel
+	// Type:
+	//   object
+	// Definition:
+	//   Details about the channel.
+	//   Refer to Object: Channel.
+	Channel *Channel `json:"channel,omitempty"`
 
 	// Attribute:
 	//   data

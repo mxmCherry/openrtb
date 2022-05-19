@@ -59,10 +59,20 @@ type App struct {
 	// Attribute:
 	//   keywords
 	// Type:
-	//   string
+	//   string; DEPRECATED
 	// Definition:
-	//   Comma separated list of keywords about the app.
+	//   Comma-separated list of keywords about the app.
+	//   Only one of 'keywords' or 'kwarray' may be present.
+	//   NOTE: this field is deprecated, use 'kwarray' instead.
 	Keywords string `json:"keywords,omitempty"`
+
+	// Attribute:
+	//   kwarray
+	// Type:
+	//   string array
+	// Definition:
+	//   Array of keywords about the site. Only one of 'keywords' or 'kwarray' may be present.
+	KwArray []string `json:"kwarray,omitempty"`
 
 	// Attribute:
 	//   bundle

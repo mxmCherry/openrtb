@@ -1,6 +1,6 @@
 package native1
 
-// 5.8 Protocols (from OpenRTB spec 2.5)
+// Protocols (from AdCOM spec 1.0, List: Creative Subtypes - Audio/Video)
 //
 // Options for the various bid response protocols that could be supported by an exchange.
 //
@@ -18,4 +18,8 @@ const (
 	ProtocolVAST40Wrapper  Protocol = 8  // VAST 4.0 Wrapper
 	ProtocolDAAST10        Protocol = 9  // DAAST 1.0
 	ProtocolDAAST10Wrapper Protocol = 10 // DAAST 1.0 Wrapper
+	ProtocolVAST41         Protocol = 11 // VAST 4.1
+	ProtocolVAST41Wrapper  Protocol = 12 // VAST 4.1 Wrapper
+	ProtocolVAST42         Protocol = 13 // VAST 4.2
+	ProtocolVAST42Wrapper  Protocol = 14 // VAST 4.2 Wrapper
 )

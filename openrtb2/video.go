@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/mxmCherry/openrtb/v16/adcom1"
+)
 
 // 3.2.7 Object: Video
 //
@@ -26,39 +30,81 @@ type Video struct {
 	// Attribute:
 	//   minduration
 	// Type:
-	//   integer; recommended
-	// Description:
-	//   Minimum video ad duration in seconds.
+	//   integer; default 0; recommended
+	// Definition:
+	//   Minimum video ad duration in seconds. This field is mutually
+	//   exclusive with rqddurs; only one of minduration and rqddurs
+	//   may be in a bid request.
 	MinDuration int64 `json:"minduration,omitempty"`
 
 	// Attribute:
 	//   maxduration
 	// Type:
 	//   integer; recommended
-	// Description:
-	//   Maximum video ad duration in seconds.
+	// Definition:
+	//  Maximum video ad duration in seconds. This field is mutually
+	//  exclusive with rqddurs; only one of maxduration and rqddurs
+	//  may be in a bid request.
 	MaxDuration int64 `json:"maxduration,omitempty"`
+
+	// Attribute:
+	//   startdelay
+	// Type:
+	//   integer; recommended
+	// Definition:
+	//   Indicates the start delay in seconds for pre-roll, mid-roll, or
+	//   post-roll ad placements. Refer to List: Start Delay Modes
+	//   in AdCOM 1.0.
+	StartDelay *adcom1.StartDelay `json:"startdelay,omitempty"`
+
+	// Attribute:
+	//   maxseq
+	// Type:
+	//   integer; recommended
+	// Definition:
+	//   Indicates the maximum number of ads that may be served into
+	//   a “dynamic” video ad pod (where the precise number of ads is
+	//   not predetermined by the seller). See Section 7.6 for more
+	//   details.
+	MaxSeq int64 `json:"maxseq,omitempty"`
+
+	// Attribute:
+	//   poddur
+	// Type:
+	//   integer; recommended
+	// Definition:
+	//   Indicates the total amount of time in seconds that advertisers
+	//   may fill for a “dynamic” video ad pod (See Section 7.6 for more
+	//   details), or the dynamic portion of a “hybrid” ad pod. This field
+	//   is required only for the dynamic portion(s) of video ad pods.
+	//   This field refers to the length of the entire ad break, whereas
+	//   minduration/maxduration/rqddurs are constraints relating to
+	//   the slots that make up the pod.
+	PodDur int64 `json:"poddur,omitempty"`
 
 	// Attribute:
 	//   protocols
 	// Type:
 	//   integer array; recommended
-	// Description:
-	//   Array of supported video protocols. Refer to List 5.8. At least
-	//   one supported protocol must be specified in either the
-	//   protocol or protocols attribute.
-	Protocols []Protocol `json:"protocols,omitempty"`
+	// Definition:
+	//   Array of supported video protocols. Refer to List: Creative
+	//   Subtypes - Audio/Video in AdCOM 1.0.
+	// Note:
+	//   OpenRTB <=2.5 defined only protocols 1..10.
+	Protocols []adcom1.MediaCreativeSubtype `json:"protocols,omitempty"`
 
 	// Attribute:
 	//   protocol
 	// Type:
-	//   integer; DEPRECATED
+	//   integer; DEPRECATED; REMOVED in OpenRTB 2.6
 	// Description:
 	//   NOTE: Deprecated in favor of protocols.
 	//   Supported video protocol. Refer to List 5.8. At least one
 	//   supported protocol must be specified in either the protocol
 	//   or protocols attribute.
-	Protocol Protocol `json:"protocol,omitempty"`
+	// Note:
+	//   OpenRTB <=2.5 defined only protocols 1..10.
+	Protocol adcom1.MediaCreativeSubtype `json:"protocol,omitempty"`
 
 	// Attribute:
 	//   w
@@ -77,22 +123,48 @@ type Video struct {
 	H int64 `json:"h,omitempty"`
 
 	// Attribute:
-	//   startdelay
+	//   podid
 	// Type:
-	//   integer; recommended
-	// Description:
-	//   Indicates the start delay in seconds for pre-roll, mid-roll, or
-	//   post-roll ad placements. Refer to List 5.12 for additional
-	//   generic values.
-	StartDelay *StartDelay `json:"startdelay,omitempty"`
+	//   integer
+	// Definition:
+	//   Unique identifier indicating that an impression opportunity
+	//   belongs to a video ad pod. If multiple impression opportunities
+	//   within a bid request share the same podid, this indicates that
+	//   those impression opportunities belong to the same video ad
+	//   pod.
+	PodID int64 `json:"podid,omitempty"`
+
+	// Attribute:
+	//   podseq
+	// Type:
+	//   integer; default 0
+	// Definition:
+	//   The sequence (position) of the video ad pod within a
+	//  content stream. Refer to List: Pod Sequence in AdCOM 1.0
+	//  for guidance on the use of this field.
+	PodSeq adcom1.PodSequence `json:"podseq,omitempty"`
+
+	// Attribute:
+	//   rqddurs
+	// Type:
+	//   integer array
+	// Definition:
+	//   Precise acceptable durations for video creatives in
+	//   seconds. This field specifically targets the Live TV use case
+	//   where non-exact ad durations would result in undesirable
+	//   ‘dead air’. This field is mutually exclusive with minduration
+	//   and maxduration; if rqddurs is specified, minduration and
+	//   maxduration must not be specified and vice versa.
+	RqdDurs []int64 `json:"rqddurs,omitempty"`
 
 	// Attribute:
 	//   placement
 	// Type:
 	//   integer
 	// Description:
-	//   Placement type for the impression. Refer to List 5.9.
-	Placement VideoPlacementType `json:"placement,omitempty"`
+	//   Video placement type for the impression. Refer to List:
+	//   Placement Subtypes - Video in AdCOM 1.0.
+	Placement adcom1.VideoPlacementSubtype `json:"placement,omitempty"`
 
 	// Attribute:
 	//   linearity
@@ -100,8 +172,11 @@ type Video struct {
 	//   integer
 	// Description:
 	//   Indicates if the impression must be linear, nonlinear, etc. If
-	//   none specified, assume all are allowed. Refer to List 5.7.
-	Linearity VideoLinearity `json:"linearity,omitempty"`
+	//   none specified, assume all are allowed. Refer to List: Linearity
+	//   Modes in AdCOM 1.0. Note that this field describes the
+	//   expected VAST response and not whether a placement is in-
+	//   stream, out-stream, etc. For that, see placement.
+	Linearity adcom1.LinearityMode `json:"linearity,omitempty"`
 
 	// Attribute:
 	//   skip
@@ -112,7 +187,8 @@ type Video struct {
 	//   where 0 = no, 1 = yes.
 	//   If a bidder sends markup/creative that is itself skippable, the
 	//   Bid object should include the attr array with an element of
-	//   16 indicating skippable video. Refer to List 5.3.
+	//   16 indicating skippable video. Refer to List: Creative
+	//   Attributes in AdCOM 1.0.
 	Skip *int8 `json:"skip,omitempty"`
 
 	// Attribute:
@@ -136,7 +212,7 @@ type Video struct {
 	// Attribute:
 	//   sequence
 	// Type:
-	//   integer
+	//   integer; default 0; DEPRECATED
 	// Description:
 	//   If multiple ad impressions are offered in the same bid request,
 	//   the sequence number will allow for the coordinated delivery
@@ -144,12 +220,36 @@ type Video struct {
 	Sequence int8 `json:"sequence,omitempty"`
 
 	// Attribute:
+	//   slotinpod
+	// Type:
+	//   integer; default 0
+	// Description:
+	//   For video ad pods, this value indicates that the seller can
+	//   guarantee delivery against the indicated slot position in the
+	//   pod. Refer to  List: Slot Position in Pod in AdCOM 1.0 guidance
+	//   on the use of this field.
+	SlotInPod adcom1.SlotPositionInPod `json:"slotinpod,omitempty"`
+
+	// Attribute:
+	//   mincpmpersec
+	// Type:
+	//   float
+	// Description:
+	//   Minimum CPM per second. This is a price floor for the
+	//   "dynamic" portion of a video ad pod, relative to the duration
+	//   of bids an advertiser may submit.
+	MinCPMPerSec float64 `json:"mincpmpersec,omitempty"`
+
+	// Attribute:
 	//   battr
 	// Type:
 	//   integer array
 	// Description:
-	//   Blocked creative attributes. Refer to List 5.3.
-	BAttr []CreativeAttribute `json:"battr,omitempty"`
+	//   Blocked creative attributes. Refer to List: Creative Attributes in
+	//   AdCOM 1.0
+	// Note:
+	//   OpenRTB <=2.5 defined only attributes 1..17.
+	BAttr []adcom1.CreativeAttribute `json:"battr,omitempty"`
 
 	// Attribute:
 	//   maxextended
@@ -194,20 +294,24 @@ type Video struct {
 	//   integer array
 	// Description:
 	//   Playback methods that may be in use. If none are specified,
-	//   any method may be used. Refer to List 5.10. Only one
-	//   method is typically used in practice. As a result, this array may
-	//   be converted to an integer in a future version of the
-	//   specification. It is strongly advised to use only the first
-	//   element of this array in preparation for this change.
-	PlaybackMethod []PlaybackMethod `json:"playbackmethod,omitempty"`
+	//   any method may be used. Refer to List: Playback Methods
+	//   in AdCOM 1.0. Only one method is typically used in practice.
+	//   As a result, this array may be converted to an integer in a
+	//   future version of the specification. It is strongly advised to use
+	//   only the first element of this array in preparation for this
+	//   change.
+	// Note:
+	//   OpenRTB <=2.5 defined only methods 1..6.
+	PlaybackMethod []adcom1.PlaybackMethod `json:"playbackmethod,omitempty"`
 
 	// Attribute:
 	//   playbackend
 	// Type:
 	//   integer
 	// Description:
-	//   The event that causes playback to end. Refer to List 5.11.
-	PlaybackEnd PlaybackCessationMode `json:"playbackend,omitempty"`
+	//   The event that causes playback to end. Refer to List: Playback
+	//   Cessation Modes in AdCOM 1.0.
+	PlaybackEnd adcom1.PlaybackCessationMode `json:"playbackend,omitempty"`
 
 	// Attribute:
 	//   delivery
@@ -215,16 +319,18 @@ type Video struct {
 	//   integer array
 	// Description:
 	//   Supported delivery methods (e.g., streaming, progressive). If
-	//   none specified, assume all are supported. Refer to List 5.15.
-	Delivery []ContentDeliveryMethod `json:"delivery,omitempty"`
+	//   none specified, assume all are supported. Refer to List:
+	//   Delivery Methods in AdCOM 1.0.
+	Delivery []adcom1.DeliveryMethod `json:"delivery,omitempty"`
 
 	// Attribute:
 	//   pos
 	// Type:
 	//   integer
 	// Description:
-	//   Ad position on screen. Refer to List 5.4.
-	Pos *AdPosition `json:"pos,omitempty"`
+	//   Ad position on screen. Refer to List: Placement Positions in
+	//   AdCOM 1.0.
+	Pos adcom1.PlacementPosition `json:"pos,omitempty"`
 
 	// Attribute:
 	//   companionad
@@ -241,21 +347,24 @@ type Video struct {
 	//   integer array
 	// Description:
 	//   List of supported API frameworks for this impression. Refer to
-	//   List 5.6. If an API is not explicitly listed, it is assumed not to be
-	//   supported.
-	API []APIFramework `json:"api,omitempty"`
+	//   List: API Frameworks in AdCOM 1.0. If an API is not explicitly
+	//   listed, it is assumed not to be supported.
+	// Note:
+	//   OpenRTB <=2.5 defined only frameworks 1..6.
+	API []adcom1.APIFramework `json:"api,omitempty"`
 
 	// Attribute:
 	//   companiontype
 	// Type:
 	//   integer array
 	// Description:
-	//   Supported VAST companion ad types. Refer to List 5.14.
-	//   Recommended if companion Banner objects are included via
-	//   the companionad array. If one of these banners will be
+	//   Supported VAST companion ad types. Refer to List:
+	//   Companion Types in AdCOM 1.0. Recommended if
+	//   companion Banner objects are included via the
+	//   companionad array. If one of these banners will be
 	//   rendered as an end-card, this can be specified using the vcm
 	//   attribute with the particular banner (Section 3.2.6).
-	CompanionType []CompanionType `json:"companiontype,omitempty"`
+	CompanionType []adcom1.CompanionType `json:"companiontype,omitempty"`
 
 	// Attribute:
 	//   ext
