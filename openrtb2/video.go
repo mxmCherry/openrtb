@@ -330,7 +330,7 @@ type Video struct {
 	// Description:
 	//   Ad position on screen. Refer to List: Placement Positions in
 	//   AdCOM 1.0.
-	Pos adcom1.PlacementPosition `json:"pos,omitempty"`
+	Pos *adcom1.PlacementPosition `json:"pos,omitempty"`
 
 	// Attribute:
 	//   companionad
