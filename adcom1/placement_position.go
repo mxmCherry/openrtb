@@ -21,7 +21,7 @@ func (p PlacementPosition) Ptr() *PlacementPosition {
 	return &p
 }
 
-// Val safely dereferences pointer, returning default value (AdPositionUnknown) for nil.
+// Val safely dereferences pointer, returning default value (PositionUnknown) for nil.
 func (p *PlacementPosition) Val() PlacementPosition {
 	if p == nil {
 		return PositionUnknown
