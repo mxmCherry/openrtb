@@ -26,3 +26,16 @@ const (
 	NoBidIncompleteSupplyChain     NoBidReason = 16 // Incomplete SupplyChain
 	NoBidBlockedSupplyChainNode    NoBidReason = 17 // Blocked SupplyChain Node
 )
+
+// Ptr returns pointer to own value.
+func (n NoBidReason) Ptr() *NoBidReason {
+	return &n
+}
+
+// Val safely dereferences pointer, returning default value (NoBidUnknownError) for nil.
+func (n *NoBidReason) Val() NoBidReason {
+	if n == nil {
+		return NoBidUnknownError
+	}
+	return *n
+}
