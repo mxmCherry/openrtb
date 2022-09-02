@@ -3,7 +3,7 @@ package openrtb2
 import (
 	"encoding/json"
 
-	"github.com/mxmCherry/openrtb/v16/adcom1"
+	"github.com/mxmCherry/openrtb/v17/adcom1"
 )
 
 // 3.2.7 Object: Video

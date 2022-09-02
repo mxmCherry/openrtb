@@ -1,7 +1,7 @@
 package request
 
 import (
-	"github.com/mxmCherry/openrtb/v16/openrtb2"
+	"github.com/mxmCherry/openrtb/v17/openrtb2"
 )
 
 // 4.5 Video Object
