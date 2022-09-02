@@ -79,6 +79,8 @@ type Asset struct {
 	//   Note that in-stream (ie preroll, etc) video ads are not part of Native.
 	//   Native ads may contain a video as the ad creative itself.
 	//   Each asset object may contain only one of title, img, data or video.
+	// Note:
+	//   Video object Refer to openrtb2.Video
 	Video *Video `json:"video,omitempty"`
 
 	// Field:
