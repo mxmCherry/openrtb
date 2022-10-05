@@ -1,3 +1,7 @@
+# ARCHIVED, use [prebid/openrtb](https://github.com/prebid/openrtb) instead
+
+[Prebid](https://github.com/prebid) [agreed to take over this project](https://github.com/mxmCherry/openrtb/issues/54), so use their fork [github.com/prebid/openrtb](https://github.com/prebid/openrtb) instead.
+
 # openrtb [![Go Reference](https://pkg.go.dev/badge/github.com/mxmCherry/openrtb/v17.svg)](https://pkg.go.dev/github.com/mxmCherry/openrtb/v17) [![Test](https://github.com/mxmCherry/openrtb/actions/workflows/test.yml/badge.svg)](https://github.com/mxmCherry/openrtb/actions/workflows/test.yml)
 
 [OpenRTB](https://iabtechlab.com/standards/openrtb/), [AdCOM](https://iabtechlab.com/standards/openmedia) and [OpenRTB Dynamic Native Ads](https://iabtechlab.com/standards/openrtb-native/) types for [Go programming language](https://golang.org/)
